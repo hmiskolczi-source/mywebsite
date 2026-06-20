@@ -85,7 +85,7 @@ export default function AcademyPricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 bg-white p-12 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative"
+            className="lg:col-span-7 bg-white p-12 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative flex flex-col"
           >
             {/* Minimal Badge */}
             <div className="absolute top-10 right-10">
@@ -94,7 +94,7 @@ export default function AcademyPricing() {
               </span>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-16 flex-grow">
               <div className="space-y-4">
                 <h3 className="font-serif-lux text-3xl font-light text-charcoal-800">
                   Pro Makeup Mentorprogram
@@ -163,45 +163,48 @@ export default function AcademyPricing() {
             </div>
           </motion.div>
 
-          {/* Sidebar - Testimonial Marquee (Restored) */}
-          <div className="lg:col-span-5 flex flex-col">
-            <div className="space-y-8 flex-grow flex flex-col">
+          {/* Sidebar - Testimonial Marquee (Restored & Fixed) */}
+          <div className="lg:col-span-5 flex flex-col h-full">
+            <div className="space-y-8 flex-grow flex flex-col h-full min-h-[600px] lg:min-h-0">
               <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block">Tanulói vélemények</span>
               
-              <div className="relative flex-grow min-h-[500px] lg:min-h-0 overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
+              <div className="relative flex-grow overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
                 <style>{`
                   @keyframes marquee-v2-vertical {
-                    0% { transform: translateY(0%); }
+                    0% { transform: translateY(0); }
                     100% { transform: translateY(-50%); }
                   }
                   @keyframes marquee-v2-horizontal {
-                    0% { transform: translateX(0%); }
+                    0% { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
                   }
                   .marquee-v2-scroller {
                     display: flex;
                     flex-direction: column;
-                    gap: 2rem;
-                    animation: marquee-v2-vertical 40s linear infinite;
+                    gap: 1.5rem;
+                    animation: marquee-v2-vertical 50s linear infinite;
                     height: max-content;
                   }
                   @media (max-width: 1023px) {
                     .marquee-v2-scroller {
                       flex-direction: row;
-                      animation: marquee-v2-horizontal 40s linear infinite;
+                      animation: marquee-v2-horizontal 50s linear infinite;
                       width: max-content;
                       height: auto;
-                      padding: 1.5rem;
+                      padding: 1rem;
                     }
+                  }
+                  .marquee-v2-scroller:hover {
+                    animation-play-state: paused;
                   }
                 `}</style>
 
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="marquee-v2-scroller py-8 px-4 lg:px-8">
+                <div className="absolute inset-0 flex">
+                  <div className="marquee-v2-scroller p-4 lg:p-8">
                     {[...reviews, ...reviews].map((review, idx) => (
                       <div 
                         key={idx} 
-                        className="bg-white p-8 border border-charcoal-800/5 shadow-sm hover:shadow-md transition-all duration-300 w-[300px] lg:w-full shrink-0"
+                        className="bg-white p-6 lg:p-8 border border-charcoal-800/5 shadow-sm hover:shadow-md transition-all duration-300 w-[280px] sm:w-[350px] lg:w-full shrink-0 flex flex-col"
                       >
                         <div className="space-y-4">
                           <div className="flex text-gold-400 gap-0.5">
@@ -209,32 +212,32 @@ export default function AcademyPricing() {
                               <Star key={s} className="w-3 h-3 fill-current" />
                             ))}
                           </div>
-                          <h4 className="font-serif-lux text-xl font-light text-charcoal-800 leading-snug">
+                          <h4 className="font-serif-lux text-lg lg:text-xl font-light text-charcoal-800 leading-snug">
                             {review.title}
                           </h4>
-                          <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
+                          <p className="text-xs lg:text-sm text-charcoal-700/70 font-light leading-relaxed">
                             {review.text}
                           </p>
-                          <div className="pt-4 border-t border-charcoal-800/5">
-                            <h5 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
-                            <p className="text-[10px] text-gold-600 font-medium italic mt-1 font-serif-lux">{review.role}</p>
+                          <div className="pt-4 border-t border-charcoal-800/5 mt-auto">
+                            <h5 className="text-[10px] lg:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
+                            <p className="text-[9px] text-gold-600 font-medium italic mt-1 font-serif-lux">{review.role}</p>
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Gradient Masks */}
-                  <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-cream-100/50 to-transparent pointer-events-none z-10 hidden lg:block" />
-                  <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-cream-100/50 to-transparent pointer-events-none z-10 hidden lg:block" />
-                  <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream-100/50 to-transparent pointer-events-none z-10 lg:hidden" />
-                  <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-cream-100/50 to-transparent pointer-events-none z-10 lg:hidden" />
+                  {/* Gradient Masks - Subtle Fades */}
+                  <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-cream-100/80 to-transparent pointer-events-none z-10 hidden lg:block" />
+                  <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-cream-100/80 to-transparent pointer-events-none z-10 hidden lg:block" />
+                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-cream-100/80 to-transparent pointer-events-none z-10 lg:hidden" />
+                  <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-cream-100/80 to-transparent pointer-events-none z-10 lg:hidden" />
                 </div>
               </div>
             </div>
 
             {/* Guarantee Section - Refined */}
-            <div className="pt-16 mt-16 border-t border-charcoal-800/10 space-y-8">
+            <div className="pt-16 mt-12 border-t border-charcoal-800/10 space-y-8">
               <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase italic">100%-os Gyakorlati Garancia</h4>
               <div className="space-y-6">
                 {[
@@ -251,8 +254,8 @@ export default function AcademyPricing() {
                     desc: "Ennek a maximalizmusnak köszönhető, hogy a tanulóim 80%-a ma is a szakmából él vagy oktat – a nálam megszerzett alapok azonnali ajánlólevelet jelentenek a piacon."
                   }
                 ].map((item, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <p className="text-sm text-charcoal-800 font-bold uppercase tracking-widest">{item.title}</p>
+                  <div key={idx} className="space-y-1">
+                    <p className="text-[11px] text-charcoal-800 font-bold uppercase tracking-widest">{item.title}</p>
                     <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
