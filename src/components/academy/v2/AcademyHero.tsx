@@ -48,8 +48,8 @@ export default function AcademyHero() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
-                Válj <span className="italic">elismert, magasan fizetett</span> sminkessé mindössze 10 hét alatt, hogy végre a saját kreativitásodból élhess, kötöttségek nélkül.
+              <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+                Válj <span className="italic text-gold-600">elismert, magasan fizetett</span> sminkessé mindössze 10 hét alatt, hogy végre a saját <span className="italic">kreativitásodból élhess</span>, kötöttségek nélkül.
               </h1>
               
               <div className="max-w-xl space-y-6">
