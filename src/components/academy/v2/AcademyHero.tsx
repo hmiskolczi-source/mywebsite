@@ -49,15 +49,12 @@ export default function AcademyHero() {
               className="space-y-8"
             >
               <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
-                Válj <span className="italic">elismert, magasan fizetett</span> sminkessé mindössze 10 hét alatt.
+                Válj <span className="italic">elismert, magasan fizetett</span> sminkessé mindössze 10 hét alatt, hogy végre a saját kreativitásodból élhess, kötöttségek nélkül.
               </h1>
               
               <div className="max-w-xl space-y-6">
                 <p className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed">
-                  Válj elismert, magasan fizetett szakemberré 10 hét alatt. Sajátítsd el a sémamentes sminkelés logikáját egy háromszoros világbajnoki ezüstérmes mentorálása mellett.
-                </p>
-                <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                  A képzés végén nem csak egy állami tanúsítványt kapsz, hanem egy olyan szakmai identitást, amellyel magabiztosan léphetsz a prémium piacra.
+                  Sajátítsd el a sémamentes sminkelés logikáját egy háromszoros világbajnoki ezüstérmes sminkmester felügyelete alatt. A képzés végén portfólióval, állami tanúsítvánnyal, és gyakorlati tudással távozol: akár már másnap fogadhatsz vendégeket.
                 </p>
               </div>
             </motion.div>
@@ -73,12 +70,12 @@ export default function AcademyHero() {
                 onClick={scrollToForm}
                 className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
               >
-                <span className="relative z-10">Jelentkezés a képzésre</span>
+                <span className="relative z-10">Jelentkezem Kingához képzésre &rarr;</span>
                 <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
               </button>
               
               <p className="text-xs text-charcoal-700/60 italic font-serif-lux tracking-wide">
-                Csak 5 elérhető hely a következő kurzusra.
+                5 elérhető hely maradt!
               </p>
             </motion.div>
 
@@ -88,11 +85,11 @@ export default function AcademyHero() {
                 <div className="flex items-center gap-3">
                   <Trophy className="w-5 h-5 text-gold-500 stroke-[1.5]" />
                   <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
-                    MFKKE Minősítés
+                    MFKKE MINŐSÍTÉS
                   </h4>
                 </div>
                 <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
-                  Hivatalos felnőttképzési minősítés, mely garantálja a legmagasabb szakmai standardokat.
+                  A Magyar Fodrász-Kozmetikus-Körmös Egyesület hivatalos felnőttképzési minősítése.
                 </p>
               </div>
 
@@ -100,11 +97,11 @@ export default function AcademyHero() {
                 <div className="flex items-center gap-3">
                   <Award className="w-5 h-5 text-gold-500 stroke-[1.5]" />
                   <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
-                    Szakmai Garancia
+                    HAJAS LÁSZLÓ AJÁNLÁSÁVAL
                   </h4>
                 </div>
                 <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
-                  Hajas László ajánlásával: egy név, amely azonnali belépőt jelent a divat- és esküvői piacra.
+                  Szakmai garancia, amellyel azonnal komolyan vesznek a divat- és esküvői piacon.
                 </p>
               </div>
             </div>
@@ -129,10 +126,10 @@ export default function AcademyHero() {
               {/* Floating Quote Moment */}
               <div className="absolute -bottom-12 -left-12 p-10 bg-white shadow-xl max-w-xs hidden md:block">
                 <p className="font-serif-lux text-xl italic text-charcoal-800 leading-relaxed">
-                  "A technika tanítható. <br /> Az ízlés nem."
+                  "Nem kapkodunk sablonokkal. Minden mozdulatot és arcarány-elemzést személyesen, türelemmel rögzítünk."
                 </p>
                 <p className="text-[10px] font-bold tracking-luxury uppercase mt-6 text-gold-600">
-                  Kinga
+                  — Hovorka-Miskolczi Kinga
                 </p>
               </div>
               
