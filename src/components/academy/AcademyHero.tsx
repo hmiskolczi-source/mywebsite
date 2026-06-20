@@ -48,9 +48,8 @@ export default function AcademyHero() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <h1 className="font-serif-lux text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-charcoal-800 leading-[0.95]">
-                A sminktetoválás <br />
-                <span className="italic">művészete.</span>
+              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
+                Válj <span className="italic">elismert, magasan fizetett</span> sminkessé mindössze 10 hét alatt.
               </h1>
               
               <div className="max-w-xl space-y-6">
