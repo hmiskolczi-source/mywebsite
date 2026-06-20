@@ -40,12 +40,10 @@ export default function AcademyProblem() {
         
         {/* Section Heading - Editorial & Minimal */}
         <div className="max-w-3xl mb-24 space-y-6">
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Közös célok, Közös sikerek</span>
           <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
-            A különbség a részletekben rejlik.
+            Miben különbözik ez a tanfolyam minden más elérhető kurzustól?
           </h2>
-          <p className="text-lg text-charcoal-700/70 font-light max-w-xl">
-            Miért választják a legigényesebb tanulók Kinga mentorprogramját a tömegképzések helyett?
-          </p>
         </div>
 
         {/* Comparison System (Refined Editorial Cards) */}
@@ -61,17 +59,17 @@ export default function AcademyProblem() {
           >
             <div className="space-y-2 border-b border-charcoal-800/10 pb-8">
               <h3 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-700/50 font-sans">
-                Standard Oktatás
+                A TIPIKUS SMINKISKOLA
               </h3>
               <p className="font-serif-lux text-2xl italic text-charcoal-700/60">
-                Amivel máshol találkozhatsz...
+                Mivel találkozhatsz máshol a piacon?
               </p>
             </div>
 
             <ul className="space-y-8">
               {comparisonItems.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-6 group">
-                  <span className="text-charcoal-700/30 font-light text-lg mt-[-2px]">—</span>
+                  <span className="text-charcoal-700/30 font-light text-lg mt-[-2px]">✗</span>
                   <p className="text-base font-light text-charcoal-700/70 leading-relaxed">
                     {item.typical}
                   </p>
@@ -90,12 +88,12 @@ export default function AcademyProblem() {
           >
             {/* Subtle Label */}
             <div className="absolute top-10 right-10 text-[9px] font-bold tracking-[0.3em] text-gold-400/50 uppercase">
-              Atelier Standard
+              PRÉMIUM VÁLASZTÁS
             </div>
 
             <div className="space-y-2 border-b border-white/10 pb-8 mb-12">
               <h3 className="text-[11px] font-bold uppercase tracking-luxury text-gold-400 font-sans">
-                Kinga Stúdiója
+                KINGA STÚDIÓJA
               </h3>
               <p className="font-serif-lux text-2xl italic text-cream-100">
                 Amit nálunk kapsz az első naptól
@@ -119,7 +117,7 @@ export default function AcademyProblem() {
         {/* Museum Moment: A brief, confident statement instead of a boxy guarantee */}
         <div className="mt-48 text-center">
           <p className="font-serif-lux text-2xl sm:text-3xl italic text-charcoal-800 max-w-2xl mx-auto leading-relaxed">
-            "A célom nem a tömegtermelés, hanem a szakmai elit kinevelése."
+            "Garantáljuk a 100%-os anyagbiztosítást és az egyénre szabott, exkluzív mentorálást."
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <div className="w-1 h-1 rounded-full bg-gold-400" />
