@@ -37,98 +37,91 @@ export default function AcademyPricing() {
       name: "Nagy Melinda",
       role: "Diplomás Pro Sminkes tanulónk",
       title: "„Soha életemben nem hoztam ennél jobb döntést. Már tanulás közben megtérült a tanfolyam.”",
-      text: "„Mindenki le akart beszélni a sminkiskolákról, mert azt mondták, túl telített a piac. Kingáéknál teljesen más szemléletet kaptam: nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam. Az esküvői szezonban már teli volt a naptáram Szeged és Budapest környékén.”"
+      text: "„Mindenki le akart beszélni a sminkiskolákról, mert azt mondták, túl telített a piac. Kingáéknál teljesen más szemléletet kaptam: nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam.”"
     },
     {
       initials: "SE",
       name: "Szabó Eszter",
       role: "Végzett Mentorprogramos tanulónk",
       title: "„Már a képzés 6. hetén saját munkákból kerestem meg az árát!”",
-      text: "„Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek a modelljeimről és kitettem őket, azonnal jöttek az első felkérések.”"
+      text: "„Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek, azonnal jöttek a felkérések.”"
     },
     {
       initials: "KP",
       name: "Kovács Petra",
       role: "Profi Sminkes mentoráltunk",
       title: "„A legfinomabb szakmai titkokat és a márkafüggetlen igazságot kaptam.”",
-      text: "„Sokáig kerestem olyan iskolát, ahol nem akarnak kötelező márkacsomagot rám erőszakolni. Itt a legjobb high-end és drogériás alternatívákat is megismertük, így százezres felesleges költésektől mentett meg Kinga tanácsa. Az elméleti tankönyve pedig egy kincs!”"
-    },
-    {
-      initials: "HS",
-      name: "Horváth Sára",
-      role: "Elit Sminkes tanulónk",
-      title: "„Kinga nemcsak oktat, hanem valódi partnerként támogat a karrieremben.”",
-      text: "„Nem csak a technikáig tart a felelőssége. Bármilyen bizonytalanságom volt a vendégkezeléssel vagy a smink tartósságával kapcsolatban, mindig azonnali, gyakorlatias választ kaptam tőle. Itt egy igazi közösség tagja lehetsz!”"
+      text: "„Sokáig kerestem olyan iskolát, ahol nem akarnak kötelező márkacsomagot rám erőszakolni. Itt a legjobb high-end és drogériás alternatívákat is megismertük, így százezres felesleges költésektől mentett meg Kinga.”"
     }
   ];
 
   return (
-    <section id="academy-pricing" className="py-32 md:py-48 bg-cream-100 overflow-hidden">
+    <section id="academy-pricing" className="py-20 md:py-32 lg:py-48 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header - Editorial */}
-        <div className="mb-24 space-y-6">
-          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Befektetés a jövődbe</span>
-          <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
-            Transzparens árazás, <br /><span className="italic">rejtett költségek nélkül.</span>
+        {/* Section Header - Responsive Typography */}
+        <div className="mb-16 md:mb-24 space-y-6">
+          <span className="text-[10px] md:text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Befektetés a jövődbe</span>
+          <h2 className="font-serif-lux text-3xl sm:text-4xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1] max-w-4xl">
+            Transzparens árazás, <br className="hidden sm:block" /><span className="italic">rejtett költségek nélkül.</span>
           </h2>
-          <p className="text-lg text-charcoal-700/70 font-light max-w-xl leading-relaxed">
-            Nálunk nincsenek kötelező kezdőcsomagok és kötelezően megvásárolandó sminkkészletek. Egyetlen, magába foglaló, részletekben is fizethető díjért mindent megkapsz a sikeres induláshoz.
+          <p className="text-base md:text-lg text-charcoal-700/70 font-light max-w-xl leading-relaxed">
+            Nálunk nincsenek kötelező kezdőcsomagok és kötelezően megvásárolandó sminkkészletek. Egyetlen, magába foglaló díjért mindent megkapsz.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 xl:gap-32 items-start">
           
-          {/* Main Pricing Card - Elegant & Isolated */}
+          {/* Main Pricing Card - Responsive Padding & Width */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 bg-white p-12 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative flex flex-col"
+            className="lg:col-span-7 bg-white p-6 sm:p-10 md:p-16 lg:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative flex flex-col w-full max-w-3xl mx-auto lg:mx-0"
           >
-            {/* Minimal Badge */}
-            <div className="absolute top-10 right-10">
-              <span className="text-[9px] font-bold tracking-[0.3em] text-gold-500 uppercase border border-gold-500/30 px-3 py-1">
+            {/* Minimal Badge - Simplified for mobile */}
+            <div className="absolute top-6 right-6 md:top-10 md:right-10">
+              <span className="text-[8px] md:text-[9px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-gold-500 uppercase border border-gold-500/30 px-2 py-1 md:px-3 md:py-1">
                 Exkluzív Előfoglalás
               </span>
             </div>
 
-            <div className="space-y-16 flex-grow">
-              <div className="space-y-4">
-                <h3 className="font-serif-lux text-3xl font-light text-charcoal-800">
+            <div className="space-y-10 md:space-y-16 flex-grow">
+              <div className="space-y-4 pt-4 sm:pt-0">
+                <h3 className="font-serif-lux text-2xl md:text-3xl font-light text-charcoal-800">
                   Pro Makeup Mentorprogram
                 </h3>
-                <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">
+                <p className="text-[9px] md:text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">
                   100 órás, 10 hetes elit csoportos képzés
                 </p>
               </div>
 
-              {/* Price Highlight */}
-              <div className="py-12 border-y border-charcoal-800/5 flex flex-col md:flex-row justify-between items-baseline gap-8">
-                <div className="space-y-2">
-                  <span className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">Teljes díj</span>
-                  <div className="font-serif-lux text-5xl sm:text-6xl text-charcoal-800 font-light tracking-tight">
-                    990 000 <span className="text-2xl ml-[-8px]">Ft</span>
+              {/* Price Highlight - Stacked on mobile */}
+              <div className="py-8 md:py-12 border-y border-charcoal-800/5 flex flex-col sm:flex-row justify-between items-baseline gap-6 md:gap-8">
+                <div className="space-y-1">
+                  <span className="text-[9px] md:text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">Teljes díj</span>
+                  <div className="font-serif-lux text-4xl md:text-5xl lg:text-6xl text-charcoal-800 font-light tracking-tight">
+                    990 000 <span className="text-xl md:text-2xl ml-[-4px] md:ml-[-8px]">Ft</span>
                   </div>
                 </div>
                 
-                <div className="space-y-2">
-                  <span className="text-[10px] font-bold tracking-luxury text-gold-600 uppercase">Részletfizetés</span>
-                  <div className="text-lg text-charcoal-700 font-light italic">
+                <div className="space-y-1">
+                  <span className="text-[9px] md:text-[10px] font-bold tracking-luxury text-gold-600 uppercase">Részletfizetés</span>
+                  <div className="text-base md:text-lg text-charcoal-700 font-light italic">
                     3 × 330 000 Ft
                   </div>
-                  <p className="text-[10px] text-charcoal-700/40 uppercase tracking-widest">Kamatmentes opció</p>
+                  <p className="text-[9px] text-charcoal-700/40 uppercase tracking-widest">Kamatmentes opció</p>
                 </div>
               </div>
 
-              {/* Inclusions */}
+              {/* Inclusions - Smaller text on mobile */}
               <div className="space-y-10">
                 <div className="space-y-6">
-                  <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">A program teljes tartalma az első naptól</h4>
+                  <h4 className="text-[10px] md:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">A program tartalma</h4>
                   <ul className="space-y-4">
                     {inclusions.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-4 text-base text-charcoal-700/80 font-light leading-relaxed">
+                      <li key={idx} className="flex items-start gap-3 md:gap-4 text-sm md:text-base text-charcoal-700/80 font-light leading-relaxed">
                         <span className="text-gold-500 font-bold mt-[-2px]">—</span>
                         <span>{item}</span>
                       </li>
@@ -137,11 +130,11 @@ export default function AcademyPricing() {
                 </div>
 
                 <div className="space-y-6">
-                  <h4 className="text-[11px] font-bold tracking-luxury text-gold-600 uppercase italic">Exkluzív ajándék bónuszok (0 Ft plusz költséggel)</h4>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <h4 className="text-[10px] md:text-[11px] font-bold tracking-luxury text-gold-600 uppercase italic">Ajándék bónuszok</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {bonuses.map((bonus, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-sm text-charcoal-800 font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                      <li key={idx} className="flex items-center gap-3 text-xs md:text-sm text-charcoal-800 font-medium">
+                        <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-gold-400" />
                         <span>{bonus}</span>
                       </li>
                     ))}
@@ -149,62 +142,55 @@ export default function AcademyPricing() {
                 </div>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-4 md:pt-8">
                 <button
                   onClick={scrollToForm}
-                  className="w-full bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase py-6 transition-all duration-500 hover:bg-charcoal-700 rounded-none shadow-xl"
+                  className="w-full bg-charcoal-800 text-cream-100 text-[10px] md:text-xs font-bold tracking-luxury uppercase py-5 md:py-6 transition-all duration-500 hover:bg-charcoal-700 rounded-none shadow-xl"
                 >
                   Jelentkezem Kingához képzésre
                 </button>
-                <p className="text-center text-[10px] text-charcoal-700/40 uppercase tracking-[0.2em] mt-6">
-                  🔒 A helyfoglalás a 10% előleg beérkezése után válik 100% véglegessé.
+                <p className="text-center text-[9px] md:text-[10px] text-charcoal-700/40 uppercase tracking-[0.2em] mt-6">
+                  🔒 A helyfoglalás a 10% előleg után válik véglegessé.
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Sidebar - Testimonial Marquee (Restored & Fixed) */}
-          <div className="lg:col-span-5 flex flex-col h-full">
-            <div className="space-y-8 flex-grow flex flex-col h-full min-h-[600px] lg:min-h-0">
-              <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block">Tanulói vélemények</span>
+          {/* Sidebar - Fixed Responsiveness for Marquee */}
+          <div className="lg:col-span-5 flex flex-col w-full overflow-hidden">
+            <div className="space-y-8 flex-grow flex flex-col w-full">
+              <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block px-2 lg:px-0 text-center lg:text-left">Tanulói vélemények</span>
               
-              <div className="relative flex-grow overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
+              <div className="relative h-[450px] md:h-[500px] lg:h-[700px] w-full overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
                 <style>{`
                   @keyframes marquee-v2-vertical {
                     0% { transform: translateY(0); }
                     100% { transform: translateY(-50%); }
                   }
-                  @keyframes marquee-v2-horizontal {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                  }
                   .marquee-v2-scroller {
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
-                    animation: marquee-v2-vertical 50s linear infinite;
+                    animation: marquee-v2-vertical 60s linear infinite;
                     height: max-content;
-                  }
-                  @media (max-width: 1023px) {
-                    .marquee-v2-scroller {
-                      flex-direction: row;
-                      animation: marquee-v2-horizontal 50s linear infinite;
-                      width: max-content;
-                      height: auto;
-                      padding: 1rem;
-                    }
+                    padding: 1.5rem;
                   }
                   .marquee-v2-scroller:hover {
                     animation-play-state: paused;
                   }
+                  @media (max-width: 1023px) {
+                    .marquee-v2-scroller {
+                      padding: 1rem;
+                    }
+                  }
                 `}</style>
 
-                <div className="absolute inset-0 flex">
-                  <div className="marquee-v2-scroller p-4 lg:p-8">
-                    {[...reviews, ...reviews].map((review, idx) => (
+                <div className="absolute inset-0 flex flex-col">
+                  <div className="marquee-v2-scroller">
+                    {[...reviews, ...reviews, ...reviews].map((review, idx) => (
                       <div 
                         key={idx} 
-                        className="bg-white p-6 lg:p-8 border border-charcoal-800/5 shadow-sm hover:shadow-md transition-all duration-300 w-[280px] sm:w-[350px] lg:w-full shrink-0 flex flex-col"
+                        className="bg-white p-6 md:p-8 border border-charcoal-800/5 shadow-sm hover:shadow-md transition-all duration-300 w-full flex flex-col"
                       >
                         <div className="space-y-4">
                           <div className="flex text-gold-400 gap-0.5">
@@ -212,14 +198,14 @@ export default function AcademyPricing() {
                               <Star key={s} className="w-3 h-3 fill-current" />
                             ))}
                           </div>
-                          <h4 className="font-serif-lux text-lg lg:text-xl font-light text-charcoal-800 leading-snug">
+                          <h4 className="font-serif-lux text-lg md:text-xl font-light text-charcoal-800 leading-snug">
                             {review.title}
                           </h4>
-                          <p className="text-xs lg:text-sm text-charcoal-700/70 font-light leading-relaxed">
+                          <p className="text-xs md:text-sm text-charcoal-700/70 font-light leading-relaxed line-clamp-4 lg:line-clamp-none">
                             {review.text}
                           </p>
                           <div className="pt-4 border-t border-charcoal-800/5 mt-auto">
-                            <h5 className="text-[10px] lg:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
+                            <h5 className="text-[10px] md:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
                             <p className="text-[9px] text-gold-600 font-medium italic mt-1 font-serif-lux">{review.role}</p>
                           </div>
                         </div>
@@ -227,36 +213,34 @@ export default function AcademyPricing() {
                     ))}
                   </div>
 
-                  {/* Gradient Masks - Subtle Fades */}
-                  <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-cream-100/80 to-transparent pointer-events-none z-10 hidden lg:block" />
-                  <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-cream-100/80 to-transparent pointer-events-none z-10 hidden lg:block" />
-                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-cream-100/80 to-transparent pointer-events-none z-10 lg:hidden" />
-                  <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-cream-100/80 to-transparent pointer-events-none z-10 lg:hidden" />
+                  {/* Gradient Masks */}
+                  <div className="absolute top-0 inset-x-0 h-16 md:h-24 bg-gradient-to-b from-cream-100 to-transparent pointer-events-none z-10" />
+                  <div className="absolute bottom-0 inset-x-0 h-16 md:h-24 bg-gradient-to-t from-cream-100 to-transparent pointer-events-none z-10" />
                 </div>
               </div>
             </div>
 
-            {/* Guarantee Section - Refined */}
-            <div className="pt-16 mt-12 border-t border-charcoal-800/10 space-y-8">
+            {/* Guarantee Section - Responsive Grid */}
+            <div className="pt-16 mt-12 border-t border-charcoal-800/10 space-y-8 px-2 lg:px-0">
               <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase italic">100%-os Gyakorlati Garancia</h4>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                 {[
                   {
                     title: "Személyes szakmai garancia:",
-                    desc: "Ha elkötelezetten látogatod az órákat és beleteszed a szükséges szorgalmat, addig támogatlak minden technikai elakadásnál, amíg el nem érjük a sikert."
+                    desc: "Addig támogatlak minden technikai elakadásnál, amíg el nem érjük a sikert."
                   },
                   {
                     title: "Szigorú szakmai korlát:",
-                    desc: "Addig senkit nem engedek záróvizsgára, amíg nem látom rajta a kitartó gyakorlást, és azt, hogy képes profi szinten, önállóan sminkelni."
+                    desc: "Addig senkit nem engedek vizsgára, amíg nem látom rajta a képességet."
                   },
                   {
                     title: "Biztos piaci belépő:",
-                    desc: "Ennek a maximalizmusnak köszönhető, hogy a tanulóim 80%-a ma is a szakmából él vagy oktat – a nálam megszerzett alapok azonnali ajánlólevelet jelentenek a piacon."
+                    desc: "Tanulóim 80%-a ma is a szakmából él – a nálam megszerzett alapok ajánlólevél."
                   }
                 ].map((item, idx) => (
                   <div key={idx} className="space-y-1">
-                    <p className="text-[11px] text-charcoal-800 font-bold uppercase tracking-widest">{item.title}</p>
-                    <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">{item.desc}</p>
+                    <p className="text-[10px] md:text-[11px] text-charcoal-800 font-bold uppercase tracking-widest">{item.title}</p>
+                    <p className="text-xs md:text-sm text-charcoal-700/70 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
