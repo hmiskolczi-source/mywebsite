@@ -1,0 +1,6 @@
+{
+  "name": "Hovorka-Miskolczi Kinga - Premium Sminktetovalas",
+  "description": "Többszörös Európa- és Világbajnoki dobogós sminkmester prémium sminktetoválás landing oldala. Természetes hatás, egyedi tervezés és fájdalommentes technológia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

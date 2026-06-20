@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Testimonials from '../components/Testimonials';
+import ValueProps from '../components/ValueProps';
+import Process from '../components/Process';
+import Founder from '../components/Founder';
+import Reviews from '../components/Reviews';
+import Pricing from '../components/Pricing';
+import FAQ from '../components/FAQ';
+import Closer from '../components/Closer';
+import Footer from '../components/Footer';
+import FloatingCTA from '../components/FloatingCTA';
+---
+
+<Layout title="Hovorka-Miskolczi Kinga — Prémium Sminktetoválás">
+	<div class="min-h-screen bg-cream-100 selection:bg-gold-200 selection:text-charcoal-900 overflow-x-hidden antialiased">
+		<FloatingCTA page="tetovalas" client:load />
+
+		<!-- Luxury Top Accents Line -->
+		<div class="h-1.5 w-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 sticky top-0 z-50 pointer-events-none"></div>
+
+		<Navbar currentPage="tetovalas" client:load />
+
+		<Hero client:load />
+		<Testimonials client:visible />
+		<ValueProps client:visible />
+		<Process client:visible />
+		<Founder client:visible />
+		<Reviews client:visible />
+		<Pricing client:visible />
+		<FAQ client:visible />
+		<Closer client:visible />
+		<Footer client:visible />
+	</div>
+</Layout>

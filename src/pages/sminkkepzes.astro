@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import AcademyHero from '../components/academy/AcademyHero';
+import AcademyProblem from '../components/academy/AcademyProblem';
+import AcademyValueProps from '../components/academy/AcademyValueProps';
+import AcademyProcess from '../components/academy/AcademyProcess';
+import AcademyFounder from '../components/academy/AcademyFounder';
+import AcademyOtherCourses from '../components/academy/AcademyOtherCourses';
+import AcademyReviews from '../components/academy/AcademyReviews';
+import AcademyFAQ from '../components/academy/AcademyFAQ';
+import AcademyPricing from '../components/academy/AcademyPricing';
+import AcademyCloser from '../components/academy/AcademyCloser';
+import Footer from '../components/Footer';
+import FloatingCTA from '../components/FloatingCTA';
+---
+
+<Layout title="Hovorka-Miskolczi Kinga — 100 Órás Profi Alapozó Sminkképzés">
+	<div class="min-h-screen bg-cream-100 selection:bg-gold-200 selection:text-charcoal-900 overflow-x-hidden antialiased">
+		<FloatingCTA page="sminkkepzes" client:load />
+
+		<!-- Luxury Top Accents Line -->
+		<div class="h-1.5 w-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 sticky top-0 z-50 pointer-events-none"></div>
+
+		<Navbar currentPage="sminkkepzes" client:load />
+
+		<AcademyHero client:load />
+		<AcademyProblem client:visible />
+		<AcademyValueProps client:visible />
+		<AcademyProcess client:visible />
+		<AcademyFounder client:visible />
+		<AcademyPricing client:visible />
+		<AcademyOtherCourses client:visible />
+		<AcademyReviews client:visible />
+		<AcademyFAQ client:visible />
+		<AcademyCloser client:visible />
+		<Footer client:visible />
+	</div>
+</Layout>
