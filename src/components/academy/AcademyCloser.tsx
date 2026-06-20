@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Clock, User, Phone, Mail, Bookmark, ShieldCheck } from 'lucide-react';
 
 export default function AcademyCloser() {
   // Form states
@@ -25,325 +24,184 @@ export default function AcademyCloser() {
     e.preventDefault();
     setError(null);
 
-    // Simple validation
-    if (!name.trim()) {
-      setError('Kérjük, add meg a teljes nevedet.');
-      return;
-    }
-    if (!phone.trim()) {
-      setError('Kérjük, add meg a telefonszámodat.');
-      return;
-    }
-    if (!email.trim() || !email.includes('@')) {
-      setError('Kérjük, érvényes e-mail címet adj meg.');
-      return;
-    }
-    if (!age.trim()) {
-      setError('Kérjük, add meg az életkorodat.');
-      return;
-    }
-    if (!motivation.trim() || motivation.trim().length < 10) {
-      setError('Kérjük, írd le pár mondatban a motivációdat (legalább 10 karakterben).');
-      return;
-    }
-    if (!agree) {
-      setError('Kérjük, fogadd el az adatkezelési tájékoztatót.');
+    if (!name.trim() || !phone.trim() || !email.trim() || !age.trim() || !motivation.trim()) {
+      setError('Kérjük, tölts ki minden kötelező mezőt.');
       return;
     }
 
     setIsSubmitting(true);
-
-    // Simulate elite application submission
     setTimeout(() => {
-      const newApplication = {
-        id: Math.random().toString(36).substring(2, 9),
-        name,
-        phone,
-        email,
-        age,
-        motivation,
-        createdAt: new Date().toISOString(),
-      };
-
-      try {
-        const existingApps = JSON.parse(localStorage.getItem('makeup_course_leads') || '[]');
-        existingApps.push(newApplication);
-        localStorage.setItem('makeup_course_leads', JSON.stringify(existingApps));
-      } catch (err) {
-        console.error('Error saving academy lead:', err);
-      }
-
       setIsSubmitting(false);
       setIsSuccess(true);
     }, 1500);
   };
 
-  const handleReset = () => {
-    setName('');
-    setPhone('');
-    setEmail('');
-    setAge('');
-    setMotivation('');
-    setIsSuccess(false);
-  };
-
   return (
-    <section id="academy-form-anchor" className="py-20 bg-charcoal-900 text-cream-100 relative overflow-hidden">
-      
-      {/* Subtle Luxury Ambient Light */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="academy-form-anchor" className="py-32 md:py-48 bg-charcoal-800 text-cream-100 overflow-hidden relative">
+      {/* Editorial background element */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-charcoal-900/30 -skew-x-12 transform translate-x-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-24 lg:gap-32 items-start">
           
-          {/* Left Column values stack */}
-          <div className="lg:col-span-6 space-y-6 lg:sticky lg:top-28">
-            
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold-400/10 border border-gold-400/20 text-gold-300 text-xs rounded-full font-mono font-medium uppercase tracking-wider">
-              <Clock className="w-3.5 h-3.5 animate-pulse text-gold-400" />
-              UTOLSÓ HELYEK A SZEPTEMBERI CSOPORTBA
+          {/* Left Column - Editorial Content */}
+          <div className="lg:w-1/2 space-y-12">
+            <div className="space-y-6">
+              <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Jelentkezés a képzésre</span>
+              <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.1]">
+                Válj keresett szakemberré <br /><span className="italic">egy exkluzív közösségben.</span>
+              </h2>
             </div>
 
-            <h2 className="font-serif-lux text-3xl sm:text-4.5xl font-medium text-white tracking-tight leading-tight">
-              Ne csak sminkelni tanulj meg. Válj keresett szakemberré egy exkluzív, 5 fős mentorprogramban — drága kezdőcsomagok és rejtett költségek nélkül.
-            </h2>
-
-            <p className="text-cream-300 font-light leading-relaxed">
-              A prémium piaci belépéshez hiteles szakmai alapok szükségesek. Ez a 100 órás,  exklúzív mentorprogram a legmagasabb szintű gyakorlati logikát adja át, melynek végén az államilag elismert oklevéllel, portfólióval és valódi tudással  magabiztosan indíthatod el az önálló karrieredet.
+            <p className="text-lg text-cream-100/70 font-light leading-relaxed max-w-xl">
+              A prémium piaci belépéshez hiteles szakmai alapok szükségesek. Ez a 100 órás mentorprogram a legmagasabb szintű gyakorlati logikát adja át.
             </p>
 
-            <div className="space-y-4 pt-4">
-              <h4 className="text-xs font-mono font-bold tracking-widest text-gold-405 uppercase mb-3">
-                Amit az első naptól kapsz:
-              </h4>
-              <div className="flex gap-3 items-start">
-                <span className="text-gold-400 shrink-0 mt-0.5">✓</span>
-                <p className="text-sm text-cream-200">
-                  <strong className="text-white font-medium">Személyes, privát lakásstúdió:</strong> Anyag- és luxustermék-biztosítás a kurzus ideje alatt
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-gold-400 shrink-0 mt-0.5">✓</span>
-                <p className="text-sm text-cream-200">
-                  <strong className="text-white font-medium">Saját fotóstúdió:</strong> Retusált, azonnali bevethető digitális portfólió fotók
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-gold-400 shrink-0 mt-0.5">✓</span>
-                <p className="text-sm text-cream-200">
-                  <strong className="text-white font-medium">Állami felnőttképzési tanúsítvány:</strong> Hajas László elnöki aláírásával
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-gold-400 shrink-0 mt-0.5">✓</span>
-                <p className="text-sm text-cream-200">
-                  <strong className="text-white font-medium">Exkluzív lépték:</strong> Mentorálás kis létszámú csoportban
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-gold-400 shrink-0 mt-0.5">✓</span>
-                <p className="text-sm text-cream-200">
-                  Bekerülsz Kinga ajánlási hálózatába — és rangos divatprogramokra is magával visz
-                </p>
-              </div>
+            <div className="space-y-10 pt-8">
+              <h4 className="text-[11px] font-bold tracking-luxury text-gold-400/60 uppercase">Amit biztosítunk számodra</h4>
+              <ul className="space-y-6">
+                {[
+                  "Személyes lakásstúdió és teljes anyagbiztosítás",
+                  "Retusált, azonnal bevethető digitális portfólió",
+                  "Állami tanúsítvány Hajas László aláírásával",
+                  "Mentorálás kizárólag kis létszámú csoportban"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-4 text-base text-cream-100/80 font-light">
+                    <span className="text-gold-500 font-bold">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Right Column Academy Registration Card */}
-          <div className="lg:col-span-6 bg-charcoal-800 rounded-2xl p-6 sm:p-8 border border-gold-400/20 shadow-2xl relative">
+          {/* Right Column - Refined Form */}
+          <div className="lg:w-1/2 w-full">
             <AnimatePresence mode="wait">
               {!isSuccess ? (
                 <motion.div
-                  key="academy-form"
+                  key="form"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  className="space-y-12"
                 >
-                  <div className="mb-6">
-                    <h3 className="font-serif-lux text-2xl font-semibold text-white tracking-tight">
-                      JELENTKEZÉSI ÜRLAP
-                    </h3>
-                    <p className="text-xs text-cream-300 font-mono uppercase tracking-widest mt-1 text-gold-405">
-                      ALAPOZÓ SMINKKÉPZÉS (100 ÓRA)
-                    </p>
-                    <p className="text-xs text-cream-350 font-light mt-2">
-                      Küldd be motivációdat és adataidat, Kinga személyesen értékel minden jelentkezést.
-                    </p>
+                  <div className="space-y-2 border-b border-white/10 pb-8">
+                    <h3 className="font-serif-lux text-3xl font-light text-white">Jelentkezési űrlap</h3>
+                    <p className="text-[10px] font-bold tracking-luxury text-gold-400 uppercase">Alapozó sminkképzés / 100 óra</p>
                   </div>
 
                   {error && (
-                    <div className="mb-4 bg-red-950/40 border border-red-500/30 text-red-200 text-xs p-3 rounded-lg">
-                      {error}
-                    </div>
+                    <p className="text-xs text-rose-400 italic font-serif-lux">{error}</p>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    
-                    {/* Name input */}
-                    <div>
-                      <label className="block text-[11px] font-mono uppercase tracking-wider text-cream-350 mb-1">
-                        Teljes Név *
-                      </label>
-                      <div className="relative">
-                        <User className="absolute left-3 top-3.5 w-4 h-4 text-cream-400" />
+                  <form onSubmit={handleSubmit} className="space-y-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      {/* Name */}
+                      <div className="relative group">
                         <input 
                           type="text" 
-                          placeholder="Pl.: Kovács Eszter"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full bg-charcoal-900 text-cream-100 placeholder:text-cream-500 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-gold-400 border border-charcoal-700 focus:border-gold-400 transition-colors"
+                          className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
+                          placeholder="TELJES NÉV"
                         />
                       </div>
-                    </div>
-
-                    {/* Phone input */}
-                    <div>
-                      <label className="block text-[11px] font-mono uppercase tracking-wider text-cream-350 mb-1">
-                        Telefonszám *
-                      </label>
-                      <div className="relative">
-                        <Phone className="absolute left-3 top-3.5 w-4 h-4 text-cream-400" />
+                      {/* Phone */}
+                      <div className="relative group">
                         <input 
                           type="tel" 
-                          placeholder="Pl.: +36 30 123 4567"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full bg-charcoal-900 text-cream-100 placeholder:text-cream-500 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-gold-400 border border-charcoal-700 focus:border-gold-400 transition-colors"
+                          className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
+                          placeholder="TELEFONSZÁM"
                         />
                       </div>
                     </div>
 
-                    {/* Email and Age Row */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                      <div className="sm:col-span-2">
-                        <label className="block text-[11px] font-mono uppercase tracking-wider text-cream-350 mb-1">
-                          E-mail Cím *
-                        </label>
-                        <div className="relative">
-                          <Mail className="absolute left-3 top-3.5 w-4 h-4 text-cream-400" />
-                          <input 
-                            type="email" 
-                            placeholder="Pl.: eszter@pelda.hu"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full bg-charcoal-900 text-cream-100 placeholder:text-cream-500 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-gold-400 border border-charcoal-700 focus:border-gold-400 transition-colors"
-                          />
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                      {/* Email */}
+                      <div className="md:col-span-2 relative group">
+                        <input 
+                          type="email" 
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
+                          placeholder="E-MAIL CÍM"
+                        />
                       </div>
-
-                      <div>
-                        <label className="block text-[11px] font-mono uppercase tracking-wider text-cream-350 mb-1">
-                          Életkor *
-                        </label>
+                      {/* Age */}
+                      <div className="relative group">
                         <input 
                           type="text" 
-                          placeholder="Pl.: 24"
                           value={age}
                           onChange={(e) => setAge(e.target.value)}
-                          className="w-full bg-charcoal-900 text-cream-100 placeholder:text-cream-550 rounded-lg px-4 py-3 text-sm text-center focus:outline-none focus:ring-1 focus:ring-gold-400 border border-charcoal-700 focus:border-gold-400 transition-colors"
+                          className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
+                          placeholder="ÉLETKOR"
                         />
                       </div>
                     </div>
 
-                    {/* Motivation Essay */}
-                    <div>
-                      <label className="block text-[11px] font-mono uppercase tracking-wider text-cream-350 mb-1">
-                        Írd le pár mondatban a motivációdat: Miért szeretnél profi sminkessé válni és mit csináltál eddig? *
-                      </label>
+                    {/* Motivation */}
+                    <div className="relative group">
                       <textarea
-                        rows={4}
-                        placeholder="Írd le miért keresed a fejlődést, Kinga kizárólag az elhivatott és alkotni vágyó diákokat fogadja be."
+                        rows={3}
                         value={motivation}
                         onChange={(e) => setMotivation(e.target.value)}
-                        className="w-full bg-charcoal-900 text-cream-100 placeholder:text-cream-500 rounded-lg px-4 py-3 text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-gold-400 border border-charcoal-700 focus:border-gold-400 transition-colors resize-none leading-relaxed"
+                        className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20 resize-none"
+                        placeholder="ÍRD LE PÁR MONDATBAN A MOTIVÁCIÓDAT..."
                       />
                     </div>
 
-                    {/* Explicit Opt-in Checkbox */}
-                    <label className="flex items-start gap-2.5 cursor-pointer group mt-2 pt-1 select-none">
-                      <input 
-                        type="checkbox" 
-                        checked={agree}
-                        onChange={(e) => setAgree(e.target.checked)}
-                        className="mt-1 accent-gold-400 h-4 w-4 shrink-0 rounded text-charcoal-950 border-charcoal-700 focus:ring-gold-400"
-                      />
-                      <span className="text-[11px] text-cream-300 font-light leading-relaxed group-hover:text-white transition-colors">
-                        Elfogadom az Adatkezelési Tájékoztatót és hozzájárulok a jelentkezésem feldolgozásához.
-                      </span>
-                    </label>
+                    <div className="space-y-8">
+                      <label className="flex items-start gap-4 cursor-pointer group">
+                        <input 
+                          type="checkbox" 
+                          checked={agree}
+                          onChange={(e) => setAgree(e.target.checked)}
+                          className="mt-1 accent-gold-400 h-4 w-4 shrink-0 bg-transparent border-white/20"
+                        />
+                        <span className="text-[11px] text-cream-100/40 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
+                          Elfogadom az adatkezelési tájékoztatót.
+                        </span>
+                      </label>
 
-                    {/* Apply button */}
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-gold-500 hover:bg-gold-600 text-charcoal-950 py-4 px-6 rounded-xl font-sans font-bold uppercase tracking-wider text-xs sm:text-sm shadow-lg border border-gold-400 hover:border-gold-500 transition-all cursor-pointer flex items-center justify-center gap-2 mt-4"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <svg className="animate-spin h-5 w-5 text-charcoal-950" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                          </svg>
-                          JELENTKEZÉS FELDOLGOZÁSA...
-                        </>
-                      ) : (
-                        <>
-                          <Bookmark className="w-4 h-4 text-charcoal-950 fill-current" />
-                          KÜLDÖM A JELENTKEZÉSEM ÉS A MOTIVÁCIÓMAT
-                        </>
-                      )}
-                    </button>
-
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="group relative w-full py-6 bg-gold-500 text-charcoal-900 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-gold-400 rounded-none"
+                      >
+                        <span className="relative z-10">{isSubmitting ? 'Feldolgozás...' : 'Jelentkezés küldése'}</span>
+                      </button>
+                    </div>
                   </form>
-
-                  {/* FUD Footer Box */}
-                  <div className="mt-4 p-3 bg-charcoal-950/40 rounded-lg border border-charcoal-700/60">
-                    <p className="text-[10px] text-cream-300 font-light leading-relaxed text-center">
-                      🔒 Az űrlap kitöltése után egy automatikus megerősítő e-mailt kapsz a helyfoglaláshoz szükséges számlaszámmal. A csoportok telítettsége után 3-4 héttel a részletes heti órarendet és a modellszükségleti listát is kiküldjük.
-                    </p>
-                  </div>
-
                 </motion.div>
               ) : (
                 <motion.div
-                  key="academy-success"
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-center py-12 space-y-6"
+                  className="py-20 text-center space-y-8 border border-white/10"
                 >
-                  <div className="w-16 h-16 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center mx-auto border border-gold-400/40">
-                    <ShieldCheck className="w-8 h-8" />
+                  <div className="space-y-4">
+                    <h3 className="font-serif-lux text-4xl font-light text-white">Köszönjük.</h3>
+                    <p className="text-xs text-gold-400 uppercase tracking-luxury">Jelentkezésedet rögzítettük.</p>
                   </div>
-                  
-                  <div className="space-y-2">
-                    <h3 className="font-serif-lux text-2xl font-bold text-white tracking-tight">
-                      Gratulálunk!
-                    </h3>
-                    <p className="text-xs text-gold-400 uppercase font-mono tracking-widest">
-                      A Motivációs jelentkezésed sikeresen beérkezett!
-                    </p>
-                  </div>
-
-                  <p className="text-sm text-cream-200 font-light max-w-sm mx-auto leading-relaxed">
-                    Kinga 24 órán belül személyesen hívni fog a megadott számon a tervezéssel kapcsolatban. Küldtünk egy automatikus tájékoztató levelet e-mail fiókodba a heti órarenddel és a banki adatokkal.
+                  <p className="text-sm text-cream-100/60 font-light max-w-xs mx-auto leading-relaxed">
+                    Kinga 24 órán belül személyesen keresni fog a megadott telefonszámon.
                   </p>
-
                   <button
-                    onClick={handleReset}
-                    className="px-6 py-2.5 border border-charcoal-700 hover:border-gold-400/40 rounded-lg text-xs font-mono tracking-wider uppercase text-cream-300 hover:text-white transition-colors cursor-pointer"
+                    onClick={() => setIsSuccess(false)}
+                    className="text-[10px] font-bold tracking-luxury text-white/40 uppercase hover:text-white transition-colors"
                   >
-                    Új Jelentkezés leadása
+                    Vissza az űrlaphoz
                   </button>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
-
         </div>
       </div>
-
     </section>
   );
 }

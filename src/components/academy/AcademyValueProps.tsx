@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { motion } from 'motion/react';
 
 export default function AcademyValueProps() {
   const scrollToForm = () => {
@@ -13,274 +14,225 @@ export default function AcademyValueProps() {
     }
   };
 
+  const brands = [
+    "MAKE UP FOR EVER", "INGLOT", "BEN NYE", "GRIMAS", "M·A·C", 
+    "URBAN DECAY", "ANASTASIA BH", "JEFFREE STAR", "BOBBI BROWN", 
+    "MAKE-UP ATELIER", "LIME CRIME", "COLOURPOP", "MADE BY MITCHELL", 
+    "STACEY MARIE", "P.LOUISE"
+  ];
+
+  const techniques = [
+    "AQUA TECHNIKA", "TINTA TECHNIKA", "GEL TECHNIKA", "COLOR SMOKEY", 
+    "CUT CREASE TECHNIKA", "KREATÍV MAKEUP-OK", "STAGE MAKEUP-OK", "KIEGÉSZÍTŐ ELEMEK"
+  ];
+
   return (
-    <section className="py-24 bg-cream-100 space-y-24 md:space-y-32 overflow-hidden">
+    <section className="bg-cream-100 py-32 md:py-48 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-          <span className="text-xs font-mono font-bold tracking-widest text-gold-600 uppercase block">Kiemelkedő Értékajánlataink</span>
-          <h2 className="font-serif-lux text-3xl sm:text-5xl font-medium text-charcoal-900 tracking-tight leading-tight">
-            Minden részlet a szakmai kiteljesedést szolgálja
+        {/* Section Header */}
+        <div className="mb-32 max-w-2xl">
+          <h2 className="font-serif-lux text-4xl sm:text-6xl font-light text-charcoal-800 tracking-tight leading-none mb-8">
+            A szakmai <br /><span className="italic">kiteljesedés</span> útja.
           </h2>
-          <p className="text-charcoal-700 font-light text-sm max-w-lg mx-auto leading-relaxed">
-            Nem titkolózunk, nincsenek kötelező kezdőcsomagok. Az egyetlen célunk, hogy gondolkodó, sikeres szakembert képezzünk belőled gyorsan és alaposan.
+          <p className="text-lg text-charcoal-700/70 font-light leading-relaxed">
+            Nem titkolózunk, nincsenek kötelező kezdőcsomagok. Az egyetlen célunk, hogy gondolkodó, sikeres szakembert képezzünk belőled.
           </p>
         </div>
         
-        <div className="flex flex-col">
+        <div className="space-y-48 md:space-y-64">
           
-          {/* Pillar 1: Material Security */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-6">
-              <span className="text-[11px] font-mono font-bold text-gold-600 uppercase tracking-widest block">01 / ANYAGELLÁTÁS</span>
-              <h3 className="font-serif-lux text-3xl sm:text-4xl font-medium text-charcoal-900 tracking-tight leading-tight">
-                Teljes Körű Prémium Anyagbiztosítás Extra Költségek Nélkül
-              </h3>
-              <p className="text-charcoal-700 font-light leading-relaxed">
-                A képzés teljes időtartama alatt minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit és csúcskategóriás eszközeit korlátlanul biztosítjuk számodra szegedi és budapesti lakásstúdiónkban. Így egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra kidobnod a beiratkozás előtt. Ráadásul Kinga segít összeállítani a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatja, mi az a 3 kulcspaletta, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
+          {/* Pillar 1: Material Security - Asymmetrical Layout */}
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="lg:w-1/2 space-y-10"
+            >
+              <div className="space-y-4">
+                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">01 / Anyagellátás</span>
+                <h3 className="font-serif-lux text-3xl sm:text-4xl font-light text-charcoal-800 leading-tight">
+                  Teljes körű prémium anyagbiztosítás <br /> extra költségek nélkül.
+                </h3>
+              </div>
+              <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                A képzés teljes időtartama alatt minden luxus- és professzionális alapanyagot korlátlanul biztosítunk számodra. Így egyetlen forintot sem kell felesleges kezdőcsomagokra kidobnod. Kinga pontosan megmutatja, mi az a 3 kulcspaletta, amivel a munka 90%-át megoldhatod.
               </p>
               
-              <div className="bg-gold-50 border-l-4 border-gold-400 p-4 rounded-r-lg italic text-charcoal-800 text-sm shadow-sm">
-                „Hatalmas megkönnyebbülés volt, hogy nem kellett százezreket elköltenem sminkcuccokra az első nap előtt. Mindenből a legfelsőbb kategóriát kaptuk!” – D. Eszter, végzett tanuló.
+              <div className="pl-8 border-l border-gold-400/30">
+                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
+                  „Hatalmas megkönnyebbülés volt, hogy nem kellett százezreket elköltenem sminkcuccokra az első nap előtt.”
+                </p>
+                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— D. Eszter</p>
               </div>
+            </motion.div>
 
-              <div className="pt-2">
-                <button 
-                  onClick={scrollToForm}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-gold-600 uppercase hover:text-gold-700 transition-colors cursor-pointer"
-                >
-                  Felveszem a kapcsolatot Kingával &rarr;
-                </button>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              className="lg:w-1/2 relative"
+            >
+              <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=800" 
+                  alt="Profi sminkek" 
+                  className="w-full h-full object-cover grayscale-[0.1]"
+                />
               </div>
-            </div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 border-t border-r border-gold-300/20 -z-10" />
+            </motion.div>
+          </div>
 
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg border border-cream-300">
-              <img 
-                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600" 
-                alt="Profi sminkek" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
+          {/* Subdued Brand Bar - Replacing loud marquee */}
+          <div className="py-20 border-y border-charcoal-800/5">
+            <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-12">
+              Korlátlanul biztosított prémium márkáink
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
+              {brands.slice(0, 8).map((brand, idx) => (
+                <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
+                  {brand}
+                </span>
+              ))}
             </div>
           </div>
 
-          {/* Endless Moving Logo Marquee for Luxury Brands */}
-          <div className="relative py-12 my-12 lg:my-16 overflow-hidden bg-cream-200/50 border-y border-cream-350/40 -mx-4 sm:-mx-6 lg:-mx-8">
-            <style>{`
-              @keyframes marquee-scroll {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-              }
-              .animate-marquee-scroll {
-                display: flex;
-                width: max-content;
-                animation: marquee-scroll 40s linear infinite;
-              }
-            `}</style>
-            
-            <div className="text-center mb-6 px-4">
-              <span className="text-[10px] font-mono tracking-widest text-gold-700 font-bold uppercase block">
-                A stúdiókban korlátlanul biztosított prémium márkáink:
-              </span>
-            </div>
-
-            <div className="flex overflow-hidden relative w-full select-none">
-              <div className="animate-marquee-scroll py-2 flex items-center">
-                {[
-                  "MAKE UP FOR EVER", "INGLOT", "BEN NYE", "GRIMAS", "M·A·C", 
-                  "URBAN DECAY", "ANASTASIA BH", "JEFFREE STAR", "BOBBI BROWN", 
-                  "MAKE-UP ATELIER", "LIME CRIME", "COLOURPOP", "MADE BY MITCHELL", 
-                  "STACEY MARIE", "P.LOUISE",
-                  "MAKE UP FOR EVER", "INGLOT", "BEN NYE", "GRIMAS", "M·A·C", 
-                  "URBAN DECAY", "ANASTASIA BH", "JEFFREE STAR", "BOBBI BROWN", 
-                  "MAKE-UP ATELIER", "LIME CRIME", "COLOURPOP", "MADE BY MITCHELL", 
-                  "STACEY MARIE", "P.LOUISE"
-                ].map((brand, idx) => (
-                  <span 
-                    key={idx}
-                    className="font-sans text-xs sm:text-sm tracking-[0.2em] font-semibold text-charcoal-900 bg-white border border-cream-300/80 px-6 py-3 rounded-full shadow-sm mx-4 inline-block transition-all hover:border-gold-400 hover:bg-gold-50/50 whitespace-nowrap"
-                  >
-                    {brand}
-                  </span>
-                ))}
+          {/* Pillar 2: Retouched Portfolio - Reversed Asymmetry */}
+          <div className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-32 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="lg:w-1/2 space-y-10"
+            >
+              <div className="space-y-4">
+                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">02 / Portfólió</span>
+                <h3 className="font-serif-lux text-3xl sm:text-4xl font-light text-charcoal-800 leading-tight">
+                  Saját fotóstúdió és retusált <br /> digitális portfólió.
+                </h3>
               </div>
-              
-              {/* Fade masks for elegant edge transition */}
-              <div className="absolute top-0 left-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-cream-100 to-transparent pointer-events-none z-10" />
-              <div className="absolute top-0 right-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-cream-100 to-transparent pointer-events-none z-10" />
-            </div>
-          </div>
-
-          {/* Pillar 2: Retouched Portfolio */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3] shadow-lg border border-cream-300">
-              <img 
-                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=600" 
-                alt="Portfólió fotózás" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </div>
-
-            <div className="order-1 lg:order-2 space-y-6">
-              <span className="text-[11px] font-mono font-bold text-gold-600 uppercase tracking-widest block">02 / PORTFÓLIÓ</span>
-              <h3 className="font-serif-lux text-3xl sm:text-4xl font-medium text-charcoal-900 tracking-tight leading-tight">
-                Saját Fotóstúdió és Retusált Digitális Portfólió
-              </h3>
-              <p className="text-charcoal-700 font-light leading-relaxed">
-                A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról professzionális stúdiókörnyezetben, csúcsminőségű felszereléssel készítünk képeket. A kész, precízen retusált, magazin-minőségű fotókból egy olyan komplett digitális portfóliót kapsz, amivel azonnal magabiztosan szerezhetsz prémium vendégeket.
+              <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                A tanfolyam során elkészített legjobb sminkjeidről professzionális stúdiókörnyezetben készítünk képeket. A kész, precízen retusált fotókból egy olyan komplett portfóliót kapsz, amivel azonnal magabiztosan szerezhetsz prémium vendégeket.
               </p>
 
-              <div className="bg-gold-50 border-l-4 border-gold-400 p-4 rounded-r-lg italic text-charcoal-800 text-sm shadow-sm">
-                „A portfólióm miatt azonnal megkerestek esküvői felkérésekkel az első hetekben. Döbbenetes magabiztosságot adott!” – László Petra.
+              <div className="pl-8 border-l border-gold-400/30">
+                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
+                  „A portfólióm miatt azonnal megkerestek esküvői felkérésekkel az első hetekben. Döbbenetes volt!”
+                </p>
+                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— László Petra</p>
               </div>
+            </motion.div>
 
-              <div className="pt-2">
-                <button 
-                  onClick={scrollToForm}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-gold-600 uppercase hover:text-gold-700 transition-colors cursor-pointer"
-                >
-                  Jelentkezem a képzésre &rarr;
-                </button>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              className="lg:w-1/2 relative"
+            >
+              <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=800" 
+                  alt="Portfólió fotózás" 
+                  className="w-full h-full object-cover grayscale-[0.1]"
+                />
               </div>
-            </div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b border-l border-gold-300/20 -z-10" />
+            </motion.div>
           </div>
 
-          {/* Endless Moving Photo Marquee for Student Portfolio */}
-          <div className="relative py-12 my-12 lg:my-16 overflow-hidden bg-cream-200/50 border-y border-cream-350/40 -mx-4 sm:-mx-6 lg:-mx-8">
-            <div className="text-center mb-8 px-4">
-              <span className="text-[10px] font-mono tracking-widest text-gold-700 font-bold uppercase block">
-                Néhány profi fotó korábbi diákjaink portfóliójából:
-              </span>
-            </div>
-
-            <div className="flex overflow-hidden relative w-full select-none">
-              <div className="animate-marquee-scroll py-2 flex items-center">
-                {[
-                  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
-                  // Loop redundancy for seamless scrolling marquee
-                  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
-                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
-                ].map((imgUrl, idx) => (
-                  <div 
-                    key={idx}
-                    className="w-40 h-52 sm:w-48 sm:h-64 rounded-2xl overflow-hidden shadow-md border border-cream-300/80 mx-4 inline-block transition-transform duration-300 hover:scale-[1.03] hover:border-gold-400 select-none pointer-events-none bg-charcoal-900"
-                  >
-                    <img 
-                      src={imgUrl} 
-                      alt={`Student Portfolio Work ${idx}`} 
-                      className="w-full h-full object-cover select-none pointer-events-none"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                ))}
+          {/* Pillar 3: Metodika */}
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="lg:w-1/2 space-y-10"
+            >
+              <div className="space-y-4">
+                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">03 / Metodika</span>
+                <h3 className="font-serif-lux text-3xl sm:text-4xl font-light text-charcoal-800 leading-tight">
+                  Legkeresettebb, legmodernebb <br /> technikák.
+                </h3>
               </div>
-              
-              {/* Fade masks for elegant edge transition */}
-              <div className="absolute top-0 left-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-cream-100 to-transparent pointer-events-none z-10" />
-              <div className="absolute top-0 right-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-cream-100 to-transparent pointer-events-none z-10" />
-            </div>
-          </div>
-
-          {/* Pillar 3: Duplicated Modeling */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-12 md:mt-16 lg:mt-24">
-            <div className="space-y-6">
-              <span className="text-[11px] font-mono font-bold text-gold-600 uppercase tracking-widest block">03 / METODIKA</span>
-              <h3 className="font-serif-lux text-3xl sm:text-4xl font-medium text-charcoal-900 tracking-tight leading-tight">
-                Legkeresettebb, legmodernebb technikák
-              </h3>
-              <p className="text-charcoal-700 font-light leading-relaxed">
-                Úgy építettük fel a tanmenetet, hogy minden héten egy-egy modern, piacképes technikát sajátíts el mélyrehatóan. Miután az első napon végignézted a professzionális bemutatót és begyakoroltad a lépéseket, a második napon egy teljesen új karakterű modellen, más színvilággal alkotod meg ugyanazt a sminket. Így a technika azonnal rögzül a kezedben, és pontosan látni fogod, hogyan alakítsd a mozdulatokat a különböző arcformákhoz.
+              <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                Úgy építettük fel a tanmenetet, hogy minden héten egy-egy modern, piacképes technikát sajátíts el mélyrehatóan. A második napon egy teljesen új karakterű modellen alkotod meg ugyanazt a sminket, így a technika azonnal rögzül.
               </p>
-
-              <div className="pt-2">
-                <button 
-                  onClick={scrollToForm}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-gold-600 uppercase hover:text-gold-700 transition-colors cursor-pointer"
-                >
-                  Szeretném elsajátítani a technikákat &rarr;
-                </button>
-              </div>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg border border-cream-300">
-              <img 
-                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=600" 
-                alt="Modell sminkelés" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </div>
-          </div>
-
-          {/* Endless Moving Tech Marquee for Techniques */}
-          <div className="relative py-12 mt-16 md:mt-24 lg:mt-32 overflow-hidden bg-cream-200/50 border-y border-cream-350/40 -mx-4 sm:-mx-6 lg:-mx-8">
-            <div className="text-center mb-6 px-4">
-              <span className="text-[10px] font-mono tracking-widest text-gold-700 font-bold uppercase block">
-                Néhány technika a sok közül, amit nálunk elsajátítasz majd:
-              </span>
-            </div>
-
-            <div className="flex overflow-hidden relative w-full select-none">
-              <div className="animate-marquee-scroll py-2 flex items-center">
-                {[
-                  "AQUA TECHNIKA", "TINTA TECHNIKA", "GEL TECHNIKA", "COLOR SMOKEY", 
-                  "CUT CREASE TECHNIKA", "KREATÍV MAKEUP-OK", "STAGE MAKEUP-OK", "KIEGÉSZÍTŐ ELEMEK",
-                  "AQUA TECHNIKA", "TINTA TECHNIKA", "GEL TECHNIKA", "COLOR SMOKEY", 
-                  "CUT CREASE TECHNIKA", "KREATÍV MAKEUP-OK", "STAGE MAKEUP-OK", "KIEGÉSZÍTŐ ELEMEK"
-                ].map((tech, idx) => (
-                  <span 
-                    key={idx}
-                    className="font-sans text-xs sm:text-sm tracking-[0.2em] font-semibold text-charcoal-900 bg-white border border-cream-300/80 px-6 py-3 rounded-full shadow-sm mx-4 inline-block transition-all hover:border-gold-400 hover:bg-gold-50/50 whitespace-nowrap"
-                  >
+              
+              <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4">
+                {techniques.slice(0, 4).map((tech, idx) => (
+                  <span key={idx} className="text-[10px] font-bold tracking-widest text-charcoal-700/50 uppercase">
                     {tech}
                   </span>
                 ))}
               </div>
-              
-              {/* Fade masks for elegant edge transition */}
-              <div className="absolute top-0 left-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-cream-100 to-transparent pointer-events-none z-10" />
-              <div className="absolute top-0 right-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-cream-100 to-transparent pointer-events-none z-10" />
-            </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              className="lg:w-1/2"
+            >
+              <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800" 
+                  alt="Modell sminkelés" 
+                  className="w-full h-full object-cover grayscale-[0.1]"
+                />
+              </div>
+            </motion.div>
           </div>
 
-          {/* Pillar 4: Skin Logic & Cosmetics Base */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-12 md:mt-16 lg:mt-24">
-            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden aspect-[4/3] shadow-lg border border-cream-300">
-              <img 
-                src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600" 
-                alt="Bőrdiagnosztika és bőrismeret" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            <div className="order-1 lg:order-2 space-y-6">
-              <span className="text-[11px] font-mono font-bold text-gold-600 uppercase tracking-widest block">04 / BŐRDIAGNOSZTIKA</span>
-              <h3 className="font-serif-lux text-3xl sm:text-4xl font-medium text-charcoal-900 tracking-tight leading-tight">
-                A bőr ismerete nélkül a smink csak festék. Itt az alapoktól sajátítod el a lényeget.
-              </h3>
-              <p className="text-charcoal-700 font-light leading-relaxed">
-                Kinga közel 10 év kozmetikusi tapasztalattal tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát. Azt a gondolkodást, amivel minden egyes vendéghez másképpen állsz hozzá – amitől a munkád prémium lesz, nem csak szép.
+          {/* Pillar 4: Bőrdiagnosztika */}
+          <div className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-32 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="lg:w-1/2 space-y-10"
+            >
+              <div className="space-y-4">
+                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">04 / Bőrdiagnosztika</span>
+                <h3 className="font-serif-lux text-3xl sm:text-4xl font-light text-charcoal-800 leading-tight">
+                  A bőr ismerete nélkül <br /> a smink csak festék.
+                </h3>
+              </div>
+              <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                Kinga közel 10 év kozmetikusi tapasztalattal tanít. Megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát. Azt a gondolkodást, amivel minden vendéghez másképpen állsz hozzá.
               </p>
 
-              <div className="pt-2">
-                <button 
-                  onClick={scrollToForm}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-gold-600 uppercase hover:text-gold-700 transition-colors cursor-pointer"
-                >
-                  Megtanulom a bőr rejtelmeit &rarr;
-                </button>
+              <button 
+                onClick={scrollToForm}
+                className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase border-b border-gold-400 pb-1 hover:text-gold-600 transition-colors"
+              >
+                Megtanulom a bőr rejtelmeit &rarr;
+              </button>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              className="lg:w-1/2"
+            >
+              <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800" 
+                  alt="Bőrdiagnosztika" 
+                  className="w-full h-full object-cover grayscale-[0.1]"
+                />
               </div>
-            </div>
+            </motion.div>
           </div>
 
         </div>

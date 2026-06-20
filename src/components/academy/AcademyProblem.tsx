@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Check, X, Sparkles } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function AcademyProblem() {
   const comparisonItems = [
@@ -35,90 +35,97 @@ export default function AcademyProblem() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#FAF8F5] relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-px bg-gradient-to-r from-transparent via-[#EADFCB]/60 to-transparent" />
-      
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-32 md:py-48 bg-cream-100 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono font-bold tracking-widest text-[#A67E2E] uppercase block">Közös célok, Közös sikerek</span>
-          <h2 className="font-serif-lux text-3xl sm:text-4.5xl font-medium tracking-tight text-[#161514] leading-tight">
-            Miben különbözik ez a tanfolyam minden más elérhető kurzustól?
+        {/* Section Heading - Editorial & Minimal */}
+        <div className="max-w-3xl mb-24 space-y-6">
+          <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
+            A különbség a részletekben rejlik.
           </h2>
-          <div className="h-0.5 w-16 bg-[#D7A84E] mx-auto mt-4" />
+          <p className="text-lg text-charcoal-700/70 font-light max-w-xl">
+            Miért választják a legigényesebb tanulók Kinga mentorprogramját a tömegképzések helyett?
+          </p>
         </div>
 
-        {/* Comparison System (Two Separated Cards) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+        {/* Comparison System (Refined Editorial Cards) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
-          {/* Box 1: A TIPIKUS SMINKISKOLA */}
-          <div className="bg-white rounded-2xl border border-red-100 shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
-            {/* Header */}
-            <div className="bg-red-500/10 border-b border-red-100 py-6 px-6 sm:px-8 flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center shrink-0 text-red-600 font-mono font-bold text-xs">
-                ✗
-              </span>
-              <div>
-                <h3 className="font-mono font-bold uppercase tracking-wider text-xs text-red-700">
-                  A TIPIKUS SMINKISKOLA
-                </h3>
-                <p className="text-[10px] text-red-600 font-light mt-0.5">Mivel találkozhatsz máshol a piacon?</p>
-              </div>
+          {/* Card 1: A TIPIKUS SMINKISKOLA (Muted & Quiet) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="space-y-2 border-b border-charcoal-800/10 pb-8">
+              <h3 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-700/50 font-sans">
+                Standard Oktatás
+              </h3>
+              <p className="font-serif-lux text-2xl italic text-charcoal-700/60">
+                Amivel máshol találkozhatsz...
+              </p>
             </div>
 
-            {/* List */}
-            <div className="p-6 sm:p-8 space-y-5 flex-grow">
+            <ul className="space-y-8">
               {comparisonItems.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <span className="text-red-400 font-bold shrink-0 mt-0.5">✗</span>
-                  <p className="text-sm font-light text-[#63615D] leading-relaxed">
+                <li key={idx} className="flex items-start gap-6 group">
+                  <span className="text-charcoal-700/30 font-light text-lg mt-[-2px]">—</span>
+                  <p className="text-base font-light text-charcoal-700/70 leading-relaxed">
                     {item.typical}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </motion.div>
 
-          {/* Box 2: KINGA STÚDIÓJA */}
-          <div className="bg-[#1E1D1A] rounded-2xl border border-[#D7A84E]/30 shadow-2xl overflow-hidden flex flex-col relative hover:shadow-gold-500/5 transition-shadow duration-300">
-            {/* Premium Gold Ribbon or Indicator */}
-            <div className="absolute top-0 right-0 bg-[#D7A84E] text-charcoal-950 font-mono font-bold text-[9px] tracking-widest uppercase px-3 py-1 rounded-bl-lg">
-              PRÉMIUM VÁLASZTÁS
-            </div>
-
-            {/* Header */}
-            <div className="bg-charcoal-950/40 border-b border-charcoal-800 py-6 px-6 sm:px-8 flex items-center gap-3">
-              <Sparkles className="w-5 h-5 text-[#E1C083] shrink-0" />
-              <div>
-                <h3 className="font-mono font-bold uppercase tracking-wider text-xs text-[#E1C083]">
-                  KINGA STÚDIÓJA
-                </h3>
-                <p className="text-[10px] text-cream-300 font-light mt-0.5">Amit nálunk kapsz az első naptól</p>
-              </div>
+          {/* Card 2: KINGA STÚDIÓJA (Confident & Elegant) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-charcoal-800 p-10 md:p-16 relative shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]"
+          >
+            {/* Subtle Label */}
+            <div className="absolute top-10 right-10 text-[9px] font-bold tracking-[0.3em] text-gold-400/50 uppercase">
+              Atelier Standard
             </div>
 
-            {/* List */}
-            <div className="p-6 sm:p-8 space-y-5 flex-grow bg-gradient-to-b from-[#1E1D1A] to-[#161514]">
+            <div className="space-y-2 border-b border-white/10 pb-8 mb-12">
+              <h3 className="text-[11px] font-bold uppercase tracking-luxury text-gold-400 font-sans">
+                Kinga Stúdiója
+              </h3>
+              <p className="font-serif-lux text-2xl italic text-cream-100">
+                Amit nálunk kapsz az első naptól
+              </p>
+            </div>
+
+            <ul className="space-y-8">
               {comparisonItems.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <span className="text-gold-400 font-bold shrink-0 mt-0.5">✓</span>
-                  <p className="text-sm font-medium text-cream-100 leading-relaxed">
+                <li key={idx} className="flex items-start gap-6">
+                  <span className="text-gold-400 font-bold text-sm mt-1">✓</span>
+                  <p className="text-base font-medium text-cream-100/90 leading-relaxed">
                     {item.kinga}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </motion.div>
 
         </div>
 
-        {/* Micro Guarantee Label */}
-        <div className="max-w-5xl mx-auto mt-8 bg-white/60 backdrop-blur-sm p-5 rounded-2xl border border-[#EADFCB]/30 text-center shadow-sm">
-          <p className="text-xs text-[#857B69] font-light flex items-center justify-center gap-2">
-            <Sparkles className="w-3.5 h-3.5 text-[#A67E2E]" />
-            Garantáljuk a 100%-os anyagbiztosítást és az egyénre szabott, exkluzív mentorálást.
+        {/* Museum Moment: A brief, confident statement instead of a boxy guarantee */}
+        <div className="mt-48 text-center">
+          <p className="font-serif-lux text-2xl sm:text-3xl italic text-charcoal-800 max-w-2xl mx-auto leading-relaxed">
+            "A célom nem a tömegtermelés, hanem a szakmai elit kinevelése."
           </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <div className="w-1 h-1 rounded-full bg-gold-400" />
+            <div className="w-1 h-1 rounded-full bg-gold-400" />
+            <div className="w-1 h-1 rounded-full bg-gold-400" />
+          </div>
         </div>
 
       </div>

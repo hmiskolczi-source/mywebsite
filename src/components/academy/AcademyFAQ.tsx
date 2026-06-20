@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
 
 export default function AcademyFAQ() {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
@@ -18,66 +17,62 @@ export default function AcademyFAQ() {
     {
       id: 'fa1',
       question: 'Nincs sminkes előképzettségem. Nekem való ez a képzés?',
-      answer: 'Igen. A feltétel nem az előképzettség, hanem az elhivatottság. Az első naptól az alapoktól indulunk, de az ütem és a szint azt teszi lehetővé, hogy 10 hét alatt piacképes tudással kerülj ki. Kinga személyesen szűri a jelentkezőket — hogy biztosan csak komoly, fejlődni vágyó emberek kerüljenek a csoportba.'
+      answer: 'Igen. A feltétel nem az előképzettség, hanem az elhivatottság. Az alapoktól indulunk, de az ütem lehetővé teszi, hogy 10 hét alatt piacképes tudással kerülj ki.'
     },
     {
       id: 'fa2',
       question: 'Mi a garancia, hogy utána munkát kapok?',
-      answer: 'Munkát nem ígérünk — portfóliót, állami tanúsítványt és Kinga személyes ajánlását igen. A végzett tanítványaink 80%-a aktívan dolgozik a szakmában. Az ajánlási hálózatba automatikusan bekerülsz: ha valaki sminkest keres, Kinga téged ajánl. A többi rajtad múlik — de az eszközöket garantáltan megkapod.'
+      answer: 'Portfóliót, állami tanúsítványt és Kinga személyes ajánlását adjuk. A végzett tanítványaink 80%-a aktívan dolgozik a szakmában. A többi rajtad múlik, de az eszközöket garantáltan megkapod.'
     },
     {
       id: 'fa3',
-      question: 'Mi történik, ha betegség vagy utazás miatt lemaradok egy alkalomról?',
-      answer: 'Online pótlási lehetőség: Hiányzás esetén élő videós közvetítés és visszanézhető órák egy zárt Facebook-csoportban. A kis létszám miatt a pótlás egyénileg is kezelhető.'
+      question: 'Mi történik, ha lemaradok egy alkalomról?',
+      answer: 'Online pótlási lehetőséget biztosítunk zárt csoportban, visszanézhető órákkal. A kis létszám miatt a pótlás egyénileg is rugalmasan kezelhető.'
     },
     {
       id: 'fa4',
-      question: 'Nekem kell biztosítanom a modelleket az órákra?',
-      answer: 'Nem kötelező. Kinga segít modelleket találni, és a portfóliófotózáshoz is biztosítanak modellt. Ha nem találsz senkit, nem maradsz le semmit.'
+      question: 'Nekem kell biztosítanom a modelleket?',
+      answer: 'Nem kötelező. Kinga segít modelleket találni a gyakorlati órákhoz és a portfóliófotózáshoz is. Semmiben nem maradsz le, ha nincs saját modelled.'
     },
     {
       id: 'fa5',
-      question: 'Mi van, ha nem teljesítem a záróvizsgát?',
-      answer: 'Kinga addig tartja a kezed, amíg el nem éred a szintet. Egyetlen tanítványát sem engedte ki záróvizsgára, aki nem állt készen — és egyet sem hagyott el az úton. A biztonsági ismétlési lehetőség ezt garantálja.'
+      question: 'Milyen oklevelet kapok a tanfolyam végén?',
+      answer: 'Hivatalos, államilag elismert szakmai tanúsítványt, Hajas László elnök aláírásával és az MFKKE pecsétjével hitelesítve.'
     },
     {
       id: 'fa6',
-      question: 'Milyen hivatalos oklevelet kapok a tanfolyam végén?',
-      answer: 'Felnőttképzési regisztrációs számmal ellátott, a Magyar Fodrász-Kozmetikus-Körmös Egyesület pecsétjével és Hajas László elnök aláírásával hitelesített, államilag elismert szakmai tanúsítványt. Ezt a fotósok, divatirodák és esküvőszervezők azonnal ismerik.'
-    },
-    {
-      id: 'fa7',
-      question: 'Lehetséges a képzési díjat részletekben fizetni?',
-      answer: 'Igen. A helyfoglalás a 10%-os előleg beérkezésével zárul. A maradék összeg 3 részletben, kamat nélkül fizethető (3 × 330 000 Ft).'
+      question: 'Lehetséges a részletfizetés?',
+      answer: 'Igen. A helyfoglalás a 10%-os előleggel zárul, a fennmaradó összeg pedig 3 kamatmentes részletben is fizethető.'
     }
   ];
 
   return (
-    <section className="py-20 bg-cream-200 border-t border-cream-300/30">
+    <section className="py-32 md:py-48 bg-cream-100 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono font-bold tracking-widest text-gold-600 uppercase block">GYIK</span>
-          <h2 className="font-serif-lux text-3xl sm:text-5xl font-medium text-charcoal-900 tracking-tight leading-tight">
-            Kérdésed van? Talán itt rögtön megtalálod:
+        {/* Section Header */}
+        <div className="mb-24 space-y-6">
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Gyakori kérdések</span>
+          <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
+            Részletek, <br /><span className="italic">amikre szükséged lehet.</span>
           </h2>
-          <div className="h-0.5 w-12 bg-gold-400 mx-auto" />
         </div>
 
-        <div className="space-y-4">
+        <div className="divide-y divide-charcoal-800/5">
           {faqs.map((f) => {
             const isOpen = openFaq === f.id;
             return (
-              <div 
-                key={f.id} 
-                className="bg-white rounded-xl border border-cream-200/50 shadow-[0_6px_24px_rgba(20,15,10,0.04)] hover:shadow-[0_12px_32px_rgba(181,149,85,0.08)] overflow-hidden transition-all duration-300"
-              >
+              <div key={f.id} className="py-8">
                 <button
                   onClick={() => toggleFaq(f.id)}
-                  className="w-full flex items-center justify-between p-5 text-left font-sans font-semibold text-charcoal-900 hover:text-gold-600 cursor-pointer"
+                  className="w-full flex items-center justify-between text-left group"
                 >
-                  <span className="text-sm sm:text-base pr-4">{f.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-gold-500 shrink-0 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
+                  <span className="font-serif-lux text-xl sm:text-2xl font-light text-charcoal-800 group-hover:text-gold-600 transition-colors duration-500 pr-8">
+                    {f.question}
+                  </span>
+                  <span className="text-gold-400 font-light text-2xl transition-transform duration-500" style={{ transform: isOpen ? 'rotate(45deg)' : 'none' }}>
+                    +
+                  </span>
                 </button>
                 
                 <AnimatePresence initial={false}>
@@ -86,9 +81,9 @@ export default function AcademyFAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: 'easeInOut' }}
+                      transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
                     >
-                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-charcoal-700 font-light leading-relaxed border-t border-cream-100">
+                      <div className="pt-6 text-base text-charcoal-700/70 font-light leading-relaxed max-w-2xl">
                         {f.answer}
                       </div>
                     </motion.div>

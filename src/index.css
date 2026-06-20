@@ -16,23 +16,31 @@
   --color-gold-700: #6E5324;
   
   --color-cream-50: #FDFCFB;
-  --color-cream-100: #FCFAF6;
+  --color-cream-100: #FAF9F6; /* Refined Alabaster */
   --color-cream-200: #F6F2EA;
   --color-cream-300: #ECE6D9;
   
   --color-charcoal-50: #F2EEEC;
-  --color-charcoal-700: #3C3330;
-  --color-charcoal-800: #2B2321;
+  --color-charcoal-700: #4A4442; /* Softened charcoal */
+  --color-charcoal-800: #2D2B2A; /* Espresso-black */
   --color-charcoal-900: #1C1614;
+  
+  --color-terracotta-400: #D4AF37; /* Muted Rose Gold/Terracotta for accents */
 }
 
 body {
   font-family: var(--font-sans);
   background-color: var(--color-cream-100);
-  color: var(--color-charcoal-900);
+  color: var(--color-charcoal-800);
+  line-height: 1.7; /* Increased line-height for breathing room */
 }
 
 .font-serif-lux {
   font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.tracking-luxury {
+  letter-spacing: 0.2em;
 }
 

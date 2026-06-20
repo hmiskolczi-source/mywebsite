@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function AcademyFounder() {
   const scrollToForm = () => {
@@ -15,66 +15,89 @@ export default function AcademyFounder() {
   };
 
   return (
-    <section className="py-24 bg-cream-200">
+    <section className="py-32 md:py-48 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-center">
           
-          {/* Image on left for founder block */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-gold-300/20 max-w-md mx-auto aspect-[3/4]">
-              <img 
-                src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&q=80&w=600" 
-                alt="Hovorka-Miskolczi Kinga sminkmester"
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-              <div className="absolute bottom-4 left-4 right-4 bg-charcoal-950/80 backdrop-blur-md p-4 rounded-xl border border-gold-400/20">
-                <span className="text-[10px] font-mono font-bold tracking-widest text-gold-400 uppercase">
-                  A MENTOROD
+          {/* Visual Column - Large, editorial portrait */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="lg:w-5/12 w-full"
+          >
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl bg-cream-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&q=80&w=800" 
+                  alt="Hovorka-Miskolczi Kinga sminkmester"
+                  className="w-full h-full object-cover grayscale-[0.1] contrast-[1.05]"
+                />
+              </div>
+              
+              {/* Floating Name Moment */}
+              <div className="absolute -bottom-10 -right-10 p-10 bg-white shadow-xl hidden md:block border border-charcoal-800/5">
+                <span className="text-[10px] font-bold tracking-luxury text-gold-500 uppercase block mb-2">
+                  A mentorod
                 </span>
-                <h4 className="font-serif-lux text-lg font-medium text-white">
-                  Hovorka-Miskolczi Kinga
+                <h4 className="font-serif-lux text-2xl font-light text-charcoal-800">
+                  Hovorka-Miskolczi <br /> Kinga
                 </h4>
-                <p className="text-[10px] text-cream-300 font-light mt-1">
-                  Bajnoki dobogós sminkmester, BABOR sminkmester
-                </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Biographical Narrative on right */}
-          <div className="lg:col-span-7 space-y-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold-400/10 border border-gold-400/30 text-gold-700 text-xs rounded-full font-mono font-bold uppercase tracking-wider">
-              A MENTOROD A SIKER ÚTJÁN
-            </span>
+          {/* Biographical Narrative - Clean typography & wide spacing */}
+          <div className="lg:w-7/12 space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">
+                A mentorod a siker útján
+              </span>
+              
+              <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
+                Nem konkurenciát képzek. <br />
+                <span className="italic">A jövőbeli szakmai partnereimet.</span>
+              </h2>
+            </motion.div>
             
-            <h2 className="font-serif-lux text-3xl sm:text-4.5xl font-medium text-charcoal-900 tracking-tight leading-tight col-span-12">
-              Nem konkurenciát képzek. A jövőbeli szakmai partnereimet.
-            </h2>
-            
-            <div className="w-16 h-0.5 bg-gold-400" />
-            
-            <div className="space-y-4 text-charcoal-700 font-light text-sm sm:text-base leading-relaxed">
+            <div className="space-y-8 text-charcoal-700/80 font-light text-lg leading-relaxed max-w-2xl">
               <p>
-                Hovorka-Miskolczi Kinga vagyok. Több mint 21 éve foglalkozom professzionális sminkeléssel filmforgatásokon, reklámokban, divatbemutatókon, menyasszonyi sminkeken és rangos fashion eseményeken. Közel 10 évig dolgoztam kozmetikusként, mielőtt teljesen a sminkre specializálódtam: a bőrismeret nem kiegészítő a munkámban, hanem az alapja.
+                Hovorka-Miskolczi Kinga vagyok. Több mint 21 éve foglalkozom professzionális sminkeléssel filmforgatásokon, reklámokban, divatbemutatókon és rangos fashion eseményeken. Közel 10 évig dolgoztam kozmetikusként: a bőrismeret nem kiegészítő a munkámban, hanem az alapja.
               </p>
               <p>
                 Nemzetközi versenyeken háromszoros világbajnoki ezüstérmet és Európa-bajnoki aranyérmet szereztem. Ma már nem versenyző vagyok, hanem hazai és nemzetközi zsűritag és versenyfelkészítő.
               </p>
-              <p>
-                15 éve oktatok. Számos sminkest képeztem, akik ma már országszerte és külföldön dolgoznak. 
-              </p>
             </div>
 
-            <blockquote className="border-l-4 border-gold-500 pl-4 py-1 text-charcoal-900 font-serif-lux text-lg italic bg-gold-50/50 p-3 rounded-r-lg shadow-sm">
-              „Az én nevem és szakmai ajánlásom komoly garanciát jelent a piacon: ha a fotósok, divatszakemberek vagy prémium esküvői irodák megtudják, hogy nálam tanultál, az egyet jelent azzal, hogy valóban kiemelkedően sminkelsz, stabil és logikus technikai alapokkal rendelkezel.”
-            </blockquote>
+            <motion.blockquote 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative p-12 bg-charcoal-800"
+            >
+              <div className="relative z-10">
+                <p className="font-serif-lux text-xl italic text-cream-100 leading-relaxed">
+                  „Az én nevem és szakmai ajánlásom komoly garanciát jelent a piacon: ha a fotósok vagy prémium esküvői irodák megtudják, hogy nálam tanultál, az egyet jelent azzal, hogy valóban kiemelkedően sminkelsz.”
+                </p>
+              </div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gold-400/10 -z-0" />
+            </motion.blockquote>
 
-            <div className="pt-2">
+            <div className="pt-8">
               <button
                 onClick={scrollToForm}
-                className="bg-gold-500 hover:bg-gold-600 text-charcoal-950 border border-gold-400 hover:border-gold-500 px-8 py-4 rounded-xl text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all shadow-md cursor-pointer inline-flex items-center gap-2 hover:-translate-y-0.5 active:translate-y-0"
+                className="group relative px-10 py-5 border border-charcoal-800 text-charcoal-800 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:text-cream-100 rounded-none"
               >
-                Jelentkezem Kingához képzésre <ArrowRight className="w-4 h-4" />
+                <span className="relative z-10">Kapcsolatfelvétel Kingával</span>
+                <div className="absolute inset-0 bg-charcoal-800 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               </button>
             </div>
 

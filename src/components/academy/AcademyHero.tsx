@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, Award as Trophy } from 'lucide-react';
+import { Award, Trophy } from 'lucide-react';
 
 export default function AcademyHero() {
   const scrollToForm = () => {
@@ -16,107 +16,130 @@ export default function AcademyHero() {
   };
 
   return (
-    <section className="relative pt-10 pb-20 md:py-24 overflow-hidden border-b border-cream-300/30">
+    <section className="relative pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden bg-cream-100">
+      {/* Background accents - subtle and airy */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-cream-200/50 -skew-x-12 transform origin-top translate-x-1/4 pointer-events-none" />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Social Brands Badge Stack */}
+        {/* Unified, Monochromatic Press/Logo Strip */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8 flex justify-center lg:justify-start"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mb-16 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 grayscale opacity-60"
         >
-          <div className="space-y-2 border-l-2 border-gold-400 pl-4 py-1 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <div className="flex items-center gap-1">
-              <span className="font-serif-lux text-sm font-bold tracking-widest text-charcoal-900 bg-gold-100/60 border border-gold-200 px-2 py-0.5 rounded">BABOR</span>
-              <span className="text-[10px] font-mono text-charcoal-700">magyarországi sminkmestere</span>
-            </div>
-            <div className="h-4 w-px bg-cream-300 font-light hidden sm:inline" />
-            <span className="font-serif-lux font-semibold italic text-charcoal-800 text-sm tracking-wider">Playboy</span>
-            <div className="h-4 w-px bg-cream-300 font-light hidden sm:inline" />
-            <span className="font-serif-lux font-semibold text-charcoal-800 text-sm tracking-wider">Esküvő Classic</span>
-            <div className="h-4 w-px bg-cream-300 font-light hidden sm:inline" />
-            <span className="font-sans font-black uppercase text-red-600 text-sm tracking-tighter">Blikk</span>
-          </div>
+          <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">BABOR</span>
+          <div className="w-px h-4 bg-charcoal-700/20" />
+          <span className="font-serif-lux font-semibold italic text-sm tracking-wider">Playboy</span>
+          <div className="w-px h-4 bg-charcoal-700/20" />
+          <span className="font-serif-lux font-semibold text-sm tracking-wider">Esküvő Classic</span>
+          <div className="w-px h-4 bg-charcoal-700/20" />
+          <span className="font-sans font-black uppercase text-sm tracking-tighter">Blikk</span>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-24 items-start">
           
-          {/* Copywriting Column */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal-900 leading-[1.15]">
-              Válj <span className="text-gold-500 font-semibold">elismert, magasan fizetett sminkessé</span> mindössze 10 hét alatt, hogy végre a saját kreativitásodból élhess, kötöttségek nélkül.
-            </h1>
-            
-            <p className="text-base sm:text-lg text-charcoal-800 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Sajátítsd el a sémamentes sminkelés logikáját egy háromszoros világbajnoki ezüstérmes sminkmester felügyelete alatt. A képzés végén portfólióval, állami tanúsítvánnyal, és gyakorlati tudással távozol: akár már másnap fogadhatsz vendégeket.
-            </p>
+          {/* Main Content Area */}
+          <div className="lg:w-7/12 space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <h1 className="font-serif-lux text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-charcoal-800 leading-[0.95]">
+                A sminktetoválás <br />
+                <span className="italic">művészete.</span>
+              </h1>
+              
+              <div className="max-w-xl space-y-6">
+                <p className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed">
+                  Válj elismert, magasan fizetett szakemberré 10 hét alatt. Sajátítsd el a sémamentes sminkelés logikáját egy háromszoros világbajnoki ezüstérmes mentorálása mellett.
+                </p>
+                <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                  A képzés végén nem csak egy állami tanúsítványt kapsz, hanem egy olyan szakmai identitást, amellyel magabiztosan léphetsz a prémium piacra.
+                </p>
+              </div>
+            </motion.div>
 
-            {/* Action and Click-triggers */}
-            <div className="pt-4 flex flex-col items-center lg:items-start gap-4">
+            {/* CTA and Scarcity - Moved to a quiet note */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row items-center gap-8 pt-4"
+            >
               <button
                 onClick={scrollToForm}
-                className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-charcoal-950 text-sm sm:text-base font-bold tracking-wider uppercase px-8 py-4 sm:py-5 rounded-xl border border-gold-400 hover:border-gold-500 transition-all cursor-pointer shadow-md hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
               >
-                Jelentkezem Kingához képzésre &rarr;
+                <span className="relative z-10">Jelentkezés a képzésre</span>
+                <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
               </button>
               
-              <p className="text-xs text-charcoal-700 font-mono flex items-center gap-1.5 justify-center lg:justify-start">
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
-                5 elérhető hely maradt!
+              <p className="text-xs text-charcoal-700/60 italic font-serif-lux tracking-wide">
+                Csak 5 elérhető hely a következő kurzusra.
               </p>
-            </div>
+            </motion.div>
 
-            {/* Official Pecsétek (Two Forms of Social Proof with Context Quotes) */}
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-cream-300/60 max-w-2xl mx-auto lg:mx-0 text-left">
-              <div className="flex gap-3">
-                <div className="w-12 h-12 rounded-full border border-gold-400 flex items-center justify-center p-2 bg-white shrink-0 shadow-sm">
-                  <Trophy className="w-6 h-6 text-gold-500" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-charcoal-900 font-mono">
-                    MFKKE MINŐSÍTÉS
+            {/* Refined Trust Indicators */}
+            <div className="pt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 border-t border-charcoal-800/5">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Trophy className="w-5 h-5 text-gold-500 stroke-[1.5]" />
+                  <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
+                    MFKKE Minősítés
                   </h4>
-                  <p className="text-xs text-charcoal-700 font-light mt-1">
-                    A Magyar Fodrász-Kozmetikus-Körmös Egyesület hivatalos felnőttképzési minősítése.
-                  </p>
                 </div>
+                <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
+                  Hivatalos felnőttképzési minősítés, mely garantálja a legmagasabb szakmai standardokat.
+                </p>
               </div>
 
-              <div className="flex gap-3">
-                <div className="w-12 h-12 rounded-full border border-gold-400 flex items-center justify-center p-2 bg-white shrink-0 shadow-sm">
-                  <Award className="w-6 h-6 text-gold-500" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-charcoal-900 font-mono">
-                    HAJAS LÁSZLÓ AJÁNLÁSÁVAL
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Award className="w-5 h-5 text-gold-500 stroke-[1.5]" />
+                  <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
+                    Szakmai Garancia
                   </h4>
-                  <p className="text-xs text-charcoal-700 font-light mt-1">
-                    Szakmai garancia, amellyel azonnal komolyan vesznek a divat- és esküvői piacon.
-                  </p>
                 </div>
+                <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
+                  Hajas László ajánlásával: egy név, amely azonnali belépőt jelent a divat- és esküvői piacra.
+                </p>
               </div>
             </div>
-
           </div>
 
-          {/* Visual Column */}
-          <div className="lg:col-span-5 relative mt-6 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-gold-300/20 max-w-md mx-auto aspect-[3/4]">
-              <img 
-                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800"
-                alt="Sminkes asztal és ecsetek" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent flex flex-col justify-end p-6">
-                <p className="text-white font-serif-lux text-xl italic font-medium leading-relaxed">
-                  "Nem kapkodunk sablonokkal. Minden mozdulatot és arcarány-elemzést személyesen, türelemmel rögzítünk."
+          {/* Visual Column - Large, editorial, asymmetrical */}
+          <div className="lg:w-5/12 w-full mt-12 lg:mt-0 lg:sticky lg:top-32">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-cream-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800"
+                  alt="Hovorka-Miskolczi Kinga Atelier" 
+                  className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
+                />
+              </div>
+              
+              {/* Floating Quote Moment */}
+              <div className="absolute -bottom-12 -left-12 p-10 bg-white shadow-xl max-w-xs hidden md:block">
+                <p className="font-serif-lux text-xl italic text-charcoal-800 leading-relaxed">
+                  "A technika tanítható. <br /> Az ízlés nem."
                 </p>
-                <p className="text-gold-400 text-xs font-mono tracking-widest uppercase mt-3">
-                  — Hovorka-Miskolczi Kinga
+                <p className="text-[10px] font-bold tracking-luxury uppercase mt-6 text-gold-600">
+                  Kinga
                 </p>
               </div>
-            </div>
+              
+              {/* Delicate Framing Corners */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-gold-300/30 -z-10" />
+            </motion.div>
           </div>
 
         </div>
