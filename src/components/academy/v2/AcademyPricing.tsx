@@ -59,7 +59,7 @@ export default function AcademyPricing() {
     <section id="academy-pricing" className="py-20 md:py-32 lg:py-48 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header - Responsive Typography */}
+        {/* Section Header */}
         <div className="mb-16 md:mb-24 space-y-6">
           <span className="text-[10px] md:text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Befektetés a jövődbe</span>
           <h2 className="font-serif-lux text-3xl sm:text-4xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1] max-w-4xl">
@@ -70,17 +70,17 @@ export default function AcademyPricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 xl:gap-32 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 xl:gap-32 items-stretch">
           
-          {/* Main Pricing Card - Responsive Padding & Width */}
+          {/* Main Pricing Card */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 bg-white p-6 sm:p-10 md:p-16 lg:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative flex flex-col w-full max-w-3xl mx-auto lg:mx-0"
+            className="flex-1 bg-white p-6 sm:p-10 md:p-16 lg:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-charcoal-800/5 relative flex flex-col min-w-0"
           >
-            {/* Minimal Badge - Simplified for mobile */}
+            {/* Minimal Badge */}
             <div className="absolute top-6 right-6 md:top-10 md:right-10">
               <span className="text-[8px] md:text-[9px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-gold-500 uppercase border border-gold-500/30 px-2 py-1 md:px-3 md:py-1">
                 Exkluzív Előfoglalás
@@ -97,7 +97,7 @@ export default function AcademyPricing() {
                 </p>
               </div>
 
-              {/* Price Highlight - Stacked on mobile */}
+              {/* Price Highlight */}
               <div className="py-8 md:py-12 border-y border-charcoal-800/5 flex flex-col sm:flex-row justify-between items-baseline gap-6 md:gap-8">
                 <div className="space-y-1">
                   <span className="text-[9px] md:text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">Teljes díj</span>
@@ -115,7 +115,7 @@ export default function AcademyPricing() {
                 </div>
               </div>
 
-              {/* Inclusions - Smaller text on mobile */}
+              {/* Inclusions */}
               <div className="space-y-10">
                 <div className="space-y-6">
                   <h4 className="text-[10px] md:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">A program tartalma</h4>
@@ -156,12 +156,12 @@ export default function AcademyPricing() {
             </div>
           </motion.div>
 
-          {/* Sidebar - Fixed Responsiveness for Marquee */}
-          <div className="lg:col-span-5 flex flex-col w-full overflow-hidden">
-            <div className="space-y-8 flex-grow flex flex-col w-full">
-              <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block px-2 lg:px-0 text-center lg:text-left">Tanulói vélemények</span>
+          {/* Sidebar */}
+          <div className="lg:w-[400px] xl:w-[450px] flex flex-col min-w-0">
+            <div className="space-y-8 flex-grow flex flex-col">
+              <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block text-center lg:text-left">Tanulói vélemények</span>
               
-              <div className="relative h-[450px] md:h-[500px] lg:h-[700px] w-full overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
+              <div className="relative flex-grow min-h-[450px] lg:min-h-0 overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
                 <style>{`
                   @keyframes marquee-v2-vertical {
                     0% { transform: translateY(0); }
@@ -177,11 +177,6 @@ export default function AcademyPricing() {
                   }
                   .marquee-v2-scroller:hover {
                     animation-play-state: paused;
-                  }
-                  @media (max-width: 1023px) {
-                    .marquee-v2-scroller {
-                      padding: 1rem;
-                    }
                   }
                 `}</style>
 
@@ -220,9 +215,9 @@ export default function AcademyPricing() {
               </div>
             </div>
 
-            {/* Guarantee Section - Responsive Grid */}
-            <div className="pt-16 mt-12 border-t border-charcoal-800/10 space-y-8 px-2 lg:px-0">
-              <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase italic">100%-os Gyakorlati Garancia</h4>
+            {/* Guarantee Section */}
+            <div className="pt-16 mt-12 border-t border-charcoal-800/10 space-y-8">
+              <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase italic text-center lg:text-left">100%-os Gyakorlati Garancia</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                 {[
                   {
@@ -244,7 +239,7 @@ export default function AcademyPricing() {
                   </div>
                 ))}
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center lg:justify-start">
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
