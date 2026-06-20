@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { Star } from 'lucide-react';
 
 export default function AcademyPricing() {
   const scrollToForm = () => {
@@ -30,6 +31,37 @@ export default function AcademyPricing() {
     "Folyamatos szakmai mentoráció"
   ];
 
+  const reviews = [
+    {
+      initials: "NM",
+      name: "Nagy Melinda",
+      role: "Diplomás Pro Sminkes tanulónk",
+      title: "„Soha életemben nem hoztam ennél jobb döntést. Már tanulás közben megtérült a tanfolyam.”",
+      text: "„Mindenki le akart beszélni a sminkiskolákról, mert azt mondták, túl telített a piac. Kingáéknál teljesen más szemléletet kaptam: nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam. Az esküvői szezonban már teli volt a naptáram Szeged és Budapest környékén.”"
+    },
+    {
+      initials: "SE",
+      name: "Szabó Eszter",
+      role: "Végzett Mentorprogramos tanulónk",
+      title: "„Már a képzés 6. hetén saját munkákból kerestem meg az árát!”",
+      text: "„Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek a modelljeimről és kitettem őket, azonnal jöttek az első felkérések.”"
+    },
+    {
+      initials: "KP",
+      name: "Kovács Petra",
+      role: "Profi Sminkes mentoráltunk",
+      title: "„A legfinomabb szakmai titkokat és a márkafüggetlen igazságot kaptam.”",
+      text: "„Sokáig kerestem olyan iskolát, ahol nem akarnak kötelező márkacsomagot rám erőszakolni. Itt a legjobb high-end és drogériás alternatívákat is megismertük, így százezres felesleges költésektől mentett meg Kinga tanácsa. Az elméleti tankönyve pedig egy kincs!”"
+    },
+    {
+      initials: "HS",
+      name: "Horváth Sára",
+      role: "Elit Sminkes tanulónk",
+      title: "„Kinga nemcsak oktat, hanem valódi partnerként támogat a karrieremben.”",
+      text: "„Nem csak a technikáig tart a felelőssége. Bármilyen bizonytalanságom volt a vendégkezeléssel vagy a smink tartósságával kapcsolatban, mindig azonnali, gyakorlatias választ kaptam tőle. Itt egy igazi közösség tagja lehetsz!”"
+    }
+  ];
+
   return (
     <section id="academy-pricing" className="py-32 md:py-48 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +77,7 @@ export default function AcademyPricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-stretch">
           
           {/* Main Pricing Card - Elegant & Isolated */}
           <motion.div 
@@ -68,7 +100,7 @@ export default function AcademyPricing() {
                   Pro Makeup Mentorprogram
                 </h3>
                 <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">
-                  100 órás, 10 hetes elit csoportos gyakorlat-fókuszú képzés
+                  100 órás, 10 hetes elit csoportos képzés
                 </p>
               </div>
 
@@ -131,41 +163,78 @@ export default function AcademyPricing() {
             </div>
           </motion.div>
 
-          {/* Sidebar - Testimonial Moment */}
-          <div className="lg:col-span-5 space-y-16">
-            <div className="space-y-8">
+          {/* Sidebar - Testimonial Marquee (Restored) */}
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="space-y-8 flex-grow flex flex-col">
               <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block">Tanulói vélemények</span>
               
-              <div className="space-y-12">
-                {[
-                  {
-                    name: "Nagy Melinda",
-                    text: "„Soha életemben nem hoztam ennél jobb döntést. Már tanulás közben megtérült a tanfolyam. Nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam. Az esküvői szezonban már teli volt a naptáram Szeged és Budapest környékén.”"
-                  },
-                  {
-                    name: "Szabó Eszter",
-                    text: "„Már a képzés 6. hetén saját munkákból kerestem meg az árát! Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek a modelljeimről és kitettem őket, azonnal jöttek az első felkérések.”"
+              <div className="relative flex-grow min-h-[500px] lg:min-h-0 overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
+                <style>{`
+                  @keyframes marquee-v2-vertical {
+                    0% { transform: translateY(0%); }
+                    100% { transform: translateY(-50%); }
                   }
-                ].map((review, idx) => (
-                  <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: idx * 0.2 }}
-                    className="space-y-4"
-                  >
-                    <p className="font-serif-lux text-xl italic text-charcoal-800 leading-relaxed">
-                      {review.text}
-                    </p>
-                    <p className="text-[10px] font-bold tracking-luxury text-gold-600 uppercase">— {review.name}</p>
-                  </motion.div>
-                ))}
+                  @keyframes marquee-v2-horizontal {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-50%); }
+                  }
+                  .marquee-v2-scroller {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    animation: marquee-v2-vertical 40s linear infinite;
+                    height: max-content;
+                  }
+                  @media (max-width: 1023px) {
+                    .marquee-v2-scroller {
+                      flex-direction: row;
+                      animation: marquee-v2-horizontal 40s linear infinite;
+                      width: max-content;
+                      height: auto;
+                      padding: 1.5rem;
+                    }
+                  }
+                `}</style>
+
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="marquee-v2-scroller py-8 px-4 lg:px-8">
+                    {[...reviews, ...reviews].map((review, idx) => (
+                      <div 
+                        key={idx} 
+                        className="bg-white p-8 border border-charcoal-800/5 shadow-sm hover:shadow-md transition-all duration-300 w-[300px] lg:w-full shrink-0"
+                      >
+                        <div className="space-y-4">
+                          <div className="flex text-gold-400 gap-0.5">
+                            {[1, 2, 3, 4, 5].map((s) => (
+                              <Star key={s} className="w-3 h-3 fill-current" />
+                            ))}
+                          </div>
+                          <h4 className="font-serif-lux text-xl font-light text-charcoal-800 leading-snug">
+                            {review.title}
+                          </h4>
+                          <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
+                            {review.text}
+                          </p>
+                          <div className="pt-4 border-t border-charcoal-800/5">
+                            <h5 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
+                            <p className="text-[10px] text-gold-600 font-medium italic mt-1 font-serif-lux">{review.role}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Gradient Masks */}
+                  <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-cream-100/50 to-transparent pointer-events-none z-10 hidden lg:block" />
+                  <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-cream-100/50 to-transparent pointer-events-none z-10 hidden lg:block" />
+                  <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream-100/50 to-transparent pointer-events-none z-10 lg:hidden" />
+                  <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-cream-100/50 to-transparent pointer-events-none z-10 lg:hidden" />
+                </div>
               </div>
             </div>
 
             {/* Guarantee Section - Refined */}
-            <div className="pt-16 border-t border-charcoal-800/10 space-y-8">
+            <div className="pt-16 mt-16 border-t border-charcoal-800/10 space-y-8">
               <h4 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase italic">100%-os Gyakorlati Garancia</h4>
               <div className="space-y-6">
                 {[
