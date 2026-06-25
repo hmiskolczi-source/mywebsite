@@ -94,7 +94,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
+              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-full"
             >
               <img
                 src="https://images.unsplash.com/photo-1632017402126-d868ced47ef7?auto=format&fit=crop&q=80&w=600"

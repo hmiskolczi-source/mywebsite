@@ -186,21 +186,13 @@ export default function Pricing() {
         {/* Global CTA Banner */}
         <div className="mt-16 bg-gradient-to-tr from-charcoal-950 to-charcoal-900 rounded-3xl p-8 sm:p-12 border border-charcoal-800 text-center relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(181,149,85,0.08),transparent_50%)]" />
-          <div className="relative z-10 space-y-6 max-w-2xl mx-auto">
-            <h3 className="font-serif-lux text-2xl sm:text-3xl font-medium text-white tracking-tight">
-              Szeretnél egyéni tervezést vagy rontott tetoválás korrigálást?
-            </h3>
-            <p className="text-xs sm:text-sm text-cream-300 font-light leading-relaxed max-w-lg mx-auto">
-              Töltsd ki egyszerű jelentkezési űrlapunkat, és Kinga személyesen felveszi veled a kapcsolatot az egyedi igényeidhez igazított, ingyenes előzetes konzultáció megszervezéséhez.
-            </p>
-            <div className="pt-2">
+          <div className="relative z-10 space-y-6 max-w-2xl mx-auto flex flex-col items-center">
               <button
                 onClick={scrollToForm}
                 className="inline-block bg-gold-500 hover:bg-gold-600 text-charcoal-950 text-sm sm:text-base font-bold tracking-wider uppercase px-8 py-4 sm:py-5 rounded-xl border border-gold-400 hover:border-gold-500 transition-all cursor-pointer shadow-md hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 Ingyenes Konzultációt Kérek
               </button>
-            </div>
           </div>
         </div>
 
