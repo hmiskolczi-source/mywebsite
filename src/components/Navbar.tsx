@@ -6,12 +6,12 @@
 import React from 'react';
 
 interface NavbarProps {
-  currentPage: 'tetovalas' | 'sminkkepzes';
+  currentPage: 'home' | 'sminktetovalas' | 'sminkkepzes';
 }
 
 export default function Navbar({ currentPage }: NavbarProps) {
   const scrollToForm = () => {
-    const anchorId = currentPage === 'tetovalas' ? 'lead-form-anchor' : 'academy-form-anchor';
+    const anchorId = currentPage === 'sminkkepzes' ? 'academy-form-anchor' : 'lead-form-anchor';
     const el = document.getElementById(anchorId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -41,13 +41,13 @@ export default function Navbar({ currentPage }: NavbarProps) {
         {/* Dynamic Nav Tabs */}
         <nav className="hidden md:flex items-center gap-8 text-xs font-mono font-bold uppercase tracking-wider">
           <a
-            href="/"
+            href="/sminktetovalas"
             className={`cursor-pointer transition-all relative py-2 no-underline ${
-              currentPage === 'tetovalas' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
+              currentPage === 'sminktetovalas' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
             }`}
           >
             SMINKTETOVÁLÁS
-            {currentPage === 'tetovalas' && (
+            {currentPage === 'sminktetovalas' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-400" />
             )}
           </a>
@@ -69,9 +69,9 @@ export default function Navbar({ currentPage }: NavbarProps) {
           {/* Mobile view text indicator for navigation alternative */}
           <div className="flex md:hidden items-center bg-cream-200 p-1 rounded-lg border border-cream-300">
             <a
-              href="/"
+              href="/sminktetovalas"
               className={`px-2.5 py-1.5 text-[9px] font-mono font-bold uppercase tracking-wider rounded no-underline ${
-                currentPage === 'tetovalas' ? 'bg-charcoal-900 text-cream-50' : 'text-charcoal-700'
+                currentPage === 'sminktetovalas' ? 'bg-charcoal-900 text-cream-50' : 'text-charcoal-700'
               }`}
             >
               Tetoválás
@@ -90,7 +90,7 @@ export default function Navbar({ currentPage }: NavbarProps) {
             onClick={scrollToForm}
             className="bg-charcoal-900 hover:bg-gold-500 hover:text-charcoal-950 text-cream-50 text-[10px] sm:text-xs font-semibold tracking-wide uppercase px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg border border-charcoal-900/10 hover:border-gold-400 transition-all cursor-pointer shadow-sm hover:-translate-y-0.5 active:translate-y-0 text-center"
           >
-            {currentPage === 'tetovalas' ? 'Konzultációt kérek' : 'Jelentkezem Kingához képzésre'}
+            {currentPage === 'sminkkepzes' ? 'Jelentkezem Kingához képzésre' : 'Konzultációt kérek'}
           </button>
         </div>
       </div>
