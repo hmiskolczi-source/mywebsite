@@ -24,7 +24,7 @@ export default function HomeMedia() {
 
         {/* Media Grid - Placeholder */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          {[1, 2, 3].map((item) => (
             <motion.div
               key={item}
               initial={{ opacity: 0, y: 20 }}

@@ -36,14 +36,12 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-2"
+              className="space-y-6"
             >
-              <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
-                Hovorka-Miskolczi Kinga vagyok,
-              </h1>
-              <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+                Hovorka-Miskolczi Kinga vagyok, <br />
                 <span className="italic text-gold-600">Világ és európabajnok sminkmester.</span>
-              </h2>
+              </h1>
             </motion.div>
 
             {/* Subheadline */}
