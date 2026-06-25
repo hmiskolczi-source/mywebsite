@@ -6,6 +6,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Award, Trophy } from 'lucide-react';
+import SocialProof from '../../SocialProof';
+import BrandLogos from '../../BrandLogos';
 
 export default function AcademyHero() {
   const scrollToForm = () => {
@@ -21,22 +23,11 @@ export default function AcademyHero() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-cream-200/50 -skew-x-12 transform origin-top translate-x-1/4 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Unified, Monochromatic Press/Logo Strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="mb-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 grayscale opacity-60"
-        >
-          <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">BABOR</span>
-          <div className="w-px h-4 bg-charcoal-700/20" />
-          <span className="font-serif-lux font-semibold italic text-sm tracking-wider">Playboy</span>
-          <div className="w-px h-4 bg-charcoal-700/20" />
-          <span className="font-serif-lux font-semibold text-sm tracking-wider">Esküvő Classic</span>
-          <div className="w-px h-4 bg-charcoal-700/20" />
-          <span className="font-sans font-black uppercase text-sm tracking-tighter">Blikk</span>
-        </motion.div>
+
+        {/* Social Proof Badges */}
+        <div className="mb-12">
+          <SocialProof />
+        </div>
 
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
@@ -138,6 +129,11 @@ export default function AcademyHero() {
             </motion.div>
           </div>
 
+        </div>
+
+        {/* Brand Logos at Bottom Center */}
+        <div className="mt-20 flex justify-center">
+          <BrandLogos />
         </div>
       </div>
     </section>

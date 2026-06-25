@@ -6,6 +6,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Star, Shield, Award, Quote, CheckCircle, Sparkles } from 'lucide-react';
+import SocialProof from './SocialProof';
+import BrandLogos from './BrandLogos';
 
 export default function Hero() {
   const scrollToForm = () => {
@@ -26,21 +28,8 @@ export default function Hero() {
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8">
 
-            {/* Unified, Monochromatic Press/Logo Strip */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
-            >
-              <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">BABOR</span>
-              <div className="w-px h-4 bg-charcoal-700/20" />
-              <span className="font-serif-lux font-semibold italic text-sm tracking-wider">Playboy</span>
-              <div className="w-px h-4 bg-charcoal-700/20" />
-              <span className="font-serif-lux font-semibold text-sm tracking-wider">Esküvő Classic</span>
-              <div className="w-px h-4 bg-charcoal-700/20" />
-              <span className="font-sans font-black uppercase text-sm tracking-tighter">Blikk</span>
-            </motion.div>
+            {/* Social Proof Badges */}
+            <SocialProof />
 
             {/* Core Headline */}
             <motion.div
@@ -105,6 +94,11 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
             </motion.div>
           </div>
+        </div>
+
+        {/* Brand Logos at Bottom Center */}
+        <div className="mt-20 flex justify-center">
+          <BrandLogos />
         </div>
       </div>
     </section>

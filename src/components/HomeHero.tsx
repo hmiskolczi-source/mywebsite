@@ -5,6 +5,8 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import SocialProof from './SocialProof';
+import BrandLogos from './BrandLogos';
 
 export default function HomeHero() {
   return (
@@ -89,6 +91,11 @@ export default function HomeHero() {
             </motion.div>
           </div>
 
+        </div>
+
+        {/* Brand Logos at Bottom Center */}
+        <div className="mt-20 flex justify-center">
+          <BrandLogos />
         </div>
       </div>
     </section>
