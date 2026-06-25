@@ -184,14 +184,14 @@ export default function Pricing() {
         </div>
 
         {/* Global CTA Banner */}
-        <div className="mt-16 bg-gradient-to-tr from-charcoal-950 to-charcoal-900 rounded-3xl p-8 sm:p-12 border border-charcoal-800 text-center relative overflow-hidden shadow-xl">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(181,149,85,0.08),transparent_50%)]" />
+        <div className="mt-16 text-center relative overflow-hidden">
           <div className="relative z-10 space-y-6 max-w-2xl mx-auto flex flex-col items-center">
               <button
                 onClick={scrollToForm}
-                className="inline-block bg-gold-500 hover:bg-gold-600 text-charcoal-950 text-sm sm:text-base font-bold tracking-wider uppercase px-8 py-4 sm:py-5 rounded-xl border border-gold-400 hover:border-gold-500 transition-all cursor-pointer shadow-md hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
               >
-                Ingyenes Konzultációt Kérek
+                <span className="relative z-10">Ingyenes Konzultációt Kérek &rarr;</span>
+                <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
               </button>
           </div>
         </div>
