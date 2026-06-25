@@ -88,9 +88,10 @@ export default function Navbar({ currentPage }: NavbarProps) {
 
           <button
             onClick={scrollToForm}
-            className="bg-charcoal-900 hover:bg-gold-500 hover:text-charcoal-950 text-cream-50 text-[10px] sm:text-xs font-semibold tracking-wide uppercase px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg border border-charcoal-900/10 hover:border-gold-400 transition-all cursor-pointer shadow-sm hover:-translate-y-0.5 active:translate-y-0 text-center"
+            className="group relative px-5 sm:px-6 py-2.5 sm:py-3 bg-charcoal-800 text-cream-100 text-[10px] sm:text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
           >
-            {currentPage === 'sminkkepzes' ? 'Jelentkezem Kingához képzésre' : 'Konzultációt kérek'}
+            <span className="relative z-10">{currentPage === 'sminkkepzes' ? 'Jelentkezem képzésre' : 'Konzultáció'}</span>
+            <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
           </button>
         </div>
       </div>

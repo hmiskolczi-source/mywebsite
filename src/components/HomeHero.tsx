@@ -24,7 +24,7 @@ export default function HomeHero() {
               transition={{ duration: 1, delay: 0.2 }}
               className="flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
             >
-              <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">Zsűritag</span>
+              <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">Nemzetközi zsűritag</span>
               <div className="w-px h-4 bg-charcoal-700/20" />
               <span className="font-serif-lux font-semibold text-sm tracking-wider">Versenyfelkészítő</span>
               <div className="w-px h-4 bg-charcoal-700/20" />
@@ -40,7 +40,7 @@ export default function HomeHero() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
                 Hovorka-Miskolczi Kinga vagyok, <br />
                 <span className="italic text-gold-600">Világ és európabajnok sminkmester.</span>
               </h1>
