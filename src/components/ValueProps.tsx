@@ -74,9 +74,6 @@ export default function ValueProps() {
             Személyreszabott, egyedi élmény, fájdalommentes eljárás, gyors regenerálódás.
           </h2>
         </div>
-          </p>
-          <div className="h-0.5 w-12 bg-gold-400 mx-auto mt-2" />
-        </div>
 
         {/* Big Rows */}
         <div className="space-y-24">
