@@ -36,12 +36,14 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-2"
             >
-              <h1 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
-                Több mint húsz év. <br />
-                <span className="italic text-gold-600">Minden arc tanított valamit.</span>
+              <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+                Hovorka-Miskolczi Kinga vagyok,
               </h1>
+              <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+                <span className="italic text-gold-600">Világ és európabajnok sminkmester.</span>
+              </h2>
             </motion.div>
 
             {/* Subheadline */}
@@ -49,9 +51,9 @@ export default function HomeHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed max-w-xl"
+              className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed max-w-2xl"
             >
-              Sminkmesterként, oktatóként és zsűritagként egyaránt ugyanazt keresem: azt a pontot, ahol a technika már nem látszik — csak az eredmény.
+              Több mint 20 éve foglalkozom professzionális sminkeléssel, és ugyanennyi ideje aktív szereplője vagyok a hazai és nemzetközi sminkversenyek világának. Ma már elsősorban nem versenyzőként, hanem hazai és nemzetközi zsűritagként, valamint versenyfelkészítőként veszek részt a szakmai életben.
             </motion.p>
 
             {/* CTA */}
