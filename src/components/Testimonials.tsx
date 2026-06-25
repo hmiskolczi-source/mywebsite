@@ -45,19 +45,15 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 md:py-24 bg-cream-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold-50 border border-gold-200 text-gold-600 text-xs rounded-full font-mono font-medium tracking-wider uppercase">
-            <Sparkles className="w-3 shrink-0" />
-            Bizonyított Eredmények
-          </div>
-          <h2 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-charcoal-900 leading-tight">
+        <div className="max-w-3xl mb-16 space-y-6">
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Ügyfeleink szavai</span>
+          <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
             Csatlakozz azokhoz a tudatos nőkhöz, akik nem kötnek kompromisszumot az arcukkal kapcsolatban.
           </h2>
-          <div className="h-0.5 w-16 bg-gold-400 mx-auto mt-4" />
         </div>
 
         {/* Testimonials 3-Grid */}
@@ -70,8 +66,8 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className={`bg-cream-100 rounded-2xl overflow-hidden border-t-4 ${card.themeColor} border-b border-x border-cream-300/60 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
+                transition={{ duration: 0.8, delay: idx * 0.2 }}
+                className="bg-white overflow-hidden border border-charcoal-800/5 shadow-sm flex flex-col justify-between group"
               >
                 {/* Visual Header Image representation of client's healed confidence */}
                 <div className="relative h-56 w-full overflow-hidden bg-charcoal-900">
@@ -84,8 +80,8 @@ export default function Testimonials() {
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/15 to-transparent pointer-events-none" />
                   
                   {/* Category Pill Tag */}
-                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-mono tracking-wider font-bold text-charcoal-900 shadow-sm border border-gold-200/50 flex items-center gap-1.5 uppercase">
-                    <IconComponent className="w-3 text-gold-500" />
+                  <div className="absolute top-4 left-4 bg-charcoal-900/80 backdrop-blur-md px-3 py-1 text-[10px] font-mono tracking-wider font-bold text-cream-100 shadow-sm border border-charcoal-700/40 flex items-center gap-1.5 uppercase">
+                    <IconComponent className="w-3 text-gold-400" />
                     {card.category}
                   </div>
 
