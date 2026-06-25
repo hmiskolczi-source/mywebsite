@@ -21,11 +21,11 @@ export default function Hero() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-cream-200/50 -skew-x-12 transform origin-top translate-x-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" id="hero-section">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch">
 
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8">
-            
+
             {/* Unified, Monochromatic Press/Logo Strip */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -89,17 +89,17 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Hero Image */}
-          <div className="lg:w-5/12 flex flex-col h-full">
+          <div className="lg:w-5/12">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 flex-1"
+              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
             >
               <img
                 src="https://images.unsplash.com/photo-1632017402126-d868ced47ef7?auto=format&fit=crop&q=80&w=600"
                 alt="Premium makeup tattoo service"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
