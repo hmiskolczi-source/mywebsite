@@ -10,11 +10,11 @@ export default function HomeCaseStudies() {
   const caseStudies = [
     {
       id: 1,
-      title: '[PLACEHOLDER - Esettanulmány 1]',
-      who: '[Ki - Híresség vagy leírás]',
-      occasion: '[Alkalom]',
-      challenge: '[A kihívás]',
-      solution: '[Hogyan oldottuk meg - 2-3 mondat Kinga saját szavaival]'
+      title: 'Párizsi Luxussminkelés Egy Királynő-Döntösnek',
+      who: 'Hamikus Renáta (influenszer, Miss Hungary döntős)',
+      occasion: 'Egy exklúzív párizsi workshopra készültünk együtt',
+      challenge: 'Egy nemzetközileg elismert szépségkirálynő-döntős és influenszer esetében olyan magazin-minőségű, sémamentes luxussminket kellett alkotni a divat fővárosában, amely a kamerák előtt és élőben, a workshop fényeinél is hozza a prémium, hibátlan eleganciát.',
+      solution: 'Nem sablonokból dolgoztunk, hanem Reni egyedi arc-architectúráját és bőrtónusát vettük alapul, hogy kiemeljük a benne rejlő természetes királynői kisugárzást. A finom, rétegzett textúrákkal és a precíz formatervezéssel egy olyan lélegzetelállító, high-end megjelenést hoztunk össze, ami a párizsi környezetben is tökéletesen megállta a helyét.'
     },
     {
       id: 2,
