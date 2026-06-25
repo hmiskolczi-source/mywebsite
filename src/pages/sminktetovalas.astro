@@ -1,16 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
-import AcademyHero from '../components/academy/v2/AcademyHero';
-import AcademyProblem from '../components/academy/v2/AcademyProblem';
-import AcademyValueProps from '../components/academy/v2/AcademyValueProps';
-import AcademyProcess from '../components/academy/v2/AcademyProcess';
-import AcademyFounder from '../components/academy/v2/AcademyFounder';
-import AcademyOtherCourses from '../components/academy/v2/AcademyOtherCourses';
-import AcademyReviews from '../components/academy/v2/AcademyReviews';
-import AcademyFAQ from '../components/academy/v2/AcademyFAQ';
-import AcademyPricing from '../components/academy/v2/AcademyPricing';
-import AcademyCloser from '../components/academy/v2/AcademyCloser';
+import Hero from '../components/Hero';
+import Testimonials from '../components/Testimonials';
+import ValueProps from '../components/ValueProps';
+import Process from '../components/Process';
+import Founder from '../components/Founder';
+import Reviews from '../components/Reviews';
+import Pricing from '../components/Pricing';
+import FAQ from '../components/FAQ';
+import Closer from '../components/Closer';
 import Footer from '../components/Footer';
 import FloatingCTA from '../components/FloatingCTA';
 ---
@@ -24,16 +23,15 @@ import FloatingCTA from '../components/FloatingCTA';
 
 		<Navbar currentPage="sminktetovalas" client:load />
 
-		<AcademyHero client:load />
-		<AcademyProblem client:visible />
-		<AcademyValueProps client:visible />
-		<AcademyProcess client:visible />
-		<AcademyFounder client:visible />
-		<AcademyPricing client:visible />
-		<AcademyOtherCourses client:visible />
-		<AcademyReviews client:visible />
-		<AcademyFAQ client:visible />
-		<AcademyCloser client:visible />
+		<Hero client:load />
+		<Testimonials client:visible />
+		<ValueProps client:visible />
+		<Process client:visible />
+		<Founder client:visible />
+		<Reviews client:visible />
+		<Pricing client:visible />
+		<FAQ client:visible />
+		<Closer client:visible />
 		<Footer client:visible />
 	</div>
 </Layout>
