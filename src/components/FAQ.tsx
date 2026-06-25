@@ -49,9 +49,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Decors */}
-      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-gold-200/5 rounded-full blur-[80px] pointer-events-none" />
+    <section className="py-20 md:py-24 bg-cream-100 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(181,149,85,0.08),transparent_50%)]"></div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

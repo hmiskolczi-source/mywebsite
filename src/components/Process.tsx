@@ -43,9 +43,9 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Decorative vertical flow separator */}
-      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-cream-300/40 hidden lg:block" />
+    <section className="py-16 md:py-24 bg-cream-100 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(181,149,85,0.08),transparent_50%)]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

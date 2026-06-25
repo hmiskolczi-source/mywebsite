@@ -87,6 +87,24 @@ export default function Hero() {
             </motion.div>
 
           </div>
+
+          {/* Right Column: Hero Image */}
+          <div className="lg:w-5/12 flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1632017402126-d868ced47ef7?auto=format&fit=crop&q=80&w=600"
+                alt="Premium makeup tattoo service"
+                className="absolute inset-0 w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
