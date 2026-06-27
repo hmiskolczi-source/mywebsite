@@ -64,10 +64,10 @@ export default function HomeHero() {
               className="pt-4"
             >
               <a
-                href="/sminktetovalas"
+                href="#lead-form-anchor"
                 className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none inline-block"
               >
-                <span className="relative z-10">Ismerj meg &rarr;</span>
+                <span className="relative z-10">Kapcsolatba lépek Kingával &rarr;</span>
                 <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
               </a>
             </motion.div>

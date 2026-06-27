@@ -3,10 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function HomeCaseStudies() {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
   const caseStudies = [
     {
       id: 1,
@@ -65,29 +67,48 @@ export default function HomeCaseStudies() {
               {/* Content */}
               <div className="space-y-4">
                 <h3 className="font-serif-lux text-xl font-light text-charcoal-800">
-                  {study.title}
+                  {study.who}
                 </h3>
 
                 <div className="space-y-2 text-sm">
-                  <div>
-                    <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Ki</p>
-                    <p className="text-charcoal-700 font-light">{study.who}</p>
-                  </div>
-
-                  <div>
-                    <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Alkalom</p>
-                    <p className="text-charcoal-700 font-light">{study.occasion}</p>
-                  </div>
-
                   <div>
                     <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">A Kihívás</p>
                     <p className="text-charcoal-700 font-light">{study.challenge}</p>
                   </div>
 
-                  <div>
-                    <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Hogyan Oldottuk Meg</p>
-                    <p className="text-charcoal-700/80 font-light leading-relaxed">{study.solution}</p>
-                  </div>
+                  <AnimatePresence>
+                    {expandedId === study.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-2 overflow-hidden"
+                      >
+                        <div>
+                          <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Ki</p>
+                          <p className="text-charcoal-700 font-light">{study.who}</p>
+                        </div>
+
+                        <div>
+                          <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Alkalom</p>
+                          <p className="text-charcoal-700 font-light">{study.occasion}</p>
+                        </div>
+
+                        <div>
+                          <p className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase">Hogyan Oldottuk Meg</p>
+                          <p className="text-charcoal-700/80 font-light leading-relaxed">{study.solution}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <button
+                    onClick={() => setExpandedId(expandedId === study.id ? null : study.id)}
+                    className="text-[11px] font-bold tracking-luxury text-gold-600 hover:text-gold-700 uppercase transition-colors pt-2"
+                  >
+                    {expandedId === study.id ? '— Összecsukás' : '→ Tovább olvasok'}
+                  </button>
                 </div>
               </div>
             </motion.div>
