@@ -54,7 +54,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                A képzés teljes időtartama alatt minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit és csúcskategóriás eszközeit korlátlanul biztosítunk számodra szegedi és budapesti lakásstúdiónkban. Így egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra kidobnod a beiratkozás előtt. Ráadásul Kinga segít összeállítani a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatja, mi az a 3 kulcspaletta, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
+                A képzés teljes időtartama alatt <span className="font-bold">minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit</span> és csúcskategóriás eszközeit korlátlanul biztosítunk számodra szegedi és budapesti lakásstúdiónkban. Így <span className="font-bold">egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra</span> kidobnod a beiratkozás előtt. Ráadásul <span className="font-bold">Kinga segít összeállítani</span> a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatja, mi az a <span className="font-bold">3 kulcspaletta</span>, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
               </p>
               
               <div className="pl-8 border-l border-gold-400/30">
@@ -113,7 +113,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról professzionális stúdiókörnyezetben, csúcsminőségű felszereléssel készítünk képeket. A kész, precízen retusált, magazin-minőségű fotókból egy olyan komplett digitális portfóliót kapsz, amivel azonnal magabiztosan szerezhetsz prémium vendégeket.
+                A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról <span className="font-bold">professzionális stúdiókörnyezetben, csúcsminőségű felszereléssel</span> készítünk képeket. A kész, <span className="font-bold">precízen retusált, magazin-minőségű fotókból</span> egy olyan komplett digitális portfóliót kapsz, amivel <span className="font-bold">azonnal magabiztosan szerezhetsz prémium vendégeket</span>.
               </p>
 
               <div className="pl-8 border-l border-gold-400/30">
@@ -197,7 +197,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                Úgy építettük fel a tanmenetet, hogy minden héten egy-egy modern, piacképes technikát sajátíts el mélyrehatóan. Miután az első napon végignézted a professzionális bemutatót és begyakoroltad a lépéseket, a második napon egy teljesen új karakterű modellen, más színvilággal alkotod meg ugyanazt a sminket. Így a technika azonnal rögzül a kezedben, és pontosan látni fogod, hogyan alakítsd a mozdulatokat a különböző arcformákhoz.
+                Úgy építettük fel a tanmenetet, hogy <span className="font-bold">minden héten egy-egy modern, piacképes technikát</span> sajátíts el mélyrehatóan. Miután az első napon végignézted a professzionális bemutatót és begyakoroltad a lépéseket, <span className="font-bold">a második napon egy teljesen új karakterű modellen</span>, más színvilággal alkotod meg ugyanazt a sminket. Így <span className="font-bold">a technika azonnal rögzül</span> a kezedben, és pontosan látni fogod, hogyan alakítsd a mozdulatokat a különböző arcformákhoz.
               </p>
 
               <button 
@@ -241,7 +241,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                Kinga közel 10 év kozmetikusi tapasztalattal tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát. Azt a gondolkodást, amivel minden egyes vendéghez másképpen állsz hozzá – amitől a munkád prémium lesz, nem csak szép.
+                Kinga <span className="font-bold">közel 10 év kozmetikusi tapasztalattal</span> tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem <span className="font-bold">megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát</span>. Azt a gondolkodást, amivel <span className="font-bold">minden egyes vendéghez másképpen állsz hozzá</span> – amitől a munkád prémium lesz, nem csak szép.
               </p>
 
               <button 
