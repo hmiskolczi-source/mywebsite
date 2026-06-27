@@ -58,10 +58,10 @@ export default function AcademyProblem() {
       ]
     },
     {
-      typical: "Az oktatók gyakran tapasztalatlan vagy generalisták",
+      typical: "Az oktatók gyakran tapasztalatlanok",
       kingaHighlight: [
         { text: '15 év tapasztalat' , bold: true },
-        { text: ' az elite professzionálok oktatásában – ' },
+        { text: ' az elite sminkesek oktatásában – ' },
         { text: 'nemzetközi bajnokok és elismert szakemberek' , bold: true },
         { text: ' mentora' }
       ]
