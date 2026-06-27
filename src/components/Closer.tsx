@@ -183,7 +183,7 @@ export default function Closer() {
                         disabled={isSubmitting}
                         className="group relative w-full py-6 bg-gold-500 text-charcoal-900 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-gold-400 rounded-none shadow-xl"
                       >
-                        <span className="relative z-10">{isSubmitting ? 'FELDOLGOZÁS...' : 'KÜLDÖM A JELENTKEZÉSEM'}</span>
+                        <span className="relative z-10">{isSubmitting ? 'FELDOLGOZÁS...' : 'Kapcsolatba lépek Kingával'}</span>
                       </button>
 
                       <p className="text-[10px] text-cream-100/30 font-light leading-relaxed text-center italic">
