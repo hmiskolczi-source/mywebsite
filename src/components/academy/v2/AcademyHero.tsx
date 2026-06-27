@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, Trophy } from 'lucide-react';
 import SocialProof from '../../shared/SocialProof';
 import BrandLogos from '../../shared/BrandLogos';
 
@@ -70,32 +69,6 @@ export default function AcademyHero() {
               </p>
             </motion.div>
 
-            {/* Refined Trust Indicators */}
-            <div className="pt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 border-t border-charcoal-800/5">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Trophy className="w-5 h-5 text-gold-500 stroke-[1.5]" />
-                  <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
-                    MFKKE MINŐSÍTÉS
-                  </h4>
-                </div>
-                <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
-                  A Magyar Fodrász-Kozmetikus-Körmös Egyesület hivatalos felnőttképzési minősítése.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-gold-500 stroke-[1.5]" />
-                  <h4 className="text-[11px] font-bold uppercase tracking-luxury text-charcoal-800 font-sans">
-                    MFKKE SZAKMAI AJÁNLÁSSAL
-                  </h4>
-                </div>
-                <p className="text-xs text-charcoal-700/70 font-light leading-relaxed">
-                  Szakmai garancia, amellyel azonnal komolyan vesznek a divat- és esküvői piacon.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Visual Column - Large, editorial, asymmetrical */}
@@ -112,16 +85,6 @@ export default function AcademyHero() {
                   alt="Hovorka-Miskolczi Kinga Atelier" 
                   className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
                 />
-              </div>
-              
-              {/* Floating Quote Moment */}
-              <div className="absolute -bottom-10 -left-10 p-8 bg-white shadow-xl max-w-xs hidden md:block border border-charcoal-800/5">
-                <p className="font-serif-lux text-xl italic text-charcoal-800 leading-relaxed">
-                  "Nem kapkodunk sablonokkal. Minden mozdulatot és arcarány-elemzést személyesen, türelemmel rögzítünk."
-                </p>
-                <p className="text-[10px] font-bold tracking-luxury uppercase mt-6 text-gold-600">
-                  — Hovorka-Miskolczi Kinga
-                </p>
               </div>
               
               {/* Delicate Framing Corners */}
