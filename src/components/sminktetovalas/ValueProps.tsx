@@ -151,7 +151,7 @@ export default function ValueProps() {
                       Pillér {p.num}
                     </span>
                     <h3 className="font-serif-lux text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-charcoal-900 leading-tight">
-                      <span className="font-bold">{p.headlineHighlight}</span>{p.headline.substring(p.headlineHighlight.length)}
+                      {p.headline}
                     </h3>
                     <p className="text-sm sm:text-base text-charcoal-800 font-light leading-relaxed">
                       {p.bodyHighlight ? p.bodyHighlight.map((part, idx) => (
