@@ -158,21 +158,22 @@ export default function AcademyValueProps() {
                   }
                 }
                 .portfolio-scroll {
-                  animation: scroll-left 30s linear infinite;
+                  animation: scroll-left 40s linear infinite;
                   will-change: transform;
                 }
               `}</style>
               <div className="flex gap-4 portfolio-scroll">
                 {[...Array(2)].map((_, loop) =>
-                  [1, 2, 3, 4, 5, 6].map((item) => (
+                  Array.from({ length: 13 }, (_, i) => i + 1).map((item) => (
                     <div
                       key={`${loop}-${item}`}
                       className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
                     >
                       <img
-                        src={`https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=150&h=150&crop=faces`}
+                        src={`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
                         alt={`Portfólió ${item}`}
                         className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
+                        referrerPolicy="no-referrer"
                       />
                     </div>
                   ))
