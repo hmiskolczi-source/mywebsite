@@ -23,31 +23,42 @@ export default function AcademyHero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Social Proof Badges */}
-        <div className="mb-12">
-          <SocialProof />
-        </div>
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-          
           {/* Main Content Area */}
-          <div className="lg:w-7/12 space-y-8">
+          <div className="lg:w-7/12 flex flex-col justify-center space-y-8">
+
+            {/* Social Proof Badges */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
+            >
+              <SocialProof />
+            </motion.div>
+
+            {/* Core Headline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
+              <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
                 Ne csak sminkelni tanulj meg. Válj <span className="italic text-gold-600">kiemelkedő, keresett szakemberré</span> mindössze 10 hét alatt és élj a <span className="italic">saját kreativitásodból</span> kötöttségek nélkül.
               </h1>
-              
-              <div className="max-w-xl space-y-6">
-                <p className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed">
-                  Sajátítsd el a sminkelés valódi logikáját egy háromszoros világbajnoki ezüstérmes sminkmester mentorálásával. A 10 hetes, gyakorlatorientált képzés végén hivatalos állami tanúsítvánnyal és kész portfólióval indíthatod el a saját, prémium praxisodat.
-                </p>
-              </div>
             </motion.div>
+
+            {/* Core Sub-headline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed max-w-2xl"
+            >
+              Sajátítsd el a sminkelés valódi logikáját egy háromszoros világbajnoki ezüstérmes sminkmester mentorálásával. A 10 hetes, gyakorlatorientált képzés végén hivatalos állami tanúsítvánnyal és kész portfólióval indíthatod el a saját, prémium praxisodat.
+            </motion.p>
 
             {/* CTA and Scarcity - Moved to a quiet note */}
             <motion.div 

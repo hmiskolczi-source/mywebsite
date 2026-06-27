@@ -23,13 +23,20 @@ export default function Hero() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-cream-200/50 -skew-x-12 transform origin-top translate-x-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" id="hero-section">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8">
 
             {/* Social Proof Badges */}
-            <SocialProof />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
+            >
+              <SocialProof />
+            </motion.div>
 
             {/* Core Headline */}
             <motion.div
@@ -44,16 +51,14 @@ export default function Hero() {
             </motion.div>
 
             {/* Core Sub-headline */}
-            <div className="max-w-xl space-y-6">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed"
-              >
-                Ha már láttál elszíneződött, aszimmetrikus munkákat, és attól félsz, hogy veled is ez történik.. ez a félelem jogos. A <span className="font-bold">15 éves nemzetközi tapasztalatom</span> és a <span className="font-bold">kétfázisú érzéstelenítési protokollom</span> pontosan ezt zárja ki.
-              </motion.p>
-            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed max-w-2xl"
+            >
+              Ha már láttál elszíneződött, aszimmetrikus munkákat, és attól félsz, hogy veled is ez történik.. ez a félelem jogos. A <span className="font-bold">15 éves nemzetközi tapasztalatom</span> és a <span className="font-bold">kétfázisú érzéstelenítési protokollom</span> pontosan ezt zárja ki.
+            </motion.p>
 
             {/* CTA and Scarcity */}
             <motion.div
