@@ -6,7 +6,7 @@
 import React from 'react';
 
 interface NavbarProps {
-  currentPage: 'home' | 'sminktetovalas' | 'sminkkepzes' | 'rolam';
+  currentPage: 'home' | 'sminktetovalas' | 'sminkkepzes';
 }
 
 export default function Navbar({ currentPage }: NavbarProps) {
@@ -41,6 +41,17 @@ export default function Navbar({ currentPage }: NavbarProps) {
         {/* Dynamic Nav Tabs */}
         <nav className="hidden md:flex items-center gap-8 text-xs font-mono font-bold uppercase tracking-wider">
           <a
+            href="/"
+            className={`cursor-pointer transition-all relative py-2 no-underline ${
+              currentPage === 'home' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
+            }`}
+          >
+            RÓLAM
+            {currentPage === 'home' && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-400" />
+            )}
+          </a>
+          <a
             href="/sminktetovalas"
             className={`cursor-pointer transition-all relative py-2 no-underline ${
               currentPage === 'sminktetovalas' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
@@ -57,19 +68,8 @@ export default function Navbar({ currentPage }: NavbarProps) {
               currentPage === 'sminkkepzes' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
             }`}
           >
-            SMINKISKOLA - 100ÓRÁS
+            SMINKISKOLA
             {currentPage === 'sminkkepzes' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-400" />
-            )}
-          </a>
-          <a
-            href="/#rolam"
-            className={`cursor-pointer transition-all relative py-2 no-underline ${
-              currentPage === 'rolam' ? 'text-charcoal-900 font-extrabold' : 'text-charcoal-700 hover:text-gold-650'
-            }`}
-          >
-            RÓLAM
-            {currentPage === 'rolam' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-400" />
             )}
           </a>
@@ -79,6 +79,14 @@ export default function Navbar({ currentPage }: NavbarProps) {
         <div className="flex items-center gap-2 sm:gap-4">
           {/* Mobile view text indicator for navigation alternative */}
           <div className="flex md:hidden items-center gap-1 bg-cream-200 p-1 rounded-lg border border-cream-300">
+            <a
+              href="/"
+              className={`px-2 py-1.5 text-[8px] font-mono font-bold uppercase tracking-wider rounded no-underline ${
+                currentPage === 'home' ? 'bg-charcoal-900 text-cream-50' : 'text-charcoal-700'
+              }`}
+            >
+              Rólam
+            </a>
             <a
               href="/sminktetovalas"
               className={`px-2 py-1.5 text-[8px] font-mono font-bold uppercase tracking-wider rounded no-underline ${
@@ -94,14 +102,6 @@ export default function Navbar({ currentPage }: NavbarProps) {
               }`}
             >
               Iskola
-            </a>
-            <a
-              href="/#rolam"
-              className={`px-2 py-1.5 text-[8px] font-mono font-bold uppercase tracking-wider rounded no-underline ${
-                currentPage === 'rolam' ? 'bg-charcoal-900 text-cream-50' : 'text-charcoal-700'
-              }`}
-            >
-              Rólam
             </a>
           </div>
 
