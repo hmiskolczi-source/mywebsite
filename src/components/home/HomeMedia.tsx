@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 const videos = [
   { id: '9O3CsZQZWLQ' },
-  { id: 'brtY_XHoKFs' },
+  { id: 'XzuhWENGzSk' },
   { id: '40NcbfOGXvY' },
 ];
 
@@ -40,7 +40,7 @@ export default function HomeMedia() {
               className="group relative border border-charcoal-800/5 overflow-hidden bg-white/50"
             >
               {/* Video Embed */}
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden rounded-lg">
                 <iframe
                   width="100%"
                   height="100%"
