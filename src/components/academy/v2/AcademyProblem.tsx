@@ -78,28 +78,40 @@ export default function AcademyProblem() {
 
         {/* Solutions Section */}
         <div className="space-y-12">
-          <div className="max-w-3xl">
-            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
+          <div className="text-center mb-12">
+            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800">
               Az ilyen történetek inspiráltak arra, hogy az alapképzésemet egy teljesen más, értékrend alapú szemlélet mentén építsem fel:
             </h3>
+          </div>
 
-            <ul className="space-y-6">
-              {solutions.map((solution, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="flex gap-4"
-                >
-                  <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">✓</span>
-                  <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                    {solution.description}
-                  </p>
-                </motion.li>
-              ))}
-            </ul>
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2">
+              <img
+                src="https://via.placeholder.com/400x400"
+                alt="Placeholder"
+                className="w-full h-auto rounded-sm shadow-lg"
+              />
+            </div>
+
+            <div className="lg:w-1/2">
+              <ul className="space-y-6">
+                {solutions.map((solution, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    className="flex gap-4 justify-end"
+                  >
+                    <p className="text-base text-charcoal-700/80 font-light leading-relaxed text-right">
+                      {solution.description}
+                    </p>
+                    <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">✓</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
