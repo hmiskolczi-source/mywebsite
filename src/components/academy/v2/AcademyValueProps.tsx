@@ -109,7 +109,7 @@ export default function AcademyValueProps() {
               <div className="space-y-3">
                 <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">02 / Portfólió</span>
                 <h3 className="font-serif-lux text-3xl sm:text-4xl font-light text-charcoal-800 leading-tight">
-                  Saját Fotóstúdió és Retusált Digitális Portfólió.
+                  Retusált Digitális Portfólió, amivel magabiztosan piacra tudsz lépni.
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
