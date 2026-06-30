@@ -27,8 +27,10 @@ export default function AcademyValueProps() {
         
         {/* Section Header */}
         <div className="mb-16 max-w-2xl">
-          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block mb-3">Minden részlet a szakmai kiteljesedést szolgálja.
-          </span>
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block mb-3">Kiemelkedő Értékajánlataink</span>
+          <h2 className="font-serif-lux text-4xl sm:text-6xl font-light text-charcoal-800 tracking-tight leading-none">
+            Minden részlet a szakmai kiteljesedést szolgálja.
+          </h2>
         </div>
         
         <div className=”space-y-24 md:space-y-32”>
