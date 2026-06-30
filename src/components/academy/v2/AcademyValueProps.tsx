@@ -249,7 +249,7 @@ export default function AcademyValueProps() {
                   Sminktechnikák
                 </p>
                 <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
-                  {["Ceruza", "Krém", "Gél", "Por", "Cut-crease", "Smokey", "Blending", "Contouring"].map((tech, idx) => (
+                  {["Ceruza", "Krém", "Gél", "Por", "Cut-crease", "Smokey"].map((tech, idx) => (
                     <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
                       {tech}
                     </span>
