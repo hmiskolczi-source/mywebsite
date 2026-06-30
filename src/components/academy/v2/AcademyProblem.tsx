@@ -50,8 +50,8 @@ export default function AcademyProblem() {
         </div>
 
         {/* Problems Section */}
-        <div className="mb-20 space-y-12">
-          <div className="max-w-3xl">
+        <div className="mb-20 space-y-12 mx-auto max-w-3xl text-center">
+          <div>
             <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
               Gyakran érkeznek hozzám olyan tanítványok, akik korábban már megpróbálták megszerezni az alapokat máshol, de falakba ütköztek:
             </h3>
@@ -64,7 +64,7 @@ export default function AcademyProblem() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="flex gap-4"
+                  className="flex justify-center gap-4"
                 >
                   <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">•</span>
                   <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
