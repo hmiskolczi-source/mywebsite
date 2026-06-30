@@ -226,36 +226,31 @@ export default function AcademyValueProps() {
             </motion.div>
           </div>
 
-          {/* Makeup Types & Techniques Bar */}
+          {/* Makeup Types Bar */}
           <div className="py-12 border-y border-charcoal-800/5">
             <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-10">
-              A képzés során megtanult sminktípusok és technikák
+              Sminktípusok
             </p>
-            <div className="space-y-8">
-              <div>
-                <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-6">
-                  Sminktípusok
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
-                  {["Nude", "Nappali", "Alkalmi", "Menyasszonyi", "Örömanya", "Smokey", "Cut-crease", "Strobing"].map((type, idx) => (
-                    <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
-                      {type}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-6">
-                  Sminktechnikák
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
-                  {["Ceruza", "Krém", "Gél", "Por", "Cut-crease", "Smokey"].map((tech, idx) => (
-                    <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
+              {["Nude", "Nappali", "Alkalmi", "Menyasszonyi", "Örömanya", "Smokey", "Cut-crease", "Strobing"].map((type, idx) => (
+                <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
+                  {type}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Makeup Techniques Bar */}
+          <div className="py-12 border-y border-charcoal-800/5">
+            <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-10">
+              Sminktechnikák
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-1000">
+              {["Ceruza", "Krém", "Gél", "Por", "Cut-crease", "Smokey"].map((tech, idx) => (
+                <span key={idx} className="font-serif-lux text-sm tracking-widest font-medium text-charcoal-900">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
 
