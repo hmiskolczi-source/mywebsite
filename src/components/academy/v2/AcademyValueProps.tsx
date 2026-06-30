@@ -27,10 +27,8 @@ export default function AcademyValueProps() {
         
         {/* Section Header */}
         <div className="mb-16 max-w-2xl">
-          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block mb-3">Kiemelkedő Értékajánlataink</span>
-          <h2 className="font-serif-lux text-4xl sm:text-6xl font-light text-charcoal-800 tracking-tight leading-none">
-            Minden részlet a szakmai kiteljesedést szolgálja.
-          </h2>
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block mb-3">Minden részlet a szakmai kiteljesedést szolgálja.
+          </span>
         </div>
         
         <div className="space-y-24 md:space-y-32">
@@ -45,7 +43,7 @@ export default function AcademyValueProps() {
               className="lg:w-1/2 space-y-8"
             >
               <div className="space-y-3">
-                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">01 / Anyagellátás</span>
+                <span className="text-[11px] font-bold text-gold-500 uppercase tracking-luxury block">Anyagellátás</span>
                 <h3 className="font-serif-lux text-3xl sm:text-4xl font-bold text-charcoal-800 leading-tight" style={{ fontStyle: 'normal' }}>
                   Teljes Körű Prémium Anyagbiztosítás Extra Költségek Nélkül.
                 </h3>

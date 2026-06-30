@@ -10,7 +10,7 @@ export default function AcademyProblem() {
   const problems = [
     {
       title: "Elveszett figyelem",
-      description: "A zsúfolt, 20-30 fős csoportokban az oktató figyelme óhatatlanul megoszlik, így a valódi személyes kapcsolat és a támogatás elmarad."
+      description: "A zsúfolt, 20-30 fős csoportokban a tapasztalatlan oktató figyelme óhatatlanul megoszlik, így a valódi személyes kapcsolat és a támogatás elmarad."
     },
     {
       title: "Felesleges anyagi terhek",
@@ -25,15 +25,15 @@ export default function AcademyProblem() {
   const solutions = [
     {
       title: "Exkluzív mentorprogram",
-      description: "Szakmai tapasztalataim alapján a precíz technika elsajátítása megismételhetetlen figyelmet igényel – ezt biztosítom számára."
+      description: "Szakmai tapasztalataim alapján a precíz technika elsajátítása megismételhetetlen figyelmet igényel. Ezt biztosítom mindenki számára a kis létszámú, exkluzív csoportos mentorálás során."
     },
     {
       title: "Teljes körű, prémium anyagbiztosítás",
-      description: "A képzés alatt kompromisszumok nélkül, extra költség nélkül biztosítom a legnevesebb nemzetközi világmárkák csúcskategóriás termékeit."
+      description: "A képzés alatt extra költség nélkül biztosítom a legnevesebb nemzetközi világmárkák csúcskategóriás termékeit."
     },
     {
       title: "Biztos alapok",
-      description: "Nem csupán elméletet adok át. A 10 hetes kurzus végén hivatalos állami tanúsítvánnyal és egy profin retusált, azonnal bevethető portfólióval a kezedben léphetsz ki a piacra."
+      description: "Azokat az alapokat adom át, amik elkísértek a VB és EB dobogójához is. A 10 hetes kurzus végén hivatalos állami tanúsítvánnyal, profi portfólióval és valódi gyakorlati tapasztalatokkal léphetsz ki a piacra."
     }
   ];
 
