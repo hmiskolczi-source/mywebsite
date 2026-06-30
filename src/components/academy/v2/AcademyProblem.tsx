@@ -49,63 +49,60 @@ export default function AcademyProblem() {
           </h2>
         </div>
 
-        {/* Problems & Solutions Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Problems Section */}
-          <div className="space-y-12">
-            <div>
-              <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
-                Gyakran érkeznek hozzám olyan tanítványok, akik korábban már megpróbálták megszerezni az alapokat máshol, de falakba ütköztek:
-              </h3>
+        {/* Problems Section */}
+        <div className="mb-20 space-y-12">
+          <div className="max-w-3xl">
+            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
+              Gyakran érkeznek hozzám olyan tanítványok, akik korábban már megpróbálták megszerezni az alapokat máshol, de falakba ütköztek:
+            </h3>
 
-              <ul className="space-y-6">
-                {problems.map((problem, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className="flex gap-4"
-                  >
-                    <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">•</span>
-                    <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                      {problem.description}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Divider for mobile */}
-            <div className="lg:hidden w-full h-px bg-charcoal-800/10 my-8" />
+            <ul className="space-y-6">
+              {problems.map((problem, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="flex gap-4"
+                >
+                  <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">•</span>
+                  <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                    {problem.description}
+                  </p>
+                </motion.li>
+              ))}
+            </ul>
           </div>
+        </div>
 
-          {/* Solutions Section */}
-          <div className="space-y-12">
-            <div>
-              <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
-                Az ilyen történetek inspiráltak arra, hogy az alapképzésemet egy teljesen más, értékrend alapú szemlélet mentén építsem fel:
-              </h3>
+        {/* Divider */}
+        <div className="w-full h-px bg-charcoal-800/10 my-16" />
 
-              <ul className="space-y-6">
-                {solutions.map((solution, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className="flex gap-4"
-                  >
-                    <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">✓</span>
-                    <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                      {solution.description}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+        {/* Solutions Section */}
+        <div className="space-y-12">
+          <div className="max-w-3xl">
+            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
+              Az ilyen történetek inspiráltak arra, hogy az alapképzésemet egy teljesen más, értékrend alapú szemlélet mentén építsem fel:
+            </h3>
+
+            <ul className="space-y-6">
+              {solutions.map((solution, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="flex gap-4"
+                >
+                  <span className="text-gold-400 font-bold text-lg mt-1 shrink-0">✓</span>
+                  <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
+                    {solution.description}
+                  </p>
+                </motion.li>
+              ))}
+            </ul>
           </div>
         </div>
 
