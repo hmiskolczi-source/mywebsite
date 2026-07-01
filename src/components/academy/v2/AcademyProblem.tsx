@@ -130,6 +130,29 @@ export default function AcademyProblem() {
           </div>
         </div>
 
+        {/* CTA Button */}
+        <div className="flex justify-center mt-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <button
+              onClick={() => {
+                const el = document.getElementById('academy-form-anchor');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
+            >
+              <span className="relative z-10">Elindítom a sminkes karrierem &rarr;</span>
+              <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
+            </button>
+          </motion.div>
+        </div>
+
       </div>
     </section>
   );
