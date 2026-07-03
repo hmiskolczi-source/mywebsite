@@ -35,7 +35,6 @@ export default function Footer() {
             </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">
               EB aranyérmes és 3x-os VB ezüstérmes sminkmester, nemzetközi zsűrítag és oktató.
-              Személyre szabott hibrid, soft powder és kompromisszummentes korrekciós eljárások Budapest szívében.
             </p>
           </div>
 
