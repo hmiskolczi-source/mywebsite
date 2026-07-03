@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Award, Heart, Scroll } from 'lucide-react';
+import { Heart, Scroll } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Footer() {
@@ -34,15 +34,9 @@ export default function Footer() {
               <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
             </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">
-              Többszörös Európa- és Világbajnoki dobogós sminkmester és sminktetováló specialista. 
+              EB aranyérmes és 3x-os VB ezüstérmes sminkmester, nemzetközi zsűrítag és oktató.
               Személyre szabott hibrid, soft powder és kompromisszummentes korrekciós eljárások Budapest szívében.
             </p>
-            <div className="flex justify-center gap-4 items-center">
-              <span className="text-[10px] font-mono text-gold-400 uppercase tracking-widest flex items-center gap-1.5 bg-charcoal-800/40 px-3.5 py-1.5 rounded-full border border-cream-100/5">
-                <Award className="w-3.5 h-3.5" />
-                15 ÉVES NEMZETKÖZI BAJNOKI PEDIGRÉ
-              </span>
-            </div>
           </div>
 
         </div>

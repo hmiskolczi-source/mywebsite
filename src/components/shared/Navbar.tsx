@@ -37,7 +37,7 @@ export default function Navbar({ currentPage }: NavbarProps) {
             <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
           <span className="text-[8px] sm:text-[11px] font-mono uppercase tracking-widest text-charcoal-700 font-medium whitespace-nowrap">
-            Többszörös EB & VB Dobogós sminkmester
+            EB aranyérmes és 3x VB ezüstérmes sminkmester
           </span>
         </a>
 
