@@ -32,10 +32,10 @@ export default function HomeCaseStudies() {
       id: 3,
       title: 'Évek Alatt a Vörös Szőnyegen — Egy Közszereplő Stabil Elegancia',
       image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_casestudy3.webp',
-      who: 'Sarka Kata (üzletasszony, celeb)',
+      who: 'Kulcsár Edina (üzletasszony, celeb)',
       occasion: 'Különböző prémium társasági események, gálák és forgatások egy többéves időszakon át (kb. 2013–2015 között)',
       challenge: 'Egy országosan ismert, folyamatos kereszttűzben lévő közszereplő esetében olyan stabil, tartós és kifogástalan megjelenést kellett biztosítani, amely a vörös szőnyegtől a televíziós stúdiókig, mindenféle megvilágításban konzisztensen hozza a luxus elvárásokat.',
-      solution: 'Éveken át dolgoztunk együtt Katával, ami alatt a merev sémák helyett mindig az aktuális esemény hangulatához és az ő egyedi karakteréhez igazítottam a sminkjeit. A titok a precíz bőr- és arc-architectúra elemzésben rejlett: olyan high-end textúrákat és formákat használtam, amelyek órákon át, a legapróbb részletekig makulátlan és elegáns hatást nyújtottak a kamerák előtt. Ez a hosszú távú bizalom a legszebb visszajelzése annak a kompromisszummentes szakmaiságnak, amit az üzlethez hozok.'
+      solution: 'Éveken át dolgoztunk együtt Edinával, ami alatt a merev sémák helyett mindig az aktuális esemény hangulatához és az ő egyedi karakteréhez igazítottam a sminkjeit. A titok a precíz bőr- és arc-architectúra elemzésben rejlett: olyan high-end textúrákat és formákat használtam, amelyek órákon át, a legapróbb részletekig makulátlan és elegáns hatást nyújtottak a kamerák előtt. Ez a hosszú távú bizalom a legszebb visszajelzése annak a kompromisszummentes szakmaiságnak, amit az üzlethez hozok.'
     }
   ];
 
