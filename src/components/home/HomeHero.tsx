@@ -15,14 +15,14 @@ export default function HomeHero() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
           {/* Main Content Area */}
-          <div className="lg:w-7/12 flex flex-col justify-center space-y-8">
+          <div className="lg:w-7/12 flex flex-col justify-center space-y-8 text-center md:text-left">
 
             {/* Social Proof */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.6 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
+              className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4 grayscale opacity-60"
             >
               <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">Nemzetközi zsűritag</span>
               <div className="w-px h-4 bg-charcoal-700/20" />
@@ -61,7 +61,7 @@ export default function HomeHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="pt-4"
+              className="pt-4 flex justify-center md:justify-start"
             >
               <a
                 href="#lead-form-anchor"

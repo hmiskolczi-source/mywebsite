@@ -90,7 +90,7 @@ export default function Navbar({ currentPage }: NavbarProps) {
 
           <button
             onClick={scrollToForm}
-            className="group relative px-4 sm:px-6 py-2.5 sm:py-3 bg-charcoal-800 text-cream-100 text-[10px] sm:text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
+            className="hidden md:block group relative px-4 sm:px-6 py-2.5 sm:py-3 bg-charcoal-800 text-cream-100 text-[10px] sm:text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
           >
             <span className="relative z-10">
               {currentPage === 'sminkkepzes' ? 'Elindítom a sminkes karrierem' : 'Jelentkezem egyéni tervezésre Kingához'}
