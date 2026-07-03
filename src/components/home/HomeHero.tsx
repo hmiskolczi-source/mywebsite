@@ -83,7 +83,7 @@ export default function HomeHero() {
               className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4]"
             >
               <img
-                src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_hero.webp"
+                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp"
                 alt="Hovorka-Miskolczi Kinga - Premium portrait"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

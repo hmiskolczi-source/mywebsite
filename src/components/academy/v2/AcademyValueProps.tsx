@@ -80,7 +80,7 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
                   alt="Profi sminkek"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
@@ -139,7 +139,7 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
                   alt="Portfólió fotózás"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
@@ -160,7 +160,7 @@ export default function AcademyValueProps() {
                   className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
                 >
                   <img
-                    src={`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
+                    src={`https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
                     alt={`Portfólió ${item}`}
                     className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
                     referrerPolicy="no-referrer"
@@ -206,7 +206,7 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
                   alt="Modell sminkelés"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
@@ -288,7 +288,7 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
                   alt="Bőrdiagnosztika"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />

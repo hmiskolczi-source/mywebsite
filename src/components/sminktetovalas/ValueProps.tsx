@@ -33,7 +33,7 @@ export default function ValueProps() {
         { text: 'könnyedek és légiesek', bold: true },
         { text: ', így az idő múlásával esztétikusan gyógyulnak és halványodnak, elkerülve a régi, drasztikus és elszíneződött tetoválások hatását.' }
       ],
-      img: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop1.webp',
+      img: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop1.webp',
       features: [
         { icon: Search, title: 'Komplex Arc-architektúra', desc: 'Személyre szabott arcarány-elemzés' },
         { icon: Layers, title: 'Légies soft-powder satír', desc: 'Lágy, természetes tónusok' },
@@ -55,7 +55,7 @@ export default function ValueProps() {
         { text: 'tökéletesen elzsibbasztja a területet', bold: true },
         { text: ' akár 1-1,5 órára.' }
       ],
-      img: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop2.webp',
+      img: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop2.webp',
       features: [
         { icon: ShieldCheck, title: 'Kétfázisú Érzéstelenítés', desc: 'Elő- és folyamatközbeni zsibbasztás' },
         { icon: Zap, title: 'Soha nincs injekció', desc: 'Csak gyengéd prémium krémek' },
@@ -77,7 +77,7 @@ export default function ValueProps() {
         { text: 'teljesen őszintén megmondom a lehetőségeket', bold: true },
         { text: ': a túl mély és sötét sebekre először lézeres eltávolítást javaslok a szép végeredményért, míg a halványabbakat azonnal, biztonságosan kijavítom.' }
       ],
-      img: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop3.webp',
+      img: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_valueprop3.webp',
       features: [
         { icon: Compass, title: 'Biztonsági stratégia', desc: 'Fokozatos sötétítés, nincs sokk' },
         { icon: Award, title: 'Ingyenes korrekció', desc: 'Az alapár tartalmazza a 2. alkalmat' },

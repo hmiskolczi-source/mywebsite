@@ -101,7 +101,7 @@ export default function AcademyProblem() {
                   </a>
                 </div>
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy_problemreview.webp"
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy_problemreview.webp"
                   alt="Wéber Kata beauty és esküvői sminkes"
                   className="w-full h-auto rounded-sm shadow-lg"
                 />
