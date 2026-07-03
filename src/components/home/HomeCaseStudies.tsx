@@ -13,7 +13,7 @@ export default function HomeCaseStudies() {
     {
       id: 1,
       title: 'Párizsi Luxussminkelés Egy Királynő-Döntösnek',
-      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/maincasestudy1.webp',
+      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_casestudy1.webp',
       who: 'Hamikus Renáta (influenszer, Miss Hungary döntős)',
       occasion: 'Egy exklúzív párizsi workshopra készültünk együtt',
       challenge: 'Egy nemzetközileg elismert szépségkirálynő-döntős és influenszer esetében olyan magazin-minőségű, sémamentes luxussminket kellett alkotni a divat fővárosában, amely a kamerák előtt és élőben, a workshop fényeinél is hozza a prémium, hibátlan eleganciát.',
@@ -22,7 +22,7 @@ export default function HomeCaseStudies() {
     {
       id: 2,
       title: 'Fotós Workshop — Párizs, Két Modell, Egy Vizuális Harmónia',
-      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/maincasestudy2.webp',
+      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_casestudy2.webp',
       who: 'Balogh Eleni (Miss Balaton)',
       occasion: 'Egy párizsi fotós workshop, ahol a párjával közösen modellkedtek',
       challenge: 'Egy fotós workshopon a sminknek egyszerre kell ellenállnia a stúdiófények és a külső helyszínek megpróbáltatásainak, miközben egy Miss Balaton győztes esetében elvárás a magazin-kompatibilis, nemzetközi szintű prémium elegancia.',
@@ -31,7 +31,7 @@ export default function HomeCaseStudies() {
     {
       id: 3,
       title: 'Évek Alatt a Vörös Szőnyegen — Egy Közszereplő Stabil Elegancia',
-      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/maincasestudy1.webp',
+      image: 'https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_casestudy3.webp',
       who: 'Sarka Kata (üzletasszony, celeb)',
       occasion: 'Különböző prémium társasági események, gálák és forgatások egy többéves időszakon át (kb. 2013–2015 között)',
       challenge: 'Egy országosan ismert, folyamatos kereszttűzben lévő közszereplő esetében olyan stabil, tartós és kifogástalan megjelenést kellett biztosítani, amely a vörös szőnyegtől a televíziós stúdiókig, mindenféle megvilágításban konzisztensen hozza a luxus elvárásokat.',
