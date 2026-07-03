@@ -29,14 +29,7 @@ export default function AcademyHero() {
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8 text-center md:text-left">
 
             {/* Social Proof Badges */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4 grayscale opacity-60"
-            >
-              <SocialProof />
-            </motion.div>
+            <SocialProof />
 
             {/* Core Headline */}
             <motion.div
