@@ -82,7 +82,7 @@ export default function Closer() {
             </div>
 
             <p className="text-lg text-cream-100/70 font-light leading-relaxed max-w-xl">
-              Csak korlátozott számú vendéget fogadok havi szinten, hogy minden egyes alkalomra 100%-os figyelmet tudjak fordítani. Az arc egyedi, az Ön szépségvonalai sablonok nélkül érdemelnek kezelést.
+              Csak korlátozott számú vendéget fogadok havi szinten, hogy minden egyes alkalomra 100%-os figyelmet tudjak fordítani. Az arc egyedi, a szépségvonalaid sablonok nélkül érdemelnek kezelést.
             </p>
 
             <div className="space-y-6 pt-4">
