@@ -153,38 +153,20 @@ export default function AcademyValueProps() {
             <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center mb-10">
               Képek korábbi résztvevők portfólióiból
             </p>
-            <div className="overflow-hidden">
-              <style>{`
-                @keyframes scroll-left {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-50%);
-                  }
-                }
-                .portfolio-scroll {
-                  animation: scroll-left 40s linear infinite;
-                  will-change: transform;
-                }
-              `}</style>
-              <div className="flex gap-4 portfolio-scroll">
-                {[...Array(2)].map((_, loop) =>
-                  Array.from({ length: 13 }, (_, i) => i + 1).map((item) => (
-                    <div
-                      key={`${loop}-${item}`}
-                      className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
-                    >
-                      <img
-                        src={`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
-                        alt={`Portfólió ${item}`}
-                        className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                  ))
-                )}
-              </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Array.from({ length: 8 }, (_, i) => i + 1).map((item) => (
+                <div
+                  key={item}
+                  className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
+                >
+                  <img
+                    src={`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
+                    alt={`Portfólió ${item}`}
+                    className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
