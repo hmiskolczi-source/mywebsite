@@ -60,7 +60,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                A képzés teljes időtartama alatt <span className="font-bold">minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit</span> és csúcskategóriás eszközeit korlátlanul biztosítom számodra szegedi és budapesti lakásstúdiómban. Így <span className="font-bold">egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra</span> kidobnod a beiratkozás előtt. Ráadásul <span className="font-bold">Kinga segít összeállítani</span> a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatja, mi az a <span className="font-bold">3 kulcspaletta</span>, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
+                A képzés teljes időtartama alatt <span className="font-bold">minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit</span> és csúcskategóriás eszközeit korlátlanul biztosítom számodra szegedi és budapesti lakásstúdiómban. Így <span className="font-bold">egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra</span> kidobnod a beiratkozás előtt. Ráadásul <span className="font-bold">segítek összeállítani</span> a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatom, mi az a <span className="font-bold">3 kulcspaletta</span>, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
               </p>
               
               <div className="pl-8 border-l border-gold-400/30">
@@ -287,9 +287,8 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                Kinga <span className="font-bold">közel 10 év kozmetikusi tapasztalattal</span> tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem <span className="font-bold">megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát</span>. Azt a gondolkodást, amivel <span className="font-bold">minden egyes vendéghez másképpen állsz hozzá</span> – amitől a munkád prémium lesz, nem csak szép.
+                <span className="font-bold">közel 10 év kozmetikusi tapasztalattal tanítok sminkelést.</span> tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem <span className="font-bold">megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát</span>. Azt a gondolkodást, amivel <span className="font-bold">minden egyes vendéghez másképpen állsz hozzá</span> – amitől a munkád prémium lesz, nem csak szép.
               </p>
-
               <button 
                 onClick={scrollToForm}
                 className="text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase border-b border-gold-400 pb-1 hover:text-gold-600 transition-colors"
