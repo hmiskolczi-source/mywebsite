@@ -36,7 +36,7 @@ export default function AcademyOtherCourses() {
     {
       badge: "Versenyfelkészítés",
       title: "Személyre szabott, egyéni bajnoki mentorprogram",
-      description: "Teljesen egyéni, privát felkészítés Kinga több mint 100 élő versenyének tapasztalatával. Körülbelül 2 hónappal a verseny előtt kezdünk: legalább 3 személyes találkozón vezetünk végig a pontos téma meghatározásától és a modell kiválasztásától a begyakorláson át a kimagasló, gyors versenymunkáig.",
+      description: "Teljesen egyéni, privát felkészítés Kinga több mint 100 élő versenyének tapasztalatával. Körülbelül 2 hónappal a verseny előtt kezdem: legalább 3 személyes találkozón vezetek végig a pontos téma meghatározásától és a modell kiválasztásától a begyakorláson át a kimagasló, gyors versenymunkáig.",
       spots: "1 elérhető hely maradt!",
       details: [
         { label: "Időkeret", value: "2 hónap" },

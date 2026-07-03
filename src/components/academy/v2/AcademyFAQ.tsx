@@ -17,12 +17,12 @@ export default function AcademyFAQ() {
     {
       id: 'fa1',
       question: 'Nincs sminkes előképzettségem. Nekem való ez a képzés?',
-      answer: 'Igen. A feltétel nem az előképzettség, hanem az elhivatottság. Az alapoktól indulunk, de az ütem és a szint azt teszi lehetővé, hogy 10 hét alatt piacképes tudással kerülj ki. Kinga személyesen szűri a jelentkezőket — hogy biztosan csak komoly, fejlődni vágyó emberek kerüljenek a csoportba.'
+      answer: 'Igen. A feltétel nem az előképzettség, hanem az elhivatottság. Az alapoktól indulok, de az ütem és a szint azt teszi lehetővé, hogy 10 hét alatt piacképes tudással kerülj ki. Kinga személyesen szűri a jelentkezőket — hogy biztosan csak komoly, fejlődni vágyó emberek kerüljenek a csoportba.'
     },
     {
       id: 'fa2',
       question: 'Mi a garancia, hogy utána munkát kapok?',
-      answer: 'Munkát nem ígérünk — portfóliót, állami tanúsítványt és Kinga személyes ajánlását igen. A végzett tanítványaink 80%-a aktívan dolgozik a szakmában. Az ajánlási hálózatba automatikusan bekerülsz: ha valaki sminkest keres, Kinga téged ajánl. A többi rajtad múlik — de az eszközöket garantáltan megkapod.'
+      answer: 'Munkát nem ígérek — portfóliót, állami tanúsítványt és Kinga személyes ajánlását igen. A végzett tanítványaim 80%-a aktívan dolgozik a szakmában. Az ajánlási hálózatba automatikusan bekerülsz: ha valaki sminkest keres, Kinga téged ajánl. A többi rajtad múlik — de az eszközöket garantáltan megkapod.'
     },
     {
       id: 'fa3',
@@ -32,7 +32,7 @@ export default function AcademyFAQ() {
     {
       id: 'fa4',
       question: 'Nekem kell biztosítanom a modelleket az órákra?',
-      answer: 'Nem kötelező. Kinga segít modelleket találni, és a portfóliófotózáshoz is biztosítanak modellt. Ha nem találsz senkit, nem maradsz le semmit.'
+      answer: 'Nem kötelező. Kinga segít modelleket találni, és a portfóliófotózáshoz is biztosítok modellt. Ha nem találsz senkit, nem maradsz le semmit.'
     },
     {
       id: 'fa5',

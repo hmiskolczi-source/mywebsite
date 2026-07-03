@@ -10,12 +10,12 @@ export default function AcademyProcess() {
   const steps = [
     {
       title: "Gyors Jelentkezés",
-      description: "Töltsd ki az alábbi 30 másodperces jelentkezési űrlapot, és írd le röviden a céljaidat. Gondosan szűrjük a résztvevőket, hogy elhivatott, valóban fejlődni akaró közösség alakuljon ki.",
+      description: "Töltsd ki az alábbi 30 másodperces jelentkezési űrlapot, és írd le röviden a céljaidat. Gondosan szűrök a résztvevőket, hogy elhivatott, valóban fejlődni akaró közösség alakuljon ki.",
       label: "Gondos előszűrés"
     },
     {
       title: "A Helybiztosítás",
-      description: "A 10%-os helyfoglalási előleg banki átutalásával vagy készpénzes teljesítésével azonnal zároljuk a helyedet a kis létszámú csoportban. Nincs meglepetés, a helyed 100%-ig foglalt.",
+      description: "A 10%-os helyfoglalási előleg banki átutalásával vagy készpénzes teljesítésével azonnal zárolom a helyedet a kis létszámú csoportban. Nincs meglepetés, a helyed 100%-ig foglalt.",
       label: "Biztosítsd be a helyedet"
     },
     {

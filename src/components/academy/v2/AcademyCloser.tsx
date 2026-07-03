@@ -222,11 +222,11 @@ export default function AcademyCloser() {
                   className="py-16 text-center space-y-6 border border-white/10"
                 >
                   <div className="space-y-4">
-                    <h3 className="font-serif-lux text-4xl font-light text-white">Gratulálunk!</h3>
-                    <p className="text-xs text-gold-400 uppercase tracking-luxury">Jelentkezésedet sikeresen rögzítettük.</p>
+                    <h3 className="font-serif-lux text-4xl font-light text-white">Gratulálok!</h3>
+                    <p className="text-xs text-gold-400 uppercase tracking-luxury">Jelentkezésedet sikeresen rögzítettem.</p>
                   </div>
                   <p className="text-sm text-cream-100/60 font-light max-w-sm mx-auto leading-relaxed">
-                    Kinga 24 órán belül személyesen hívni fog a megadott számon a tervezéssel kapcsolatban. Küldtünk egy automatikus tájékoztató levelet e-mail fiókodba a heti órarendleddel és a banki adatokkal.
+                    Kinga 24 órán belül személyesen hívni fog a megadott számon a tervezéssel kapcsolatban. Küldtem egy automatikus tájékoztató levelet e-mail fiókodba a heti órarendleddel és a banki adatokkal.
                   </p>
                   <button
                     onClick={handleReset}

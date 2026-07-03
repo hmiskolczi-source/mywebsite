@@ -35,21 +35,21 @@ export default function AcademyPricing() {
     {
       initials: "NM",
       name: "Nagy Melinda",
-      role: "Diplomás Pro Sminkes tanulónk",
+      role: "Diplomás Pro Sminkes tanulóm",
       title: "„Soha életemben nem hoztam ennél jobb döntést. Már tanulás közben megtérült a tanfolyam.”",
       text: "„Mindenki le akart beszélni a sminkiskolákról, mert azt mondták, túl telített a piac. Kingáéknál teljesen más szemléletet kaptam: nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam.”"
     },
     {
       initials: "SE",
       name: "Szabó Eszter",
-      role: "Végzett Mentorprogramos tanulónk",
+      role: "Végzett Mentorprogramos tanulóm",
       title: "„Már a képzés 6. hetén saját munkákból kerestem meg az árát!”",
       text: "„Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek, azonnal jöttek a felkérések.”"
     },
     {
       initials: "KP",
       name: "Kovács Petra",
-      role: "Profi Sminkes mentoráltunk",
+      role: "Profi Sminkes mentorálam",
       title: "„A legfinomabb szakmai titkokat és a márkafüggetlen igazságot kaptam.”",
       text: "„Sokáig kerestem olyan iskolát, ahol nem akarnak kötelező márkacsomagot rám erőszakolni. Itt a legjobb high-end és drogériás alternatívákat is megismertük, így százezres felesleges költésektől mentett meg Kinga.”"
     }
@@ -66,7 +66,7 @@ export default function AcademyPricing() {
             Transzparens árazás, <br className="hidden sm:block" /><span className="italic">rejtett költségek nélkül.</span>
           </h2>
           <p className="text-base md:text-lg text-charcoal-700/70 font-light max-w-xl leading-relaxed">
-            Nálunk nincsenek kötelező kezdőcsomagok és kötelezően megvásárolandó sminkkészletek. Egyetlen, magába foglaló díjért mindent megkapsz.
+            Nálam nincsenek kötelező kezdőcsomagok és kötelezően megvásárolandó sminkkészletek. Egyetlen, magába foglaló díjért mindent megkapsz.
           </p>
         </div>
 

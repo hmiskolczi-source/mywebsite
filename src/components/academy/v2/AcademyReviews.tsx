@@ -35,9 +35,9 @@ export default function AcademyReviews() {
         
         {/* Section Header - Magazine Style */}
         <div className="mb-12 space-y-4">
-          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Tanulóink Véleményei</span>
+          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Tanulóim Véleménye</span>
           <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
-            Tanítványaink 80%-a <br /><span className="italic">Aktívan a Szakmában Dolgozik és Oktat.</span>
+            Tanítványaim 80%-a <br /><span className="italic">Aktívan a Szakmában Dolgozik és Oktat.</span>
           </h2>
           <p className="text-lg text-charcoal-700/70 font-light max-w-xl">
             Nézd meg, hogyan építettek sikeres karriert az esküvői és divatszakmában a Kingánál megszerzett bajnoki tudással.
