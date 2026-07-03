@@ -25,20 +25,16 @@ export default function Navbar({ currentPage }: NavbarProps) {
     <header className="sticky top-0 z-50 bg-cream-100/90 backdrop-blur-md border-b border-cream-300/30 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between gap-4">
         
-        {/* Brand logo & tagline representation */}
-        <a 
-          href="/" 
-          className="flex flex-col cursor-pointer select-none shrink-0 no-underline"
+        {/* Brand logo */}
+        <a
+          href="/"
+          className="cursor-pointer select-none shrink-0 no-underline"
         >
-          <div className="flex items-center gap-1.5">
-            <span className="font-serif-lux font-bold text-base sm:text-2xl tracking-wider text-charcoal-900 uppercase">
-              MISKOLCZI KINGA
-            </span>
-            <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-          </div>
-          <span className="text-[8px] sm:text-[11px] font-mono uppercase tracking-widest text-charcoal-700 font-medium whitespace-nowrap">
-            EB aranyérmes és 3x VB ezüstérmes sminkmester
-          </span>
+          <img
+            src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
+            alt="Kinga Miskolczi Logo"
+            className="h-12 sm:h-16 w-auto"
+          />
         </a>
 
         {/* Dynamic Nav Tabs */}
