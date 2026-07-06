@@ -17,7 +17,7 @@ export default function LeadForm({ idPrefix }: LeadFormProps) {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [area, setArea] = useState('');
-  const [agree, setAgree] = useState(true);
+  const [agree, setAgree] = useState(false);
 
   // States for validation & submission
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -212,10 +212,20 @@ export default function LeadForm({ idPrefix }: LeadFormProps) {
                     type="checkbox"
                     checked={agree}
                     onChange={(e) => setAgree(e.target.checked)}
+                    required
                     className="mt-0.5 rounded border-amber-200/15 text-gold-400 bg-charcoal-900 focus:ring-gold-400 focus:ring-opacity-20 accent-gold-400"
                   />
                   <span>
-                    Elfogadom az Adatkezelési Tájékoztatót és hozzájárulok a személyre szabott konzultáció megszervezéséhez.
+                    Elfogadom az{' '}
+                    <a
+                      href="/adatvedelem"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gold-300 hover:text-gold-200 underline underline-offset-1 transition-colors"
+                    >
+                      Adatkezelési Tájékoztatót
+                    </a>
+                    {' '}és hozzájárulok a személyre szabott konzultáció megszervezéséhez.
                   </span>
                 </label>
               </div>
