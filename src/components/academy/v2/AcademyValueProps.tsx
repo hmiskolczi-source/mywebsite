@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import ImageWatermark from '../../shared/ImageWatermark';
 
 export default function AcademyValueProps() {
   const [showTypes, setShowTypes] = useState(true);
@@ -71,7 +72,7 @@ export default function AcademyValueProps() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -79,11 +80,13 @@ export default function AcademyValueProps() {
               className="lg:w-1/2 relative"
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
-                  alt="Profi sminkek"
-                  className="w-full h-full object-cover grayscale-[0.1]"
-                />
+                <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
+                    alt="Profi sminkek"
+                    className="w-full h-full object-cover grayscale-[0.1]"
+                  />
+                </ImageWatermark>
               </div>
               <div className="absolute -top-6 -right-6 w-32 h-32 border-t border-r border-gold-300/20 -z-10" />
             </motion.div>
@@ -130,7 +133,7 @@ export default function AcademyValueProps() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -138,11 +141,13 @@ export default function AcademyValueProps() {
               className="lg:w-1/2 relative"
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
-                  alt="Portfólió fotózás"
-                  className="w-full h-full object-cover grayscale-[0.1]"
-                />
+                <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
+                    alt="Portfólió fotózás"
+                    className="w-full h-full object-cover grayscale-[0.1]"
+                  />
+                </ImageWatermark>
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b border-l border-gold-300/20 -z-10" />
             </motion.div>
@@ -197,7 +202,7 @@ export default function AcademyValueProps() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -205,11 +210,13 @@ export default function AcademyValueProps() {
               className="lg:w-1/2"
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
-                  alt="Modell sminkelés"
-                  className="w-full h-full object-cover grayscale-[0.1]"
-                />
+                <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
+                    alt="Modell sminkelés"
+                    className="w-full h-full object-cover grayscale-[0.1]"
+                  />
+                </ImageWatermark>
               </div>
             </motion.div>
           </div>
@@ -279,7 +286,7 @@ export default function AcademyValueProps() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -287,11 +294,13 @@ export default function AcademyValueProps() {
               className="lg:w-1/2"
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
-                  alt="Bőrdiagnosztika"
-                  className="w-full h-full object-cover grayscale-[0.1]"
-                />
+                <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
+                    alt="Bőrdiagnosztika"
+                    className="w-full h-full object-cover grayscale-[0.1]"
+                  />
+                </ImageWatermark>
               </div>
             </motion.div>
           </div>

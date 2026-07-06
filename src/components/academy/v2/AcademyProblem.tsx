@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import ImageWatermark from '../../shared/ImageWatermark';
 
 export default function AcademyProblem() {
   const problems = [
@@ -100,11 +101,13 @@ export default function AcademyProblem() {
                     eskuvoclassic.hu
                   </a>
                 </div>
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_problemreview.webp"
-                  alt="Wéber Kata beauty és esküvői sminkes"
-                  className="w-full h-auto rounded-sm shadow-lg"
-                />
+                <ImageWatermark className="relative w-full h-auto rounded-sm overflow-hidden shadow-lg">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_problemreview.webp"
+                    alt="Wéber Kata beauty és esküvői sminkes"
+                    className="w-full h-auto rounded-sm"
+                  />
+                </ImageWatermark>
               </div>
             </div>
 

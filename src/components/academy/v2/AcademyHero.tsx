@@ -7,6 +7,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import SocialProof from '../../shared/SocialProof';
 import BrandLogos from '../../shared/BrandLogos';
+import ImageWatermark from '../../shared/ImageWatermark';
 
 export default function AcademyHero() {
   const scrollToForm = () => {
@@ -84,11 +85,13 @@ export default function AcademyHero() {
               className="relative"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-cream-200">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_hero.webp"
-                  alt="Hovorka-Miskolczi Kinga Atelier"
-                  className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
-                />
+                <ImageWatermark className="relative w-full h-full">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_hero.webp"
+                    alt="Hovorka-Miskolczi Kinga Atelier"
+                    className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
+                  />
+                </ImageWatermark>
               </div>
               
               {/* Delicate Framing Corners */}

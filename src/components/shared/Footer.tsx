@@ -29,8 +29,8 @@ export default function Footer() {
           <div className="space-y-4 max-w-xl mx-auto">
             <div className="flex items-center justify-center gap-2">
               <img
-                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
-                alt="Kinga Miskolczi Logo"
+                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/footerlogo.png"
+                alt="Kinga Miskolczi Footer Logo"
                 className="h-12 sm:h-16 w-auto"
               />
             </div>

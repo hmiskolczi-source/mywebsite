@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import ImageWatermark from '../shared/ImageWatermark';
 
 export default function Founder() {
   const scrollToForm = () => {
@@ -29,12 +30,14 @@ export default function Founder() {
           >
             <div className="relative">
               <div className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl bg-cream-200">
-                <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/kingafounder.webp"
-                  alt="Hovorka-Miskolczi Kinga sminkmester"
-                  className="w-full h-full object-cover grayscale-[0.1] contrast-[1.05]"
-                  referrerPolicy="no-referrer"
-                />
+                <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
+                  <img
+                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/kingafounder.webp"
+                    alt="Hovorka-Miskolczi Kinga sminkmester"
+                    className="w-full h-full object-cover grayscale-[0.1] contrast-[1.05]"
+                    referrerPolicy="no-referrer"
+                  />
+                </ImageWatermark>
               </div>
 
               {/* Floating Name Moment */}

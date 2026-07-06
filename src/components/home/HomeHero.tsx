@@ -7,6 +7,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import SocialProof from '../shared/SocialProof';
 import BrandLogos from '../shared/BrandLogos';
+import ImageWatermark from '../shared/ImageWatermark';
 
 export default function HomeHero() {
   return (
@@ -80,14 +81,16 @@ export default function HomeHero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4]"
+              className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4]"
             >
-              <img
-                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp"
-                alt="Hovorka-Miskolczi Kinga - Premium portrait"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+              <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
+                <img
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp"
+                  alt="Hovorka-Miskolczi Kinga - Premium portrait"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </ImageWatermark>
             </motion.div>
           </div>
 

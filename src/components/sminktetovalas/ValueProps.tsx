@@ -5,10 +5,11 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Sparkles, ShieldCheck, Heart, Search, Eye, RefreshCw, 
-  Settings, Check, Compass, Layers, Zap, Info, Award 
+import {
+  Sparkles, ShieldCheck, Heart, Search, Eye, RefreshCw,
+  Settings, Check, Compass, Layers, Zap, Info, Award
 } from 'lucide-react';
+import ImageWatermark from '../shared/ImageWatermark';
 
 export default function ValueProps() {
   const scrollToForm = () => {
@@ -118,27 +119,20 @@ export default function ValueProps() {
                     className="relative rounded-2xl overflow-hidden aspect-square border border-cream-300 shadow-xl bg-white p-3 group"
                   >
                     <div className="relative w-full h-full rounded-xl overflow-hidden bg-charcoal-900">
-                      <img 
-                        src={p.img} 
-                        alt={p.headline}
-                        className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity group-hover:mix-blend-normal"
-                        referrerPolicy="no-referrer"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
-                      
-                      {/* Big elegant counter number */}
-                      <div className="absolute top-6 right-6 font-serif-lux text-7xl font-light italic text-gold-300/20 z-10 select-none">
-                        {p.num}
-                      </div>
-
-                      {/* Floating tag with logo */}
-                      <div className="absolute bottom-6 left-6 right-6 flex flex-col items-center justify-center">
+                      <ImageWatermark className="relative w-full h-full rounded-xl overflow-hidden">
                         <img
-                          src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
-                          alt="Kinga Miskolczi Logo"
-                          className="h-10 w-auto opacity-90"
+                          src={p.img}
+                          alt={p.headline}
+                          className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity group-hover:mix-blend-normal"
+                          referrerPolicy="no-referrer"
                         />
-                      </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
+
+                        {/* Big elegant counter number */}
+                        <div className="absolute top-6 right-6 font-serif-lux text-7xl font-light italic text-gold-300/20 z-10 select-none">
+                          {p.num}
+                        </div>
+                      </ImageWatermark>
                     </div>
                   </motion.div>
                 </div>

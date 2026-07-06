@@ -8,6 +8,7 @@ import { motion } from 'motion/react';
 import { Star, Shield, Award, Quote, CheckCircle, Sparkles } from 'lucide-react';
 import SocialProof from '../shared/SocialProof';
 import BrandLogos from '../shared/BrandLogos';
+import ImageWatermark from '../shared/ImageWatermark';
 
 export default function Hero() {
   const scrollToForm = () => {
@@ -81,15 +82,17 @@ export default function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
+              className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
             >
-              <img
-                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp"
-                alt="Premium makeup tattoo service"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
+              <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
+                <img
+                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp"
+                  alt="Premium makeup tattoo service"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
+              </ImageWatermark>
             </motion.div>
           </div>
         </div>
