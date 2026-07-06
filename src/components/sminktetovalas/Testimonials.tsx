@@ -57,7 +57,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials 3-Grid */}
-        <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {cards.map((card, idx) => {
             const IconComponent = card.tagIcon;
             return (
@@ -70,15 +70,15 @@ export default function Testimonials() {
                 className="bg-white overflow-hidden border border-charcoal-800/5 shadow-sm flex flex-col justify-between group"
               >
                 {/* Visual Header Image representation of client's healed confidence */}
-                <div className="relative h-56 w-full overflow-hidden bg-charcoal-900">
-                  <img 
-                    src={card.image} 
+                <div className="hidden relative h-56 w-full overflow-hidden bg-charcoal-900">
+                  <img
+                    src={card.image}
                     alt={`${card.author} healed faces representation`}
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/15 to-transparent pointer-events-none" />
-                  
+
                   {/* Category Pill Tag */}
                   <div className="absolute top-4 left-4 bg-charcoal-900/80 backdrop-blur-md px-3 py-1 text-[10px] font-mono tracking-wider font-bold text-cream-100 shadow-sm border border-charcoal-700/40 flex items-center gap-1.5 uppercase">
                     <IconComponent className="w-3 text-gold-400" />
