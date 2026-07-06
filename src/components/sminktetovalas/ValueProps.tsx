@@ -123,7 +123,10 @@ export default function ValueProps() {
                         <img
                           src={p.img}
                           alt={p.headline}
-                          className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity group-hover:mix-blend-normal"
+                          className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 group-hover:mix-blend-normal"
+                          style={{
+                            mixBlendMode: window.matchMedia('(min-width: 768px)').matches ? 'luminosity' : 'normal'
+                          }}
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
