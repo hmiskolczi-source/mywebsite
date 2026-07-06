@@ -160,7 +160,7 @@ export default function AcademyValueProps() {
                   className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
                 >
                   <img
-                    src={`https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
+                    src={`https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/portfolio/${item}.webp`}
                     alt={`Portfólió ${item}`}
                     className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
                     referrerPolicy="no-referrer"

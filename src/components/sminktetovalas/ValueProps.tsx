@@ -131,14 +131,13 @@ export default function ValueProps() {
                         {p.num}
                       </div>
 
-                      {/* Floating tag */}
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <span className="inline-block px-3 py-1 bg-gold-400 text-charcoal-950 font-mono text-[10px] font-bold uppercase rounded-full tracking-wider mb-2">
-                          {p.badge}
-                        </span>
-                        <p className="text-white text-xs font-light tracking-wide leading-relaxed italic block">
-                          {p.tagline}
-                        </p>
+                      {/* Floating tag with logo */}
+                      <div className="absolute bottom-6 left-6 right-6 flex flex-col items-center justify-center">
+                        <img
+                          src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
+                          alt="Kinga Miskolczi Logo"
+                          className="h-10 w-auto opacity-90"
+                        />
                       </div>
                     </div>
                   </motion.div>

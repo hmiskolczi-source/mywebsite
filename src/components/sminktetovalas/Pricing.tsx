@@ -36,7 +36,7 @@ export default function Pricing() {
     {
       category: 'AJAKTETOVÁLÁS',
       items: [
-        { name: 'OMBRE LIPS:', price: '90.000.-', desc: 'A legmodernebb tecnikával készített diszkrét kontúrvonal és befelé finoman mosódó lágy satírozás, amely természetes volument kölcsönöz.' },
+        { name: 'OMBRE LIPS:', price: '120.000.-', desc: 'A legmodernebb tecnikával készített diszkrét kontúrvonal és befelé finoman mosódó lágy satírozás, amely természetes volument kölcsönöz.' },
         { name: 'AJAK TELJES SATÍR:', price: '120.000.-', desc: 'Teljes felületű, gyönyörűen pigmentált rúzs hatású vagy lágy Lip Blush technika az egyenletes, ragyogó tónusért.' }
       ]
     },

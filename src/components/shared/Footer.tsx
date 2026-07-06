@@ -28,11 +28,11 @@ export default function Footer() {
           {/* Brand details - Centered & Elegant */}
           <div className="space-y-4 max-w-xl mx-auto">
             <div className="flex items-center justify-center gap-2">
-              <span className="font-serif-lux font-bold text-xl sm:text-2xl tracking-wider text-white uppercase">
-                MISKOLCZI KINGA
-              </span>
-              <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-            </div>
+              <img
+                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
+                alt="Kinga Miskolczi Logo"
+                className="h-12 sm:h-16 w-auto"
+              />
             <p className="text-xs text-cream-300 font-light leading-relaxed">
               EB aranyérmes és 3x-os VB ezüstérmes sminkmester, nemzetközi zsűrítag és oktató.
             </p>
