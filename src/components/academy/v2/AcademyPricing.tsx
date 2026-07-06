@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Star } from 'lucide-react';
+import { Star, Instagram, Facebook, Phone } from 'lucide-react';
 
 export default function AcademyPricing() {
   const scrollToForm = () => {
@@ -243,6 +243,25 @@ export default function AcademyPricing() {
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
                 <div className="w-1 h-1 rounded-full bg-gold-400" />
+              </div>
+
+              {/* Socials & Contacts */}
+              <div className="mt-12 pt-8 border-t border-charcoal-800/10 space-y-6">
+                <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center">Kapcsolatba lépés</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-xs sm:text-sm text-charcoal-700 font-light">
+                  <a href="https://www.instagram.com/miskolczikinga_makeup_school/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
+                    <Instagram className="w-4 h-4 text-gold-500 shrink-0" />
+                    <span className="truncate">miskolczikinga_makeup_school</span>
+                  </a>
+                  <a href="https://www.facebook.com/promakeupschool" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
+                    <Facebook className="w-4 h-4 text-gold-500 shrink-0" />
+                    <span className="truncate">Pro Makeup School</span>
+                  </a>
+                  <div className="flex items-center justify-center gap-2 py-1">
+                    <Phone className="w-4 h-4 text-gold-500 shrink-0" />
+                    <span>+36 30 709 4370</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

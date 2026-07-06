@@ -162,17 +162,17 @@ export default function Pricing() {
 
             {/* Socials & Contacts */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-xs sm:text-sm text-charcoal-700 font-light mb-8 pt-3">
-              <a href="https://instagram.com/sminktetovalas_miskolczikinga" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
+              <a href="https://www.instagram.com/sminktetovalas_miskolczikinga/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
                 <Instagram className="w-4 h-4 text-gold-500 shrink-0" />
                 <span className="truncate">sminktetovalas_miskolczikinga</span>
               </a>
-              <a href="https://facebook.com/kingamiskolcziprofessionelmakeup" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
+              <a href="https://www.facebook.com/profile.php?id=100075798163564" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
                 <Facebook className="w-4 h-4 text-gold-500 shrink-0" />
-                <span className="truncate">kingamiskolcziprofessionelmakeup</span>
+                <span className="truncate">Kinga Miskolczi</span>
               </a>
               <div className="flex items-center justify-center gap-2 py-1">
                 <Phone className="w-4 h-4 text-gold-500 shrink-0" />
-                <span>+36 30 709 43 70</span>
+                <span>+36 30 709 4370</span>
               </div>
             </div>
 
