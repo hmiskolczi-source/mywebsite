@@ -11,7 +11,7 @@ export default function MainCloser() {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [interest, setInterest] = useState('');
-  const [agree, setAgree] = useState(true);
+  const [agree, setAgree] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -150,10 +150,20 @@ export default function MainCloser() {
                           type="checkbox"
                           checked={agree}
                           onChange={(e) => setAgree(e.target.checked)}
+                          required
                           className="mt-1 accent-gold-400 h-4 w-4 shrink-0 bg-transparent border-white/20"
                         />
                         <span className="text-[11px] text-cream-100/40 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
-                          Elfogadom az adatkezelési tájékoztatót és hozzájárulok a jelentkezésem feldolgozásához.
+                          Elfogadom az{' '}
+                          <a
+                            href="/adatvedelem"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gold-300 hover:text-gold-200 underline underline-offset-1 transition-colors"
+                          >
+                            adatkezelési tájékoztatót
+                          </a>
+                          {' '}és hozzájárulok a jelentkezésem feldolgozásához.
                         </span>
                       </label>
 

@@ -32,8 +32,8 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-cream-300/50">
-          <p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-[11px] font-mono text-cream-300/50">
+          <p className="order-1 sm:order-1 sm:absolute sm:left-4 sm:lg:left-8">
             &copy; 2026 Hovorka-Miskolczi Kinga. Minden jog fenntartva.
           </p>
 
@@ -41,12 +41,12 @@ export default function Footer() {
             href="/adatvedelem"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gold-300 transition-colors cursor-pointer"
+            className="order-2 hover:text-gold-300 transition-colors cursor-pointer"
           >
             Adatvédelmi Nyilatkozat
           </a>
 
-          <div className="flex items-center gap-1">
+          <div className="order-3 sm:order-3 sm:absolute sm:right-4 sm:lg:right-8 flex items-center gap-1">
             <span>Made with</span>
             <Heart className="w-3 h-3 text-gold-400 fill-gold-400" />
             <span>care by</span>
