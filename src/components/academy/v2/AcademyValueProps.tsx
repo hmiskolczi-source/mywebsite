@@ -84,7 +84,7 @@ export default function AcademyValueProps() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
                     alt="Profi sminkek"
-                    className="w-full h-full object-cover grayscale-[0.1]"
+                    className="w-full h-full object-cover md:grayscale-[0.1]"
                   />
                 </ImageWatermark>
               </div>
@@ -145,7 +145,7 @@ export default function AcademyValueProps() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
                     alt="Portfólió fotózás"
-                    className="w-full h-full object-cover grayscale-[0.1]"
+                    className="w-full h-full object-cover md:grayscale-[0.1]"
                   />
                 </ImageWatermark>
               </div>
@@ -214,7 +214,7 @@ export default function AcademyValueProps() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
                     alt="Modell sminkelés"
-                    className="w-full h-full object-cover grayscale-[0.1]"
+                    className="w-full h-full object-cover md:grayscale-[0.1]"
                   />
                 </ImageWatermark>
               </div>
@@ -298,7 +298,7 @@ export default function AcademyValueProps() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
                     alt="Bőrdiagnosztika"
-                    className="w-full h-full object-cover grayscale-[0.1]"
+                    className="w-full h-full object-cover md:grayscale-[0.1]"
                   />
                 </ImageWatermark>
               </div>

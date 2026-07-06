@@ -34,7 +34,7 @@ export default function AcademyFounder() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/kingafounder.webp"
                     alt="Hovorka-Miskolczi Kinga sminkmester"
-                    className="w-full h-full object-cover grayscale-[0.1] contrast-[1.05]"
+                    className="w-full h-full object-cover md:grayscale-[0.1] contrast-[1.05]"
                     referrerPolicy="no-referrer"
                   />
                 </ImageWatermark>

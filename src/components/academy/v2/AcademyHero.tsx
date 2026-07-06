@@ -89,7 +89,7 @@ export default function AcademyHero() {
                   <img
                     src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_hero.webp"
                     alt="Hovorka-Miskolczi Kinga Atelier"
-                    className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
+                    className="w-full h-full object-cover md:grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
                   />
                 </ImageWatermark>
               </div>

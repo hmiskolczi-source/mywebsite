@@ -57,7 +57,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials 3-Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {cards.map((card, idx) => {
             const IconComponent = card.tagIcon;
             return (
