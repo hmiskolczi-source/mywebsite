@@ -33,6 +33,7 @@ export default function Footer() {
                 alt="Kinga Miskolczi Logo"
                 className="h-12 sm:h-16 w-auto"
               />
+            </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">
               EB aranyérmes és 3x-os VB ezüstérmes sminkmester, nemzetközi zsűrítag és oktató.
             </p>
