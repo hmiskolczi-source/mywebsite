@@ -74,7 +74,7 @@ export default function Testimonials() {
                   <img
                     src={card.image}
                     alt={`${card.author} healed faces representation`}
-                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 md:mix-blend-luminosity hover:mix-blend-normal"
+                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/15 to-transparent pointer-events-none" />
