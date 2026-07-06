@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import {
   Sparkles, ShieldCheck, Heart, Search, Eye, RefreshCw,
@@ -12,6 +12,17 @@ import {
 import ImageWatermark from '../shared/ImageWatermark';
 
 export default function ValueProps() {
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    setIsDesktop(mediaQuery.matches);
+
+    const handler = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
   const scrollToForm = () => {
     const el = document.getElementById('lead-form-anchor');
     if (el) {
@@ -125,7 +136,7 @@ export default function ValueProps() {
                           alt={p.headline}
                           className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 group-hover:mix-blend-normal"
                           style={{
-                            mixBlendMode: window.matchMedia('(min-width: 768px)').matches ? 'luminosity' : 'normal'
+                            mixBlendMode: isDesktop ? 'luminosity' : 'normal'
                           }}
                           referrerPolicy="no-referrer"
                         />

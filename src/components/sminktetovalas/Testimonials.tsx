@@ -3,11 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Clock, Eye, ShieldAlert, Sparkles } from 'lucide-react';
 
 export default function Testimonials() {
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    setIsDesktop(mediaQuery.matches);
+
+    const handler = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
   const cards = [
     {
       id: 'time-saved',
@@ -76,7 +86,7 @@ export default function Testimonials() {
                     alt={`${card.author} healed faces representation`}
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 hover:mix-blend-normal"
                     style={{
-                      mixBlendMode: window.matchMedia('(min-width: 768px)').matches ? 'luminosity' : 'normal'
+                      mixBlendMode: isDesktop ? 'luminosity' : 'normal'
                     }}
                     referrerPolicy="no-referrer"
                   />
