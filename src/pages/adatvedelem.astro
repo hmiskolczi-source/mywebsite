@@ -8,45 +8,129 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="bg-white rounded-2xl p-8 sm:p-12 border border-cream-200/60 shadow-[0_15px_50px_rgba(20,15,10,0.04)]">
 
-        <h1 class="font-serif-lux text-4xl sm:text-5xl font-light text-charcoal-800 mb-8 tracking-tight">
+        <h1 class="font-serif-lux text-4xl sm:text-5xl font-light text-charcoal-800 mb-2 tracking-tight">
           Adatvédelmi Nyilatkozat
         </h1>
+        <p class="text-xs text-charcoal-600 mb-8">
+          (Kapcsolatfelvételi űrlaphoz)<br />
+          Hatályos: 2026. július 3. napjától
+        </p>
 
-        <div class="text-sm sm:text-base text-charcoal-700/80 font-light leading-relaxed space-y-6">
+        <div class="text-sm sm:text-base text-charcoal-700/80 font-light leading-relaxed space-y-8">
 
           <div>
-            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">1. Adatgyűjtés Célja</h2>
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">1. Az Adatkezelő megnevezése</h2>
+            <ul class="space-y-2 list-disc list-inside">
+              <li><strong>Név/Cégnév:</strong> Hovorka-Miskolczi Kinga</li>
+              <li><strong>E-mail cím:</strong> info@miskolczikinga.hu</li>
+              <li><strong>Telefonszám:</strong> +36 30 709 43 70</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">2. A kezelt adatok köre, célja és jogalapja</h2>
+            <p class="mb-4">
+              Az Ön által a kapcsolatfelvételi űrlapon megadott adatokat kizárólag a beérkező megkeresések megválaszolása, az Önnel való kapcsolatfelvétel, valamint az Ön által megjelölt motiváció kiértékelése céljából kezelem.
+            </p>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-xs border-collapse border border-charcoal-300">
+                <thead>
+                  <tr class="bg-charcoal-100">
+                    <th class="border border-charcoal-300 p-3 text-left font-bold">Kezelt adat</th>
+                    <th class="border border-charcoal-300 p-3 text-left font-bold">Az adatkezelés célja</th>
+                    <th class="border border-charcoal-300 p-3 text-left font-bold">Az adatkezelés jogalapja</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-charcoal-300 p-3 font-bold">Teljes név</td>
+                    <td class="border border-charcoal-300 p-3">Azonosítás, kapcsolatfelvétel, megszólítás.</td>
+                    <td class="border border-charcoal-300 p-3">Az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-charcoal-300 p-3 font-bold">E-mail cím</td>
+                    <td class="border border-charcoal-300 p-3">Válaszadás a megkeresésre, online kommunikáció.</td>
+                    <td class="border border-charcoal-300 p-3">Az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-charcoal-300 p-3 font-bold">Telefonszám</td>
+                    <td class="border border-charcoal-300 p-3">Sürgős vagy hatékonyabb egyeztetés céljából történő kapcsolatfelvétel.</td>
+                    <td class="border border-charcoal-300 p-3">Az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-charcoal-300 p-3 font-bold">Életkor</td>
+                    <td class="border border-charcoal-300 p-3">A megkeresés kontextusának megértése, jognyilatkozatok érvényessége.</td>
+                    <td class="border border-charcoal-300 p-3">Az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-charcoal-300 p-3 font-bold">Motiváció</td>
+                    <td class="border border-charcoal-300 p-3">A megkeresés okának, az Ön céljainak megismerése és feldolgozása.</td>
+                    <td class="border border-charcoal-300 p-3">Az Ön önkéntes hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">3. Az adatkezelés időtartama</h2>
             <p>
-              A weboldalon megadott adatokat (Név, Telefonszám, E-mail cím, keresett terület) kizárólag a Hovorka-Miskolczi Kingatól igényelt egyéni anatómiai konzultáció egyeztetése céljából tárolom és dolgozom fel.
+              Az Ön adatait kizárólag a kapcsolatfelvételi cél megvalósulásáig kezelem (amíg a megkeresésben érintett ügy le nem zárul), vagy addig, amíg Ön nem kéri az adatai törlését (a hozzájárulása visszavonásáig). Ezt követően az adatok véglegesen törlésre kerülnek.
             </p>
           </div>
 
           <div>
-            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">2. Adatkezelés Időtartama</h2>
-            <p>
-              Az adatokat a konzultáció létrejöttéig vagy a felhasználó törlési kérelméig őrzöm meg a hatályos hazai és európai (GDPR) adatvédelmi jogszabályoknak megfelelően.
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">4. Adattovábbítás és adatbiztonság</h2>
+            <ul class="space-y-4">
+              <li>
+                <strong class="text-charcoal-900">Nyilvánosságra hozatal:</strong> Az Ön által megadott adatokat semmilyen formában nem hozom nyilvánosságra, harmadik fél számára nem teszem hozzáférhetővé.
+              </li>
+              <li>
+                <strong class="text-charcoal-900">Adattovábbítás:</strong> Kereskedelmi vagy marketing célból az adatokat senkinek nem továbbítom. Az adatokhoz kizárólag én (mint Adatkezelő) férek hozzá.
+              </li>
+              <li>
+                <strong class="text-charcoal-900">Biztonság:</strong> Megteszek minden szükséges technikai és szervezési intézkedést annak érdekében, hogy az adatok védettek legyenek a jogosulatlan hozzáféréssel, megváltoztatással vagy törléssel szemben.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">5. Az Ön jogai az adatkezeléssel kapcsolatban</h2>
+            <p class="mb-4">Ön bármikor jogosult:</p>
+            <ol class="space-y-2 list-decimal list-inside">
+              <li>Tájékoztatást és hozzáférést kérni arról, hogy milyen adatait kezelem.</li>
+              <li>A pontatlan adatok helyesbítését vagy kiegészítését kérni.</li>
+              <li>Az adatai törlését kérni (a hozzájárulás visszavonásához való jog).</li>
+              <li>Az adatkezelés korlátozását kérni.</li>
+            </ol>
+            <p class="mt-4">
+              Ezen jogait az 1. pontban megadott e-mail címemre küldött nyilatkozattal bármikor ingyenesen gyakorolhatja.
             </p>
           </div>
 
           <div>
-            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">3. Biztonság & Harmadik Felek</h2>
-            <p>
-              A lead adatokat harmadik fél részére nem értékesítem, nem használom kéretlen üzenetek (spam) küldésére, és azokat TLS titkosítással ellátott szervereken tárolom.
+            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">6. Jogorvoslati lehetőségek</h2>
+            <p class="mb-4">
+              Amennyiben úgy érzi, hogy az adatainak kezelése során megsértettem a hatályos jogszabályokat, kérlem, jelezze felém a közvetlen és gyors megoldás érdekében. Emellett Ön jogosult panaszt tenni a hatóságnál vagy bírósághoz fordulni:
             </p>
+            <ul class="space-y-3">
+              <li>
+                <strong class="text-charcoal-900">Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</strong>
+                <ul class="list-disc list-inside ml-4 mt-1">
+                  <li>Cím: 1055 Budapest, Falk Miksa utca 9-11.</li>
+                  <li>Honlap: <a href="https://www.naih.hu" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:text-gold-700">www.naih.hu</a></li>
+                </ul>
+              </li>
+              <li>
+                <strong class="text-charcoal-900">Bíróság:</strong> A pert a lakóhelye vagy tartózkodási helye szerinti törvényszék előtt is megindíthatja.
+              </li>
+            </ul>
           </div>
 
-          <div>
-            <h2 class="font-serif-lux text-2xl font-bold text-charcoal-900 mb-4">4. Az Ön Jogai</h2>
+          <div class="pt-6 border-t border-cream-300 text-xs text-charcoal-600 italic">
             <p>
-              Jogában áll bármikor hozzáférni, módosítani vagy töröltetni adatait. Amennyiben kérdése van az adatkezeléssel kapcsolatban, kérjük, lépjen velünk kapcsolatba az alábbi elérhetőségeken.
-            </p>
-          </div>
-
-          <div class="pt-6 border-t border-cream-300">
-            <p class="text-xs text-charcoal-600">
-              <strong>Hovorka-Miskolczi Kinga</strong><br />
-              E-mail: <a href="mailto:info@miskolczikinga.hu" class="text-gold-600 hover:text-gold-700">info@miskolczikinga.hu</a><br />
-              Telefon: +36 30 709 43 70
+              Az Adatkezelési Tájékoztatót a hatályos adatvédelmi jogszabályok (GDPR, nemzeti adatvédelmi törvények) alapján készítette: Hovorka-Miskolczi Kinga
             </p>
           </div>
 
