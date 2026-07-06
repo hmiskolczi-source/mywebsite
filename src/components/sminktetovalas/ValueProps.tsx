@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import {
   Sparkles, ShieldCheck, Heart, Search, Eye, RefreshCw,
@@ -12,17 +12,6 @@ import {
 import ImageWatermark from '../shared/ImageWatermark';
 
 export default function ValueProps() {
-  const [isDesktop, setIsDesktop] = useState(true);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)');
-    setIsDesktop(mediaQuery.matches);
-
-    const handler = (e) => setIsDesktop(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
-
   const scrollToForm = () => {
     const el = document.getElementById('lead-form-anchor');
     if (el) {
@@ -134,10 +123,7 @@ export default function ValueProps() {
                         <img
                           src={p.img}
                           alt={p.headline}
-                          className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 group-hover:mix-blend-normal"
-                          style={{
-                            mixBlendMode: isDesktop ? 'luminosity' : 'normal'
-                          }}
+                          className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 md:mix-blend-luminosity group-hover:mix-blend-normal"
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
