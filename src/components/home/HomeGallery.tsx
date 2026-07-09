@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const galleryImages = [
@@ -83,12 +83,18 @@ const galleryImages = [
 
 export default function HomeGallery() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const handleSelectImage = (index: number) => {
-    setSelectedIndex(index);
-  };
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const selectedImage = galleryImages[selectedIndex];
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      const activeButton = scrollContainerRef.current.children[selectedIndex] as HTMLElement;
+      if (activeButton) {
+        activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  }, [selectedIndex]);
 
   return (
     <section className="py-20 md:py-28 bg-white overflow-hidden">
@@ -105,80 +111,73 @@ export default function HomeGallery() {
           </p>
         </div>
 
-        {/* Gallery Container */}
-        <div className="space-y-8">
-          {/* Main Image */}
-          <motion.div
-            className="relative overflow-hidden bg-charcoal-50 aspect-video rounded-lg border border-charcoal-800/10"
-            layout
-          >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={selectedImage.id}
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full object-cover"
-              />
-            </AnimatePresence>
+        {/* Split Layout Gallery */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Left: Main Image */}
+          <div className="flex-1 lg:min-w-0">
+            <motion.div
+              className="relative overflow-hidden bg-charcoal-50 aspect-square rounded-lg border border-charcoal-800/10"
+              layout
+            >
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={selectedImage.id}
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-full object-cover"
+                />
+              </AnimatePresence>
 
-            {/* Image Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal-900 to-transparent p-6 lg:p-8">
-              <p className="text-lg sm:text-xl text-white font-light">{selectedImage.title}</p>
-            </div>
-          </motion.div>
+              {/* Image Title Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/60 to-transparent p-4 sm:p-6">
+                <p className="text-sm sm:text-base text-white font-light">{selectedImage.title}</p>
+              </div>
+            </motion.div>
+          </div>
 
-          {/* Preview Thumbnails */}
-          <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-4 md:gap-6">
-            {galleryImages.map((image, index) => (
-              <motion.button
-                key={image.id}
-                onClick={() => handleSelectImage(index)}
-                className={`relative shrink-0 md:shrink cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                  index === selectedIndex
-                    ? 'border-gold-500 shadow-lg'
-                    : 'border-charcoal-200 hover:border-charcoal-400'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {/* Thumbnail Image */}
-                <div className="w-24 h-24 md:w-full md:aspect-square overflow-hidden bg-charcoal-50">
+          {/* Right: Vertical Scrollable Thumbnails */}
+          <div className="lg:w-28 flex-shrink-0">
+            <div
+              ref={scrollContainerRef}
+              className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto lg:h-96 pb-2 lg:pb-0 lg:pr-1"
+            >
+              {galleryImages.map((image, index) => (
+                <motion.button
+                  key={image.id}
+                  onClick={() => setSelectedIndex(index)}
+                  className={`relative shrink-0 cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 w-20 h-20 lg:w-full lg:aspect-square ${
+                    index === selectedIndex
+                      ? 'border-gold-500 shadow-lg'
+                      : 'border-charcoal-200 hover:border-charcoal-400'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <img
                     src={image.src}
                     alt={image.alt}
                     className={`w-full h-full object-cover transition-all duration-300 ${
-                      index === selectedIndex ? 'scale-100 brightness-100' : 'scale-95 brightness-75 hover:brightness-90'
+                      index === selectedIndex ? 'scale-100 brightness-100' : 'scale-90 brightness-75 hover:brightness-85'
                     }`}
                   />
-                </div>
-
-                {/* Active Indicator */}
-                {index === selectedIndex && (
-                  <motion.div
-                    layoutId="activeIndicator"
-                    className="absolute inset-0 border-2 border-gold-500"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  />
-                )}
-              </motion.button>
-            ))}
+                </motion.button>
+              ))}
+            </div>
           </div>
+        </div>
 
-          {/* Navigation Info */}
-          <div className="flex items-center justify-between pt-4 md:pt-8 border-t border-charcoal-800/10">
-            <p className="text-xs text-charcoal-600/60 font-light uppercase tracking-luxury">
-              {selectedIndex + 1} / {galleryImages.length}
-            </p>
-            <p className="text-xs text-charcoal-600/60 font-light italic">
-              Kattintson egy képre a megtekintéshez
-            </p>
-          </div>
+        {/* Counter */}
+        <div className="mt-8 flex items-center justify-between border-t border-charcoal-800/10 pt-6">
+          <p className="text-xs text-charcoal-600/60 font-light uppercase tracking-luxury">
+            {selectedIndex + 1} / {galleryImages.length}
+          </p>
+          <p className="text-xs text-charcoal-600/60 font-light italic">
+            Kattintson egy képre a megtekintéshez
+          </p>
         </div>
 
       </div>
