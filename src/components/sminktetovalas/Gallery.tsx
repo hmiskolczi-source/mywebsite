@@ -6,19 +6,19 @@
 import React from 'react';
 import GalleryCarousel from '../shared/GalleryCarousel';
 
-const galleryImages = Array.from({ length: 12 }, (_, i) => ({
+const galleryImages = Array.from({ length: 13 }, (_, i) => ({
   id: i + 1,
-  src: `https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/${i + 1}.webp`,
+  src: `https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/gallery/${i + 1}.webp`,
   alt: `Sminktetoválás munka ${i + 1}`,
 }));
 
-export default function HomeGallery() {
+export default function Gallery() {
   return (
     <GalleryCarousel
       images={galleryImages}
       label="Galéria"
       title="Munkáim"
-      subtitle="Minden projekt egyedi: az arc arányai, a bőr típusa és a személyes ízlés tökéletes kombinációja."
+      subtitle="Természetes, időtálló eredmények: válogatás az elmúlt évek sminktetoválás munkáiból."
     />
   );
 }
