@@ -41,7 +41,7 @@ export default function HomeGallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-3xl shadow-xl border border-charcoal-800/5 overflow-hidden py-12 sm:py-16"
+          className="overflow-hidden py-12 sm:py-16"
         >
           {/* Header */}
           <div className="text-center space-y-3 px-6 mb-10 sm:mb-14">
