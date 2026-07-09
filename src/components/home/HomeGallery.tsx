@@ -98,86 +98,84 @@ export default function HomeGallery() {
         </div>
 
         {/* Carousel Gallery */}
-        <div className="space-y-10">
-          {/* Main Carousel */}
-          <div className="relative h-64 sm:h-80 md:h-96 lg:h-[450px] flex items-center justify-center px-0 sm:px-8 md:px-12">
-            <div className="relative w-full h-full flex items-center justify-center perspective">
-              <AnimatePresence mode="wait">
-                {/* Left Image */}
-                <motion.div
-                  key={`prev-${getPrevIndex()}`}
-                  initial={{ opacity: 0, x: -100, scale: 0.8 }}
-                  animate={{ opacity: 0.4, x: -80, scale: 0.7, zIndex: 1 }}
-                  exit={{ opacity: 0, x: 100, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute w-32 sm:w-40 md:w-48 h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden border-2 border-charcoal-200 left-0"
-                >
+        <div className="space-y-12">
+          {/* Main Carousel - 3 Image Row */}
+          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 px-2">
+            <AnimatePresence mode="wait">
+              {/* Left Image */}
+              <motion.div
+                key={`prev-${getPrevIndex()}`}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.5 }}
+                className="hidden sm:block flex-shrink-0"
+              >
+                <div className="w-28 sm:w-32 md:w-40 h-32 sm:h-36 md:h-44 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-charcoal-300">
                   <img
                     src={prevImage.src}
                     alt={prevImage.alt}
                     className="w-full h-full object-cover"
                   />
-                </motion.div>
+                </div>
+              </motion.div>
 
-                {/* Center Image */}
-                <motion.div
-                  key={`center-${selectedIndex}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1, zIndex: 10 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute w-40 sm:w-56 md:w-72 h-48 sm:h-64 md:h-80 rounded-2xl overflow-hidden border-4 border-charcoal-800 shadow-2xl"
-                >
+              {/* Center Image */}
+              <motion.div
+                key={`center-${selectedIndex}`}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5 }}
+                className="flex-shrink-0"
+              >
+                <div className="w-40 sm:w-48 md:w-64 h-44 sm:h-52 md:h-72 rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-charcoal-800 shadow-2xl">
                   <img
                     src={currentImage.src}
                     alt={currentImage.alt}
                     className="w-full h-full object-cover"
                   />
-                </motion.div>
+                </div>
+              </motion.div>
 
-                {/* Right Image */}
-                <motion.div
-                  key={`next-${getNextIndex()}`}
-                  initial={{ opacity: 0, x: 100, scale: 0.8 }}
-                  animate={{ opacity: 0.4, x: 80, scale: 0.7, zIndex: 1 }}
-                  exit={{ opacity: 0, x: -100, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute w-32 sm:w-40 md:w-48 h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden border-2 border-charcoal-200 right-0"
-                >
+              {/* Right Image */}
+              <motion.div
+                key={`next-${getNextIndex()}`}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="hidden sm:block flex-shrink-0"
+              >
+                <div className="w-28 sm:w-32 md:w-40 h-32 sm:h-36 md:h-44 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-charcoal-300">
                   <img
                     src={nextImage.src}
                     alt={nextImage.alt}
                     className="w-full h-full object-cover"
                   />
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-8">
+          <div className="flex items-center justify-center gap-6">
             <motion.button
               onClick={handlePrev}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="group w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
             >
-              <span className="text-charcoal-800 group-hover:text-white text-lg sm:text-xl">←</span>
+              <span className="text-charcoal-800 hover:text-white text-lg">←</span>
             </motion.button>
-
-            <div className="text-center">
-              <p className="text-xs sm:text-sm text-charcoal-600/70 font-light uppercase tracking-luxury">
-                {selectedIndex + 1} / {galleryImages.length}
-              </p>
-            </div>
 
             <motion.button
               onClick={handleNext}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="group w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
             >
-              <span className="text-charcoal-800 group-hover:text-white text-lg sm:text-xl">→</span>
+              <span className="text-charcoal-800 hover:text-white text-lg">→</span>
             </motion.button>
           </div>
         </div>
