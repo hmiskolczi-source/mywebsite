@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 const galleryImages = Array.from({ length: 12 }, (_, i) => ({
@@ -25,8 +25,20 @@ const SLOT_BY_OFFSET: Record<number, { left: string; scale: number; z: number }>
 
 export default function HomeGallery() {
   const [index, setIndex] = useState(0);
+  // Off-slot images only get a src once the browser is idle, so the five
+  // visible ones don't compete with them for bandwidth on first load.
+  const [preloadRest, setPreloadRest] = useState(false);
 
   const count = galleryImages.length;
+
+  useEffect(() => {
+    const idle = (window as any).requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1500));
+    const handle = idle(() => setPreloadRest(true));
+    return () => {
+      const cancel = (window as any).cancelIdleCallback ?? clearTimeout;
+      cancel(handle);
+    };
+  }, []);
 
   const handlePrev = () => setIndex((i) => (i - 1 + count) % count);
   const handleNext = () => setIndex((i) => (i + 1) % count);
@@ -93,10 +105,11 @@ export default function HomeGallery() {
                   }}
                 >
                   <img
-                    src={image.src}
+                    src={slot || preloadRest ? image.src : undefined}
                     alt={image.alt}
                     draggable={false}
                     decoding="async"
+                    fetchPriority={isCenter ? 'high' : slot ? 'auto' : 'low'}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </motion.div>
