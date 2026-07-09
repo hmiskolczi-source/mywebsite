@@ -10,182 +10,213 @@ const galleryImages = [
   {
     id: 1,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/1.webp',
-    alt: 'Sminktetoválás munka 1',
+    alt: 'Portfolio work 1',
   },
   {
     id: 2,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/2.webp',
-    alt: 'Sminktetoválás munka 2',
+    alt: 'Portfolio work 2',
   },
   {
     id: 3,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/3.webp',
-    alt: 'Sminktetoválás munka 3',
+    alt: 'Portfolio work 3',
   },
   {
     id: 4,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/4.webp',
-    alt: 'Sminktetoválás munka 4',
+    alt: 'Portfolio work 4',
   },
   {
     id: 5,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/5.webp',
-    alt: 'Sminktetoválás munka 5',
+    alt: 'Portfolio work 5',
   },
   {
     id: 6,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/6.webp',
-    alt: 'Sminktetoválás munka 6',
+    alt: 'Portfolio work 6',
   },
   {
     id: 7,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/7.webp',
-    alt: 'Sminktetoválás munka 7',
+    alt: 'Portfolio work 7',
   },
   {
     id: 8,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/8.webp',
-    alt: 'Sminktetoválás munka 8',
+    alt: 'Portfolio work 8',
   },
   {
     id: 9,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/9.webp',
-    alt: 'Sminktetoválás munka 9',
+    alt: 'Portfolio work 9',
   },
   {
     id: 10,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/10.webp',
-    alt: 'Sminktetoválás munka 10',
+    alt: 'Portfolio work 10',
   },
   {
     id: 11,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/11.webp',
-    alt: 'Sminktetoválás munka 11',
+    alt: 'Portfolio work 11',
   },
   {
     id: 12,
     src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/12.webp',
-    alt: 'Sminktetoválás munka 12',
+    alt: 'Portfolio work 12',
   },
 ];
 
 export default function HomeGallery() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const getPrevIndex = () => (selectedIndex - 1 + galleryImages.length) % galleryImages.length;
-  const getNextIndex = () => (selectedIndex + 1) % galleryImages.length;
+  const getImageByOffset = (offset: number) => {
+    return galleryImages[(selectedIndex + offset + galleryImages.length) % galleryImages.length];
+  };
 
-  const prevImage = galleryImages[getPrevIndex()];
-  const currentImage = galleryImages[selectedIndex];
-  const nextImage = galleryImages[getNextIndex()];
-
-  const handlePrev = () => setSelectedIndex(getPrevIndex());
-  const handleNext = () => setSelectedIndex(getNextIndex());
+  const handlePrev = () => setSelectedIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  const handleNext = () => setSelectedIndex((prev) => (prev + 1) % galleryImages.length);
 
   return (
-    <section className="py-20 md:py-28 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 md:py-32 overflow-hidden">
+      {/* Blurred Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-charcoal-900/5 via-gold-500/5 to-charcoal-800/10 pointer-events-none" />
 
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 space-y-4">
-          <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Munkaportfólió</span>
-          <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
-            Kiváló munkáim
-          </h2>
-          <p className="text-base sm:text-lg text-charcoal-700/70 font-light max-w-2xl mx-auto">
-            Minden projekt egyedi: az arc arányok, a bőr típusa, és a személyes ízlés tökéletes kombinációja.
-          </p>
-        </div>
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Card Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+        >
+          {/* Card Header */}
+          <div className="px-6 sm:px-8 md:px-12 pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-10 md:pb-12 text-center space-y-3 sm:space-y-4">
+            <span className="text-[10px] sm:text-xs font-bold tracking-widest text-gray-500 uppercase block">
+              Gallery
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal-800">
+              My Visual Diary
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
+              See the world through my lens: adventures in photos and videos
+            </p>
+          </div>
 
-        {/* Carousel Gallery */}
-        <div className="space-y-12">
-          {/* Main Carousel - Overlapping Images */}
-          <div className="relative h-72 sm:h-80 md:h-96 flex items-center justify-center overflow-visible">
-            <div className="relative w-full h-full flex items-center justify-center">
-              <AnimatePresence mode="wait">
-                {[getPrevIndex(), selectedIndex, getNextIndex()].map((idx, position) => {
-                  const image = galleryImages[idx];
-                  const isCenter = position === 1;
-                  const isLeft = position === 0;
+          {/* Gallery Carousel */}
+          <div className="px-4 sm:px-6 md:px-12 py-8 sm:py-10 md:py-16">
+            {/* Carousel Container */}
+            <div className="relative h-64 sm:h-80 md:h-96 flex items-center justify-center">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <AnimatePresence mode="wait">
+                  {/* Left Image (offset -2) */}
+                  <motion.div
+                    key={`left-${getImageByOffset(-2).id}`}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 0.4, x: 0, zIndex: 2 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute h-40 sm:h-52 md:h-64 w-28 sm:w-36 md:w-44 left-0 rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={getImageByOffset(-2).src}
+                      alt={getImageByOffset(-2).alt}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </motion.div>
 
-                  let leftPos, zIndex, scale, opacity, imageScale;
+                  {/* Left-Center Image (offset -1) */}
+                  <motion.div
+                    key={`left-center-${getImageByOffset(-1).id}`}
+                    initial={{ opacity: 0, x: -50, scale: 0.9 }}
+                    animate={{ opacity: 0.6, x: 0, scale: 0.85, zIndex: 3 }}
+                    exit={{ opacity: 0, x: -50, scale: 0.9 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute h-48 sm:h-60 md:h-72 w-32 sm:w-40 md:w-52 left-8 sm:left-12 md:left-16 rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={getImageByOffset(-1).src}
+                      alt={getImageByOffset(-1).alt}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </motion.div>
 
-                  if (isLeft) {
-                    leftPos = 0;
-                    zIndex = 1;
-                    scale = 0.7;
-                    opacity = 0.6;
-                    imageScale = 0.85;
-                  } else if (isCenter) {
-                    leftPos = '50%';
-                    zIndex = 10;
-                    scale = 1;
-                    opacity = 1;
-                    imageScale = 1;
-                  } else {
-                    leftPos = 'auto';
-                    zIndex = 1;
-                    scale = 0.7;
-                    opacity = 0.6;
-                    imageScale = 0.85;
-                  }
+                  {/* Center Image */}
+                  <motion.div
+                    key={`center-${selectedIndex}`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1, zIndex: 10 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute h-56 sm:h-72 md:h-80 w-40 sm:w-52 md:w-64 rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+                  >
+                    <img
+                      src={getImageByOffset(0).src}
+                      alt={getImageByOffset(0).alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </motion.div>
 
-                  return (
-                    <motion.div
-                      key={`img-${idx}`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{
-                        opacity,
-                        scale,
-                        ...(isLeft ? { left: leftPos } : {}),
-                        ...(isCenter ? { left: leftPos, x: '-50%' } : { right: leftPos, x: '50%' }),
-                        zIndex
-                      }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      transition={{ duration: 0.5 }}
-                      className={`absolute h-56 sm:h-64 md:h-80 rounded-2xl sm:rounded-3xl overflow-hidden border-2 sm:border-4 ${
-                        isCenter ? 'border-charcoal-800 shadow-2xl' : 'border-charcoal-200/50'
-                      }`}
-                      style={{
-                        width: isCenter ? '280px' : '200px',
-                        ...(isCenter ? {} : {}),
-                      }}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover"
-                        style={{ transform: `scale(${imageScale})`, transformOrigin: 'center' }}
-                      />
-                    </motion.div>
-                  );
-                })}
-              </AnimatePresence>
+                  {/* Right-Center Image (offset +1) */}
+                  <motion.div
+                    key={`right-center-${getImageByOffset(1).id}`}
+                    initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                    animate={{ opacity: 0.6, x: 0, scale: 0.85, zIndex: 3 }}
+                    exit={{ opacity: 0, x: 50, scale: 0.9 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute h-48 sm:h-60 md:h-72 w-32 sm:w-40 md:w-52 right-8 sm:right-12 md:right-16 rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={getImageByOffset(1).src}
+                      alt={getImageByOffset(1).alt}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </motion.div>
+
+                  {/* Right Image (offset +2) */}
+                  <motion.div
+                    key={`right-${getImageByOffset(2).id}`}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 0.4, x: 0, zIndex: 2 }}
+                    exit={{ opacity: 0, x: 100 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute h-40 sm:h-52 md:h-64 w-28 sm:w-36 md:w-44 right-0 rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={getImageByOffset(2).src}
+                      alt={getImageByOffset(2).alt}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Navigation Controls */}
+            <div className="flex items-center justify-center gap-6 sm:gap-8 mt-10 sm:mt-12 md:mt-14">
+              <motion.button
+                onClick={handlePrev}
+                whileHover={{ scale: 1.12, backgroundColor: '#2D2B2A', color: '#fff' }}
+                whileTap={{ scale: 0.92 }}
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center text-charcoal-800 transition-all duration-300 hover:shadow-lg"
+              >
+                <span className="text-xl">←</span>
+              </motion.button>
+
+              <motion.button
+                onClick={handleNext}
+                whileHover={{ scale: 1.12, backgroundColor: '#2D2B2A', color: '#fff' }}
+                whileTap={{ scale: 0.92 }}
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center text-charcoal-800 transition-all duration-300 hover:shadow-lg"
+              >
+                <span className="text-xl">→</span>
+              </motion.button>
             </div>
           </div>
-
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-6">
-            <motion.button
-              onClick={handlePrev}
-              whileHover={{ scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
-            >
-              <span className="text-charcoal-800 hover:text-white text-lg">←</span>
-            </motion.button>
-
-            <motion.button
-              onClick={handleNext}
-              whileHover={{ scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-charcoal-800 flex items-center justify-center hover:bg-charcoal-800 transition-colors"
-            >
-              <span className="text-charcoal-800 hover:text-white text-lg">→</span>
-            </motion.button>
-          </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
