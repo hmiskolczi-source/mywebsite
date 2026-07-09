@@ -9,27 +9,75 @@ import { motion, AnimatePresence } from 'motion/react';
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1487412992651-b8d4b53f0bb1?w=800&h=600&fit=crop',
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/1.webp',
     alt: 'Sminktetoválás munka 1',
     title: 'Egyedi szín harmónia',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/2.webp',
     alt: 'Sminktetoválás munka 2',
     title: 'Precíziós vonalas technika',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/3.webp',
     alt: 'Sminktetoválás munka 3',
     title: 'Természetes árnyalatok',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&h=600&fit=crop',
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/4.webp',
     alt: 'Sminktetoválás munka 4',
     title: 'Klasszikus elegancia',
+  },
+  {
+    id: 5,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/5.webp',
+    alt: 'Sminktetoválás munka 5',
+    title: 'Szépségkezelés',
+  },
+  {
+    id: 6,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/6.webp',
+    alt: 'Sminktetoválás munka 6',
+    title: 'Finom részletek',
+  },
+  {
+    id: 7,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/7.webp',
+    alt: 'Sminktetoválás munka 7',
+    title: 'Kifejezésgazdag munka',
+  },
+  {
+    id: 8,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/8.webp',
+    alt: 'Sminktetoválás munka 8',
+    title: 'Luxus kidolgozás',
+  },
+  {
+    id: 9,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/9.webp',
+    alt: 'Sminktetoválás munka 9',
+    title: 'Tökéletes harmónia',
+  },
+  {
+    id: 10,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/10.webp',
+    alt: 'Sminktetoválás munka 10',
+    title: 'Mestermunka',
+  },
+  {
+    id: 11,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/11.webp',
+    alt: 'Sminktetoválás munka 11',
+    title: 'Egyedi jelleg',
+  },
+  {
+    id: 12,
+    src: 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/gallery/12.webp',
+    alt: 'Sminktetoválás munka 12',
+    title: 'Végeredmény',
   },
 ];
 
