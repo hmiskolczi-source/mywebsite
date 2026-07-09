@@ -99,63 +99,69 @@ export default function HomeGallery() {
 
         {/* Carousel Gallery */}
         <div className="space-y-12">
-          {/* Main Carousel - 3 Image Row */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 px-2">
-            <AnimatePresence mode="wait">
-              {/* Left Image */}
-              <motion.div
-                key={`prev-${getPrevIndex()}`}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
-                transition={{ duration: 0.5 }}
-                className="hidden sm:block flex-shrink-0"
-              >
-                <div className="w-28 sm:w-32 md:w-40 h-32 sm:h-36 md:h-44 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-charcoal-300">
-                  <img
-                    src={prevImage.src}
-                    alt={prevImage.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
+          {/* Main Carousel - Overlapping Images */}
+          <div className="relative h-72 sm:h-80 md:h-96 flex items-center justify-center overflow-visible">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                {[getPrevIndex(), selectedIndex, getNextIndex()].map((idx, position) => {
+                  const image = galleryImages[idx];
+                  const isCenter = position === 1;
+                  const isLeft = position === 0;
 
-              {/* Center Image */}
-              <motion.div
-                key={`center-${selectedIndex}`}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5 }}
-                className="flex-shrink-0"
-              >
-                <div className="w-40 sm:w-48 md:w-64 h-44 sm:h-52 md:h-72 rounded-2xl sm:rounded-3xl overflow-hidden border-4 border-charcoal-800 shadow-2xl">
-                  <img
-                    src={currentImage.src}
-                    alt={currentImage.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
+                  let leftPos, zIndex, scale, opacity, imageScale;
 
-              {/* Right Image */}
-              <motion.div
-                key={`next-${getNextIndex()}`}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="hidden sm:block flex-shrink-0"
-              >
-                <div className="w-28 sm:w-32 md:w-40 h-32 sm:h-36 md:h-44 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-charcoal-300">
-                  <img
-                    src={nextImage.src}
-                    alt={nextImage.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                  if (isLeft) {
+                    leftPos = 0;
+                    zIndex = 1;
+                    scale = 0.7;
+                    opacity = 0.6;
+                    imageScale = 0.85;
+                  } else if (isCenter) {
+                    leftPos = '50%';
+                    zIndex = 10;
+                    scale = 1;
+                    opacity = 1;
+                    imageScale = 1;
+                  } else {
+                    leftPos = 'auto';
+                    zIndex = 1;
+                    scale = 0.7;
+                    opacity = 0.6;
+                    imageScale = 0.85;
+                  }
+
+                  return (
+                    <motion.div
+                      key={`img-${idx}`}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{
+                        opacity,
+                        scale,
+                        ...(isLeft ? { left: leftPos } : {}),
+                        ...(isCenter ? { left: leftPos, x: '-50%' } : { right: leftPos, x: '50%' }),
+                        zIndex
+                      }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.5 }}
+                      className={`absolute h-56 sm:h-64 md:h-80 rounded-2xl sm:rounded-3xl overflow-hidden border-2 sm:border-4 ${
+                        isCenter ? 'border-charcoal-800 shadow-2xl' : 'border-charcoal-200/50'
+                      }`}
+                      style={{
+                        width: isCenter ? '280px' : '200px',
+                        ...(isCenter ? {} : {}),
+                      }}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                        style={{ transform: `scale(${imageScale})`, transformOrigin: 'center' }}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Navigation Controls */}
