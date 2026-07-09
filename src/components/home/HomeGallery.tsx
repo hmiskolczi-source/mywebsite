@@ -15,11 +15,11 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => ({
 // 5 visible slots: center is tallest and on top, each step outward is
 // shorter, sits behind its neighbor, and the outermost bleed off the edges.
 const SLOTS = [
-  { offset: -2, left: '4%', height: '58%', z: 10 },
-  { offset: -1, left: '26%', height: '80%', z: 20 },
+  { offset: -2, left: '9%', height: '64%', z: 10 },
+  { offset: -1, left: '28%', height: '82%', z: 20 },
   { offset: 0, left: '50%', height: '100%', z: 30 },
-  { offset: 1, left: '74%', height: '80%', z: 20 },
-  { offset: 2, left: '96%', height: '58%', z: 10 },
+  { offset: 1, left: '72%', height: '82%', z: 20 },
+  { offset: 2, left: '91%', height: '64%', z: 10 },
 ];
 
 export default function HomeGallery() {
@@ -32,7 +32,7 @@ export default function HomeGallery() {
   const handleNext = () => setIndex((i) => (i + 1) % count);
 
   return (
-    <section className="py-16 md:py-24 bg-cream-100 overflow-hidden">
+    <section className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Card Container */}
@@ -77,8 +77,13 @@ export default function HomeGallery() {
                     transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
                     onClick={() => !isCenter && setIndex((index + slot.offset + count) % count)}
                     className={`absolute top-1/2 aspect-[3/4] rounded-2xl overflow-hidden bg-charcoal-50 ${
-                      isCenter ? 'shadow-2xl' : 'shadow-lg cursor-pointer'
+                      isCenter ? '' : 'cursor-pointer'
                     }`}
+                    style={{
+                      boxShadow: isCenter
+                        ? '0 25px 60px -12px rgba(28, 22, 20, 0.45)'
+                        : '0 18px 40px -12px rgba(28, 22, 20, 0.3)',
+                    }}
                   >
                     <img
                       src={image.src}
