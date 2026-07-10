@@ -21,7 +21,7 @@ export default function Footer() {
               <img
                 src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/footerlogo.png"
                 alt="Kinga Miskolczi Footer Logo"
-                className="h-12 sm:h-16 w-auto"
+                className="h-[57.6px] sm:h-[76.8px] w-auto"
               />
             </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">

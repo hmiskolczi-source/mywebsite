@@ -33,7 +33,7 @@ export default function Navbar({ currentPage }: NavbarProps) {
           <img
             src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
             alt="Kinga Miskolczi Logo"
-            className="h-12 sm:h-16 w-auto"
+            className="h-[57.6px] sm:h-[76.8px] w-auto"
           />
         </a>
 

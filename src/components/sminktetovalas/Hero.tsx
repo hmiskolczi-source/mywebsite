@@ -70,7 +70,7 @@ export default function Hero() {
               </button>
 
               <p className="text-xs text-charcoal-700/60 italic font-serif-lux tracking-wide">
-                Ingyenes konzultáció!
+                Ingyenes telefonos konzultáció!
               </p>
             </motion.div>
 
