@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { imgProps } from '../../lib/imageOpt';
 
 export interface GalleryImage {
   id: number;
