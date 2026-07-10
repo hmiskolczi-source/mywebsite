@@ -219,9 +219,11 @@ export default function AcademyValueProps() {
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
                   <img
-                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
+                    {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp", "(min-width: 1024px) 42vw, 100vw")}
                     alt="Modell sminkelés"
                     className="w-full h-full object-cover md:grayscale-[0.1]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </ImageWatermark>
               </div>
