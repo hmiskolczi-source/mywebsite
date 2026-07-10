@@ -9,6 +9,7 @@ import { Star, Shield, Award, Quote, CheckCircle, Sparkles } from 'lucide-react'
 import SocialProof from '../shared/SocialProof';
 import BrandLogos from '../shared/BrandLogos';
 import ImageWatermark from '../shared/ImageWatermark';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function Hero() {
   const scrollToForm = () => {
