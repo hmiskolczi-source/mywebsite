@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { imgProps } from '../../lib/imageOpt';
 
 interface ImageWatermarkProps {
   children: React.ReactNode;
