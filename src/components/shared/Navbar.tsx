@@ -32,7 +32,7 @@ export default function Navbar({ currentPage }: NavbarProps) {
           className="cursor-pointer select-none shrink-0 no-underline"
         >
           <img
-            src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png"
+            {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/KMLOGO.png", "128px")}
             alt="Kinga Miskolczi Logo"
             className="h-[57.6px] sm:h-[76.8px] w-auto"
           />
