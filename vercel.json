@@ -1,0 +1,11 @@
+{
+  "images": {
+    "domains": [
+      "bgumoxbjyuzc6ytp.public.blob.vercel-storage.com",
+      "ihbwkp8vwcp4igya.public.blob.vercel-storage.com"
+    ],
+    "sizes": [128, 256, 384, 640, 828, 1080, 1600],
+    "formats": ["image/avif", "image/webp"],
+    "minimumCacheTTL": 2678400
+  }
+}
