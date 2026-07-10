@@ -22,6 +22,17 @@ export interface AcademyLead {
   createdAt: string;
 }
 
+export interface OptimizedImage {
+  src: string;
+  srcSet?: string;
+  width: number;
+  height: number;
+  sizes?: string;
+  loading: 'eager' | 'lazy';
+  decoding: 'sync' | 'async';
+  fetchPriority?: 'high' | 'low' | 'auto';
+}
+
 export interface Review {
   id: string;
   title: string;
