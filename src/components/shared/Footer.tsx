@@ -20,9 +20,11 @@ export default function Footer() {
           <div className="space-y-4 max-w-xl mx-auto">
             <div className="flex items-center justify-center gap-2">
               <img
-                src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/footerlogo.png"
+                {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/footerlogo.png", "128px")}
                 alt="Kinga Miskolczi Footer Logo"
                 className="h-[57.6px] sm:h-[76.8px] w-auto"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">
