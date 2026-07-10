@@ -104,9 +104,11 @@ export default function AcademyProblem() {
                 </div>
                 <ImageWatermark className="relative w-full h-auto rounded-sm overflow-hidden shadow-lg">
                   <img
-                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_problemreview.webp"
+                    {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_problemreview.webp", "(min-width: 1024px) 42vw, 100vw")}
                     alt="Wéber Kata beauty és esküvői sminkes"
                     className="w-full h-auto rounded-sm"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </ImageWatermark>
               </div>
