@@ -190,7 +190,7 @@ export default function Pricing() {
                 onClick={scrollToForm}
                 className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
               >
-                <span className="relative z-10">Ingyenes Konzultációt Kérek &rarr;</span>
+                <span className="relative z-10">Jelentkezem egyéni tervezésre Kingához &rarr;</span>
                 <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
               </button>
           </div>
