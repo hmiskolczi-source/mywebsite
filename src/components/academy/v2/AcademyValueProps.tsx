@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import ImageWatermark from '../../shared/ImageWatermark';
+import { imgProps } from '../../../lib/imageOpt';
 
 export default function AcademyValueProps() {
   const [showTypes, setShowTypes] = useState(true);
