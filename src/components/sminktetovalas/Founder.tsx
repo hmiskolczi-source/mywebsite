@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function Founder() {
   const scrollToForm = () => {
@@ -30,10 +31,12 @@ export default function Founder() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl bg-cream-200">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/kingafounder.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/kingafounder.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Hovorka-Miskolczi Kinga sminkmester"
                   className="w-full h-full object-cover grayscale-[0.1] contrast-[1.05]"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

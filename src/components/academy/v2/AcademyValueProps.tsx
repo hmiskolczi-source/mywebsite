@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { imgProps } from '../../../lib/imageOpt';
 
 export default function AcademyValueProps() {
   const [showTypes, setShowTypes] = useState(true);
@@ -80,9 +81,11 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop1.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop1.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Profi sminkek"
                   className="w-full h-full object-cover grayscale-[0.1]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -top-6 -right-6 w-32 h-32 border-t border-r border-gold-300/20 -z-10" />
@@ -139,9 +142,11 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop2.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop2.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Portfólió fotózás"
                   className="w-full h-full object-cover grayscale-[0.1]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b border-l border-gold-300/20 -z-10" />
@@ -176,10 +181,12 @@ export default function AcademyValueProps() {
                       className="flex-shrink-0 w-32 h-32 group relative overflow-hidden rounded-sm shadow-md bg-charcoal-900"
                     >
                       <img
-                        src={`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`}
+                        {...imgProps(`https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/portfolio${item}_compressed.webp`, "(min-width: 768px) 25vw, 50vw")}
                         alt={`Portfólió ${item}`}
                         className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   ))
@@ -224,9 +231,11 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valuprop3JPG.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Modell sminkelés"
                   className="w-full h-full object-cover grayscale-[0.1]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </motion.div>
@@ -306,9 +315,11 @@ export default function AcademyValueProps() {
             >
               <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valueprop4.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_valueprop4.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Bőrdiagnosztika"
                   className="w-full h-full object-cover grayscale-[0.1]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </motion.div>

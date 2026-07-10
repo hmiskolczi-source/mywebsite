@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function HomeCaseStudies() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -65,10 +66,12 @@ export default function HomeCaseStudies() {
               {/* Case Study Image */}
               <div className="aspect-square bg-gradient-to-br from-cream-200 to-cream-300 rounded-lg overflow-hidden shadow-md">
                 <img
-                  src={study.image}
+                  {...imgProps(study.image, "(min-width: 768px) 33vw, 100vw")}
                   alt={study.who}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

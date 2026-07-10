@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { imgProps } from '../../../lib/imageOpt';
 
 export default function AcademyProblem() {
   const problems = [
@@ -101,9 +102,11 @@ export default function AcademyProblem() {
                   </a>
                 </div>
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy_problemreview.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy_problemreview.webp", "(min-width: 1024px) 50vw, 100vw")}
                   alt="Wéber Kata beauty és esküvői sminkes"
                   className="w-full h-auto rounded-sm shadow-lg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

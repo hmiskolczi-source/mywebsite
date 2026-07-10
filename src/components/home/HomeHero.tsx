@@ -6,6 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import SocialProof from '../shared/SocialProof';
+import { imgProps } from '../../lib/imageOpt';
 import BrandLogos from '../shared/BrandLogos';
 
 export default function HomeHero() {
@@ -83,10 +84,11 @@ export default function HomeHero() {
               className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4]"
             >
               <img
-                src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_hero.webp"
+                {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/home/main_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                 alt="Hovorka-Miskolczi Kinga - Premium portrait"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                fetchPriority="high"
               />
             </motion.div>
           </div>

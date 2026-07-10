@@ -6,6 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Star, Shield, Award, Quote, CheckCircle, Sparkles } from 'lucide-react';
+import { imgProps } from '../../lib/imageOpt';
 import SocialProof from '../shared/SocialProof';
 import BrandLogos from '../shared/BrandLogos';
 
@@ -91,10 +92,11 @@ export default function Hero() {
               className="relative rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
             >
               <img
-                src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp"
+                {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                 alt="Premium makeup tattoo service"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
             </motion.div>

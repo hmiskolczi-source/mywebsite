@@ -6,6 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import SocialProof from '../../shared/SocialProof';
+import { imgProps } from '../../../lib/imageOpt';
 import BrandLogos from '../../shared/BrandLogos';
 
 export default function AcademyHero() {
@@ -92,9 +93,10 @@ export default function AcademyHero() {
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-cream-200">
                 <img
-                  src="https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_hero.webp"
+                  {...imgProps("https://ihbwkp8vwcp4igya.public.blob.vercel-storage.com/academy/academy_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                   alt="Hovorka-Miskolczi Kinga Atelier"
                   className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
+                  fetchPriority="high"
                 />
               </div>
               

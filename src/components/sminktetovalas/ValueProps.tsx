@@ -7,8 +7,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { 
   Sparkles, ShieldCheck, Heart, Search, Eye, RefreshCw, 
-  Settings, Check, Compass, Layers, Zap, Info, Award 
+  Settings, Check, Compass, Layers, Zap, Info, Award
 } from 'lucide-react';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function ValueProps() {
   const scrollToForm = () => {
@@ -118,9 +119,11 @@ export default function ValueProps() {
                     className="relative rounded-2xl overflow-hidden aspect-square border border-cream-300 shadow-xl bg-white p-3 group"
                   >
                     <div className="relative w-full h-full rounded-xl overflow-hidden bg-charcoal-900">
-                      <img 
-                        src={p.img} 
+                      <img
+                        {...imgProps(p.img, "(min-width: 1024px) 50vw, 100vw")}
                         alt={p.headline}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity group-hover:mix-blend-normal"
                         referrerPolicy="no-referrer"
                       />
