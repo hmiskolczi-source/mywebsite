@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function HomeCaseStudies() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
