@@ -86,10 +86,11 @@ export default function HomeHero() {
             >
               <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
                 <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp"
+                  {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                   alt="Hovorka-Miskolczi Kinga - Premium portrait"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  fetchPriority="high"
                 />
               </ImageWatermark>
             </motion.div>
