@@ -112,7 +112,7 @@ export default function GalleryCarousel({ images, label, title, subtitle }: Gall
                   }}
                 >
                   <img
-                    src={slot || preloadRest ? image.src : undefined}
+                    {...(slot || preloadRest ? imgProps(image.src, '(min-width: 768px) 330px, 60vw') : {})}
                     alt={image.alt}
                     draggable={false}
                     decoding="async"
