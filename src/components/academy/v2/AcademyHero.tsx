@@ -88,9 +88,10 @@ export default function AcademyHero() {
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-cream-200">
                 <ImageWatermark className="relative w-full h-full">
                   <img
-                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_hero.webp"
+                    {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/academy/academy_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                     alt="Hovorka-Miskolczi Kinga Atelier"
                     className="w-full h-full object-cover md:grayscale-[0.2] contrast-[1.1] brightness-[1.02]"
+                    fetchPriority="high"
                   />
                 </ImageWatermark>
               </div>
