@@ -122,10 +122,12 @@ export default function ValueProps() {
                     <div className="relative w-full h-full rounded-xl overflow-hidden bg-charcoal-900">
                       <ImageWatermark className="relative w-full h-full rounded-xl overflow-hidden">
                         <img
-                          src={p.img}
+                          {...imgProps(p.img, "(min-width: 1024px) 42vw, 100vw")}
                           alt={p.headline}
                           className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700"
                           referrerPolicy="no-referrer"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
 
