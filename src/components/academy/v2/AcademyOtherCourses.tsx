@@ -124,5 +124,6 @@ export default function AcademyOtherCourses() {
 
       </div>
     </section>
+    </>
   );
 }
