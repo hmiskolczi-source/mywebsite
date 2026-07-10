@@ -94,7 +94,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
       setEmail('');
       setPhone('');
       setMessage('');
-      setCourse('');
+      setCourse(courseTitle ? courseMap[courseTitle] || '' : '');
       setAgree(false);
       setError(null);
       setIsSuccess(false);
