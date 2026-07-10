@@ -14,11 +14,17 @@ interface AcademyFormProps {
 }
 
 export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFormProps) {
+  const courseMap: { [key: string]: string } = {
+    'Haladó anyag- és formatechnikai mesterprogram': 'mesterképzés',
+    'Személyre szabott, egyéni bajnoki mentorprogram': 'versenyfelkészítés',
+    '3 órás privát önsminkelési mesterkurzus': 'smink-tanácsadás',
+  };
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
-  const [course, setCourse] = useState('');
+  const [course, setCourse] = useState(courseTitle ? courseMap[courseTitle] || '' : '');
   const [agree, setAgree] = useState(false);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
