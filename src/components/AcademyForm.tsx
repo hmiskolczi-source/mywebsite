@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle, User, Mail, Phone, FileText, MessageSquare, X } from 'lucide-react';
+import { AcademyLead } from '../types';
 
 interface AcademyFormProps {
   isOpen: boolean;
