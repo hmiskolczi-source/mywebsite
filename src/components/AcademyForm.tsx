@@ -38,7 +38,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
     { value: 'smink-tanácsadás', label: 'Smink tanácsadás' },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
@@ -65,28 +65,32 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      const newLead: AcademyLead = {
-        id: Math.random().toString(36).substring(2, 9),
-        name,
-        email,
-        phone,
-        message,
-        course,
-        createdAt: new Date().toISOString(),
-      };
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '4cef5e56-4abe-45a6-a6b3-5fd7443eb481',
+          name,
+          email,
+          phone,
+          course,
+          message,
+        }),
+      });
 
-      try {
-        const existingLeads = JSON.parse(localStorage.getItem('academy_leads') || '[]');
-        existingLeads.push(newLead);
-        localStorage.setItem('academy_leads', JSON.stringify(existingLeads));
-      } catch (err) {
-        console.error('Error saving lead:', err);
+      if (response.ok) {
+        setIsSubmitting(false);
+        setIsSuccess(true);
+      } else {
+        throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');
       }
-
+    } catch (err) {
       setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1200);
+      setError(err instanceof Error ? err.message : 'Hiba történt az adatok küldésekor. Kérjük, próbáld újra.');
+    }
   };
 
   const handleClose = () => {
