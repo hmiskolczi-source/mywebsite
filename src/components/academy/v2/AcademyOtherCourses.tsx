@@ -3,21 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import AcademyForm from '../../AcademyForm';
 
 export default function AcademyOtherCourses() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<string>();
+
   const handleApplyClick = (courseTitle: string) => {
-    const el = document.getElementById('academy-form-anchor');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      const textarea = document.querySelector('textarea') as HTMLTextAreaElement;
-      if (textarea) {
-        textarea.value = `Szia Kinga! Szeretnék érdeklődni és jelentkezni a "${courseTitle}" képzésre.`;
-        const event = new Event('input', { bubbles: true });
-        textarea.dispatchEvent(event);
-      }
-    }
+    setSelectedCourse(courseTitle);
+    setIsFormOpen(true);
   };
 
   const courses = [
