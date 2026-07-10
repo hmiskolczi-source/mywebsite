@@ -33,10 +33,12 @@ export default function Founder() {
               <div className="aspect-[3/4] rounded-sm overflow-hidden shadow-2xl bg-cream-200">
                 <ImageWatermark className="relative w-full h-full rounded-sm overflow-hidden">
                   <img
-                    src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/kingafounder.webp"
+                    {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/kingafounder.webp", "(min-width: 1024px) 42vw, 100vw")}
                     alt="Hovorka-Miskolczi Kinga sminkmester"
                     className="w-full h-full object-cover md:grayscale-[0.1] contrast-[1.05]"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </ImageWatermark>
               </div>
