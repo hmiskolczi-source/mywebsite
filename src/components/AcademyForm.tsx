@@ -66,7 +66,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
     setIsSubmitting(true);
 
     setTimeout(() => {
-      const newLead = {
+      const newLead: AcademyLead = {
         id: Math.random().toString(36).substring(2, 9),
         name,
         email,
