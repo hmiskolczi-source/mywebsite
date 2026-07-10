@@ -57,7 +57,9 @@ export default function AcademyOtherCourses() {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-cream-100 overflow-hidden border-t border-charcoal-800/5">
+    <>
+      <AcademyForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} courseTitle={selectedCourse} />
+      <section className="py-20 md:py-24 bg-cream-100 overflow-hidden border-t border-charcoal-800/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
