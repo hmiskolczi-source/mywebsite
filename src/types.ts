@@ -12,6 +12,16 @@ export interface Lead {
   createdAt: string;
 }
 
+export interface AcademyLead {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  course: string;
+  createdAt: string;
+}
+
 export interface Review {
   id: string;
   title: string;
