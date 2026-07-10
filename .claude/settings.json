@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git add -A && git commit -m 'chore: auto-commit changes' && git push origin HEAD",
+            "timeout": 30,
+            "statusMessage": "Committing and pushing changes..."
+          }
+        ]
+      }
+    ]
+  }
+}
