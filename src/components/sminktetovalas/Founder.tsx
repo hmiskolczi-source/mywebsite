@@ -6,6 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import ImageWatermark from '../shared/ImageWatermark';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function Founder() {
   const scrollToForm = () => {
