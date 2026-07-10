@@ -10,6 +10,7 @@ import {
   Settings, Check, Compass, Layers, Zap, Info, Award
 } from 'lucide-react';
 import ImageWatermark from '../shared/ImageWatermark';
+import { imgProps } from '../../lib/imageOpt';
 
 export default function ValueProps() {
   const scrollToForm = () => {
