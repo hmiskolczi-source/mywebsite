@@ -8,6 +8,7 @@ import { motion } from 'motion/react';
 import SocialProof from '../../shared/SocialProof';
 import BrandLogos from '../../shared/BrandLogos';
 import ImageWatermark from '../../shared/ImageWatermark';
+import { imgProps } from '../../../lib/imageOpt';
 
 export default function AcademyHero() {
   const scrollToForm = () => {
