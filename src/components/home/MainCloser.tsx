@@ -16,7 +16,7 @@ export default function MainCloser() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
@@ -42,10 +42,32 @@ export default function MainCloser() {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'bf82c20b-51b3-4d45-b1db-c06126f1cadf',
+          name,
+          phone,
+          email,
+          message: interest,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitting(false);
+        setIsSuccess(true);
+      } else {
+        throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');
+      }
+    } catch (err) {
       setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1500);
+      setError(err instanceof Error ? err.message : 'Hiba történt az adatok küldésekor. Kérjük, próbáld újra.');
+    }
   };
 
   const handleReset = () => {
