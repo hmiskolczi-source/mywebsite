@@ -87,10 +87,11 @@ export default function Hero() {
             >
               <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
                 <img
-                  src="https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp"
+                  {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
                   alt="Premium makeup tattoo service"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
               </ImageWatermark>
