@@ -26,18 +26,6 @@ export default function Reviews() {
       role: "",
       title: "Egy főnyeremény",
       text: "Kinga hibátlan munkája, és közvetlen, kedves személyisége miatt egy főnyeremény: csak ajánlani tudom"
-    },
-    {
-      name: "G. Dalma",
-      role: "",
-      title: "Mindig figyel az igényeinkre",
-      text: "Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸"
-    },
-    {
-      name: "N.K. Márta",
-      role: "",
-      title: "Az eredménnyel maximálisan elégedett vagyok!",
-      text: "Szemöldök tetováláson voltam, az eredménnyel maximálisan elégedett vagyok! Nagyon kellemes hangulatban telt, Kinga személyisége imádnivaló!"
     }
   ];
 
