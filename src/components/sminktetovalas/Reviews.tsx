@@ -10,14 +10,14 @@ import { Quote } from 'lucide-react';
 export default function Reviews() {
   const reviews = [
     {
-      name: "B. Szilvia",
-      title: "Szívből ajánlom Kingát!",
-      text: "Rendkívül precíz, igényes és nagyon kedves szakember. Már a konzultációnál is érezhető volt a profizmusa és az, hogy maximálisan figyel a vendég igényeire. A végeredmény gyönyörű, természetes hatású lett, pontosan olyan, amilyet szerettem volna. A kezelés alatt végig biztonságban és jó kezekben éreztem magam. Ha sminktetoválás Szegeden, akkor számomra egyértelműen Miskolczi Kinga."
+      name: "H. Petra",
+      title: "Egy főnyeremény",
+      text: "Kinga hibátlan munkája, és közvetlen, kedves személyisége miatt egy főnyeremény: csak ajánlani tudom"
     },
     {
-      name: "N.B. Klára",
-      title: "Nagyban megkönnyítette a mindennapjaimat",
-      text: "Szülést követően készített nekem Kinga egy természetes hatású szemöldök sminktetoválást, amely pont olyan lett, mint amilyet szerettem volna. Nagyban megkönnyítette a mindennapjaimat, hogy nem kellett rajzolgatni reggelente a szemöldököm."
+      name: "N.K. Márta",
+      title: "Az eredménnyel maximálisan elégedett vagyok!",
+      text: "Szemöldök tetováláson voltam, az eredménnyel maximálisan elégedett vagyok! Nagyon kellemes hangulatban telt, Kinga személyisége imádnivaló!"
     }
   ];
 
