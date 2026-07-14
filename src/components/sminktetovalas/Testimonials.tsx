@@ -10,17 +10,6 @@ import { CheckCircle2, Clock, Eye, ShieldAlert, Sparkles } from 'lucide-react';
 export default function Testimonials() {
   const cards = [
     {
-      id: 'dalma-review',
-      category: 'Ügyfél véleménye',
-      title: 'Mindig figyel az igényeinkre',
-      desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸',
-      author: 'G. Dalma',
-      role: 'Ismerős 5 éve',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600',
-      tagIcon: Sparkles,
-      themeColor: 'border-gold-300'
-    },
-    {
       id: 'marta-review',
       category: 'Ügyfél véleménye',
       title: 'Az eredménnyel maximálisan elégedett vagyok!',
@@ -56,8 +45,8 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Testimonials 3-Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        {/* Testimonials 2-Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {cards.map((card, idx) => {
             const IconComponent = card.tagIcon;
             return (
