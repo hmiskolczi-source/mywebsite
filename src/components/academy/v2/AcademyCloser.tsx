@@ -256,9 +256,16 @@ export default function AcademyCloser() {
                     <h3 className="font-serif-lux text-4xl font-light text-white">Gratulálok!</h3>
                     <p className="text-xs text-gold-400 uppercase tracking-luxury">Jelentkezésedet sikeresen rögzítettem.</p>
                   </div>
-                  <p className="text-sm text-cream-100/60 font-light max-w-sm mx-auto leading-relaxed">
-                    Kinga 24 órán belül személyesen hívni fog a megadott számon a tervezéssel kapcsolatban. Küldtem egy automatikus tájékoztató levelet e-mail fiókodba a heti órarendleddel és a banki adatokkal.
-                  </p>
+                  <div className="text-sm text-cream-100/60 font-light max-w-md mx-auto leading-relaxed space-y-4">
+                    <p>24 órán belül személyesen fogom felvenni a kapcsolatot veled.</p>
+                    <div className="space-y-3 pt-4 border-t border-white/10">
+                      <p className="font-medium text-cream-100/80">Fontos információ: a helyed a 10%-os előleg után kerül foglalásra. Kérlek, az alábbi számlaszámra utalj, hogy biztosítsd a részvételedet:</p>
+                      <div className="bg-gold-500/20 border border-gold-400/40 p-4 rounded space-y-2">
+                        <p className="font-mono font-bold text-gold-300 text-base tracking-wider">116000060000000024437460</p>
+                        <p className="text-xs text-cream-100/70">Miskolczi Kinga</p>
+                      </div>
+                    </div>
+                  </div>
                   <button
                     onClick={handleReset}
                     className="text-[10px] font-bold tracking-luxury text-white/40 uppercase hover:text-white transition-colors"
