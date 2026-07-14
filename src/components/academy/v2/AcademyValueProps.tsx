@@ -130,7 +130,7 @@ export default function AcademyValueProps() {
 
               <div className=”pl-8 border-l border-gold-400/30”>
                 <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
-                  „Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően, ami nagyon jó referencia lett számomra. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
+                  “Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően, ami nagyon jó referencia lett számomra. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
                 </p>
                 <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— Cs. Anna, végzett tanuló</p>
               </div>
