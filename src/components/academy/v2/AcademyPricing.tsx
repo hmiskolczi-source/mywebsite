@@ -64,7 +64,7 @@ export default function AcademyPricing() {
       initials: “VJ”,
       name: “V. Jázmin”,
       role: “Divatsmink Képzés Végzett”,
-      title: “„Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.””,
+      title: “Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.”,
       text: “Először sminkmodellként kerültem Kingához több alkalommal, és már akkor teljesen lenyűgözött a profizmusa, a kedvessége és az a nyugodt, támogató légkör, amit megteremtett maga körül. Később nála végeztem el a 100 órás divatsmink képzést. A képzés minden percét imádtam. Kinga hihetetlen türelemmel és odafigyeléssel tanít, tényleg fontos számára, hogy minden tanítványa fejlődjön.”
     }
   ];
