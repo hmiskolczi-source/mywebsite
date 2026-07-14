@@ -10,22 +10,22 @@ import { Quote } from 'lucide-react';
 export default function AcademyReviews() {
   const reviews = [
     {
-      name: "Kovács Petra",
-      role: "Esküvői & Divatsminkes specialistaként dolgozik • Szeged",
-      title: "A végzés után azonnal felkértek egy esküvői fotózásra a portfólióm alapján!",
-      text: "A tanfolyam alatt készített és Kinga professzionális fényképezőjével retusált képekkel azonnal el tudtam indulni valódi munkát keresni és feltölteni a közösségi oldalaimat. A nevének és az oklevélnek köszönhetően az ügynökségek és a menyasszonyok azonnal komolyan vettek és szóba álltak velem."
+      name: "V. Jázmin",
+      role: "Divatsmink Képzés Végzett",
+      title: "Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.",
+      text: "Először sminkmodellként kerültem Kingához több alkalommal, és már akkor teljesen lenyűgözött a profizmusa, a kedvessége és az a nyugodt, támogató légkör, amit megteremtett maga körül. Később nála végeztem el a 100 órás divatsmink képzést. A képzés minden percét imádtam. Kinga hihetetlen türelemmel és odafigyeléssel tanít, tényleg fontos számára, hogy minden tanítványa fejlődjön."
     },
     {
-      name: "Németh Laura",
-      role: "Szépségipari Vállalkozó & Oktató • Budapest",
-      title: "Végre megértettem a sminkelés valódi logikáját a merev szabályok helyett.",
-      text: "Más sminkiskolákban csak lemásoltatták az éppen divatos maszkos formákat az azonos arckarakterű diákokon. Kinga megtanította a bőrdiagnosztika, a színdiagnózis és az arc-architektúra kőkemény logikáját, így ma már teljesen magabiztosan sminkelek és javítok érett vagy kifejezetten problémás bőrt is."
+      name: "P.B. Noémi",
+      role: "Fodrász & Sminkes",
+      title: "A lehető legjobb alapokat tanulhattam meg.",
+      text: "Kingánál az alapképzésen vettem részt 2021-ben. Nagyon profi szakember, minden mozdulatunkra figyelt, kedves és segítőkész. Az órák mindig jó hangulatban teltek, bármi kérdésünk volt, mindenre válaszolt. Amikor végeztünk a smink elkészítésével, mindig készültek profi fotók a modellekről. Azóta is sminkesként (is) dolgozom, és magabiztosan állnak az ecsetek a kezemben!"
     },
     {
-      name: "Szabó Júlia",
-      role: "Esküvői Sminkes • Kecskemét",
-      title: "A legcsodásabb mentorprogram, ahol az egyéni figyelem tényleg 100%-os volt.",
-      text: "Nem egy zajos, harmincfős teremben ültünk. A maximum 5 fős exkluzív limit miatt Kinga minden egyes ecsetvonásomnál mögöttem állt és közvetlenül javította a tartást, nyomást és a satírozást. Ez a támogatás hihetetlen gyorsan átlendített az akadályokon."
+      name: "Cs. Anna",
+      role: "Fodrász & Sminkes",
+      title: "Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.",
+      text: "2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem."
     }
   ];
 
