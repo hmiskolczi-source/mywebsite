@@ -67,7 +67,7 @@ export default function AcademyValueProps() {
               
               <div className=”pl-8 border-l border-gold-400/30”>
                 <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
-                  „A lehető legjobb alapokat tanulhattam meg, így mikor elkezdtem dolgozni, magabiztosan álltak az ecsetek a kezemben!”
+                  “A lehető legjobb alapokat tanulhattam meg, így mikor elkezdtem dolgozni, magabiztosan álltak az ecsetek a kezemben!”
                 </p>
                 <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— P.B. Noémi, végzett tanuló</p>
               </div>
