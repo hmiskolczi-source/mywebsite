@@ -33,25 +33,39 @@ export default function AcademyPricing() {
 
   const reviews = [
     {
-      initials: "NM",
-      name: "Nagy Melinda",
-      role: "Diplomás Pro Sminkes tanulóm",
-      title: "„Soha életemben nem hoztam ennél jobb döntést. Már tanulás közben megtérült a tanfolyam.”",
-      text: "„Mindenki le akart beszélni a sminkiskolákról, mert azt mondták, túl telített a piac. Kingáéknál teljesen más szemléletet kaptam: nemcsak festeni, hanem vállalkozást építeni, karaktert olvasni és vendéget megtartani is megtanultam.”"
+      initials: “CA”,
+      name: “Cs. Anna”,
+      role: “Fodrász & Sminkes”,
+      title: “„Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.””,
+      text: “2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
     },
     {
-      initials: "SE",
-      name: "Szabó Eszter",
-      role: "Végzett Mentorprogramos tanulóm",
-      title: "„Már a képzés 6. hetén saját munkákból kerestem meg az árát!”",
-      text: "„Úgy érkeztem ide, hogy csak az alapokat akartam tudni, de Kinga energiája és professzionalizmusa teljesen magával ragadott. Amikor a modulok végén elkészültek a profi, retusált képek, azonnal jöttek a felkérések.”"
+      initials: “VK”,
+      name: “V. Kyra”,
+      role: “Sminkoktatás & Képzés”,
+      title: “„Rengeteget tanultam, és valódi tudást kaptam a sminkszakma minden fontos területéről.””,
+      text: “Nagyon elégedett vagyok a budapesti sminkképzéssel! Rengeteget tanultam, és valódi, tudást kaptam a sminkszakma minden fontos területéről. Külön szeretném megköszönni a türelmes oktatást és a kimagasló szakmai tudás átadását. Mindenkinek ajánlom, aki szeretne tudást szerezni a smink szakmában!”
     },
     {
-      initials: "KP",
-      name: "Kovács Petra",
-      role: "Profi Sminkes mentorálam",
-      title: "„A legfinomabb szakmai titkokat és a márkafüggetlen igazságot kaptam.”",
-      text: "„Sokáig kerestem olyan iskolát, ahol nem akarnak kötelező márkacsomagot rám erőszakolni. Itt a legjobb high-end és drogériás alternatívákat is megismertük, így százezres felesleges költésektől mentett meg Kinga.”"
+      initials: “TR”,
+      name: “T. Reni”,
+      role: “Profi Sminkes”,
+      title: “„Tiszta szívből ajánlom mindenkinek, aki szeretne megtanulni sminkelni.””,
+      text: “Miskolczi Kinga egy fantasztikus művész és ember, tiszta szívből ajánlom mindenkinek aki szeretne megtanulni sminkelni. Hozzá jártam pár éve és rengeteget tanultam, csodálatos volt a hangulat, rendkívül türelmes mester, vérprofi, vérprofizmussal végigkísér az alapoktól akár a nagyon komplex művészi alkotásokig.”
+    },
+    {
+      initials: “PBN”,
+      name: “P.B. Noémi”,
+      role: “Fodrász & Sminkes”,
+      title: “„A lehető legjobb alapokat tanulhattam meg.””,
+      text: “Kingánál az alapképzésen vettem részt 2021-ben. Nagyon profi szakember, minden mozdulatunkra figyelt, kedves és segítőkész. Az órák mindig jó hangulatban teltek, bármi kérdésünk volt, mindenre válaszolt. Amikor végeztünk a smink elkészítésével, mindig készültek profi fotók a modellekről. Azóta is sminkesként (is) dolgozom, és magabiztosan állnak az ecsetek a kezemben!”
+    },
+    {
+      initials: “VJ”,
+      name: “V. Jázmin”,
+      role: “Divatsmink Képzés Végzett”,
+      title: “„Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.””,
+      text: “Először sminkmodellként kerültem Kingához több alkalommal, és már akkor teljesen lenyűgözött a profizmusa, a kedvessége és az a nyugodt, támogató légkör, amit megteremtett maga körül. Később nála végeztem el a 100 órás divatsmink képzést. A képzés minden percét imádtam. Kinga hihetetlen türelemmel és odafigyeléssel tanít, tényleg fontos számára, hogy minden tanítványa fejlődjön.”
     }
   ];
 
