@@ -10,24 +10,24 @@ import { CheckCircle2, Clock, Eye, ShieldAlert, Sparkles } from 'lucide-react';
 export default function Testimonials() {
   const cards = [
     {
-      id: 'time-saved',
-      category: 'Időmegtakarítás',
-      title: 'Időszuverenitás & Reggeli Szabadság',
-      desc: '„Nincs többé reggeli fáradt sminkelés és stresszes méricskélés a tükör előtt. Minden áldott nap úgy ébredek, hogy az arcom teljesen kimerült vonások nélkül, kamera-készen tündököl. Életem legjobb befektetése.”',
-      author: 'Szabó Laura',
-      role: 'Cégvezető, Budapesti ügyfél',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600',
-      tagIcon: Clock,
+      id: 'dalma-review',
+      category: 'Ügyfél véleménye',
+      title: 'Mindig figyel az igényeinkre',
+      desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸',
+      author: 'G. Dalma',
+      role: 'Ismerős 5 éve',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600',
+      tagIcon: Sparkles,
       themeColor: 'border-gold-300'
     },
     {
-      id: 'pain-avoided',
-      category: 'Fájdalommentesség',
-      title: 'Wellness Eljárás Mikrostressz Nélkül',
-      desc: '„Sokáig rettegtem a fájdalomtól és a kékülő elszíneződéstől. Kinga kétfázisú protokollja egy csoda: konkrétan semmit nem éreztem, a hangulat pedig megnyugtató luxust árasztott. Teljes biztonságban voltam.”',
-      author: 'Molnár Petra',
-      role: 'Tartalomgyártó & Modell',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600',
+      id: 'marta-review',
+      category: 'Ügyfél véleménye',
+      title: 'Az eredménnyel maximálisan elégedett vagyok!',
+      desc: 'Szemöldök tetováláson voltam, az eredménnyel maximálisan elégedett vagyok! Nagyon kellemes hangulatban telt, Kinga személyisége imádnivaló!',
+      author: 'N.K. Márta',
+      role: 'Szemöldök tetoválás',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600',
       tagIcon: CheckCircle2,
       themeColor: 'border-gold-400'
     },
@@ -35,7 +35,7 @@ export default function Testimonials() {
       id: 'natural-beauty',
       category: 'Természetesség',
       title: 'Hajszálvékony, Lágy Poros Hatás',
-      desc: '„Nem tetoválást akartam, hanem gyönyörű, mértéktartó korrigálást. A környezetemből senki nem mondja meg, hogy sminktetoválásom van. Csak azt látják és dicsérik, hogy mennyire kisimultam és friss lettem!”',
+      desc: '„Nem tetoválást akartam, hanem gyönyörű, mértéktartó korrigálást. A környezetemből senki nem mondja meg, hogy sminktetoválásom van. Csak azt látják és dicsérik, hogy mennyire kisimultam és friss lettem!"',
       author: 'Dr. Varga Beatrix',
       role: 'Jogász, 45 éves prémium vendég',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600',
@@ -100,9 +100,9 @@ export default function Testimonials() {
 
                   <div className="pt-4 border-t border-cream-300/40 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <img 
-                        src={card.image} 
-                        alt={card.author} 
+                      <img
+                        src={card.image}
+                        alt={card.author}
                         className="w-10 h-10 rounded-full object-cover border border-gold-200 shrink-0 shadow-sm"
                         referrerPolicy="no-referrer"
                       />
