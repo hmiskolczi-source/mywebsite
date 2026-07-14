@@ -43,7 +43,7 @@ export default function AcademyPricing() {
       initials: “VK”,
       name: “V. Kyra”,
       role: “Sminkoktatás & Képzés”,
-      title: “„Rengeteget tanultam, és valódi tudást kaptam a sminkszakma minden fontos területéről.””,
+      title: “Rengeteget tanultam, és valódi tudást kaptam a sminkszakma minden fontos területéről.”,
       text: “Nagyon elégedett vagyok a budapesti sminkképzéssel! Rengeteget tanultam, és valódi, tudást kaptam a sminkszakma minden fontos területéről. Külön szeretném megköszönni a türelmes oktatást és a kimagasló szakmai tudás átadását. Mindenkinek ajánlom, aki szeretne tudást szerezni a smink szakmában!”
     },
     {
