@@ -36,7 +36,7 @@ export default function AcademyPricing() {
       initials: “CA”,
       name: “Cs. Anna”,
       role: “Fodrász & Sminkes”,
-      title: “„Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.””,
+      title: “Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.”,
       text: “2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
     },
     {
