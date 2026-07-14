@@ -50,7 +50,7 @@ export default function AcademyPricing() {
       initials: “TR”,
       name: “T. Reni”,
       role: “Profi Sminkes”,
-      title: “„Tiszta szívből ajánlom mindenkinek, aki szeretne megtanulni sminkelni.””,
+      title: “Tiszta szívből ajánlom mindenkinek, aki szeretne megtanulni sminkelni.”,
       text: “Miskolczi Kinga egy fantasztikus művész és ember, tiszta szívből ajánlom mindenkinek aki szeretne megtanulni sminkelni. Hozzá jártam pár éve és rengeteget tanultam, csodálatos volt a hangulat, rendkívül türelmes mester, vérprofi, vérprofizmussal végigkísér az alapoktól akár a nagyon komplex művészi alkotásokig.”
     },
     {
