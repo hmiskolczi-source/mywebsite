@@ -13,22 +13,19 @@ export default function Testimonials() {
       id: 'szilvia-review',
       title: 'Szívből ajánlom Kingát!',
       desc: 'Rendkívül precíz, igényes és nagyon kedves szakember. Már a konzultációnál is érezhető volt a profizmusa és az, hogy maximálisan figyel a vendég igényeire. A végeredmény gyönyörű, természetes hatású lett, pontosan olyan, amilyet szerettem volna. A kezelés alatt végig biztonságban és jó kezekben éreztem magam. Ha sminktetoválás Szegeden, akkor számomra egyértelműen Miskolczi Kinga.',
-      author: 'B. Szilvia',
-      role: 'Ügyfél'
+      author: 'B. Szilvia'
     },
     {
       id: 'klara-review',
       title: 'Nagyban megkönnyítette a mindennapjaimat',
       desc: 'Szülést követően készített nekem Kinga egy természetes hatású szemöldök sminktetoválást, amely pont olyan lett, mint amilyet szerettem volna. Nagyban megkönnyítette a mindennapjaimat, hogy nem kellett rajzolgatni reggelente a szemöldököm.',
-      author: 'N.B. Klára',
-      role: 'Ügyfél'
+      author: 'N.B. Klára'
     },
     {
       id: 'dalma-review',
       title: 'Mindig figyel az igényeinkre',
       desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸',
-      author: 'G. Dalma',
-      role: 'Ismerős 5 éve'
+      author: 'G. Dalma'
     }
   ];
 
@@ -68,15 +65,10 @@ export default function Testimonials() {
                   </div>
 
                   <div className="pt-4 border-t border-cream-300/40 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div>
-                        <h4 className="font-serif-lux font-bold text-base text-charcoal-900 tracking-wide">
-                          {card.author}
-                        </h4>
-                        <p className="text-xs text-charcoal-700 font-mono mt-0.5 font-medium uppercase tracking-wider">
-                          {card.role}
-                        </p>
-                      </div>
+                    <div>
+                      <h4 className="font-serif-lux font-bold text-base text-charcoal-900 tracking-wide">
+                        {card.author}
+                      </h4>
                     </div>
 
                     <div className="flex flex-col items-end gap-1 shrink-0">
