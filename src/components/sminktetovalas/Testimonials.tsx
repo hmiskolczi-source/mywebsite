@@ -11,36 +11,24 @@ export default function Testimonials() {
   const cards = [
     {
       id: 'szilvia-review',
-      category: 'Ügyfél véleménye',
       title: 'Szívből ajánlom Kingát!',
       desc: 'Rendkívül precíz, igényes és nagyon kedves szakember. Már a konzultációnál is érezhető volt a profizmusa és az, hogy maximálisan figyel a vendég igényeire. A végeredmény gyönyörű, természetes hatású lett, pontosan olyan, amilyet szerettem volna. A kezelés alatt végig biztonságban és jó kezekben éreztem magam. Ha sminktetoválás Szegeden, akkor számomra egyértelműen Miskolczi Kinga.',
       author: 'B. Szilvia',
-      role: 'Ügyfél',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600',
-      tagIcon: Sparkles,
-      themeColor: 'border-gold-300'
+      role: 'Ügyfél'
     },
     {
       id: 'klara-review',
-      category: 'Ügyfél véleménye',
       title: 'Nagyban megkönnyítette a mindennapjaimat',
       desc: 'Szülést követően készített nekem Kinga egy természetes hatású szemöldök sminktetoválást, amely pont olyan lett, mint amilyet szerettem volna. Nagyban megkönnyítette a mindennapjaimat, hogy nem kellett rajzolgatni reggelente a szemöldököm.',
       author: 'N.B. Klára',
-      role: 'Ügyfél',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600',
-      tagIcon: CheckCircle2,
-      themeColor: 'border-gold-400'
+      role: 'Ügyfél'
     },
     {
       id: 'dalma-review',
-      category: 'Ügyfél véleménye',
       title: 'Mindig figyel az igényeinkre',
       desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸',
       author: 'G. Dalma',
-      role: 'Ismerős 5 éve',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600',
-      tagIcon: Sparkles,
-      themeColor: 'border-gold-300'
+      role: 'Ismerős 5 éve'
     }
   ];
 
@@ -59,7 +47,6 @@ export default function Testimonials() {
         {/* Testimonials 3-Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {cards.map((card, idx) => {
-            const IconComponent = card.tagIcon;
             return (
               <motion.div
                 key={card.id}
@@ -69,43 +56,19 @@ export default function Testimonials() {
                 transition={{ duration: 0.8, delay: idx * 0.2 }}
                 className="bg-white overflow-hidden border border-charcoal-800/5 shadow-sm flex flex-col justify-between group"
               >
-                {/* Visual Header Image representation of client's healed confidence */}
-                <div className="hidden relative h-56 w-full overflow-hidden bg-charcoal-900">
-                  <img
-                    src={card.image}
-                    alt={`${card.author} healed faces representation`}
-                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/15 to-transparent pointer-events-none" />
-
-                  {/* Category Pill Tag */}
-                  <div className="absolute top-4 left-4 bg-charcoal-900/80 backdrop-blur-md px-3 py-1 text-[10px] font-mono tracking-wider font-bold text-cream-100 shadow-sm border border-charcoal-700/40 flex items-center gap-1.5 uppercase">
-                    <IconComponent className="w-3 text-gold-400" />
-                    {card.category}
-                  </div>
-
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-serif-lux text-lg font-semibold leading-tight tracking-wide">
-                      {card.title}
-                    </p>
-                  </div>
-                </div>
-
                 {/* Card Content & Copy */}
                 <div className="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-6">
-                  <p className="text-sm text-charcoal-800 leading-relaxed font-light italic">
-                    {card.desc}
-                  </p>
+                  <div className="space-y-3">
+                    <h3 className="font-serif-lux text-lg sm:text-xl font-light text-charcoal-800 leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-charcoal-800 leading-relaxed font-light italic">
+                      {card.desc}
+                    </p>
+                  </div>
 
                   <div className="pt-4 border-t border-cream-300/40 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <img
-                        src={card.image}
-                        alt={card.author}
-                        className="w-10 h-10 rounded-full object-cover border border-gold-200 shrink-0 shadow-sm"
-                        referrerPolicy="no-referrer"
-                      />
                       <div>
                         <h4 className="font-serif-lux font-bold text-base text-charcoal-900 tracking-wide">
                           {card.author}
