@@ -10,22 +10,34 @@ import { Quote } from 'lucide-react';
 export default function Reviews() {
   const reviews = [
     {
-      name: "Kovács Beatrix",
-      role: "Irodavezető • Budapest",
-      title: "Megszűnt a reggeli stressz és az állítgatás",
-      text: "Minden reggel 25-30 percet töltöttem azzal, hogy megpróbáljam egyformára rajzolni a szemöldökömet, de sose sikerült. Kinga hibrid tetoválása óta szó szerint megváltozott a reggelem. Tiszta luxus, tiszta szabadság."
+      name: "B. Szilvia",
+      role: "",
+      title: "Szívből ajánlom Kingát!",
+      text: "Rendkívül precíz, igényes és nagyon kedves szakember. Már a konzultációnál is érezhető volt a profizmusa és az, hogy maximálisan figyel a vendég igényeire. A végeredmény gyönyörű, természetes hatású lett, pontosan olyan, amilyet szerettem volna. A kezelés alatt végig biztonságban és jó kezekben éreztem magam. Ha sminktetoválás Szegeden, akkor számomra egyértelműen Miskolczi Kinga."
     },
     {
-      name: "Horváth Nóra",
-      role: "Grafikai Tervező • Debrecen",
-      title: "A kétfázisú érzéstelenítő csodát tesz",
-      text: "Rettenetesen alacsony a fájdalomküszöböm, szinte remegve ültem be a székbe. De a kétfázisú eljárás alatt konkrétan semmit sem éreztem! Olyan volt, mint egy finom kozmetikai kezelés. Mindenkinek csak ajánlani tudom!"
+      name: "N.B. Klára",
+      role: "",
+      title: "Nagyban megkönnyítette a mindennapjaimat",
+      text: "Szülést követően készített nekem Kinga egy természetes hatású szemöldök sminktetoválást, amely pont olyan lett, mint amilyet szerettem volna. Nagyban megkönnyítette a mindennapjaimat, hogy nem kellett rajzolgatni reggelente a szemöldököm."
     },
     {
-      name: "Dr. Farkas Réka",
-      role: "Jogász • Budapest",
-      title: "Rejtett, de mégis ragyogó tetoválás",
-      text: "Nem szeretem a mesterkélt, láthatóan mű dolgokat. Kingánál az volt a kérésem, hogy rejtett legyen. A végeredmény zseniális: az ismerőseim kérdezgetik, mitől vagyok ilyen sugárzó, de senki sem veszi észre a tetoválást."
+      name: "H. Petra",
+      role: "",
+      title: "Egy főnyeremény",
+      text: "Kinga hibátlan munkája, és közvetlen, kedves személyisége miatt egy főnyeremény: csak ajánlani tudom"
+    },
+    {
+      name: "G. Dalma",
+      role: "",
+      title: "Mindig figyel az igényeinkre",
+      text: "Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸"
+    },
+    {
+      name: "N.K. Márta",
+      role: "",
+      title: "Az eredménnyel maximálisan elégedett vagyok!",
+      text: "Szemöldök tetováláson voltam, az eredménnyel maximálisan elégedett vagyok! Nagyon kellemes hangulatban telt, Kinga személyisége imádnivaló!"
     }
   ];
 
