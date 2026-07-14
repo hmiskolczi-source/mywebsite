@@ -33,39 +33,39 @@ export default function AcademyPricing() {
 
   const reviews = [
     {
-      initials: “CA”,
-      name: “Cs. Anna”,
-      role: “Fodrász & Sminkes”,
-      title: “Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.”,
-      text: “2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
+      initials: "CA",
+      name: "Cs. Anna",
+      role: "Fodrász & Sminkes",
+      title: "Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.",
+      text: "2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem."
     },
     {
-      initials: “VK”,
-      name: “V. Kyra”,
-      role: “Sminkoktatás & Képzés”,
-      title: “Rengeteget tanultam, és valódi tudást kaptam a sminkszakma minden fontos területéről.”,
-      text: “Nagyon elégedett vagyok a budapesti sminkképzéssel! Rengeteget tanultam, és valódi, tudást kaptam a sminkszakma minden fontos területéről. Külön szeretném megköszönni a türelmes oktatást és a kimagasló szakmai tudás átadását. Mindenkinek ajánlom, aki szeretne tudást szerezni a smink szakmában!”
+      initials: "VK",
+      name: "V. Kyra",
+      role: "Sminkoktatás & Képzés",
+      title: "Rengeteget tanultam, és valódi tudást kaptam a sminkszakma minden fontos területéről.",
+      text: "Nagyon elégedett vagyok a budapesti sminkképzéssel! Rengeteget tanultam, és valódi, tudást kaptam a sminkszakma minden fontos területéről. Külön szeretném megköszönni a türelmes oktatást és a kimagasló szakmai tudás átadását. Mindenkinek ajánlom, aki szeretne tudást szerezni a smink szakmában!"
     },
     {
-      initials: “TR”,
-      name: “T. Reni”,
-      role: “Profi Sminkes”,
-      title: “Tiszta szívből ajánlom mindenkinek, aki szeretne megtanulni sminkelni.”,
-      text: “Miskolczi Kinga egy fantasztikus művész és ember, tiszta szívből ajánlom mindenkinek aki szeretne megtanulni sminkelni. Hozzá jártam pár éve és rengeteget tanultam, csodálatos volt a hangulat, rendkívül türelmes mester, vérprofi, vérprofizmussal végigkísér az alapoktól akár a nagyon komplex művészi alkotásokig.”
+      initials: "TR",
+      name: "T. Reni",
+      role: "Profi Sminkes",
+      title: "Tiszta szívből ajánlom mindenkinek, aki szeretne megtanulni sminkelni.",
+      text: "Miskolczi Kinga egy fantasztikus művész és ember, tiszta szívből ajánlom mindenkinek aki szeretne megtanulni sminkelni. Hozzá jártam pár éve és rengeteget tanultam, csodálatos volt a hangulat, rendkívül türelmes mester, vérprofi, vérprofizmussal végigkísér az alapoktól akár a nagyon komplex művészi alkotásokig."
     },
     {
-      initials: “PBN”,
-      name: “P.B. Noémi”,
-      role: “Fodrász & Sminkes”,
-      title: “A lehető legjobb alapokat tanulhattam meg.”,
-      text: “Kingánál az alapképzésen vettem részt 2021-ben. Nagyon profi szakember, minden mozdulatunkra figyelt, kedves és segítőkész. Az órák mindig jó hangulatban teltek, bármi kérdésünk volt, mindenre válaszolt. Amikor végeztünk a smink elkészítésével, mindig készültek profi fotók a modellekről. Azóta is sminkesként (is) dolgozom, és magabiztosan állnak az ecsetek a kezemben!”
+      initials: "PBN",
+      name: "P.B. Noémi",
+      role: "Fodrász & Sminkes",
+      title: "A lehető legjobb alapokat tanulhattam meg.",
+      text: "Kingánál az alapképzésen vettem részt 2021-ben. Nagyon profi szakember, minden mozdulatunkra figyelt, kedves és segítőkész. Az órák mindig jó hangulatban teltek, bármi kérdésünk volt, mindenre válaszolt. Amikor végeztünk a smink elkészítésével, mindig készültek profi fotók a modellekről. Azóta is sminkesként (is) dolgozom, és magabiztosan állnak az ecsetek a kezemben!"
     },
     {
-      initials: “VJ”,
-      name: “V. Jázmin”,
-      role: “Divatsmink Képzés Végzett”,
-      title: “Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.”,
-      text: “Először sminkmodellként kerültem Kingához több alkalommal, és már akkor teljesen lenyűgözött a profizmusa, a kedvessége és az a nyugodt, támogató légkör, amit megteremtett maga körül. Később nála végeztem el a 100 órás divatsmink képzést. A képzés minden percét imádtam. Kinga hihetetlen türelemmel és odafigyeléssel tanít, tényleg fontos számára, hogy minden tanítványa fejlődjön.”
+      initials: "VJ",
+      name: "V. Jázmin",
+      role: "Divatsmink Képzés Végzett",
+      title: "Tényleg inspirálva érzi magát, szívvel-lélekkel adja át a tudását.",
+      text: "Először sminkmodellként kerültem Kingához több alkalommal, és már akkor teljesen lenyűgözött a profizmusa, a kedvessége és az a nyugodt, támogató légkör, amit megteremtett maga körül. Később nála végeztem el a 100 órás divatsmink képzést. A képzés minden percét imádtam. Kinga hihetetlen türelemmel és odafigyeléssel tanít, tényleg fontos számára, hogy minden tanítványa fejlődjön."
     }
   ];
 

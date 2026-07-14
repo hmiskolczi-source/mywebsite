@@ -65,11 +65,11 @@ export default function AcademyValueProps() {
                 A képzés teljes időtartama alatt <span className="font-bold">minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit</span> és csúcskategóriás eszközeit korlátlanul biztosítom számodra szegedi és budapesti lakásstúdiómban. Így <span className="font-bold">egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra</span> kidobnod a beiratkozás előtt. Ráadásul <span className="font-bold">segítek összeállítani</span> a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatom, mi az a <span className="font-bold">3 kulcspaletta</span>, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
               </p>
               
-              <div className=”pl-8 border-l border-gold-400/30”>
-                <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
-                  A leheto legjobb alapokat tanulhattam meg, igy mikor elkezdtem dolgozni, magabiztosan alltak az ecsetek a kezemben!
+              <div className="pl-8 border-l border-gold-400/30">
+                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
+                  „A lehető legjobb alapokat tanulhattam meg, így mikor elkezdtem dolgozni, magabiztosan álltak az ecsetek a kezemben!”
                 </p>
-                <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— P.B. Noémi, végzett tanuló</p>
+                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— P.B. Noémi, végzett tanuló</p>
               </div>
             </motion.div>
 
@@ -128,11 +128,11 @@ export default function AcademyValueProps() {
                 A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról <span className="font-bold">letisztult stúdiókörnyezetben, profi felszereléssel</span> készítok képeket. A kész, <span className="font-bold">precízen retusált, magazin-minőségű fotókból</span> egy olyan komplett digitális portfóliót kapsz, amivel <span className="font-bold">azonnal magabiztosan szerezhetsz prémium vendégeket</span>.
               </p>
 
-              <div className=”pl-8 border-l border-gold-400/30”>
-                <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
+              <div className="pl-8 border-l border-gold-400/30">
+                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
                   Frissen vegzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően, ami nagyon jó referencia lett számomra. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.
                 </p>
-                <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— Cs. Anna, végzett tanuló</p>
+                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— Cs. Anna, végzett tanuló</p>
               </div>
             </motion.div>
 
