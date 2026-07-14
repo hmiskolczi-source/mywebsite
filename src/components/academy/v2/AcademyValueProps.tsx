@@ -65,11 +65,11 @@ export default function AcademyValueProps() {
                 A képzés teljes időtartama alatt <span className="font-bold">minden luxus- és professzionális alapanyagot, nemzetközi világmárkák termékeit</span> és csúcskategóriás eszközeit korlátlanul biztosítom számodra szegedi és budapesti lakásstúdiómban. Így <span className="font-bold">egyetlen forintot sem kell felesleges, méregdrága kezdőcsomagokra</span> kidobnod a beiratkozás előtt. Ráadásul <span className="font-bold">segítek összeállítani</span> a kezdő sminkkészletedet a pénztárcád és a céljaid alapján. Pontosan megmutatom, mi az a <span className="font-bold">3 kulcspaletta</span>, amivel a munka 90%-át megoldhatod felesleges kiadások nélkül.
               </p>
               
-              <div className="pl-8 border-l border-gold-400/30">
-                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
-                  „Hatalmas megkönnyebbülés volt, hogy nem kellett százezreket elköltenem sminkcuccokra az első nap előtt. Mindenből a legfelsőbb kategóriát kaptuk!”
+              <div className=”pl-8 border-l border-gold-400/30”>
+                <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
+                  „A lehető legjobb alapokat tanulhattam meg, így mikor elkezdtem dolgozni, magabiztosan álltak az ecsetek a kezemben!”
                 </p>
-                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— D. Eszter, végzett tanuló</p>
+                <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— P.B. Noémi, végzett tanuló</p>
               </div>
             </motion.div>
 
