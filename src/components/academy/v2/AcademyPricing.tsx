@@ -57,7 +57,7 @@ export default function AcademyPricing() {
       initials: “PBN”,
       name: “P.B. Noémi”,
       role: “Fodrász & Sminkes”,
-      title: “„A lehető legjobb alapokat tanulhattam meg.””,
+      title: “A lehető legjobb alapokat tanulhattam meg.”,
       text: “Kingánál az alapképzésen vettem részt 2021-ben. Nagyon profi szakember, minden mozdulatunkra figyelt, kedves és segítőkész. Az órák mindig jó hangulatban teltek, bármi kérdésünk volt, mindenre válaszolt. Amikor végeztünk a smink elkészítésével, mindig készültek profi fotók a modellekről. Azóta is sminkesként (is) dolgozom, és magabiztosan állnak az ecsetek a kezemben!”
     },
     {
