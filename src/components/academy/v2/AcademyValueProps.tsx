@@ -128,11 +128,11 @@ export default function AcademyValueProps() {
                 A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról <span className="font-bold">letisztult stúdiókörnyezetben, profi felszereléssel</span> készítok képeket. A kész, <span className="font-bold">precízen retusált, magazin-minőségű fotókból</span> egy olyan komplett digitális portfóliót kapsz, amivel <span className="font-bold">azonnal magabiztosan szerezhetsz prémium vendégeket</span>.
               </p>
 
-              <div className="pl-8 border-l border-gold-400/30">
-                <p className="font-serif-lux text-lg italic text-charcoal-700 leading-relaxed">
-                  „A portfólióm miatt azonnal megkerestek esküvői felkérésekkel az első hetekben. Döbbenetes magabiztosságot adott!”
+              <div className=”pl-8 border-l border-gold-400/30”>
+                <p className=”font-serif-lux text-lg italic text-charcoal-700 leading-relaxed”>
+                  „Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően, ami nagyon jó referencia lett számomra. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem.”
                 </p>
-                <p className="text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600">— László Petra</p>
+                <p className=”text-[10px] font-bold tracking-luxury uppercase mt-4 text-gold-600”>— Cs. Anna, végzett tanuló</p>
               </div>
             </motion.div>
 
