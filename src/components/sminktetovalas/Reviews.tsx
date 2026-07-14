@@ -11,21 +11,13 @@ export default function Reviews() {
   const reviews = [
     {
       name: "B. Szilvia",
-      role: "",
       title: "Szívből ajánlom Kingát!",
       text: "Rendkívül precíz, igényes és nagyon kedves szakember. Már a konzultációnál is érezhető volt a profizmusa és az, hogy maximálisan figyel a vendég igényeire. A végeredmény gyönyörű, természetes hatású lett, pontosan olyan, amilyet szerettem volna. A kezelés alatt végig biztonságban és jó kezekben éreztem magam. Ha sminktetoválás Szegeden, akkor számomra egyértelműen Miskolczi Kinga."
     },
     {
       name: "N.B. Klára",
-      role: "",
       title: "Nagyban megkönnyítette a mindennapjaimat",
       text: "Szülést követően készített nekem Kinga egy természetes hatású szemöldök sminktetoválást, amely pont olyan lett, mint amilyet szerettem volna. Nagyban megkönnyítette a mindennapjaimat, hogy nem kellett rajzolgatni reggelente a szemöldököm."
-    },
-    {
-      name: "H. Petra",
-      role: "",
-      title: "Egy főnyeremény",
-      text: "Kinga hibátlan munkája, és közvetlen, kedves személyisége miatt egy főnyeremény: csak ajánlani tudom"
     }
   ];
 
@@ -41,7 +33,7 @@ export default function Reviews() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           {reviews.map((review, idx) => (
             <motion.div
               key={idx}
@@ -66,9 +58,6 @@ export default function Reviews() {
               <div className="pt-6 border-t border-charcoal-800/5">
                 <p className="font-serif-lux text-sm font-light text-charcoal-800">
                   {review.name}
-                </p>
-                <p className="text-xs text-charcoal-700/60 font-light">
-                  {review.role}
                 </p>
               </div>
             </motion.div>
