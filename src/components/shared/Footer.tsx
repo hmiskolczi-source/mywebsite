@@ -32,6 +32,53 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Socials & Contact */}
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-cream-300 font-light">
+            <a
+              href="https://www.instagram.com/sminktetovalas_miskolczikinga/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:text-gold-300 transition-colors"
+            >
+              <Instagram className="w-4 h-4 text-gold-400 shrink-0" />
+              <span>sminktetovalas_miskolczikinga</span>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100075798163564"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:text-gold-300 transition-colors"
+            >
+              <Facebook className="w-4 h-4 text-gold-400 shrink-0" />
+              <span>Kinga Miskolczi</span>
+            </a>
+            <a
+              href="https://www.instagram.com/miskolczikinga_makeup_school/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:text-gold-300 transition-colors"
+            >
+              <Instagram className="w-4 h-4 text-gold-400 shrink-0" />
+              <span>miskolczikinga_makeup_school</span>
+            </a>
+            <a
+              href="https://www.facebook.com/promakeupschool"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:text-gold-300 transition-colors"
+            >
+              <Facebook className="w-4 h-4 text-gold-400 shrink-0" />
+              <span>Pro Makeup School</span>
+            </a>
+            <a
+              href="tel:+36307094370"
+              className="flex items-center gap-2 hover:text-gold-300 transition-colors"
+            >
+              <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+              <span>+36 30 709 4370</span>
+            </a>
+          </div>
+
         </div>
 
         {/* Footer Bottom Row */}
