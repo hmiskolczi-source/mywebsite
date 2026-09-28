@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Heart, Scroll } from 'lucide-react';
+import { Heart, Scroll, Instagram, Facebook, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Footer() {
