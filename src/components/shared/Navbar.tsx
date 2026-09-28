@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-  currentPage: 'home' | 'sminktetovalas' | 'sminkkepzes';
+  currentPage: 'home' | 'sminktetovalas' | 'sminkkepzes' | 'impresszum';
 }
 
 export default function Navbar({ currentPage }: NavbarProps) {
