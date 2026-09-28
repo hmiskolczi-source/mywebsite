@@ -96,6 +96,15 @@ export default function Footer() {
             Adatvédelmi Nyilatkozat
           </a>
 
+          <a
+            href="/impresszum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="order-2 hover:text-gold-300 transition-colors cursor-pointer"
+          >
+            Impresszum
+          </a>
+
           <div className="order-3 sm:order-3 sm:absolute sm:right-4 sm:lg:right-8 flex items-center gap-1">
             <span>Made with</span>
             <Heart className="w-3 h-3 text-gold-400 fill-gold-400" />
