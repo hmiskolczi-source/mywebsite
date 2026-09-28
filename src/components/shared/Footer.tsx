@@ -83,12 +83,18 @@ export default function Footer() {
             >
               Adatvédelmi Nyilatkozat
             </button>
-            <button 
+            <button
               onClick={() => openModal('terms')}
               className="hover:text-gold-300 transition-colors cursor-pointer"
             >
               ÁSZF & Garanciális Feltételek
             </button>
+            <a
+              href="/impresszum"
+              className="hover:text-gold-300 transition-colors no-underline"
+            >
+              Impresszum
+            </a>
           </div>
 
           <div className="flex items-center gap-1">
