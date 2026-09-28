@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Heart } from 'lucide-react';
+import { Heart, Instagram, Facebook, Phone } from 'lucide-react';
 import { imgProps } from '../../lib/imageOpt';
 
 export default function Footer() {
