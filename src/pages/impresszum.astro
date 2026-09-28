@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/shared/Navbar';
+import Footer from '../components/shared/Footer';
+---
+
+<Layout title="Hovorka-Miskolczi Kinga — Impresszum">
+	<div class="min-h-screen bg-cream-100 selection:bg-gold-200 selection:text-charcoal-900 overflow-x-hidden antialiased">
+		<!-- Luxury Top Accents Line -->
+		<div class="h-1.5 w-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 sticky top-0 z-50 pointer-events-none"></div>
+
+		<Navbar currentPage="impresszum" client:load />
+
+		<main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 min-h-[40vh]">
+			<h1 class="font-serif-lux font-bold text-3xl sm:text-4xl text-charcoal-900">Impresszum</h1>
+		</main>
+
+		<Footer client:visible />
+	</div>
+</Layout>
