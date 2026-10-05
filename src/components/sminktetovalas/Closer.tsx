@@ -59,8 +59,7 @@ export default function Closer() {
       });
 
       if (response.ok) {
-        setIsSubmitting(false);
-        setIsSuccess(true);
+        window.location.href = '/koszonjuk';
       } else {
         throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');
       }
