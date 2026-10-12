@@ -1,0 +1,153 @@
+---
+// Cookie consent banner (orestbida/cookieconsent v3). Plain bundled <script>, no React
+// hydration. Each consent change is forwarded to GTM via Consent Mode v2 (defaults are
+// set to "denied" in Layout.astro, before GTM loads).
+---
+
+<script>
+	import 'vanilla-cookieconsent/dist/cookieconsent.css';
+	import * as CookieConsent from 'vanilla-cookieconsent';
+
+	type Gtag = (...args: unknown[]) => void;
+	const w = window as unknown as { dataLayer?: unknown[]; gtag?: Gtag };
+
+	function syncConsentToGtm() {
+		const analytics = CookieConsent.acceptedCategory('analytics') ? 'granted' : 'denied';
+		const marketing = CookieConsent.acceptedCategory('marketing') ? 'granted' : 'denied';
+
+		w.gtag?.('consent', 'update', {
+			analytics_storage: analytics,
+			ad_storage: marketing,
+			ad_user_data: marketing,
+			ad_personalization: marketing,
+		});
+		w.dataLayer = w.dataLayer || [];
+		w.dataLayer.push({ event: 'consent_update' });
+	}
+
+	CookieConsent.run({
+		guiOptions: {
+			consentModal: { layout: 'box', position: 'bottom left', equalWeightButtons: true },
+			preferencesModal: { layout: 'box', equalWeightButtons: true },
+		},
+
+		// Fires on first consent and on every later page load with a stored choice.
+		onConsent: syncConsentToGtm,
+		onChange: syncConsentToGtm,
+
+		categories: {
+			necessary: { enabled: true, readOnly: true },
+			analytics: {
+				autoClear: { cookies: [{ name: /^_ga/ }, { name: '_gid' }] },
+			},
+			marketing: {
+				autoClear: { cookies: [{ name: '_fbp' }, { name: '_fbc' }] },
+			},
+		},
+
+		language: {
+			default: 'hu',
+			translations: {
+				hu: {
+					consentModal: {
+						title: 'Sütiket használunk',
+						description:
+							'Az oldal működéséhez szükséges sütik mellett, a hozzájárulásoddal, statisztikai és marketing sütiket is használunk. Ezekkel mérjük a látogatottságot és a hirdetéseink hatékonyságát. A döntésedet bármikor megváltoztathatod az oldal alján lévő „Süti beállítások” linkkel.',
+						acceptAllBtn: 'Elfogadom',
+						acceptNecessaryBtn: 'Csak a szükségesek',
+						showPreferencesBtn: 'Beállítások',
+						footer: '<a href="/adatvedelem" target="_blank" rel="noopener noreferrer">Adatkezelési tájékoztató</a>',
+					},
+					preferencesModal: {
+						title: 'Süti beállítások',
+						acceptAllBtn: 'Összes elfogadása',
+						acceptNecessaryBtn: 'Összes elutasítása',
+						savePreferencesBtn: 'Kiválasztottak mentése',
+						closeIconLabel: 'Bezárás',
+						sections: [
+							{
+								description:
+									'Itt kategóriánként eldöntheted, mely sütikhez járulsz hozzá. Részletek az <a href="/adatvedelem" target="_blank" rel="noopener noreferrer">adatkezelési tájékoztatóban</a>.',
+							},
+							{
+								title: 'Szükséges sütik',
+								description: 'Az oldal alapműködéséhez kellenek, például ezek tárolják a süti-beállításaidat. Nem kapcsolhatók ki.',
+								linkedCategory: 'necessary',
+							},
+							{
+								title: 'Statisztikai sütik',
+								description: 'A Google Analytics névtelen statisztikát készít arról, hogyan használják a látogatók az oldalt.',
+								linkedCategory: 'analytics',
+								cookieTable: {
+									headers: { name: 'Süti', desc: 'Leírás' },
+									body: [
+										{ name: '_ga, _ga_*', desc: 'Google Analytics: látogatók megkülönböztetése (2 év)' },
+									],
+								},
+							},
+							{
+								title: 'Marketing sütik',
+								description:
+									'A Meta (Facebook, Instagram) Pixel és Conversions API a hirdetések hatékonyságát méri, és releváns hirdetéseket jelenít meg.',
+								linkedCategory: 'marketing',
+								cookieTable: {
+									headers: { name: 'Süti', desc: 'Leírás' },
+									body: [
+										{ name: '_fbp', desc: 'Meta Pixel: böngésző azonosítása (3 hónap)' },
+										{ name: '_fbc', desc: 'Meta: hirdetésre kattintás azonosítója (3 hónap)' },
+									],
+								},
+							},
+						],
+					},
+				},
+			},
+		},
+	});
+</script>
+
+<style is:global>
+	#cc-main {
+		--cc-font-family: var(--font-sans);
+		--cc-bg: var(--color-cream-50);
+		--cc-primary-color: var(--color-charcoal-800);
+		--cc-secondary-color: var(--color-charcoal-700);
+		--cc-link-color: var(--color-gold-600);
+
+		--cc-btn-primary-bg: var(--color-charcoal-800);
+		--cc-btn-primary-color: var(--color-cream-50);
+		--cc-btn-primary-border-color: var(--color-charcoal-800);
+		--cc-btn-primary-hover-bg: var(--color-charcoal-900);
+		--cc-btn-primary-hover-color: var(--color-cream-50);
+		--cc-btn-primary-hover-border-color: var(--color-charcoal-900);
+
+		--cc-btn-secondary-bg: var(--color-cream-200);
+		--cc-btn-secondary-color: var(--color-charcoal-800);
+		--cc-btn-secondary-border-color: var(--color-cream-300);
+		--cc-btn-secondary-hover-bg: var(--color-gold-100);
+		--cc-btn-secondary-hover-color: var(--color-charcoal-900);
+		--cc-btn-secondary-hover-border-color: var(--color-gold-300);
+
+		--cc-separator-border-color: var(--color-cream-300);
+		--cc-toggle-on-bg: var(--color-gold-500);
+		--cc-toggle-readonly-bg: var(--color-gold-200);
+		--cc-cookie-category-block-bg: var(--color-cream-100);
+		--cc-cookie-category-block-border: var(--color-cream-300);
+		--cc-cookie-category-block-hover-bg: var(--color-cream-200);
+		--cc-cookie-category-block-hover-border: var(--color-gold-200);
+		--cc-cookie-category-expanded-block-bg: var(--color-cream-100);
+		--cc-cookie-category-expanded-block-hover-bg: var(--color-cream-200);
+		--cc-footer-bg: var(--color-cream-200);
+		--cc-footer-color: var(--color-charcoal-700);
+		--cc-footer-border-color: var(--color-cream-300);
+
+		--cc-btn-border-radius: 0.5rem;
+		--cc-modal-border-radius: 1rem;
+	}
+
+	#cc-main .cm__title,
+	#cc-main .pm__title {
+		font-family: var(--font-serif);
+		font-weight: 500;
+	}
+</style>
