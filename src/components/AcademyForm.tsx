@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackLead } from '../lib/tracking';
 import { CheckCircle, User, Mail, Phone, FileText, MessageSquare, X } from 'lucide-react';
 import { AcademyLead } from '../types';
 
@@ -82,6 +83,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
       });
 
       if (response.ok) {
+        await trackLead({ formName: 'sminkkepzes-kurzus', email, phone }).catch(() => {});
         window.location.href = '/koszonjuk';
       } else {
         throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');

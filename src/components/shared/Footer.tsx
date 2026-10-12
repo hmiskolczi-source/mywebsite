@@ -5,7 +5,9 @@
 
 import React from 'react';
 import { Heart, Instagram, Facebook, Phone } from 'lucide-react';
+import { showPreferences } from 'vanilla-cookieconsent';
 import { imgProps } from '../../lib/imageOpt';
+import { trackContactClick } from '../../lib/tracking';
 
 export default function Footer() {
 
@@ -72,6 +74,7 @@ export default function Footer() {
             </a>
             <a
               href="tel:+36307094370"
+              onClick={() => trackContactClick('phone')}
               className="flex items-center gap-2 hover:text-gold-300 transition-colors"
             >
               <Phone className="w-4 h-4 text-gold-400 shrink-0" />
@@ -104,6 +107,14 @@ export default function Footer() {
           >
             Impresszum
           </a>
+
+          <button
+            type="button"
+            onClick={() => showPreferences()}
+            className="order-2 hover:text-gold-300 transition-colors cursor-pointer"
+          >
+            Süti beállítások
+          </button>
 
           <div className="order-3 sm:order-3 sm:absolute sm:right-4 sm:lg:right-8 flex items-center gap-1">
             <span>Made with</span>

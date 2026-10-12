@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackLead } from '../../lib/tracking';
 
 export default function MainCloser() {
   const [name, setName] = useState('');
@@ -59,6 +60,7 @@ export default function MainCloser() {
       });
 
       if (response.ok) {
+        await trackLead({ formName: 'home', email, phone }).catch(() => {});
         window.location.href = '/koszonjuk';
       } else {
         throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');

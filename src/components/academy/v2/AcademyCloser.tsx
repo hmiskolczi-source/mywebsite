@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackLead } from '../../../lib/tracking';
 
 export default function AcademyCloser() {
   // Form states
@@ -69,6 +70,7 @@ export default function AcademyCloser() {
       });
 
       if (response.ok) {
+        await trackLead({ formName: 'sminkkepzes', email, phone }).catch(() => {});
         window.location.href = '/koszonjuk';
       } else {
         throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');
