@@ -11,6 +11,10 @@
 	type Gtag = (...args: unknown[]) => void;
 	const w = window as unknown as { dataLayer?: unknown[]; gtag?: Gtag };
 
+	// React islands reach the consent API through window (see src/lib/tracking.ts):
+	// importing the package there breaks SSR prerendering (it resolves to CJS in Node).
+	window.CookieConsent = CookieConsent;
+
 	function syncConsentToGtm() {
 		const analytics = CookieConsent.acceptedCategory('analytics') ? 'granted' : 'denied';
 		const marketing = CookieConsent.acceptedCategory('marketing') ? 'granted' : 'denied';

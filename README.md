@@ -48,12 +48,13 @@ Tagek:
    GA4-ben jelöld kulcseseménynek.
 3. **GA4 Event** `contact_click`, paraméter `method = {{DLV - method}}`, trigger: `contact_click`.
 4. **Meta Pixel** (Community Template Gallery: „Facebook Pixel” by facebookarchive), Pixel ID, esemény `PageView`,
-   trigger: All Pages. Consent beállítás: további hozzájárulás szükséges: `ad_storage`.
+   trigger: **`consent_update`** (Custom Event), consent: további hozzájárulás szükséges: `ad_storage`.
+   A `consent_update` minden oldalbetöltéskor lefut, ha már van mentett döntés, és az első elfogadáskor is,
+   így a PageView pontosan egyszer tüzel, és csak hozzájárulás után.
 5. **Meta Pixel** `Lead`, **Event ID: `{{DLV - event_id}}`** (ez kell a CAPI deduplikációhoz), trigger: `generate_lead`,
    consent: `ad_storage`.
 
-Ha a látogató az oldal betöltése után fogadja el a sütiket, a `consent_update` eseményre is tüzeljenek a PageView tagek
-(add hozzá triggerként a 1. és 4. taghez, vagy használd a GTM consent-alapú újratüzelését).
+A GA4 Google tagnek elég az All Pages trigger: a Consent Mode a hozzájárulás után magától elküldi a page_view-t.
 
 ## Tesztelés
 

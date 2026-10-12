@@ -1,5 +1,3 @@
-import { acceptedCategory } from 'vanilla-cookieconsent';
-
 type DataLayerEvent = Record<string, unknown> & {
   event: string;
   eventCallback?: () => void;
@@ -10,6 +8,8 @@ declare global {
   interface Window {
     dataLayer?: DataLayerEvent[];
     google_tag_manager?: unknown;
+    /** Set by src/components/shared/CookieConsent.astro. */
+    CookieConsent?: typeof import('vanilla-cookieconsent');
   }
 }
 
@@ -58,7 +58,7 @@ interface LeadData {
 export async function trackLead({ formName, email, phone }: LeadData): Promise<void> {
   const eventId = crypto.randomUUID();
 
-  if (acceptedCategory('marketing')) {
+  if (window.CookieConsent?.acceptedCategory('marketing')) {
     const body = JSON.stringify({
       eventId,
       formName,
@@ -71,6 +71,10 @@ export async function trackLead({ formName, email, phone }: LeadData): Promise<v
   }
 
   await pushAndWait({ event: 'generate_lead', form_name: formName, event_id: eventId });
+}
+
+export function showCookiePreferences() {
+  window.CookieConsent?.showPreferences();
 }
 
 export function trackContactClick(method: 'phone' | 'email' | 'instagram' | 'facebook') {

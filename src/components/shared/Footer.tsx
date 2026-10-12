@@ -5,9 +5,8 @@
 
 import React from 'react';
 import { Heart, Instagram, Facebook, Phone } from 'lucide-react';
-import { showPreferences } from 'vanilla-cookieconsent';
 import { imgProps } from '../../lib/imageOpt';
-import { trackContactClick } from '../../lib/tracking';
+import { showCookiePreferences, trackContactClick } from '../../lib/tracking';
 
 export default function Footer() {
 
@@ -110,7 +109,7 @@ export default function Footer() {
 
           <button
             type="button"
-            onClick={() => showPreferences()}
+            onClick={showCookiePreferences}
             className="order-2 hover:text-gold-300 transition-colors cursor-pointer"
           >
             Süti beállítások
