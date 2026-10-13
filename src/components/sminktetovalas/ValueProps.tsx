@@ -148,9 +148,9 @@ export default function ValueProps() {
                       {p.headline}
                     </h3>
                     <p className="text-sm sm:text-base text-charcoal-800 font-light leading-relaxed">
-                      {p.bodyHighlight ? p.bodyHighlight.map((part, idx) => (
+                      {p.bodyHighlight.map((part, idx) => (
                         part.bold ? <span key={idx} className="font-bold">{part.text}</span> : part.text
-                      )) : p.body}
+                      ))}
                     </p>
                   </div>
 

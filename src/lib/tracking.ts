@@ -1,3 +1,7 @@
+// Brings in the library's global `window.CookieConsent` type. The object itself is set by
+// src/components/shared/CookieConsent.astro; it's missing until that script runs, hence `?.`.
+/// <reference types="vanilla-cookieconsent" />
+
 type DataLayerEvent = Record<string, unknown> & {
   event: string;
   eventCallback?: () => void;
@@ -8,8 +12,6 @@ declare global {
   interface Window {
     dataLayer?: DataLayerEvent[];
     google_tag_manager?: unknown;
-    /** Set by src/components/shared/CookieConsent.astro. */
-    CookieConsent?: typeof import('vanilla-cookieconsent');
   }
 }
 

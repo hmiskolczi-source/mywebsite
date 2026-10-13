@@ -80,9 +80,9 @@ export default function Process() {
                   {step.title}
                 </h3>
                 <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
-                  {step.descriptionHighlight ? step.descriptionHighlight.map((part, idx) => (
+                  {step.descriptionHighlight.map((part, idx) => (
                     part.bold ? <span key={idx} className="font-bold">{part.text}</span> : part.text
-                  )) : step.description}
+                  ))}
                 </p>
               </div>
 
