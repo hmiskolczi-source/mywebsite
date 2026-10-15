@@ -5,6 +5,7 @@ import { META_CAPI_ACCESS_TOKEN, META_PIXEL_ID, META_TEST_EVENT_CODE } from 'ast
 export const prerender = false;
 
 const GRAPH_API_VERSION = 'v26.0';
+const MAX_BODY_BYTES = 4096;
 
 async function sha256(value: string): Promise<string> {
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
@@ -24,13 +25,55 @@ function normalizePhone(phone: string): string {
 
 const asString = (v: unknown, max = 500) => (typeof v === 'string' ? v.slice(0, max) : '');
 
+// Only our own pages may post here: the browser always sends Origin on a POST, and
+// it can't be set from page JS. Doesn't stop scripted abuse (curl can fake it), that
+// needs a Vercel Firewall rate-limit rule on this path.
+function isSameOrigin(request: Request, url: URL): boolean {
+  const origin = request.headers.get('origin');
+  if (!origin) return false;
+  try {
+    return new URL(origin).host === url.host;
+  } catch {
+    return false;
+  }
+}
+
+// The consent banner (src/components/shared/CookieConsent.astro) stores the visitor's
+// choice in the `cc_cookie` cookie as URI-encoded JSON: { categories: [...] , ... }.
+// Checked here as well, so the server never forwards personal data without consent.
+function hasMarketingConsent(raw: string | undefined): boolean {
+  if (!raw) return false;
+  for (const candidate of [raw, safeDecode(raw)]) {
+    try {
+      const { categories } = JSON.parse(candidate) as { categories?: unknown };
+      return Array.isArray(categories) && categories.includes('marketing');
+    } catch {
+      // try the next form
+    }
+  }
+  return false;
+}
+
+function safeDecode(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
 /**
  * Receives the Lead event from src/lib/tracking.ts (sendBeacon) and forwards it to the
  * Meta Conversions API. The browser Pixel sends the same event_id, so Meta deduplicates.
- * Always answers 204: tracking must never affect the visitor.
+ * Valid requests always get 204: tracking must never affect the visitor.
  */
-export const POST: APIRoute = async ({ request, cookies, clientAddress }) => {
+export const POST: APIRoute = async ({ request, url, cookies, clientAddress }) => {
+  if (!isSameOrigin(request, url)) return new Response(null, { status: 403 });
+  if (Number(request.headers.get('content-length') ?? 0) > MAX_BODY_BYTES) {
+    return new Response(null, { status: 413 });
+  }
   if (!META_PIXEL_ID || !META_CAPI_ACCESS_TOKEN) return new Response(null, { status: 204 });
+  if (!hasMarketingConsent(cookies.get('cc_cookie')?.value)) return new Response(null, { status: 204 });
 
   let body: Record<string, unknown>;
   try {
@@ -54,6 +97,10 @@ export const POST: APIRoute = async ({ request, cookies, clientAddress }) => {
   const normalizedPhone = normalizePhone(phone);
   if (normalizedPhone.length >= 8) userData.ph = [await sha256(normalizedPhone)];
 
+  // Only URLs of this site are accepted as the event source.
+  const sourceUrl = asString(body.eventSourceUrl, 2000);
+  const eventSourceUrl = sourceUrl.startsWith(url.origin + '/') ? sourceUrl : undefined;
+
   const payload = {
     data: [
       {
@@ -61,23 +108,22 @@ export const POST: APIRoute = async ({ request, cookies, clientAddress }) => {
         event_time: Math.floor(Date.now() / 1000),
         event_id: eventId,
         action_source: 'website',
-        event_source_url: asString(body.eventSourceUrl, 2000) || request.headers.get('referer') || undefined,
+        event_source_url: eventSourceUrl,
         user_data: userData,
         custom_data: { content_name: asString(body.formName, 100) },
       },
     ],
     ...(META_TEST_EVENT_CODE ? { test_event_code: META_TEST_EVENT_CODE } : {}),
+    // In the body rather than the query string, so it doesn't end up in URL logs.
+    access_token: META_CAPI_ACCESS_TOKEN,
   };
 
   try {
-    const res = await fetch(
-      `https://graph.facebook.com/${GRAPH_API_VERSION}/${META_PIXEL_ID}/events?access_token=${encodeURIComponent(META_CAPI_ACCESS_TOKEN)}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      },
-    );
+    const res = await fetch(`https://graph.facebook.com/${GRAPH_API_VERSION}/${META_PIXEL_ID}/events`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
     if (!res.ok) console.error('Meta CAPI error', res.status, await res.text());
   } catch (err) {
     console.error('Meta CAPI request failed', err);
