@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { submitToWeb3Forms } from '../../lib/web3forms';
+import { sendToStudio } from '../../lib/studio';
 import { motion, AnimatePresence } from 'motion/react';
 import { trackLead } from '../../lib/tracking';
 
@@ -46,7 +47,9 @@ export default function Closer() {
     setIsSubmitting(true);
 
     try {
-      await submitToWeb3Forms('Új jelentkezés · Sminktetoválás', { name, phone, email, message: interest });
+      const studio = sendToStudio({ name, email, phone, serviceId: 'pmu_consultation', message: `Sminktetoválás-oldal: ${interest}` });
+      const emailed = await submitToWeb3Forms('Új jelentkezés · Sminktetoválás', { name, phone, email, message: interest }).then(() => true, () => false);
+      if (!emailed && !(await studio)) throw new Error('A küldés nem sikerült. Kérjük, próbáld újra.');
       await trackLead({ formName: 'sminktetovalas', email, phone }).catch(() => {});
       window.location.href = '/koszonjuk';
     } catch (err) {

@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { trackLead } from '../lib/tracking';
+import { sendToStudio, type StudioServiceId } from '../lib/studio';
 import { CheckCircle, User, Mail, Phone, FileText, MessageSquare, X } from 'lucide-react';
 import { AcademyLead } from '../types';
 
@@ -67,6 +68,8 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
     setIsSubmitting(true);
 
     try {
+      const courseService: Record<string, StudioServiceId> = { 'mesterképzés': 'school_advanced', 'versenyfelkészítés': 'school_competition', 'smink-tanácsadás': 'school_self' };
+      const studio = sendToStudio({ name, email, phone, serviceId: courseService[course] || 'school_basic', message: `Képzés: ${course}${message ? ` · ${message}` : ''}` });
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -82,7 +85,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
         }),
       });
 
-      if (response.ok) {
+      if (response.ok || (await studio)) {
         await trackLead({ formName: 'sminkkepzes-kurzus', email, phone }).catch(() => {});
         window.location.href = '/koszonjuk';
       } else {
