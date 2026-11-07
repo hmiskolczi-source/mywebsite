@@ -46,6 +46,7 @@ import { bookingServices } from '../lib/bookingCatalog';
     const form=document.querySelector<HTMLFormElement>('#booking-form')!,status=document.querySelector<HTMLElement>('#booking-status')!,error=document.querySelector<HTMLElement>('#booking-error')!,servicesNode=document.querySelector<HTMLElement>('#booking-services')!;
     const services=JSON.parse(document.querySelector<HTMLScriptElement>('#booking-services-data')!.textContent||'[]') as Service[];
     const web3FormsId=PUBLIC_WEB3FORMS_BOOKING_FORM_ID?.trim();
+    const STUDIO_BOOKING_URL='https://kinga-studio-live.bianka20010221.workers.dev/api/booking/requests';
     let selected=new URLSearchParams(location.search).get('service')||'';
     let category:Service['category']=selected.startsWith('school_')?'school':selected==='makeup'?'makeup':'pmu';
     const field=(id:string)=>document.querySelector<HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement>(`#booking-${id}`)!;
@@ -71,6 +72,15 @@ import { bookingServices } from '../lib/bookingCatalog';
         if(!web3FormsId)throw Error('Az időpontkérés jelenleg nem érhető el.');
         if(field('website').value){form.hidden=true;document.querySelector<HTMLElement>('#booking-success')!.hidden=false;return}
         const service=services.find(item=>item.id===selected)!;
+        // A kérés a Kinga Stúdió Megkeresések listájába is bekerül; ha ez nem sikerül, az e-mail akkor is megy.
+        const studio=fetch(STUDIO_BOOKING_URL,{
+          method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({
+            name:field('name').value.trim(),email:field('email').value.trim(),phone:field('phone').value.trim(),
+            serviceId:service.id,preferredDate:field('date').value,preferredTime:field('time').value,
+            message:field('message').value.trim(),consent:true,idempotencyKey:crypto.randomUUID(),
+          }),
+        }).then(result=>result.ok).catch(()=>false);
         const response=await fetch('https://api.web3forms.com/submit',{
           method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
           body:JSON.stringify({
@@ -81,7 +91,8 @@ import { bookingServices } from '../lib/bookingCatalog';
           }),
         });
         const data=await response.json().catch(()=>null) as {success?:boolean;message?:string}|null;
-        if(!response.ok||data?.success!==true)throw Error(data?.message||'A küldés nem sikerült.');
+        const emailed=response.ok&&data?.success===true;
+        if(!emailed&&!(await studio))throw Error(data?.message||'A küldés nem sikerült.');
         form.hidden=true;document.querySelector<HTMLElement>('#booking-success')!.hidden=false;
         document.querySelector<HTMLElement>('#booking-reference')!.textContent='Kinga e-mailben megkapta a kérésedet.';
       }catch(cause){fail(cause instanceof Error?cause.message:'A küldés nem sikerült.')}finally{submit.disabled=false}
