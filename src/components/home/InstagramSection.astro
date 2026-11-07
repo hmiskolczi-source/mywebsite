@@ -1,0 +1,30 @@
+---
+const initialProfile = Astro.url.pathname.startsWith('/sminktetovalas') ? 'pmu' : 'school';
+const showSwitch = Astro.url.pathname === '/';
+---
+<link rel="stylesheet" href="/instagram-feed.css" />
+<section id="instagram" class="instagram-section bg-[#eee8df] py-20 md:py-28 scroll-mt-24" data-instagram-feed={initialProfile} aria-labelledby="instagram-title">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-8 lg:gap-20 items-end">
+      <div>
+        <span class="flex items-center gap-3 text-xs font-bold tracking-[0.2em] uppercase text-gold-700"><span class="h-px w-7 bg-gold-700" aria-hidden="true"></span>Instagram</span>
+        <h2 id="instagram-title" class="text-charcoal-900 mt-7 mb-8">A részletekben<br /><em class="text-gold-700">ott a történet.</em></h2>
+      </div>
+      <div class="lg:pb-10">
+        <p class="font-system-ui text-[15px] leading-relaxed text-charcoal-700 mb-6">Sminkek, műhelypillanatok és történetek a stúdióból. Fedezd fel a sminkiskola és a sminktetoválás világát az Instagramon is.</p>
+        <a data-instagram-profile href={initialProfile === 'pmu' ? 'https://www.instagram.com/sminktetovalas_miskolczikinga/' : 'https://www.instagram.com/miskolczikinga_makeup_school/'} target="_blank" rel="noopener noreferrer" class="inline-block pb-2 border-b border-charcoal-800 text-xs font-bold text-charcoal-900 hover:text-gold-700">{initialProfile === 'pmu' ? '@sminktetovalas_miskolczikinga ↗' : '@miskolczikinga_makeup_school ↗'}</a>
+      </div>
+    </div>
+    {showSwitch && <div class="instagram-controls" data-instagram-controls hidden role="group" aria-label="Instagram-profil kiválasztása">
+      <button type="button" data-instagram-switch="school" aria-pressed={String(initialProfile === 'school')} class="instagram-switch">Sminkiskola</button>
+      <button type="button" data-instagram-switch="pmu" aria-pressed={String(initialProfile === 'pmu')} class="instagram-switch">Sminktetoválás</button>
+    </div>}
+    <p class="instagram-status font-system-ui" data-instagram-status role="status">Friss munkákért és a legújabb bejegyzésekért látogass el az Instagram-profilra.</p>
+    <ul class="instagram-grid" data-instagram-grid hidden></ul>
+  </div>
+</section>
+<style>
+  .instagram-section h2{font-size:clamp(3rem,5.5vw,5.2rem);font-style:normal;line-height:1.02;letter-spacing:-.04em}
+  .instagram-section h2 em{font-style:italic}
+</style>
+<script src="/instagram-feed.js" defer></script>
