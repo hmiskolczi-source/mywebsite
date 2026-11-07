@@ -27,6 +27,7 @@ export default defineConfig({
   env: {
     schema: {
       PUBLIC_GTM_ID: envField.string({ context: 'client', access: 'public', optional: true }),
+      PUBLIC_WEB3FORMS_BOOKING_FORM_ID: envField.string({ context: 'client', access: 'public', optional: true }),
       META_PIXEL_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
       META_CAPI_ACCESS_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
       META_TEST_EVENT_CODE: envField.string({ context: 'server', access: 'secret', optional: true }),
@@ -34,7 +35,6 @@ export default defineConfig({
       WEB3FORMS_PMU_ACCESS_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
       WEB3FORMS_ACADEMY_ACCESS_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
       WEB3FORMS_COURSE_ACCESS_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
-      WEB3FORMS_BOOKING_ACCESS_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
       INSTAGRAM_GRAPH_VERSION: envField.string({ context: 'server', access: 'secret', optional: true }),
       INSTAGRAM_SCHOOL_USER_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
       INSTAGRAM_SCHOOL_ACCESS_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),

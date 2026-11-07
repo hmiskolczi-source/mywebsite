@@ -67,19 +67,18 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          formType: 'course',
+          access_key: '4cef5e56-4abe-45a6-a6b3-5fd7443eb481',
           name,
           email,
           phone,
           course,
           message,
-          company: '',
         }),
       });
 
