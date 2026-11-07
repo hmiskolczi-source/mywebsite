@@ -11,7 +11,7 @@ const vercelJson = JSON.parse(readFileSync(new URL('./vercel.json', import.meta.
 // https://astro.build/config
 export default defineConfig({
   // Pages stay prerendered (static); only routes with `prerender = false`
-  // (src/pages/api/meta-capi.ts) run as Vercel Functions.
+  // (src/pages/api/meta-capi.ts and Instagram feed) run as Vercel Functions.
   adapter: vercel({ imagesConfig: vercelJson.images }),
   integrations: [react()],
   image: {
@@ -23,6 +23,11 @@ export default defineConfig({
       META_PIXEL_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
       META_CAPI_ACCESS_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
       META_TEST_EVENT_CODE: envField.string({ context: 'server', access: 'secret', optional: true }),
+      INSTAGRAM_GRAPH_VERSION: envField.string({ context: 'server', access: 'secret', optional: true }),
+      INSTAGRAM_SCHOOL_USER_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
+      INSTAGRAM_SCHOOL_ACCESS_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
+      INSTAGRAM_PMU_USER_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
+      INSTAGRAM_PMU_ACCESS_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
   vite: {
