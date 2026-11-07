@@ -71,10 +71,10 @@ import { bookingServices } from '../lib/bookingCatalog';
         if(!web3FormsId)throw Error('Az időpontkérés jelenleg nem érhető el.');
         if(field('website').value){form.hidden=true;document.querySelector<HTMLElement>('#booking-success')!.hidden=false;return}
         const service=services.find(item=>item.id===selected)!;
-        const response=await fetch(`https://api.web3forms.com/submit/${encodeURIComponent(web3FormsId)}`,{
-          method:'POST',headers:{'Content-Type':'application/json'},
+        const response=await fetch('https://api.web3forms.com/submit',{
+          method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
           body:JSON.stringify({
-            subject:`Új időpontkérés · ${service.label}`,from_name:'kingamiskolczi.com',
+            access_key:web3FormsId,subject:`Új időpontkérés · ${service.label}`,from_name:'kingamiskolczi.com',
             name:field('name').value.trim(),email:field('email').value.trim(),phone:field('phone').value.trim(),
             Szolgáltatás:service.label,'Javasolt nap':field('date').value||'Nincs megadva',Napszak:field('time').value,
             message:field('message').value.trim()||'Nincs külön üzenet.','Adatkezelési hozzájárulás':'igen',botcheck:false,

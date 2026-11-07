@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from 'react';
+import { submitToWeb3Forms } from '../../lib/web3forms';
 import { motion, AnimatePresence } from 'motion/react';
 import { trackLead } from '../../lib/tracking';
 
@@ -45,27 +46,9 @@ export default function Closer() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          formType: 'pmu',
-          name,
-          phone,
-          email,
-          message: interest,
-          company: '',
-        }),
-      });
-
-      if (response.ok) {
-        await trackLead({ formName: 'sminktetovalas', email, phone }).catch(() => {});
-        window.location.href = '/koszonjuk';
-      } else {
-        throw new Error('Hálózati hiba történt. Kérjük, próbáld újra.');
-      }
+      await submitToWeb3Forms('Új jelentkezés · Sminktetoválás', { name, phone, email, message: interest });
+      await trackLead({ formName: 'sminktetovalas', email, phone }).catch(() => {});
+      window.location.href = '/koszonjuk';
     } catch (err) {
       setIsSubmitting(false);
       setError(err instanceof Error ? err.message : 'Hiba történt az adatok küldésekor. Kérjük, próbáld újra.');
