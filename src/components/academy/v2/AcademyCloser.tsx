@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { submitToWeb3Forms } from '../../../lib/web3forms';
+import { sendToStudio } from '../../../lib/studio';
 import { motion, AnimatePresence } from 'motion/react';
 import { trackLead } from '../../../lib/tracking';
 
@@ -55,7 +56,9 @@ export default function AcademyCloser() {
     setIsSubmitting(true);
 
     try {
-      await submitToWeb3Forms('Új jelentkezés · Sminkiskola', { name, phone, email, 'Életkor': age, message: motivation });
+      const studio = sendToStudio({ name, email, phone, serviceId: 'school_basic', message: `Sminkiskola-jelentkezés (életkor: ${age}): ${motivation}` });
+      const emailed = await submitToWeb3Forms('Új jelentkezés · Sminkiskola', { name, phone, email, 'Életkor': age, message: motivation }).then(() => true, () => false);
+      if (!emailed && !(await studio)) throw new Error('A küldés nem sikerült. Kérjük, próbáld újra.');
       await trackLead({ formName: 'sminkkepzes', email, phone }).catch(() => {});
       window.location.href = '/koszonjuk';
     } catch (err) {
