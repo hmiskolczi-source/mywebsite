@@ -51,9 +51,9 @@ export default function AcademyProblem() {
         {/* Problems Section */}
         <div className="mb-20 space-y-12 mx-auto max-w-3xl text-center">
           <div>
-            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
+            <h2 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800 mb-8">
               Gyakran érkeznek hozzám olyan tanítványok, akik korábban már megpróbálták megszerezni az alapokat máshol, de falakba ütköztek:
-            </h3>
+            </h2>
 
             <ul className="space-y-6">
               {problems.map((problem, idx) => (
@@ -81,9 +81,9 @@ export default function AcademyProblem() {
         {/* Solutions Section */}
         <div className="space-y-12">
           <div className="text-center mb-12 mx-auto max-w-3xl">
-            <h3 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800">
+            <h2 className="font-serif-lux text-2xl sm:text-3xl font-bold text-charcoal-800">
               Az ilyen történetek inspiráltak arra, hogy az alapképzésemet egy teljesen más, értékrend alapú szemlélet mentén építsem fel:
-            </h3>
+            </h2>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-start">

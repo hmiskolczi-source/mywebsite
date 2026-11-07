@@ -68,7 +68,7 @@ export default function AcademyOtherCourses() {
           <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1]">
             További Képzéseim <br /><span className="italic">a stúdióban.</span>
           </h2>
-          <p className="text-lg text-charcoal-700/70 font-light max-w-xl leading-relaxed">
+          <p className="text-lg text-charcoal-700 font-light max-w-xl leading-relaxed">
             Legyél akár ambiciózus kezdő, versenyre készülő profi, vagy egyszerűen önmagad legszebb arcát kereső nő — fedezd fel speciális mentorprogramjaimat.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function AcademyOtherCourses() {
                 <h3 className="font-serif-lux text-2xl font-light text-charcoal-800 leading-snug group-hover:text-gold-600 transition-colors duration-500">
                   {course.title}
                 </h3>
-                <p className="text-base text-charcoal-700/70 font-light leading-relaxed">
+                <p className="text-base text-charcoal-700 font-light leading-relaxed">
                   {course.description}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function AcademyOtherCourses() {
                   Részletek és jelentkezés
                 </button>
                 <div className="text-center">
-                  <p className="text-xs text-charcoal-700/60 italic font-serif-lux tracking-wide">
+                  <p className="text-xs text-charcoal-700 italic font-serif-lux tracking-wide">
                     {course.spots}
                   </p>
                 </div>

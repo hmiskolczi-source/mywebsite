@@ -9,10 +9,7 @@ import { Sparkle, Info, Compass, Calendar, ChevronRight, Phone, Mail, Globe, Ins
 
 export default function Pricing() {
   const scrollToForm = () => {
-    const el = document.getElementById('lead-form-anchor');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.location.assign('/idopont?service=pmu_consultation');
   };
 
   const services = [
@@ -36,7 +33,7 @@ export default function Pricing() {
     {
       category: 'AJAKTETOVÁLÁS',
       items: [
-        { name: 'OMBRE LIPS:', price: '120.000.-', desc: 'A legmodernebb tecnikával készített diszkrét kontúrvonal és befelé finoman mosódó lágy satírozás, amely természetes volument kölcsönöz.' },
+        { name: 'OMBRE LIPS:', price: '120.000.-', desc: 'A legmodernebb technikával készített diszkrét kontúrvonal és befelé finoman mosódó lágy satírozás, amely természetes volument kölcsönöz.' },
         { name: 'AJAK TELJES SATÍR:', price: '120.000.-', desc: 'Teljes felületű, gyönyörűen pigmentált rúzs hatású vagy lágy Lip Blush technika az egyenletes, ragyogó tónusért.' }
       ]
     },
@@ -86,7 +83,7 @@ export default function Pricing() {
             <span className="font-serif-lux text-2.5xl sm:text-3.5xl md:text-4xl text-gold-500 font-normal tracking-wide block italic select-none">
               Kinga Miskolczi
             </span>
-            <span className="text-[9px] sm:text-[11px] font-mono font-semibold tracking-[0.25em] text-charcoal-600 block mt-1 uppercase">
+            <span className="text-[11px] sm:text-xs font-mono font-semibold tracking-[0.2em] text-charcoal-700 block mt-1 uppercase">
               MAKEUP ARTIST
             </span>
             
@@ -124,7 +121,7 @@ export default function Pricing() {
                       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
                         
                         {/* Name (on desktop we uppercase and add dots) */}
-                        <span className="font-serif-lux text-xs sm:text-[13px] font-bold text-charcoal-900 uppercase tracking-wider group-hover:text-gold-700 transition-colors duration-300">
+                        <span className="font-serif-lux text-sm font-bold text-charcoal-900 uppercase tracking-wide group-hover:text-gold-700 transition-colors duration-300">
                           {item.name}
                         </span>
                         
@@ -139,7 +136,7 @@ export default function Pricing() {
                       </div>
 
                       {/* Clean micro description of the technique */}
-                      <p className="text-[11px] sm:text-xs text-charcoal-700 font-light leading-relaxed max-w-2xl">
+                      <p className="text-sm text-charcoal-700 font-normal leading-relaxed max-w-2xl">
                         {item.desc}
                       </p>
                     </div>
@@ -176,7 +173,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <div className="text-[10px] font-mono uppercase tracking-[0.15em] text-cream-500">
+            <div className="text-xs font-mono uppercase tracking-[0.12em] text-charcoal-700">
               © 2026 KINGA MISKOLCZI MAKEUP ARTIST • ALL RIGHTS RESERVED
             </div>
           </div>

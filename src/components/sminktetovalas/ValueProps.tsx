@@ -46,8 +46,8 @@ export default function ValueProps() {
     {
       id: 'pain-elimination',
       num: '02',
-      badge: 'Fájdalommentes Wellness',
-      headline: 'Kétfázisú lidokainos érzéstelenítés injekció nélkül a teljes fájdalommentességért.',
+      badge: 'Kíméletes komfort',
+      headline: 'Kétfázisú helyi érzéstelenítés injekció nélkül a kellemetlenség csökkentéséért.',
       headlineHighlight: 'Kétfázisú lidokainos érzéstelenítés',
       bodyHighlight: [
         { text: 'Soha nem alkalmazok fájdalmas injekciókat.' , bold: true },
@@ -61,9 +61,9 @@ export default function ValueProps() {
       features: [
         { icon: ShieldCheck, title: 'Kétfázisú Érzéstelenítés', desc: 'Elő- és folyamatközbeni zsibbasztás' },
         { icon: Zap, title: 'Soha nincs injekció', desc: 'Csak gyengéd prémium krémek' },
-        { icon: Heart, title: 'Wellness hangulat', desc: '100% kényelem, pihentető szépülés' },
+        { icon: Heart, title: 'Nyugodt környezet', desc: 'Figyelmes, kíméletes kezelés' },
       ],
-      tagline: 'Felejtsd el a félelmet: nálam a teljes zsibbadás tiszta komfortot garantál.'
+      tagline: 'A gondos előkészítés és érzéstelenítés célja, hogy a kezelés a lehető legkomfortosabb legyen.'
     },
     {
       id: 'risk-correction',
@@ -85,7 +85,7 @@ export default function ValueProps() {
         { icon: Award, title: 'Ingyenes korrekció', desc: 'Az alapár tartalmazza a 2. alkalmat' },
         { icon: RefreshCw, title: 'Rontott munkák javítása', desc: 'Lézeres és camouflage protokoll' },
       ],
-      tagline: 'Nincsenek rejtett költségek — transzparencia, orvosi tisztaság és bajnoki garancia.'
+      tagline: 'Nincsenek rejtett költségek — transzparens árak, szigorú higiénia és tapasztalt szakmai munka.'
     }
   ];
 
@@ -97,7 +97,7 @@ export default function ValueProps() {
         <div className="max-w-3xl mb-16 space-y-6">
           <span className="text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Kiemelkedő Értékajánlataink</span>
           <h2 className="font-serif-lux text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-charcoal-800 leading-[1.1]">
-            Személyreszabott, egyedi élmény, fájdalommentes eljárás, gyors regenerálódás.
+            Személyre szabott, egyedi élmény, kíméletes eljárás és gyors regenerálódás.
           </h2>
         </div>
 

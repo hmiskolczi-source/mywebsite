@@ -10,9 +10,9 @@
   --color-gold-200: #E6D4AA;
   --color-gold-300: #D8BF80;
   --color-gold-400: #C5A059;
-  --color-gold-500: #B08B44;
-  --color-gold-600: #8F6F33;
-  --color-gold-700: #6E5324;
+  --color-gold-500: #87672E;
+  --color-gold-600: #765A28;
+  --color-gold-700: #5E461F;
   
   --color-cream-50: #FDFCFB;
   --color-cream-100: #FAF9F6; /* Refined Alabaster */
@@ -34,10 +34,24 @@ body {
   line-height: 1.7; /* Increased line-height for breathing room */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .font-serif-lux {
   font-family: var(--font-serif);
   font-style: italic;
   letter-spacing: -0.02em;
+}
+
+.font-system-ui {
+  font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-sans);
 }
 
 h1 {
@@ -72,6 +86,39 @@ h5 {
 
 h6 {
   font-size: 14px;
+}
+
+/* Shared, restrained display scale for the newer inner pages. */
+.editorial-page-title {
+  font-size: clamp(3rem, 5.4vw, 5.2rem);
+  font-style: normal;
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.editorial-page-title em {
+  font-style: italic;
+}
+
+/* Keep the new contact close at its intended editorial scale. */
+.contact-closer h2 {
+  font-size: clamp(3.1rem, 5.4vw, 5.4rem);
+  font-style: normal;
+  line-height: 1.04;
+}
+
+.contact-closer h2 em {
+  font-style: italic;
+}
+
+.contact-closer h3 {
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+  font-style: normal;
+  line-height: 1.12;
+}
+
+.contact-closer p {
+  font-family: var(--font-sans);
 }
 
 .tracking-luxury {

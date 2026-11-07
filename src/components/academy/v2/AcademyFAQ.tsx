@@ -21,8 +21,8 @@ export default function AcademyFAQ() {
     },
     {
       id: 'fa2',
-      question: 'Mi a garancia, hogy utána munkát kapok?',
-      answer: 'Munkát nem ígérek — portfóliót, állami tanúsítványt és Kinga személyes ajánlását igen. A végzett tanítványaim 80%-a aktívan dolgozik a szakmában. Az ajánlási hálózatba automatikusan bekerülsz: ha valaki sminkest keres, Kinga téged ajánl. A többi rajtad múlik — de az eszközöket garantáltan megkapod.'
+      question: 'Kapok segítséget a szakmai induláshoz?',
+      answer: 'Munkát nem lehet ígérni, de a képzés során portfóliót, tanúsítványt, gyakorlati üzleti útmutatást és személyes szakmai visszajelzést kapsz. A tényleges elhelyezkedés az egyéni munkától, gyakorlástól és piaci körülményektől is függ.'
     },
     {
       id: 'fa3',
@@ -37,7 +37,7 @@ export default function AcademyFAQ() {
     {
       id: 'fa5',
       question: 'Mi van, ha nem teljesítem a záróvizsgát?',
-      answer: 'Kinga addig tartja a kezed, amíg el nem éred a szintet. Egyetlen tanítványát sem engedte ki záróvizsgára, aki nem állt készen — és egyet sem hagyott el az úton. A biztonsági ismétlési lehetőség ezt garantálja.'
+      answer: 'A záróvizsga előtt személyes visszajelzést és felkészítést kapsz. Ha még további gyakorlás szükséges, az ismétlési lehetőségeket egyénileg egyeztetjük.'
     },
     {
       id: 'fa6',
@@ -88,7 +88,7 @@ export default function AcademyFAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
                     >
-                      <div className="pt-4 text-base text-charcoal-700/70 font-light leading-relaxed max-w-2xl">
+                      <div className="pt-4 text-base text-charcoal-700 font-light leading-relaxed max-w-2xl">
                         {f.answer}
                       </div>
                     </motion.div>

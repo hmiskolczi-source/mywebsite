@@ -125,7 +125,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról <span className="font-bold">letisztult stúdiókörnyezetben, profi felszereléssel</span> készítok képeket. A kész, <span className="font-bold">precízen retusált, magazin-minőségű fotókból</span> egy olyan komplett digitális portfóliót kapsz, amivel <span className="font-bold">azonnal magabiztosan szerezhetsz prémium vendégeket</span>.
+                A tanfolyam során elkészített legjobb sminkjeidről és a záróvizsgádról <span className="font-bold">letisztult stúdiókörnyezetben, profi felszereléssel</span> készítek képeket. A kész, <span className="font-bold">precízen retusált, magazin-minőségű fotókból</span> egy olyan komplett digitális portfóliót kapsz, amellyel <span className="font-bold">magabiztosabban mutathatod be a munkáidat leendő vendégeidnek</span>.
               </p>
 
               <div className="pl-8 border-l border-gold-400/30">
@@ -285,7 +285,7 @@ export default function AcademyValueProps() {
                 </h3>
               </div>
               <p className="text-base text-charcoal-700/80 font-light leading-relaxed">
-                <span className="font-bold">közel 10 év kozmetikusi tapasztalattal tanítok sminkelést.</span> tanít sminkelést. Nem divatos stílusokat tanulsz meg lemásolni, hanem <span className="font-bold">megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist, az arcformát</span>. Azt a gondolkodást, amivel <span className="font-bold">minden egyes vendéghez másképpen állsz hozzá</span> – amitől a munkád prémium lesz, nem csak szép.
+                <span className="font-bold">Közel 10 év kozmetikusi tapasztalattal tanítok sminkelést.</span> Nem divatos stílusokat tanulsz meg lemásolni, hanem <span className="font-bold">megtanulod olvasni az arcot: a bőrtípust, a bőrdiagnózist és az arcformát</span>. Azt a gondolkodást, amellyel <span className="font-bold">minden egyes vendéghez másképpen állsz hozzá</span> – amitől a munkád prémium lesz, nem csak szép.
               </p>
               <button 
                 onClick={scrollToForm}

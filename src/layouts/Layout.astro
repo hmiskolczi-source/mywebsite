@@ -14,15 +14,65 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
+import heroFontUrl from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-300-italic.woff2?url';
+import heroFontExtUrl from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-ext-300-italic.woff2?url';
 import { PUBLIC_GTM_ID } from 'astro:env/client';
 import CookieConsent from '../components/shared/CookieConsent.astro';
 
 interface Props {
 	title: string;
 	description?: string;
+	canonicalPath?: string;
+	image?: string;
+	noindex?: boolean;
+	pageType?: 'website' | 'article';
 }
 
-const { title, description = "Hovorka-Miskolczi Kinga — Prémium Sminktetoválás" } = Astro.props;
+const {
+	title,
+	description = 'Hovorka-Miskolczi Kinga sminkmester, sminktetováló és oktató Szegeden és Budapesten.',
+	canonicalPath = Astro.url.pathname,
+	image = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/home/main_hero.webp',
+	noindex = false,
+	pageType = 'website',
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL('https://www.kingamiskolczi.com');
+const canonicalUrl = new URL(canonicalPath, siteUrl);
+const socialImageUrl = new URL(image, siteUrl);
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Person',
+			'@id': `${siteUrl}#kinga`,
+			name: 'Hovorka-Miskolczi Kinga',
+			url: siteUrl.toString(),
+			jobTitle: 'Sminkmester, sminktetováló és oktató',
+			sameAs: [
+				'https://www.instagram.com/sminktetovalas_miskolczikinga/',
+				'https://www.instagram.com/miskolczikinga_makeup_school/',
+				'https://www.facebook.com/Miskolczikingamakeupschool',
+			],
+		},
+		{
+			'@type': 'BeautySalon',
+			'@id': `${siteUrl}#business`,
+			name: 'Hovorka-Miskolczi Kinga',
+			url: siteUrl.toString(),
+			telephone: '+36307094370',
+			email: 'hmiskolczi@gmail.com',
+			founder: { '@id': `${siteUrl}#kinga` },
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Barcsay Károly utca 7. A ép. 1.',
+				postalCode: '6726',
+				addressLocality: 'Szeged',
+				addressCountry: 'HU',
+			},
+		},
+	],
+};
 
 // GTM only in production builds, so local dev doesn't pollute GA4 / Meta data.
 const gtmId = import.meta.env.PROD ? PUBLIC_GTM_ID : undefined;
@@ -33,10 +83,26 @@ const gtmId = import.meta.env.PROD ? PUBLIC_GTM_ID : undefined;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		<link rel="canonical" href={canonicalUrl} />
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+		<link rel="preload" href={heroFontUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href={heroFontExtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+		<meta property="og:locale" content="hu_HU" />
+		<meta property="og:type" content={pageType} />
+		<meta property="og:site_name" content="Hovorka-Miskolczi Kinga" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={socialImageUrl} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImageUrl} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		{gtmId && (
 			<>
 				{/* Consent Mode v2 defaults — must run before GTM; CookieConsent.astro sends the update. */}

@@ -1,6 +1,6 @@
 ---
 const initialProfile = Astro.url.pathname.startsWith('/sminktetovalas') ? 'pmu' : 'school';
-const showSwitch = Astro.url.pathname === '/';
+const showSwitch = Astro.url.pathname === '/' || Astro.url.pathname.startsWith('/sminkek');
 ---
 <link rel="stylesheet" href="/instagram-feed.css" />
 <section id="instagram" class="instagram-section bg-[#eee8df] py-20 md:py-28 scroll-mt-24" data-instagram-feed={initialProfile} aria-labelledby="instagram-title">

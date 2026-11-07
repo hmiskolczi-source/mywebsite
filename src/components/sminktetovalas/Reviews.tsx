@@ -50,7 +50,7 @@ export default function Reviews() {
                 <h3 className="font-serif-lux text-lg sm:text-xl font-light text-charcoal-800 leading-snug">
                   {review.title}
                 </h3>
-                <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
+                <p className="text-sm text-charcoal-700 font-light leading-relaxed">
                   "{review.text}"
                 </p>
               </div>

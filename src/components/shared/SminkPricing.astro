@@ -1,0 +1,38 @@
+---
+interface Props { showGalleryLink?: boolean }
+const { showGalleryLink = false } = Astro.props;
+const groups = [
+  { title: 'Alkalmi smink', items: [['Alkalmi smink, egyéb sminkek', '20 000 Ft']] },
+  { title: 'Menyasszonyi smink', items: [['Menyasszonyi smink', '40 000 Ft'], ['Menyasszonyi smink kiszállással', '65 000 Ft'], ['Próbasmink', '25 000 Ft']] },
+  { title: 'Az esküvő többi szereplője', items: [['Násznő sminkje', '20 000 Ft'], ['Vőlegény smink', '5 000 Ft']] },
+  { title: 'Kiszállás', items: [['Útiköltség', '150 Ft/km']], note: 'Az útiköltség Szegedtől kerül kiszámításra.' },
+];
+---
+
+<section id="smink-arak" class="bg-cream-100 py-16 md:py-24 scroll-mt-24" aria-labelledby="smink-arak-title">
+  <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-[32px] border border-cream-200/60 shadow-[0_20px_70px_rgba(72,52,27,.07)] px-6 py-10 sm:px-12 sm:py-14 md:px-16 md:py-16">
+    <div class="text-center mb-10 md:mb-14">
+      <span class="font-serif-lux text-3xl md:text-4xl text-gold-600 italic block">Kinga Miskolczi</span>
+      <span class="font-mono text-xs font-semibold tracking-[.2em] uppercase text-charcoal-700 block mt-1">Makeup Artist</span>
+      <h2 id="smink-arak-title" class="font-serif-lux text-xl sm:text-2xl font-bold uppercase tracking-[.17em] text-charcoal-900 mt-7">Smink árlista</h2>
+      <div class="flex items-center justify-center my-7 max-w-sm mx-auto" aria-hidden="true"><span class="h-0.5 w-3 bg-gold-400 shrink-0"></span><span class="h-px bg-gold-300/60 flex-1"></span><span class="w-2.5 h-2.5 border-2 border-gold-400 rounded-full mx-2 shrink-0"></span><span class="h-px bg-gold-300/60 flex-1"></span><span class="h-0.5 w-3 bg-gold-400 shrink-0"></span></div>
+    </div>
+    <div class="space-y-11 sm:space-y-14 text-charcoal-900">
+      {groups.map(group => (
+        <div>
+          <h3 class="flex items-center gap-3 font-serif-lux text-base sm:text-lg font-bold uppercase tracking-[.12em] text-charcoal-900 mb-5 sm:mb-7"><span class="h-1.5 w-6 bg-gold-400 shrink-0"></span>{group.title}</h3>
+          <dl class="space-y-5">
+            {group.items.map(([label, price]) => <div class="grid grid-cols-[minmax(0,1fr)_auto] sm:grid-cols-[auto_minmax(0,1fr)_auto] items-baseline gap-x-2 sm:gap-x-3"><dt class="font-serif-lux font-bold uppercase tracking-wide text-sm sm:text-base leading-snug">{label}</dt><span class="hidden sm:block border-b border-dotted border-cream-300" aria-hidden="true"></span><dd class="font-mono text-sm sm:text-base font-bold text-gold-700 whitespace-nowrap text-right">{price}</dd></div>)}
+          </dl>
+          {'note' in group && <p class="font-system-ui text-sm text-charcoal-700 mt-3">{group.note}</p>}
+        </div>
+      ))}
+    </div>
+    <div class="flex flex-wrap justify-center gap-3 mt-12">
+      {showGalleryLink && <a href="/sminkek" class="border border-charcoal-900 px-6 py-4 text-xs font-bold uppercase tracking-widest text-charcoal-900 hover:bg-white">Sminkmunkák megtekintése ↗</a>}
+      <a href="/idopont?service=makeup" class="bg-charcoal-900 text-white px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-charcoal-800">Időpontot kérek ↗</a>
+    </div>
+    </div>
+  </div>
+</section>

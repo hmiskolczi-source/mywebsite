@@ -54,18 +54,19 @@ export default function AcademyCloser() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'a57cebc3-88fb-4646-b5a1-82e4e1bc5170',
+          formType: 'academy',
           name,
           phone,
           email,
           age,
-          motivation,
+          message: motivation,
+          company: '',
         }),
       });
 
@@ -112,7 +113,7 @@ export default function AcademyCloser() {
             </p>
 
             <div className="space-y-6 pt-4">
-              <h4 className="text-[11px] font-bold tracking-luxury text-gold-400/60 uppercase">Amit az első naptól kapsz</h4>
+              <p className="text-[11px] font-bold tracking-luxury text-gold-400/60 uppercase">Amit az első naptól kapsz</p>
               <ul className="space-y-4">
                 {[
                   "Személyes, privát lakásstúdió: Anyag- és luxustermék-biztosítás",
@@ -144,7 +145,7 @@ export default function AcademyCloser() {
                   <div className="space-y-2 border-b border-white/10 pb-6">
                     <h3 className="font-serif-lux text-3xl font-light text-white">Jelentkezési űrlap</h3>
                     <p className="text-[10px] font-bold tracking-luxury text-gold-400 uppercase">Alapozó sminkképzés / 100 óra</p>
-                    <p className="text-xs text-cream-100/40 font-light mt-2 italic">Kinga személyesen értékel minden jelentkezést.</p>
+                    <p className="text-xs text-cream-100/70 font-light mt-2 italic">Kinga személyesen értékel minden jelentkezést.</p>
                   </div>
 
                   {error && (
@@ -155,8 +156,13 @@ export default function AcademyCloser() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       {/* Name */}
                       <div className="relative group">
+                        <label htmlFor="academy-name" className="sr-only">Teljes név</label>
                         <input 
+                          id="academy-name"
+                          name="name"
                           type="text" 
+                          autoComplete="name"
+                          required
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
@@ -165,8 +171,13 @@ export default function AcademyCloser() {
                       </div>
                       {/* Phone */}
                       <div className="relative group">
+                        <label htmlFor="academy-phone" className="sr-only">Telefonszám</label>
                         <input 
+                          id="academy-phone"
+                          name="phone"
                           type="tel" 
+                          autoComplete="tel"
+                          required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
@@ -178,8 +189,13 @@ export default function AcademyCloser() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {/* Email */}
                       <div className="md:col-span-2 relative group">
+                        <label htmlFor="academy-email" className="sr-only">E-mail cím</label>
                         <input 
+                          id="academy-email"
+                          name="email"
                           type="email" 
+                          autoComplete="email"
+                          required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
@@ -188,8 +204,14 @@ export default function AcademyCloser() {
                       </div>
                       {/* Age */}
                       <div className="relative group">
+                        <label htmlFor="academy-age" className="sr-only">Életkor</label>
                         <input 
+                          id="academy-age"
+                          name="age"
                           type="text" 
+                          inputMode="numeric"
+                          autoComplete="off"
+                          required
                           value={age}
                           onChange={(e) => setAge(e.target.value)}
                           className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20"
@@ -200,8 +222,12 @@ export default function AcademyCloser() {
 
                     {/* Motivation */}
                     <div className="relative group">
+                      <label htmlFor="academy-motivation" className="sr-only">Motiváció</label>
                       <textarea
+                        id="academy-motivation"
+                        name="message"
                         rows={4}
+                        required
                         value={motivation}
                         onChange={(e) => setMotivation(e.target.value)}
                         className="w-full bg-transparent border-b border-white/20 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream-100/20 resize-none leading-relaxed"
@@ -212,13 +238,14 @@ export default function AcademyCloser() {
                     <div className="space-y-6">
                       <label className="flex items-start gap-4 cursor-pointer group">
                         <input
+                          name="privacy-consent"
                           type="checkbox"
                           checked={agree}
                           onChange={(e) => setAgree(e.target.checked)}
                           required
                           className="mt-1 accent-gold-400 h-4 w-4 shrink-0 bg-transparent border-white/20"
                         />
-                        <span className="text-[11px] text-cream-100/40 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
+                        <span className="text-[11px] text-cream-100/70 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
                           Elfogadom az{' '}
                           <a
                             href="/adatvedelem"

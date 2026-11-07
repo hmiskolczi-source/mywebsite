@@ -22,7 +22,7 @@ export default function Process() {
       label: "Egyéni konzultáció"
     },
     {
-      title: "Fájdalommentes érzéstelenítés és előrajzolás",
+      title: "Kíméletes érzéstelenítés és előrajzolás",
       descriptionHighlight: [
         { text: 'A beleegyező nyilatkozat aláírása után megkezdjük a ' },
         { text: 'hatékony érzéstelenítést (injekció nélkül)', bold: true },
@@ -35,15 +35,15 @@ export default function Process() {
       label: "Személyre szabott tervezés"
     },
     {
-      title: "Fájdalommentes pigmentálás és ingyenes korrekció",
+      title: "Kíméletes pigmentálás és ingyenes korrekció",
       descriptionHighlight: [
         { text: 'Az átkarcolt területre felviszem a másodlagos érzéstelenítőt, ami ' },
-        { text: 'akár 1–1,5 órára teljesen elzsibbasztja a bőrt', bold: true },
-        { text: ' a tökéletes kényelemért. Ezután ' },
-        { text: 'mikrotűs géppel és orvosi tisztaságú szín garantált pigmentekkel', bold: true },
+        { text: 'segít csökkenteni a kellemetlen érzést a kezelés során', bold: true },
+        { text: '. Ezután ' },
+        { text: 'mikrotűs géppel és ellenőrzött, prémium pigmentekkel', bold: true },
         { text: ' elkészítem a finom satírt.' }
       ],
-      label: "Fájdalommentes beavatkozás"
+      label: "Kíméletes beavatkozás"
     }
   ];
 
@@ -79,7 +79,7 @@ export default function Process() {
                 <h3 className="font-serif-lux text-2xl font-light text-charcoal-800">
                   {step.title}
                 </h3>
-                <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
+                <p className="text-sm text-charcoal-700 font-light leading-relaxed">
                   {step.descriptionHighlight.map((part, idx) => (
                     part.bold ? <span key={idx} className="font-bold">{part.text}</span> : part.text
                   ))}

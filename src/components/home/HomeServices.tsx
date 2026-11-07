@@ -29,11 +29,11 @@ export default function HomeServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 relative border border-charcoal-800/5 p-8 lg:p-10 bg-cream-100/50"
+            className="grid grid-rows-[auto_auto_auto] md:row-span-3 md:grid-rows-subgrid gap-y-6 relative border border-charcoal-800/5 p-8 lg:p-10 bg-cream-100/50"
           >
             <div className="space-y-4">
-              <h3 className="font-serif-lux text-3xl font-light text-charcoal-800">Sminktetoválás</h3>
-              <p className="text-base text-charcoal-700/70 font-light leading-relaxed">
+              <h2 className="font-serif-lux text-3xl font-light text-charcoal-800">Sminktetoválás</h2>
+              <p className="text-base text-charcoal-700 font-light leading-relaxed">
                 Egy jó sminktetoválás <span className="font-bold">nem feltűnő</span>. Ehhez pontosan kell érteni az arc arányait, a bőr sajátosságait és azt, hogy mi áll jól valakinek, nem csak most, hanem évek múlva is. Kozmetikusként kezdtem, és ez a <span className="font-bold">bőrismeret</span> azóta is minden munkám alapja.
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function HomeServices() {
               </a>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-charcoal-800/5">
+            <div className="pt-6 border-t border-charcoal-800/5">
               <HomeTestimonial
                 text="Kinga mesterileg dolgozik, nem csak a technika, hanem a személyes készségei miatt is ajánlom mindenkinek. Az én sminktetoválásom természetes és tökéletes."
                 name="Éva B."
@@ -63,11 +63,11 @@ export default function HomeServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="space-y-6 relative border border-charcoal-800/5 p-8 lg:p-10 bg-cream-100/50"
+            className="grid grid-rows-[auto_auto_auto] md:row-span-3 md:grid-rows-subgrid gap-y-6 relative border border-charcoal-800/5 p-8 lg:p-10 bg-cream-100/50"
           >
             <div className="space-y-4">
-              <h3 className="font-serif-lux text-3xl font-light text-charcoal-800">Sminkoktatás</h3>
-              <p className="text-base text-charcoal-700/70 font-light leading-relaxed">
+              <h2 className="font-serif-lux text-3xl font-light text-charcoal-800">Sminkoktatás</h2>
+              <p className="text-base text-charcoal-700 font-light leading-relaxed">
                 Oktatással immár <span className="font-bold">15 éve</span> foglalkozom. Ez idő alatt <span className="font-bold">számos sikeres sminkes</span> került ki a kezeim alól, akik ma már országszerte és külföldön is eredményesen dolgoznak. Nem tartok vissza semmit: minden technikát, logikát, munkafolyamatot átadok, ami a mindennapi munkában valóban szükséges.
               </p>
             </div>
@@ -82,9 +82,9 @@ export default function HomeServices() {
               </a>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-charcoal-800/5">
+            <div className="pt-6 border-t border-charcoal-800/5">
               <HomeTestimonial
-                text="A képzés alatt megtanultam olyan technikákat, amelyeket máshol nem tanítanak. Kinga hozzáértése és gyakorlatia tudása valóban piacképessé tette vállalkozásomat."
+                text="A képzés alatt megtanultam olyan technikákat, amelyeket máshol nem tanítanak. Kinga hozzáértése és gyakorlati tudása valóban piacképessé tette vállalkozásomat."
                 name="Petra K."
                 role="Sminkoktatás végzettje"
               />

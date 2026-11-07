@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/shared/Navbar.astro';
+import Footer from '../components/shared/Footer';
+import MainCloser from '../components/home/MainCloser';
+import InstagramSection from '../components/home/InstagramSection.astro';
+---
+<Layout title="Időpontkérés | Hovorka-Miskolczi Kinga" description="Időpontkérés sminktetoválásra, sminkre vagy sminkiskolai képzésre." noindex={true}>
+  <div class="min-h-screen bg-cream-100 text-charcoal-900 overflow-x-hidden antialiased">
+    <Navbar currentPage="idopont" />
+    <main class="max-w-6xl mx-auto px-5 pb-24">
+      <p class="text-xs text-charcoal-700 py-8"><a href="/" class="hover:underline">Kezdőlap</a><span class="mx-4">/</span>Időpontkérés</p>
+      <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 lg:gap-20 items-end mb-10"><div><span class="text-xs tracking-luxury uppercase text-gold-700 font-bold">Egy személyes találkozás kezdete</span><h1 class="editorial-page-title mt-4">Mesélj az <em class="text-gold-700">elképzelésedről.</em></h1></div><p class="text-charcoal-700 leading-relaxed">Válassz szolgáltatást, és írd meg, mikor lenne alkalmas. Az időpontot Kingával közösen véglegesítitek.</p></div>
+      <div class="grid lg:grid-cols-[minmax(0,1.6fr)_minmax(260px,.8fr)] gap-8 lg:gap-12 items-start">
+        <section class="bg-white border border-cream-300 p-6 sm:p-9" aria-labelledby="form-heading">
+          <div id="booking-status" role="status" class="text-charcoal-700">Az időpontkérés betöltése…</div>
+          <form id="booking-form" hidden novalidate>
+            <h2 id="form-heading" class="text-3xl mb-6">Miben segíthetek?</h2>
+            <p id="booking-error" role="alert" tabindex="-1" hidden class="bg-red-50 text-red-800 p-4 mb-5"></p>
+            <div class="flex flex-wrap gap-2 mb-5" role="group" aria-label="Szolgáltatási terület"><button type="button" data-category="pmu" class="category">Sminktetoválás</button><button type="button" data-category="makeup" class="category">Smink</button><button type="button" data-category="school" class="category">Sminkiskola</button></div>
+            <div id="booking-services" class="grid gap-2 mb-5"></div>
+            <a href="/arak" class="text-sm text-gold-700 underline">Árlista megtekintése</a>
+            <div class="grid sm:grid-cols-2 gap-5 mt-8">
+              <label class="field">Név *<input id="booking-name" autocomplete="name" maxlength="100" required /></label><label class="field">E-mail *<input id="booking-email" type="email" autocomplete="email" maxlength="254" required /></label>
+              <label class="field">Telefonszám<input id="booking-phone" type="tel" autocomplete="tel" maxlength="40" /></label><label class="field">Melyik nap lenne jó?<input id="booking-date" type="date" /></label>
+              <label class="field sm:col-span-2">Napszak<select id="booking-time"><option value="rugalmas">Rugalmas vagyok</option><option value="délelőtt">Délelőtt</option><option value="délután">Délután</option></select></label>
+              <label class="field sm:col-span-2">Elképzelésed<textarea id="booking-message" rows="4" maxlength="1000"></textarea></label>
+            </div>
+            <input id="booking-website" aria-hidden="true" tabindex="-1" autocomplete="off" class="absolute -left-[9999px]" />
+            <label class="check mt-7"><input id="booking-consent" type="checkbox" required /><span>Elolvastam az <a href="/adatvedelem" class="underline">adatkezelési tájékoztatót</a>, és hozzájárulok az időpontkérésem kezeléséhez.</span></label>
+            <button id="booking-submit" type="submit" class="mt-8 bg-charcoal-900 text-white px-7 py-4 uppercase tracking-widest text-xs font-bold disabled:opacity-50">Időpontkérés elküldése →</button>
+          </form>
+          <div id="booking-success" hidden tabindex="-1"><span class="text-gold-700 text-4xl">✓</span><h2 id="booking-success-title" class="text-4xl my-4">Elküldtük az időpontkérésedet.</h2><p id="booking-success-copy">Ez még nem visszaigazolt időpont. Kinga személyesen egyeztet veled a részletekről.</p><p id="booking-reference" class="mt-4 text-sm"></p></div>
+        </section>
+        <aside class="lg:pt-8"><span class="text-xs uppercase tracking-luxury text-gold-700 font-bold">Személyesen, figyelemmel</span><h2 class="text-4xl mt-5 mb-7">Minden történet egy beszélgetéssel kezdődik.</h2><ol class="space-y-6 text-sm text-charcoal-700"><li><strong class="block text-charcoal-900">01 · Írd meg, mit szeretnél.</strong>Sminktetoválás, smink vagy szakmai fejlődés.</li><li><strong class="block text-charcoal-900">02 · Egyeztessetek Kingával.</strong>A kért nap és napszak kiindulópont.</li><li><strong class="block text-charcoal-900">03 · Véglegesítsétek az időpontot.</strong>A foglalás Kinga jóváhagyása után válik biztossá.</li></ol><p class="mt-10 text-sm">Telefonon: <a href="tel:+36307094370" class="underline">+36 30 709 4370</a></p></aside>
+      </div>
+    </main><InstagramSection /><MainCloser anchorId="booking-footer" bookingPage={true} /><Footer client:visible />
+  </div>
+  <style>.category{border:1px solid #aa9573;padding:11px 15px;font-size:12px;cursor:pointer}.category[aria-pressed="true"]{background:#292723;color:white}.field{display:grid;gap:7px;font-size:13px;color:#403b33}.field input,.field textarea,.field select{width:100%;border:1px solid #b8ad9d;background:#fff;padding:12px;color:#292723;min-height:46px}.check{display:flex;gap:12px;font-size:13px;line-height:1.5;color:#403b33}.check input{width:18px;height:18px;flex:none;accent-color:#92703f;margin-top:2px}[hidden]{display:none!important}</style>
+  <script>
+    type Service = { id:string;label:string;category:'pmu'|'makeup'|'school' };
+    const form=document.querySelector<HTMLFormElement>('#booking-form')!,status=document.querySelector<HTMLElement>('#booking-status')!,error=document.querySelector<HTMLElement>('#booking-error')!,servicesNode=document.querySelector<HTMLElement>('#booking-services')!;
+    const allowed=new Set(['pmu_consultation','pmu_eyebrows','pmu_eyeliner','pmu_lips','pmu_correction','makeup','school_basic','school_advanced','school_competition','school_self']);
+    let services:Service[]=[],selected=new URLSearchParams(location.search).get('service')||'';
+    let category:Service['category']=selected.startsWith('school_')?'school':selected==='makeup'?'makeup':'pmu';
+    const idempotencyKey=crypto.randomUUID();
+    const field=(id:string)=>document.querySelector<HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement>(`#booking-${id}`)!;
+    const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Budapest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());field('date').setAttribute('min',today);
+    function render(){servicesNode.replaceChildren();for(const service of services.filter(item=>item.category===category)){const label=document.createElement('label');label.className='flex gap-3 items-center border border-cream-300 px-4 py-4 cursor-pointer text-sm';const radio=document.createElement('input');radio.type='radio';radio.name='service';radio.value=service.id;radio.checked=selected===service.id;radio.addEventListener('change',()=>{selected=service.id});label.append(radio,document.createTextNode(service.label));servicesNode.append(label)}document.querySelectorAll<HTMLButtonElement>('[data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category===category)))}
+    document.querySelectorAll<HTMLButtonElement>('[data-category]').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.category as Service['category'];selected='';render()}));
+    fetch('/api/booking/config').then(async response=>{
+      if(!response.ok)throw Error();
+      const data=await response.json();
+      if(data.mode!=='live'||!data.acceptingRequests||!Array.isArray(data.services))throw Error();
+      services=data.services.filter((item:Service)=>allowed.has(item.id)&&['pmu','makeup','school'].includes(item.category));
+      if(!services.length)throw Error();
+      if(!services.some(item=>item.id===selected))selected='';
+      render();status.hidden=true;form.hidden=false;
+    }).catch(()=>{status.textContent='Az időpontkérés most nem érhető el. Kingát a +36 30 709 4370 számon éred el.'});
+    function fail(message:string){error.textContent=message;error.hidden=false;error.focus()}
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();error.hidden=true;
+      if(!services.some(item=>item.id===selected))return fail('Válassz szolgáltatást.');
+      if(field('name').value.trim().length<2)return fail('Add meg a nevedet.');
+      if(!field('email').value.trim()||!(field('email') as HTMLInputElement).validity.valid)return fail('Adj meg egy érvényes e-mail-címet.');
+      if(field('date').value&&field('date').value<today)return fail('Mai vagy későbbi napot válassz.');
+      if(!(field('consent') as HTMLInputElement).checked)return fail('Fogadd el a szükséges feltételeket.');
+      const submit=document.querySelector<HTMLButtonElement>('#booking-submit')!;submit.disabled=true;
+      try{
+        const response=await fetch('/api/booking/requests',{
+          method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({
+            name:field('name').value.trim(),email:field('email').value.trim(),phone:field('phone').value.trim(),
+            serviceId:selected,preferredDate:field('date').value,preferredTime:field('time').value,
+            message:field('message').value.trim(),consent:true,website:field('website').value,idempotencyKey,
+          }),
+        });
+        const data=await response.json();
+        if(!response.ok||data.ok!==true||data.mode!=='live')throw Error(data.message||'A küldés nem sikerült.');
+        form.hidden=true;document.querySelector<HTMLElement>('#booking-success')!.hidden=false;
+        document.querySelector<HTMLElement>('#booking-reference')!.textContent=`A kérés azonosítója: ${data.id}`;
+      }catch(cause){fail(cause instanceof Error?cause.message:'A küldés nem sikerült.')}finally{submit.disabled=false}
+    });
+  </script>
+</Layout>

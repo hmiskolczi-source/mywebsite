@@ -22,6 +22,8 @@ export default function Footer() {
             <div className="flex items-center justify-center gap-2">
               <img
                 {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/footerlogo.png", "128px")}
+                width={128}
+                height={42}
                 alt="Kinga Miskolczi Footer Logo"
                 className="h-[57.6px] sm:h-[76.8px] w-auto"
                 loading="lazy"
@@ -29,7 +31,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-xs text-cream-300 font-light leading-relaxed">
-              EB aranyérmes és 3x-os VB ezüstérmes sminkmester, nemzetközi zsűrítag és oktató.
+              EB-aranyérmes és háromszoros VB-ezüstérmes sminkmester, nemzetközi zsűritag és oktató.
             </p>
           </div>
 
@@ -63,13 +65,13 @@ export default function Footer() {
               <span>miskolczikinga_makeup_school</span>
             </a>
             <a
-              href="https://www.facebook.com/promakeupschool"
+              href="https://www.facebook.com/Miskolczikingamakeupschool"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 hover:text-gold-300 transition-colors"
             >
               <Facebook className="w-4 h-4 text-gold-400 shrink-0" />
-              <span>Pro Makeup School</span>
+              <span>Miskolczi Kinga Makeup School</span>
             </a>
             <a
               href="tel:+36307094370"
@@ -84,7 +86,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-[11px] font-mono text-cream-300/50">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-[11px] font-mono text-cream-300">
           <p className="order-1 sm:order-1 sm:absolute sm:left-4 sm:lg:left-8">
             &copy; 2026 Hovorka-Miskolczi Kinga. Minden jog fenntartva.
           </p>
