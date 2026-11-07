@@ -80,6 +80,8 @@ export default function Navbar({ currentPage }: NavbarProps) {
           {/* Mobile Hamburger Menu */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Mobil menü bezárása' : 'Mobil menü megnyitása'}
+            aria-expanded={menuOpen}
             className="md:hidden text-charcoal-800 p-2 hover:bg-cream-200 rounded transition-colors"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}

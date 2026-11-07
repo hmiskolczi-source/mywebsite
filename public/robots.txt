@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /koszonjuk
+Disallow: /api/
+
+Sitemap: https://www.kingamiskolczi.com/sitemap-index.xml

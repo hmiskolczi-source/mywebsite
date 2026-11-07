@@ -16,8 +16,8 @@ export default function FAQ() {
   const faqs = [
     {
       id: 'fa1',
-      question: 'Tényleg teljesen fájdalommentes az eljárás?',
-      answer: 'Igen. Nálam nem kell tartanod a tűs injekcióktól (szuritól) — soha nem használok ilyet. Ehelyett egy prémium, kétfázisú lidokainos érzéstelenítő krémet alkalmazok elő- és folyamatközben is. Az átkarcolás után felvitt zselé tökéletesen elzsibbasztja a bőrt akár 1–1,5 órára, a vendégeim többsége pedig kellemes, pihentető eljárást tapasztal feszültség nélkül.'
+      question: 'Mennyire kellemetlen az eljárás?',
+      answer: 'Az érzékenység egyénenként eltérő. Tűs injekció helyett kétfázisú, helyileg alkalmazott érzéstelenítést használok a kellemetlenség csökkentésére. A vendégeim többsége jól tolerálhatónak írja le a kezelést, de teljes fájdalommentességet nem lehet mindenkinél ígérni.'
     },
     {
       id: 'fa2',
@@ -27,7 +27,7 @@ export default function FAQ() {
     {
       id: 'fa3',
       question: 'Mit tartalmaz a prémium ár? Vannak-e rejtett költségek?',
-      answer: 'Teljes transzparenciával dolgozom, nincsenek rejtett költségek. A feltüntetett árak egy komplex, értékalapú csomagot fednek le. Magában foglalja az előzetes egészségügyi szűrést, az egyedi arcarány-elemzést és előrajzolást, a prémium kétlépcsős érzéstelenítést, az orvosi minőségű, színgarantált pigmenteket és a szükséges korrekciós alkalmat is. Sok szalonnal ellentétben a korrekció nálam teljesen ingyenes.'
+      answer: 'Teljes transzparenciával dolgozom, nincsenek rejtett költségek. A feltüntetett árak egy komplex, értékalapú csomagot fednek le. Magában foglalja az előzetes egészségügyi szűrést, az egyedi arcarány-elemzést és előrajzolást, a kétlépcsős érzéstelenítést, a prémium pigmenteket és a szükséges korrekciós alkalmat is. Sok szalonnal ellentétben a korrekció nálam teljesen ingyenes.'
     },
     {
       id: 'fa4',
@@ -41,8 +41,8 @@ export default function FAQ() {
     },
     {
       id: 'fa6',
-      question: 'Mi a garancia arra, hogy nem kapok aszimmetrikus tucat-sablont?',
-      answer: 'A sablonok teljes elutasítása. 15 éves bajnoki sminkmesteri rutinnal, egyedi arc-architektúra elemzéssel és precíz mérőeszközökkel dolgozom. Vakon soha nem tetoválok: a formát milliméter pontosan megrajzolom neked, és addig finomítjuk, amíg te magad teljesen jóvá nem hagyod. Csak azután kezdődik a pigmentálás, ha 100%-ig szereted a skiccet.'
+      question: 'Hogyan kerülhető el a sablonos vagy aszimmetrikus eredmény?',
+      answer: 'Egyedi arcelemzéssel és precíz mérőeszközökkel dolgozom. A formát a pigmentálás előtt megrajzolom, közösen finomítjuk, és csak a jóváhagyásod után kezdődik a kezelés.'
     }
   ];
 
@@ -83,7 +83,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
                     >
-                      <div className="pt-4 text-base text-charcoal-700/70 font-light leading-relaxed max-w-2xl">
+                      <div className="pt-4 text-base text-charcoal-700 font-light leading-relaxed max-w-2xl">
                         {f.answer}
                       </div>
                     </motion.div>

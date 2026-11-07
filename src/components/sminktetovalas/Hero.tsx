@@ -4,21 +4,12 @@
  */
 
 import React from 'react';
-import { motion } from 'motion/react';
-import { Star, Shield, Award, Quote, CheckCircle, Sparkles } from 'lucide-react';
 import SocialProof from '../shared/SocialProof';
 import BrandLogos from '../shared/BrandLogos';
 import ImageWatermark from '../shared/ImageWatermark';
 import { imgProps } from '../../lib/imageOpt';
 
 export default function Hero() {
-  const scrollToForm = () => {
-    const el = document.getElementById('lead-form-anchor');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <section className="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-cream-100">
       {/* Background accents - subtle and airy */}
@@ -34,57 +25,37 @@ export default function Hero() {
             <SocialProof />
 
             {/* Core Headline */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
+            <div className="space-y-6">
               <h1 className="font-serif-lux text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-charcoal-800 leading-[1.2]">
                 Ébredj minden nap <span className="italic text-gold-600">természetes tökéletességben</span>: Tartós, Elegáns és Teljesen Natúr sminktetoválás akár egyetlen exklúzív alkalom után.
               </h1>
-            </motion.div>
+            </div>
 
             {/* Core Sub-headline */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg sm:text-xl text-charcoal-700 font-light leading-relaxed max-w-2xl"
-            >
-              Ha már láttál elszíneződött, aszimmetrikus munkákat, és attól félsz, hogy veled is ez történik.. ez a félelem jogos. A <span className="font-bold">15 éves nemzetközi tapasztalatom</span> és a <span className="font-bold">kétfázisú érzéstelenítési protokollom</span> pontosan ezt zárja ki.
-            </motion.p>
+            <p className="font-system-ui text-lg sm:text-xl text-charcoal-700 font-normal leading-relaxed max-w-2xl">
+              Ha már láttál elszíneződött, aszimmetrikus munkákat, és attól félsz, hogy veled is ez történik, ez a félelem jogos. A <span className="font-bold">15 éves nemzetközi tapasztalatom</span> és a <span className="font-bold">kétfázisú érzéstelenítési protokollom</span> pontosan ezt zárja ki.
+            </p>
 
             {/* CTA and Scarcity */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-8 pt-2"
-            >
-              <button
-                onClick={scrollToForm}
-                className="group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-8 pt-2">
+              <a
+                href="#lead-form-anchor"
+                className="font-system-ui group relative px-10 py-5 bg-charcoal-800 text-cream-100 text-xs font-bold tracking-luxury uppercase overflow-hidden transition-all duration-500 hover:bg-charcoal-700 rounded-none"
               >
                 <span className="relative z-10">Jelentkezem egyéni tervezésre Kingához &rarr;</span>
                 <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
-              </button>
+              </a>
 
-              <p className="text-xs text-charcoal-700/60 italic font-serif-lux tracking-wide">
+              <p className="text-xs text-charcoal-700 italic font-serif-lux tracking-wide">
                 Ingyenes telefonos konzultáció!
               </p>
-            </motion.div>
+            </div>
 
           </div>
 
           {/* Right Column: Hero Image */}
           <div className="lg:w-5/12">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]"
-            >
+            <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]">
               <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
                 <img
                   {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
@@ -95,7 +66,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent pointer-events-none" />
               </ImageWatermark>
-            </motion.div>
+            </div>
           </div>
         </div>
 

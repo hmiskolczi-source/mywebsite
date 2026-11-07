@@ -25,8 +25,8 @@ export default function AcademyProcess() {
     },
     {
       title: "Piacra Lépés",
-      description: "Sikeres elméleti és gyakorlati vizsga után átveszed a hivatalos, elnök által aláírt állami tanúsítványt és a kész, retusált digitális portfóliódat, amivel már másnap elkezdheted építeni a vevőkörödet.",
-      label: "Hivatalos Tanúsítvány"
+      description: "Sikeres elméleti és gyakorlati vizsga után átveszed a képzés elvégzését igazoló tanúsítványt és a kész, retusált digitális portfóliódat, amellyel elkezdheted tudatosan építeni a szakmai jelenlétedet.",
+      label: "Tanúsítvány és portfólió"
     }
   ];
 
@@ -62,7 +62,7 @@ export default function AcademyProcess() {
                 <h3 className="font-serif-lux text-2xl font-light text-charcoal-800">
                   {step.title}
                 </h3>
-                <p className="text-sm text-charcoal-700/70 font-light leading-relaxed">
+                <p className="text-sm text-charcoal-700 font-light leading-relaxed">
                   {step.description}
                 </p>
               </div>

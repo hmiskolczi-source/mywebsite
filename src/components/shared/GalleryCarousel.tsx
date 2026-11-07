@@ -68,7 +68,7 @@ export default function GalleryCarousel({ images, label, title, subtitle }: Gall
             <h2 className="font-serif-lux text-4xl sm:text-5xl font-light text-charcoal-800 tracking-tight">
               {title}
             </h2>
-            <p className="text-base sm:text-lg text-charcoal-700/70 font-light max-w-xl mx-auto">
+            <p className="text-base sm:text-lg text-charcoal-700 font-light max-w-xl mx-auto">
               {subtitle}
             </p>
           </div>

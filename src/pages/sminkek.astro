@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/shared/Navbar.astro';
+import InstagramSection from '../components/home/InstagramSection.astro';
+import MainCloser from '../components/home/MainCloser';
+import Footer from '../components/shared/Footer';
+import SminkPricing from '../components/shared/SminkPricing.astro';
+
+const bridal = [2,3,4,5,6,8,9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,25,28,29];
+const editorial = [1,7,16,26,27];
+const photo = (number: number) => `/images/bridal/bridal-${String(number).padStart(2, '0')}.webp`;
+---
+
+<Layout title="Sminkek és menyasszonyi sminkek | Hovorka-Miskolczi Kinga" description="Menyasszonyi, alkalmi és kreatív sminkek Hovorka-Miskolczi Kinga munkáiból. Nézd meg a képeket, az árakat és kérj időpontot.">
+  <div class="min-h-screen bg-cream-100 text-charcoal-900 overflow-x-hidden antialiased">
+    <Navbar currentPage="sminkek" />
+    <main>
+      <section class="bg-[#eae5de] overflow-hidden" aria-labelledby="makeup-title">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-[.78fr_1.22fr] lg:min-h-[660px]">
+          <div class="px-5 sm:px-8 lg:pl-10 lg:pr-12 py-16 sm:py-20 lg:py-24 flex flex-col justify-center">
+            <span class="text-xs font-bold uppercase tracking-luxury text-gold-700">Hovorka-Miskolczi Kinga · sminkmunkák</span>
+            <h1 id="makeup-title" class="editorial-page-title text-charcoal-900 mt-5">A pillanat,<br /><em class="text-gold-700">amikor önmagad vagy.</em></h1>
+            <p class="font-system-ui text-base sm:text-lg text-charcoal-700 leading-relaxed max-w-md mt-7">Menyasszonyi, alkalmi és kreatív sminkek. Nézd meg a munkáimat: minden arc, fény és történet más.</p>
+            <div class="flex flex-wrap gap-3 mt-8"><a href="#menyasszonyi" class="inline-flex items-center bg-charcoal-900 text-white px-6 py-4 text-xs font-bold uppercase tracking-[.12em] hover:bg-charcoal-800">Menyasszonyi munkák ↓</a><a href="#smink-arak" class="inline-flex items-center border border-charcoal-900 text-charcoal-900 px-6 py-4 text-xs font-bold uppercase tracking-[.12em] hover:bg-white">Sminkárak ↗</a></div>
+          </div>
+          <div class="grid grid-cols-[1.2fr_.8fr] grid-rows-2 h-[400px] sm:h-[560px] lg:h-auto" aria-label="Válogatás menyasszonyi sminkekből">
+            <a href={photo(19)} target="_blank" rel="noopener" aria-label="Első menyasszonyi sminkkép megnyitása" class="block row-span-2 overflow-hidden"><img src={photo(19)} alt="Lágy menyasszonyi smink közeli portrén" width="6000" height="4000" fetchpriority="high" class="w-full h-full object-cover" /></a>
+            <a href={photo(25)} target="_blank" rel="noopener" aria-label="Második menyasszonyi sminkkép megnyitása" class="block overflow-hidden"><img src={photo(25)} alt="Menyasszonyi smink elegáns konttyal" width="3808" height="5712" class="w-full h-full object-cover" /></a>
+            <a href={photo(17)} target="_blank" rel="noopener" aria-label="Harmadik menyasszonyi sminkkép megnyitása" class="block overflow-hidden"><img src={photo(17)} alt="Menyasszonyi smink vörös hajú modellen" width="4256" height="2832" class="w-full h-full object-cover" /></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="menyasszonyi" class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 md:py-24 scroll-mt-24" aria-labelledby="bridal-title">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
+          <div><span class="text-xs font-bold uppercase tracking-luxury text-gold-700">Munkáim · 01</span><h2 id="bridal-title" class="gallery-heading mt-3">Menyasszonyi <em>sminkek.</em></h2></div>
+          <p class="font-system-ui text-base text-charcoal-700 leading-relaxed max-w-sm">Természetes ragyogás, finom részletek és karakteres tekintetek. Kattints egy fotóra a teljes kép megnyitásához.</p>
+        </div>
+        <div class="columns-2 lg:columns-3 gap-3 sm:gap-5 lg:gap-7">
+          {bridal.filter(number => ![17,19,25].includes(number)).map((number, index) => (
+            <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Menyasszonyi sminkmunka ${index + 1}: teljes kép`} class="block break-inside-avoid mb-3 sm:mb-5 lg:mb-7 group overflow-hidden bg-white">
+              <img src={photo(number)} alt={`Menyasszonyi sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 md:py-24" aria-labelledby="editorial-title">
+        <div class="mb-10 md:mb-14"><span class="text-xs font-bold uppercase tracking-luxury text-gold-700">Munkáim · 02</span><h2 id="editorial-title" class="gallery-heading mt-3">Alkalmi és <em>kreatív sminkek.</em></h2></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
+          {editorial.map((number, index) => <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Alkalmi vagy kreatív sminkmunka ${index + 1}: teljes kép`} class="block group overflow-hidden bg-cream-200"><img src={photo(number)} alt={`Alkalmi vagy kreatív sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.035]" /></a>)}
+        </div>
+      </section>
+
+      <SminkPricing />
+
+
+    </main>
+    <InstagramSection />
+    <MainCloser />
+    <Footer client:visible />
+  </div>
+  <style>
+    .gallery-heading{font-size:clamp(2.25rem,5.5vw,4.7rem);line-height:1.04;letter-spacing:-.045em;color:#211e1b}
+    .gallery-heading em{color:#8b673b;font-weight:400}
+  </style>
+</Layout>

@@ -70,7 +70,7 @@ export default function HomeContact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xs text-cream-100/40 font-light pt-4"
+            className="text-xs text-cream-100/70 font-light pt-4"
           >
             Napi munkáimat az Instagramon osztom meg.
           </motion.p>

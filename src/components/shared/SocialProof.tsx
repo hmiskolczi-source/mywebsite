@@ -4,23 +4,17 @@
  */
 
 import React from 'react';
-import { motion } from 'motion/react';
 
 export default function SocialProof() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.6 }}
-      transition={{ duration: 1, delay: 0.2 }}
-      className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4 grayscale opacity-60"
-    >
-      <span className="font-serif-lux text-sm font-bold tracking-widest uppercase">Nemzetközi zsűrítag</span>
+    <div className="font-system-ui flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4 text-charcoal-700">
+      <span className="text-sm font-bold tracking-widest uppercase">Nemzetközi zsűritag</span>
       <div className="w-px h-4 bg-charcoal-700/20" />
-      <span className="font-serif-lux font-semibold text-sm tracking-wider">Versenyfelkészítő</span>
+      <span className="font-semibold text-sm tracking-wider">Versenyfelkészítő</span>
       <div className="w-px h-4 bg-charcoal-700/20" />
-      <span className="font-serif-lux font-semibold text-sm tracking-wider">3× VB ezüstérmes</span>
+      <span className="font-semibold text-sm tracking-wider">3× VB ezüstérmes</span>
       <div className="w-px h-4 bg-charcoal-700/20" />
-      <span className="font-sans font-black uppercase text-sm tracking-tighter">EB-arany</span>
-    </motion.div>
+      <span className="font-black uppercase text-sm tracking-tighter">EB-arany</span>
+    </div>
   );
 }

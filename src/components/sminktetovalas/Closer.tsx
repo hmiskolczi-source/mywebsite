@@ -45,17 +45,18 @@ export default function Closer() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '61bbb006-d750-493f-91d6-316d085763b1',
+          formType: 'pmu',
           name,
           phone,
           email,
-          interest,
+          message: interest,
+          company: '',
         }),
       });
 
@@ -81,10 +82,10 @@ export default function Closer() {
 
   const benefits = [
     "Egyéni konzultáció és arc-diagnózis: Személyre szabott tervezés a Te arcarchitektúrádra",
-    "Prémium kétfázisú érzéstelenítés: Fájdalommentes, luxus eljárás",
+    "Prémium kétfázisú érzéstelenítés: Kíméletes, komfortos eljárás",
     "Ingyenes korrekció: Az alapár tartalmazza a tökéletesítő második alkalmat",
-    "15 éves bajnoki garancia: Nemzetközi szintű szépítőmunka",
-    "Esztétikus gyógyulás: Modern pigmentálási technikám természetes hatást garantál"
+    "15 éves szakmai tapasztalat: Nemzetközi szintű szépítőmunka",
+    "Esztétikus gyógyulás: Modern pigmentálási technika a természetes hatásért"
   ];
 
   return (
@@ -109,7 +110,7 @@ export default function Closer() {
             </p>
 
             <div className="space-y-6 pt-4">
-              <h4 className="text-[11px] font-bold tracking-luxury text-gold-400/60 uppercase">Amit megkapsz</h4>
+              <p className="text-[11px] font-bold tracking-luxury text-gold-400/60 uppercase">Amit megkapsz</p>
               <ul className="space-y-4">
                 {benefits.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-4 text-base text-cream-100/80 font-light">
@@ -135,7 +136,7 @@ export default function Closer() {
                   <div className="space-y-2 border-b border-white/10 pb-6">
                     <h3 className="font-serif-lux text-3xl font-light text-white">Konzultációs Forma</h3>
                     <p className="text-[10px] font-bold tracking-luxury text-gold-400 uppercase">Prémium Sminktetoválás</p>
-                    <p className="text-xs text-cream-100/40 font-light mt-2 italic">Kérjük, adja meg adatait. Kinga személyesen felveszi veled a kapcsolatot 24 órán belül.</p>
+                    <p className="text-xs text-cream-100/70 font-light mt-2 italic">Kérjük, adja meg adatait. Kinga személyesen felveszi veled a kapcsolatot 24 órán belül.</p>
                   </div>
 
                   {error && (
@@ -147,6 +148,10 @@ export default function Closer() {
                       {/* Name */}
                       <div className="relative group">
                         <input
+                          id="pmu-name"
+                          name="name"
+                          autoComplete="name"
+                          aria-label="Teljes név"
                           type="text"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -157,6 +162,10 @@ export default function Closer() {
                       {/* Phone */}
                       <div className="relative group">
                         <input
+                          id="pmu-phone"
+                          name="phone"
+                          autoComplete="tel"
+                          aria-label="Telefonszám"
                           type="tel"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
@@ -169,6 +178,10 @@ export default function Closer() {
                     {/* Email */}
                     <div className="relative group">
                       <input
+                        id="pmu-email"
+                        name="email"
+                        autoComplete="email"
+                        aria-label="E-mail cím"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -180,6 +193,9 @@ export default function Closer() {
                     {/* Interest */}
                     <div className="relative group">
                       <textarea
+                        id="pmu-message"
+                        name="message"
+                        aria-label="Igények és elképzelések"
                         rows={4}
                         value={interest}
                         onChange={(e) => setInterest(e.target.value)}
@@ -191,13 +207,14 @@ export default function Closer() {
                     <div className="space-y-6">
                       <label className="flex items-start gap-4 cursor-pointer group">
                         <input
+                          name="privacy-consent"
                           type="checkbox"
                           checked={agree}
                           onChange={(e) => setAgree(e.target.checked)}
                           required
                           className="mt-1 accent-gold-400 h-4 w-4 shrink-0 bg-transparent border-white/20"
                         />
-                        <span className="text-[11px] text-cream-100/40 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
+                        <span className="text-[11px] text-cream-100/70 font-light leading-relaxed uppercase tracking-widest group-hover:text-cream-100 transition-colors">
                           Elfogadom az{' '}
                           <a
                             href="/adatvedelem"
@@ -237,7 +254,7 @@ export default function Closer() {
                     <p className="text-xs text-gold-400 uppercase tracking-luxury">Jelentkezésedet sikeresen rögzítettük.</p>
                   </div>
                   <p className="text-sm text-cream-100/60 font-light max-w-sm mx-auto leading-relaxed">
-                    Kinga 24 órán belül személyesen felhívni fog a megadott számon a konzultáció szervezéséhez. Küldtünk egy automatikus tájékoztató levelet e-mail fiókodba.
+                    Kinga 24 órán belül személyesen fel fog hívni a megadott számon a konzultáció szervezéséhez. Küldtünk egy automatikus tájékoztató levelet az e-mail-fiókodba.
                   </p>
                   <button
                     onClick={handleReset}

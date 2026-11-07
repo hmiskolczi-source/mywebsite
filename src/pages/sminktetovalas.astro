@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/shared/Navbar';
+import Navbar from '../components/shared/Navbar.astro';
 import Hero from '../components/sminktetovalas/Hero';
 import Testimonials from '../components/sminktetovalas/Testimonials';
 import ValueProps from '../components/sminktetovalas/ValueProps';
@@ -8,34 +8,30 @@ import Process from '../components/sminktetovalas/Process';
 import Founder from '../components/sminktetovalas/Founder';
 import Reviews from '../components/sminktetovalas/Reviews';
 import Gallery from '../components/sminktetovalas/Gallery';
-import InstagramSection from '../components/home/InstagramSection.astro';
-import Pricing from '../components/sminktetovalas/Pricing';
 import FAQ from '../components/sminktetovalas/FAQ';
-import Closer from '../components/sminktetovalas/Closer';
+import MainCloser from '../components/home/MainCloser';
+import InstagramSection from '../components/home/InstagramSection.astro';
 import Footer from '../components/shared/Footer';
-import FloatingCTA from '../components/shared/FloatingCTA';
 ---
 
-<Layout title="Hovorka-Miskolczi Kinga — Prémium Sminktetoválás">
+<Layout
+	title="Prémium sminktetoválás Szegeden | Miskolczi Kinga"
+	description="Személyre szabott szemöldök-, szemhéj- és ajaktetoválás Szegeden, részletes konzultációval és egyedi tervezéssel. Jelentkezz Miskolczi Kingához."
+>
 	<div class="min-h-screen bg-cream-100 selection:bg-gold-200 selection:text-charcoal-900 overflow-x-hidden antialiased">
-		<FloatingCTA page="sminktetovalas" client:load />
-
 		<!-- Luxury Top Accents Line -->
-		<div class="h-1.5 w-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 sticky top-0 z-50 pointer-events-none"></div>
+		<Navbar currentPage="sminktetovalas" />
 
-		<Navbar currentPage="sminktetovalas" client:load />
-
-		<Hero client:load />
+		<Hero />
 		<Testimonials client:visible />
 		<ValueProps client:visible />
 		<Process client:visible />
 		<Founder client:visible />
 		<Reviews client:visible />
 		<Gallery client:visible />
-		<InstagramSection />
-		<Pricing client:visible />
 		<FAQ client:visible />
-		<Closer client:visible />
+		<InstagramSection />
+		<MainCloser />
 		<Footer client:visible />
 	</div>
 </Layout>

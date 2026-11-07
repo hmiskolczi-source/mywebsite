@@ -18,6 +18,8 @@ export default function ImageWatermark({ children, className = '' }: ImageWaterm
       <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 pointer-events-none">
         <img
           {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/imagelogo.png", "32px")}
+          width={32}
+          height={32}
           alt="Kinga Miskolczi watermark"
           className="h-6 w-auto sm:h-8 opacity-80"
           referrerPolicy="no-referrer"

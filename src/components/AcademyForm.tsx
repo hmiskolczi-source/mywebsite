@@ -183,12 +183,15 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
                     <form onSubmit={handleSubmit} className="space-y-4">
                       {/* Name Field */}
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
+                        <label htmlFor="course-name" className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
                           <User className="w-3 text-gold-300" />
                           Név *
                         </label>
                         <input
+                          id="course-name"
+                          name="name"
                           type="text"
+                          autoComplete="name"
                           required
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -199,12 +202,15 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
 
                       {/* Email Field */}
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
+                        <label htmlFor="course-email" className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
                           <Mail className="w-3 text-gold-300" />
                           E-mail *
                         </label>
                         <input
+                          id="course-email"
+                          name="email"
                           type="email"
+                          autoComplete="email"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
@@ -215,12 +221,15 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
 
                       {/* Phone Field */}
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
+                        <label htmlFor="course-phone" className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
                           <Phone className="w-3 text-gold-300" />
                           Telefonszám *
                         </label>
                         <input
+                          id="course-phone"
+                          name="phone"
                           type="tel"
+                          autoComplete="tel"
                           required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
@@ -231,11 +240,13 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
 
                       {/* Course Selection */}
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
+                        <label htmlFor="course-selection" className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
                           <FileText className="w-3 text-gold-300" />
                           Képzés kiválasztása *
                         </label>
                         <select
+                          id="course-selection"
+                          name="course"
                           required
                           value={course}
                           onChange={(e) => setCourse(e.target.value)}
@@ -261,11 +272,13 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
 
                       {/* Message Field */}
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
+                        <label htmlFor="course-message" className="block text-xs font-mono uppercase tracking-wider text-amber-100/70 mb-1.5 flex items-center gap-1.5">
                           <MessageSquare className="w-3 text-gold-300" />
                           Üzenet (opcionális)
                         </label>
                         <textarea
+                          id="course-message"
+                          name="message"
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           placeholder="Pl.: Milyen tapasztalatod van a sminkelésben?"
@@ -278,6 +291,7 @@ export default function AcademyForm({ isOpen, onClose, courseTitle }: AcademyFor
                       <div className="pt-1 select-none">
                         <label className="flex items-start gap-2.5 cursor-pointer text-xs text-cream-300 font-light leading-relaxed">
                           <input
+                            name="privacy-consent"
                             type="checkbox"
                             checked={agree}
                             onChange={(e) => setAgree(e.target.checked)}

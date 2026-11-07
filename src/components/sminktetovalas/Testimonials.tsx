@@ -24,7 +24,7 @@ export default function Testimonials() {
     {
       id: 'dalma-review',
       title: 'Mindig figyel az igényeinkre',
-      desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemölddivatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne.✨🌸',
+      desc: 'Több éve ismerem Kinga munkásságát sminkesként és sminktetoválóként is, és csak a legjobbakat tudom róla mondani. Lassan 5 éve készített nekem szemöldöktetoválást, amely a mai napig szép és divatos. Kinga nemcsak nagyon kedves, hanem rendkívül precíz is. Szívvel-lélekkel végzi a munkáját, és mindig figyel arra, hogy az adott smink vagy tetoválás arcformához, egyéniséghez és igényekhez legyen igazítva. Jó szívvel ajánlom mindenkinek, aki igényes, tartós és személyre szabott munkát szeretne. ✨🌸',
       author: 'G. Dalma'
     }
   ];

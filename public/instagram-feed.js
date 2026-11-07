@@ -111,6 +111,7 @@
         status.textContent = `${posts.length} legutóbbi tartalom · a bejegyzések az Instagramon nyílnak meg.`;
       } catch {
         if (controller !== requestController || selected !== key) return;
+        // No stock photos or old work-gallery images are passed off as current Instagram posts.
         status.textContent = 'Friss munkákért és a legújabb bejegyzésekért látogass el az Instagram-profilomra.';
       } finally {
         clearTimeout(timeout);

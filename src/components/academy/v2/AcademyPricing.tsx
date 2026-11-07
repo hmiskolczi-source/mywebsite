@@ -9,16 +9,13 @@ import { Star, Instagram, Facebook, Phone } from 'lucide-react';
 
 export default function AcademyPricing() {
   const scrollToForm = () => {
-    const el = document.getElementById('academy-form-anchor');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.location.assign('/idopont?service=school_basic');
   };
 
   const inclusions = [
     "10 héten át tartó, 100 órás rendkívül intenzív, gyakorlat-orientált élő oktatás",
     "Korlátlan luxus & prémium anyaghasználat (M·A·C, Inglot, Makeup Forever stb.)",
-    "Felnőttképzési regisztrációs számmal ellátott, a Magyar Fodrász-Kozmetikus-Körmös Egyesület által hitelesítetét, államilag elismert szakmai tanúsítvány",
+    "Felnőttképzési regisztrációs számmal ellátott, a Magyar Fodrász-Kozmetikus-Körmös Egyesület által hitelesített, államilag elismert szakmai tanúsítvány",
     "Kizárólag kis létszámú, exkluzív csoportos mentorálás",
     "Online pótlási lehetőség: Hiányzás esetén élő videós közvetítés és visszanézhető órák egy zárt Facebook-csoportban."
   ];
@@ -37,7 +34,7 @@ export default function AcademyPricing() {
       name: "Cs. Anna",
       role: "Fodrász & Sminkes",
       title: "Mindenkinek szívből ajánlom, mind emberileg, mind szakmailag.",
-      text: "2017-ben 60órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsó sorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem."
+      text: "2017-ben 60 órás profi sminktanfolyamon vettem részt Kingánál. Kinga nagyon kedves, türelmes, segítőkész és nem utolsósorban profi sminkes. A tanfolyam elvégzése után sem hagyott magamra, ha volt kérdésem, készségesen segített. Frissen végzettként már lehetőségem is volt a Szegedi Szabadtérin sminkelni Kingának köszönhetően. Azóta is dolgozom a szakmában, rengeteg kismama, menyasszony, első bálozó szavazott bizalmat nekem."
     },
     {
       initials: "VK",
@@ -75,11 +72,11 @@ export default function AcademyPricing() {
         
         {/* Section Header */}
         <div className="mb-12 space-y-4">
-          <span className="text-[10px] md:text-[11px] font-bold tracking-luxury text-gold-500 uppercase block">Befektetés a jövődbe</span>
+          <span className="text-xs font-bold tracking-luxury text-gold-700 uppercase block">Befektetés a jövődbe</span>
           <h2 className="font-serif-lux text-3xl sm:text-4xl lg:text-6xl font-light text-charcoal-800 tracking-tight leading-[1.1] max-w-4xl">
             Transzparens árazás, <br className="hidden sm:block" /><span className="italic">rejtett költségek nélkül.</span>
           </h2>
-          <p className="text-base md:text-lg text-charcoal-700/70 font-light max-w-xl leading-relaxed">
+          <p className="text-base md:text-lg text-charcoal-700 font-light max-w-xl leading-relaxed">
             Nálam nincsenek kötelező kezdőcsomagok és kötelezően megvásárolandó sminkkészletek. Egyetlen, magába foglaló díjért mindent megkapsz.
           </p>
         </div>
@@ -96,7 +93,7 @@ export default function AcademyPricing() {
           >
             {/* Minimal Badge */}
             <div className="absolute top-6 right-6 md:top-10 md:right-10">
-              <span className="text-[8px] md:text-[9px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-gold-500 uppercase border border-gold-500/30 px-2 py-1 md:px-3 md:py-1">
+              <span className="text-xs font-bold tracking-[0.16em] text-gold-700 uppercase border border-gold-500/50 px-2 py-1 md:px-3 md:py-1">
                 Exkluzív Előfoglalás
               </span>
             </div>
@@ -106,7 +103,7 @@ export default function AcademyPricing() {
                 <h3 className="font-serif-lux text-2xl md:text-3xl font-light text-charcoal-800">
                   Pro Makeup Mentorprogram
                 </h3>
-                <p className="text-[9px] md:text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">
+                <p className="text-xs font-bold tracking-wide text-charcoal-700 uppercase">
                   100 órás, 10 hetes elit csoportos képzés
                 </p>
               </div>
@@ -114,7 +111,7 @@ export default function AcademyPricing() {
               {/* Price Highlight */}
               <div className="py-8 md:py-12 border-y border-charcoal-800/5 flex flex-col sm:flex-row justify-between items-baseline gap-6 md:gap-8">
                 <div className="space-y-1">
-                  <span className="text-[9px] md:text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase">Teljes díj</span>
+                  <span className="text-xs font-bold tracking-wide text-charcoal-700 uppercase">Teljes díj</span>
                   <div className="font-serif-lux text-4xl md:text-5xl lg:text-6xl text-charcoal-800 font-light tracking-tight">
                     990 000 <span className="text-xl md:text-2xl ml-[-4px] md:ml-[-8px]">Ft</span>
                   </div>
@@ -125,7 +122,7 @@ export default function AcademyPricing() {
                   <div className="text-base md:text-lg text-charcoal-700 font-light italic">
                     3 × 330 000 Ft
                   </div>
-                  <p className="text-[9px] text-charcoal-700/40 uppercase tracking-widest">Kamatmentes opció</p>
+                  <p className="text-xs text-charcoal-700 uppercase tracking-wide">Kamatmentes opció</p>
                 </div>
               </div>
 
@@ -163,7 +160,7 @@ export default function AcademyPricing() {
                 >
                   Elindítom a sminkes karrierem
                 </button>
-                <p className="text-center text-[9px] md:text-[10px] text-charcoal-700/40 uppercase tracking-[0.2em] mt-6">
+                <p className="text-center text-xs text-charcoal-700 uppercase tracking-wide mt-6">
                   🔒 A helyfoglalás a 10% előleg után válik véglegessé.
                 </p>
               </div>
@@ -173,7 +170,7 @@ export default function AcademyPricing() {
           {/* Sidebar */}
           <div className="lg:w-[400px] xl:w-[450px] flex flex-col min-w-0">
             <div className="space-y-8 flex-grow flex flex-col">
-              <span className="text-[11px] font-bold tracking-luxury text-charcoal-700/40 uppercase block text-center lg:text-left">Tanulói vélemények</span>
+              <span className="text-xs font-bold tracking-wide text-charcoal-700 uppercase block text-center lg:text-left">Tanulói vélemények</span>
               
               <div className="relative flex-grow min-h-[450px] lg:min-h-0 overflow-hidden rounded-sm bg-cream-200/20 border border-charcoal-800/5">
                 <style>{`
@@ -210,12 +207,12 @@ export default function AcademyPricing() {
                           <h4 className="font-serif-lux text-lg md:text-xl font-light text-charcoal-800 leading-snug">
                             {review.title}
                           </h4>
-                          <p className="text-xs md:text-sm text-charcoal-700/70 font-light leading-relaxed line-clamp-4 lg:line-clamp-none">
+                          <p className="text-xs md:text-sm text-charcoal-700 font-light leading-relaxed line-clamp-4 lg:line-clamp-none">
                             {review.text}
                           </p>
                           <div className="pt-4 border-t border-charcoal-800/5 mt-auto">
                             <h5 className="text-[10px] md:text-[11px] font-bold tracking-luxury text-charcoal-800 uppercase">{review.name}</h5>
-                            <p className="text-[9px] text-gold-600 font-medium italic mt-1 font-serif-lux">{review.role}</p>
+                            <p className="text-xs text-gold-700 font-medium italic mt-1 font-serif-lux">{review.role}</p>
                           </div>
                         </div>
                       </div>
@@ -249,7 +246,7 @@ export default function AcademyPricing() {
                 ].map((item, idx) => (
                   <div key={idx} className="space-y-1">
                     <p className="text-[10px] md:text-[11px] text-charcoal-800 font-bold uppercase tracking-widest">{item.title}</p>
-                    <p className="text-xs md:text-sm text-charcoal-700/70 font-light leading-relaxed">{item.desc}</p>
+                    <p className="text-xs md:text-sm text-charcoal-700 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -261,15 +258,15 @@ export default function AcademyPricing() {
 
               {/* Socials & Contacts */}
               <div className="mt-12 pt-8 border-t border-charcoal-800/10 space-y-6">
-                <p className="text-[10px] font-bold tracking-luxury text-charcoal-700/40 uppercase text-center">Kapcsolatba lépés</p>
+                <p className="text-xs font-bold tracking-wide text-charcoal-700 uppercase text-center">Kapcsolatba lépés</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-xs sm:text-sm text-charcoal-700 font-light">
                   <a href="https://www.instagram.com/miskolczikinga_makeup_school/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
                     <Instagram className="w-4 h-4 text-gold-500 shrink-0" />
                     <span className="truncate">miskolczikinga_makeup_school</span>
                   </a>
-                  <a href="https://www.facebook.com/promakeupschool" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
+                  <a href="https://www.facebook.com/Miskolczikingamakeupschool" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 hover:text-gold-600 transition-colors py-1 min-w-0">
                     <Facebook className="w-4 h-4 text-gold-500 shrink-0" />
-                    <span className="truncate">Pro Makeup School</span>
+                    <span className="truncate">Miskolczi Kinga Makeup School</span>
                   </a>
                   <div className="flex items-center justify-center gap-2 py-1">
                     <Phone className="w-4 h-4 text-gold-500 shrink-0" />
