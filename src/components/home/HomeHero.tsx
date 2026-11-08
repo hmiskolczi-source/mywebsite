@@ -12,7 +12,7 @@ export default function HomeHero() {
   return (
     <section className="py-16 md:py-24 bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24 items-center">
 
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8 text-center md:text-left">
@@ -55,7 +55,7 @@ export default function HomeHero() {
           </div>
 
           {/* Right Column: Portrait */}
-          <div className="lg:w-5/12">
+          <div className="lg:w-5/12 w-full order-first lg:order-none">
             <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4]">
               <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
                 <img
