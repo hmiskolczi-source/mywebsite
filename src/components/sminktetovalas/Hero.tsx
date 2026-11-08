@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-cream-200/50 -skew-x-12 transform origin-top translate-x-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" id="hero-section">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24 items-center">
 
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8 text-center md:text-left">
@@ -54,13 +54,15 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Hero Image */}
-          <div className="lg:w-5/12">
+          <div className="lg:w-5/12 w-full order-first lg:order-none">
             <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 h-96 lg:h-full min-h-[400px]">
               <ImageWatermark className="relative w-full h-full rounded-lg overflow-hidden">
                 <img
-                  {...imgProps("https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/sminktetovalas/sminktetovalas_hero.webp", "(min-width: 1024px) 42vw, 100vw")}
-                  alt="Premium makeup tattoo service"
-                  className="w-full h-full object-cover"
+                  {...imgProps("/images/pmu/sminktetovalas-hero.webp", "(min-width: 1024px) 42vw, 100vw")}
+                  alt="Hovorka-Miskolczi Kinga ajaktetoválás közben a szegedi stúdióban"
+                  width={1086}
+                  height={1448}
+                  className="w-full h-full object-cover object-[50%_30%]"
                   referrerPolicy="no-referrer"
                   fetchPriority="high"
                 />

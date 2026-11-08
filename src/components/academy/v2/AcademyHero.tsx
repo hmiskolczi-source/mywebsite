@@ -17,7 +17,7 @@ export default function AcademyHero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24 items-center">
 
           {/* Main Content Area */}
           <div className="lg:w-7/12 flex flex-col justify-center space-y-8 text-center md:text-left">
@@ -55,7 +55,7 @@ export default function AcademyHero() {
           </div>
 
           {/* Visual Column - Large, editorial, asymmetrical */}
-          <div className="lg:w-5/12 w-full mt-12 lg:mt-0 lg:sticky lg:top-32">
+          <div className="lg:w-5/12 w-full order-first lg:order-none lg:sticky lg:top-32">
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-cream-200">
                 <ImageWatermark className="relative w-full h-full">
