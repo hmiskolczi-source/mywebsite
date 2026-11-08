@@ -50,9 +50,9 @@ export default function HomeServices() {
 
             <div className="pt-6 border-t border-charcoal-800/5">
               <HomeTestimonial
-                text="Kinga mesterileg dolgozik, nem csak a technika, hanem a személyes készségei miatt is ajánlom mindenkinek. Az én sminktetoválásom természetes és tökéletes."
-                name="Éva B."
-                role="Sminktetoválás ügyfél"
+                text="Kinga pár évvel ezelőtt készített szemöldök és szemhéj tetoválást nekem és gyönyörű munkát végzett, pont olyan lett a végeredmény amilyet szerettem volna. Nagyon kedves, türelmes és remek szakember, jó szívvel ajánlom mindenkinek."
+                name="Lili Pálfi"
+                role="★★★★★ Google-értékelés · szemöldök- és szemhéjtetoválás"
               />
             </div>
           </motion.div>
@@ -84,9 +84,9 @@ export default function HomeServices() {
 
             <div className="pt-6 border-t border-charcoal-800/5">
               <HomeTestimonial
-                text="A képzés alatt megtanultam olyan technikákat, amelyeket máshol nem tanítanak. Kinga hozzáértése és gyakorlati tudása valóban piacképessé tette vállalkozásomat."
-                name="Petra K."
-                role="Sminkoktatás végzettje"
+                text="2023-ban jártam Kingánál Szegeden a sminkiskolában 100 órás alaptanfolyamon. Nagyon jó élmény volt, rengeteg tudást szereztem és még jobban megszerettem a szakmát. Kinga amellett, hogy naprakész a tudásában, kedves és türelmes oktató is."
+                name="Emma Petrikné Faragó"
+                role="★★★★★ Google-értékelés · 100 órás sminkképzés"
               />
             </div>
           </motion.div>
