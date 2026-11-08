@@ -9,11 +9,8 @@ import '@fontsource/cormorant-garamond/400-italic.css';
 import '@fontsource/cormorant-garamond/500.css';
 import '@fontsource/cormorant-garamond/600.css';
 import '@fontsource/cormorant-garamond/700.css';
-import '@fontsource/inter/300.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
+// Inter változó betűként: 300–700 egyetlen fájlban karakterkészletenként (8 külön fájl helyett 2).
+import '@fontsource-variable/inter/wght.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import heroFontUrl from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-300-italic.woff2?url';
@@ -120,12 +117,27 @@ const gtmId = import.meta.env.PROD ? PUBLIC_GTM_ID : undefined;
 						wait_for_update: 500,
 					});
 				</script>
+				{/* GTM késleltetve: az első interakciókor (görgetés, koppintás, billentyű), vagy legkésőbb
+				    2,5 mp-cel a betöltés után töltődik be, így nem lassítja az első megjelenést mobilon.
+				    A közben keletkező dataLayer-események (hozzájárulás, időpontkérés) sorban várnak, és utána mind lefutnak. */}
 				<script is:inline define:vars={{ gtmId }}>
-					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-					})(window,document,'script','dataLayer',gtmId);
+					(function (w, d, id) {
+						var loaded = false;
+						var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+						function load() {
+							if (loaded) return; loaded = true;
+							w.dataLayer = w.dataLayer || [];
+							w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+							var j = d.createElement('script'); j.async = true;
+							j.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+							d.head.appendChild(j);
+						}
+						w.__loadGtm = load;
+						events.forEach(function (e) { w.addEventListener(e, load, { once: true, passive: true }); });
+						function later() { (w.requestIdleCallback || function (cb) { return setTimeout(cb, 1); })(load, { timeout: 1500 }); }
+						if (d.readyState === 'complete') setTimeout(later, 2500);
+						else w.addEventListener('load', function () { setTimeout(later, 2500); }, { once: true });
+					})(window, document, gtmId);
 				</script>
 			</>
 		)}
