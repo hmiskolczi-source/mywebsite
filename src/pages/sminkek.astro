@@ -5,6 +5,7 @@ import InstagramSection from '../components/home/InstagramSection.astro';
 import MainCloser from '../components/home/MainCloser';
 import Footer from '../components/shared/Footer';
 import SminkPricing from '../components/shared/SminkPricing.astro';
+import { imgProps } from '../lib/imageOpt';
 
 // A nyitókép (25) a hero portréja; a többi a galériákban jelenik meg.
 const heroPhoto = 25;
@@ -55,7 +56,7 @@ const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/share
 
             <div class="lg:w-5/12 w-full">
               <div class="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4] relative">
-                <img src={photo(heroPhoto)} alt="Menyasszonyi smink elegáns konttyal" width="3808" height="5712" fetchpriority="high" class="w-full h-full object-cover" />
+                <img {...imgProps(photo(heroPhoto), "(min-width: 1024px) 40vw, 100vw")} alt="Menyasszonyi smink elegáns konttyal" width="3808" height="5712" fetchpriority="high" decoding="async" class="w-full h-full object-cover" />
                 <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 pointer-events-none">
                   <img src={watermark} width="32" height="32" alt="" class="h-6 w-auto sm:h-8 opacity-80" referrerpolicy="no-referrer" decoding="async" />
                 </div>
@@ -79,7 +80,7 @@ const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/share
           <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-7">
             {bridal.slice(0, featured).map((number, index) => (
               <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Menyasszonyi sminkmunka ${index + 1}: teljes kép`} class="block group overflow-hidden rounded-lg shadow-sm bg-cream-200">
-                <img src={photo(number)} alt={`Menyasszonyi sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
+                <img {...imgProps(photo(number), "(min-width: 768px) 33vw, 50vw")} alt={`Menyasszonyi sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
               </a>
             ))}
           </div>
@@ -91,7 +92,7 @@ const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/share
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-7 mt-10">
               {bridal.slice(featured).map((number, index) => (
                 <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Menyasszonyi sminkmunka ${featured + index + 1}: teljes kép`} class="block group overflow-hidden rounded-lg shadow-sm bg-cream-200">
-                  <img src={photo(number)} alt={`Menyasszonyi sminkmunka, ${featured + index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
+                  <img {...imgProps(photo(number), "(min-width: 768px) 33vw, 50vw")} alt={`Menyasszonyi sminkmunka, ${featured + index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
                 </a>
               ))}
             </div>
@@ -108,7 +109,7 @@ const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/share
             </h2>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
-            {editorial.map((number, index) => <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Alkalmi vagy kreatív sminkmunka ${index + 1}: teljes kép`} class="block group overflow-hidden rounded-lg shadow-sm bg-cream-200"><img src={photo(number)} alt={`Alkalmi vagy kreatív sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.035]" /></a>)}
+            {editorial.map((number, index) => <a href={photo(number)} target="_blank" rel="noopener" aria-label={`Alkalmi vagy kreatív sminkmunka ${index + 1}: teljes kép`} class="block group overflow-hidden rounded-lg shadow-sm bg-cream-200"><img {...imgProps(photo(number), "(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw")} alt={`Alkalmi vagy kreatív sminkmunka, ${index + 1}. kép`} loading="lazy" decoding="async" class="block w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.035]" /></a>)}
           </div>
         </div>
       </section>

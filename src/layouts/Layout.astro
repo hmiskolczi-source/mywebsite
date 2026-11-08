@@ -2,6 +2,8 @@
 // Self-hosted fonts (same families/weights the site previously pulled from
 // Google Fonts) — bundled locally so no render-blocking third-party request.
 import '@fontsource/cormorant-garamond/300.css';
+// A címsorok dőlt 300-as betűje: enélkül az előtöltött fájl kárba megy, és a cím (LCP) egy késve betöltött betűre vár.
+import '@fontsource/cormorant-garamond/300-italic.css';
 import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/400-italic.css';
 import '@fontsource/cormorant-garamond/500.css';

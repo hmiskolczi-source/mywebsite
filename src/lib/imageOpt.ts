@@ -23,7 +23,8 @@ function vercelImageUrl(src: string, width: number): string {
  * In local dev (no Vercel optimizer available) the raw URL is used.
  */
 export function imgProps(src: string, sizes: string) {
-  if (import.meta.env.DEV || !src.includes(OPTIMIZABLE_HOST)) {
+  // A saját (/images/...) képek is a Vercel-optimalizálón mennek át.
+  if (import.meta.env.DEV || !(src.includes(OPTIMIZABLE_HOST) || src.startsWith('/'))) {
     return { src };
   }
   return {
