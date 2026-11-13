@@ -141,6 +141,7 @@ const gtmId = import.meta.env.PROD ? PUBLIC_GTM_ID : undefined;
 				</script>
 			</>
 		)}
+		<slot name="head" />
 	</head>
 	<body>
 		{gtmId && (

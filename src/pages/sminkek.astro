@@ -14,10 +14,13 @@ const editorial = [1,7,16,26,27];
 // Elsőre ennyi menyasszonyi kép látszik; a többi a „További menyasszonyi munkák” gombbal nyílik ki.
 const featured = 9;
 const photo = (number: number) => `/images/bridal/bridal-${String(number).padStart(2, '0')}.webp`;
+// A nyitókép (LCP) előtöltése: a letöltés a HTML elején indul, nem a CSS és a kép-elem feldolgozása után.
+const heroImage = imgProps(photo(heroPhoto), "(min-width: 1024px) 40vw, 100vw");
 const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/shared/imagelogo.png';
 ---
 
 <Layout title="Sminkek és menyasszonyi sminkek | Hovorka-Miskolczi Kinga" description="Menyasszonyi, alkalmi és kreatív sminkek Hovorka-Miskolczi Kinga munkáiból. Nézd meg a képeket, az árakat és kérj időpontot.">
+  {heroImage.srcSet ? <link slot="head" rel="preload" as="image" href={heroImage.src} imagesrcset={heroImage.srcSet} imagesizes={heroImage.sizes} fetchpriority="high" /> : <link slot="head" rel="preload" as="image" href={heroImage.src} fetchpriority="high" />}
   <div class="min-h-screen bg-cream-100 text-charcoal-900 overflow-x-hidden antialiased">
     <Navbar currentPage="sminkek" />
     <main>
@@ -56,7 +59,7 @@ const watermark = 'https://bgumoxbjyuzc6ytp.public.blob.vercel-storage.com/share
 
             <div class="lg:w-5/12 w-full order-first lg:order-none">
               <div class="rounded-lg overflow-hidden shadow-lg bg-charcoal-900 aspect-[3/4] relative">
-                <img {...imgProps(photo(heroPhoto), "(min-width: 1024px) 40vw, 100vw")} alt="Menyasszonyi smink elegáns konttyal" width="3808" height="5712" fetchpriority="high" decoding="async" class="w-full h-full object-cover" />
+                <img {...heroImage} alt="Menyasszonyi smink elegáns konttyal" width="3808" height="5712" fetchpriority="high" class="w-full h-full object-cover" />
                 <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 pointer-events-none">
                   <img src={watermark} width="32" height="32" alt="" class="h-6 w-auto sm:h-8 opacity-80" referrerpolicy="no-referrer" decoding="async" />
                 </div>

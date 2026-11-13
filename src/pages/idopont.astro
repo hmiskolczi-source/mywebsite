@@ -14,12 +14,12 @@ import { bookingServices } from '../lib/bookingCatalog';
       <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 lg:gap-20 items-end mb-10"><div><span class="text-xs tracking-luxury uppercase text-gold-700 font-bold">Egy személyes találkozás kezdete</span><h1 class="editorial-page-title mt-4">Mesélj az <em class="text-gold-700">elképzelésedről.</em></h1></div><p class="text-charcoal-700 leading-relaxed">Válassz szolgáltatást, és írd meg, mikor lenne alkalmas. Az időpontot Kingával közösen véglegesítitek.</p></div>
       <div class="grid lg:grid-cols-[minmax(0,1.6fr)_minmax(260px,.8fr)] gap-8 lg:gap-12 items-start">
         <section class="bg-white border border-cream-300 p-6 sm:p-9" aria-labelledby="form-heading">
-          <div id="booking-status" role="status" class="text-charcoal-700">Az időpontkérés betöltése…</div>
-          <form id="booking-form" hidden novalidate>
+          <div id="booking-status" role="status" class="text-charcoal-700" hidden></div>
+          <form id="booking-form" novalidate>
             <h2 id="form-heading" class="text-3xl mb-6">Miben segíthetek?</h2>
             <p id="booking-error" role="alert" tabindex="-1" hidden class="bg-red-50 text-red-800 p-4 mb-5"></p>
-            <div class="flex flex-wrap gap-2 mb-5" role="group" aria-label="Szolgáltatási terület"><button type="button" data-category="pmu" class="category">Sminktetoválás</button><button type="button" data-category="makeup" class="category">Smink</button><button type="button" data-category="school" class="category">Sminkiskola</button></div>
-            <div id="booking-services" class="grid gap-2 mb-5"></div>
+            <div class="flex flex-wrap gap-2 mb-5" role="group" aria-label="Szolgáltatási terület"><button type="button" data-category="pmu" class="category" aria-pressed="true">Sminktetoválás</button><button type="button" data-category="makeup" class="category" aria-pressed="false">Smink</button><button type="button" data-category="school" class="category" aria-pressed="false">Sminkiskola</button></div>
+            <div id="booking-services" class="grid gap-2 mb-5">{bookingServices.map((service) => <label data-service-category={service.category} hidden={service.category !== 'pmu'} class="flex gap-3 items-center border border-cream-300 px-4 py-4 cursor-pointer text-sm"><input type="radio" name="service" value={service.id} />{service.label}</label>)}</div>
             <a href="/arak" class="text-sm text-gold-700 underline">Árlista megtekintése</a>
             <div class="grid sm:grid-cols-2 gap-5 mt-8">
               <label class="field">Név *<input id="booking-name" autocomplete="name" maxlength="100" required /></label><label class="field">E-mail *<input id="booking-email" type="email" autocomplete="email" maxlength="254" required /></label>
@@ -51,13 +51,14 @@ import { bookingServices } from '../lib/bookingCatalog';
     let category:Service['category']=selected.startsWith('school_')?'school':selected==='makeup'?'makeup':'pmu';
     const field=(id:string)=>document.querySelector<HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement>(`#booking-${id}`)!;
     const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Budapest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());field('date').setAttribute('min',today);
-    function render(){servicesNode.replaceChildren();for(const service of services.filter(item=>item.category===category)){const label=document.createElement('label');label.className='flex gap-3 items-center border border-cream-300 px-4 py-4 cursor-pointer text-sm';const radio=document.createElement('input');radio.type='radio';radio.name='service';radio.value=service.id;radio.checked=selected===service.id;radio.addEventListener('change',()=>{selected=service.id});label.append(radio,document.createTextNode(service.label));servicesNode.append(label)}document.querySelectorAll<HTMLButtonElement>('[data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category===category)))}
+    function render(){servicesNode.querySelectorAll<HTMLLabelElement>('[data-service-category]').forEach(label=>{const radio=label.querySelector<HTMLInputElement>('input')!;label.hidden=label.dataset.serviceCategory!==category;radio.checked=selected===radio.value});document.querySelectorAll<HTMLButtonElement>('[data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category===category)))}
+    servicesNode.addEventListener('change',event=>{const target=event.target as HTMLInputElement;if(target.name==='service')selected=target.value});
     document.querySelectorAll<HTMLButtonElement>('[data-category]').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.category as Service['category'];selected='';render()}));
     if(web3FormsId&&services.length){
       if(!services.some(item=>item.id===selected))selected='';
-      render();status.hidden=true;form.hidden=false;
+      render();
     }else{
-      status.textContent='Az időpontkérés most nem érhető el. Kingát a +36 30 709 4370 számon éred el.';
+      form.hidden=true;status.hidden=false;status.textContent='Az időpontkérés most nem érhető el. Kingát a +36 30 709 4370 számon éred el.';
     }
     function fail(message:string){error.textContent=message;error.hidden=false;error.focus()}
     form.addEventListener('submit',async event=>{
